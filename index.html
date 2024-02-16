@@ -1,0 +1,95 @@
+<!-- INDEX.HTNL -->
+
+<!DOCTYPE html> 
+<html lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=EUC-JP">
+   
+    <title>ARCA Laboratorios</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/jquery.dataTables.min.css">
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.13.1/jquery.validate.min.js"></script>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" >
+    <script type="text/javascript" src="js/jquery.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="js/jquery-ui.js"></script>
+    <script type="text/javascript" src="js/jquery.dataTables.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+     <link rel="stylesheet" type="text/css" href="../media/alert/dist/sweetalert2.css">
+
+</head>
+<body background="imagenes/logo_arca_sys_web.jpg">
+  <div class="container">
+      <br>
+      <div class="col-md-4 col-md-offset-4">
+      <div class="text-center">
+        <h1>Bienvenidos al sistema de gestion<strong> ARCA</strong> </h1>
+
+      </div>
+
+      <div class="row">
+              <div class="login-panel panel panel-default" style="color:#000000;background:#f0edcc">
+                  <div class="panel-heading"  >
+                      <h3 class="panel-title">Inicio de Sesion       </h3>
+                  </div>
+                  <div class="panel-body">
+                      <!-- llama a la funcion de validar los accesos usuario/contraseña -->
+                      <form id="login-form" class="text-left" action="controladores/validar.php" method="post" style="color:rgb(16, 16, 241);text-align:center" > 
+                        <div class="form-group" align="left" ">
+                         <label>Usuario</label>
+                         <input type="text" class="form-control" id="lg_username" name="usua" placeholder="email@ejemplo.com" required="" >
+                         <small class="form-text text-muted">Ingrese su usuario</small>
+                        </div>
+
+<!-- sucursal -->
+                        <div class="form-group" align="left">
+                         <label>Sucursal</label>
+                         
+                          <div>
+                          <select name="fn_sucursal" id="fi_sucursal">
+                            <option value="1">Tulyehualco</option>
+                            <option value="2">DiNo</option>
+                            <option value="3">San Gregorio</option>
+                            <option value="4">Xochimilco</option>
+                            <option value="5">Santiago</option>
+                            <option value="6">San Pablo</option>
+                            <option value="7">San Pedro</option>
+                            <option value="8">Tecomitl</option>
+                            <option value="9">Tetelco</option>
+							<option value="12">Tlahuac</option>
+							<option value="13">Milpa Alta</option>
+                          </select>                            
+
+                          </div>
+
+                         
+                         <small class="form-text text-muted">Ingrese la sucursal</small>
+                        </div>
+
+
+                        <div class="form-group" align="left">
+                             <label>Contrase&ntilde;a</label>
+                             <input type="password" class="form-control" id="lg_password" name="contra" placeholder="Contraseña" required="">
+                        </div>
+
+                        <button type="submit" class="btn btn-success" id="btniniciar"  >Ingresar</button>
+
+                      </form>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  </div>
+<script src="../media/alert/dist/sweetalert2.js"></script>
+</body>
+</html>
