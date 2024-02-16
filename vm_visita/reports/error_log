@@ -1,0 +1,87 @@
+[08-Oct-2020 14:39:06 America/Mexico_City] PHP Fatal error:  Uncaught Exception: FPDF error: Some data has already been output, can't send PDF file (output started at /home/labora41/public_html/sysarcaweb_1.0/ag_orden_dia_rad/reports/print_imagen.php:410) in /home/labora41/public_html/sysarcaweb_1.0/fpdf/fpdf.php:273
+Stack trace:
+#0 /home/labora41/public_html/sysarcaweb_1.0/fpdf/fpdf.php(1054): FPDF->Error('Some data has a...')
+#1 /home/labora41/public_html/sysarcaweb_1.0/fpdf/fpdf.php(1001): FPDF->_checkoutput()
+#2 /home/labora41/public_html/sysarcaweb_1.0/ag_orden_dia_rad/reports/print_imagen.php(540): FPDF->Output()
+#3 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/fpdf/fpdf.php on line 273
+[08-Oct-2020 15:23:24 America/Mexico_City] PHP Fatal error:  Uncaught Exception: FPDF error: Some data has already been output, can't send PDF file (output started at /home/labora41/public_html/sysarcaweb_1.0/ag_orden_dia_rad/reports/print_imagen.php:410) in /home/labora41/public_html/sysarcaweb_1.0/fpdf/fpdf.php:273
+Stack trace:
+#0 /home/labora41/public_html/sysarcaweb_1.0/fpdf/fpdf.php(1054): FPDF->Error('Some data has a...')
+#1 /home/labora41/public_html/sysarcaweb_1.0/fpdf/fpdf.php(1001): FPDF->_checkoutput()
+#2 /home/labora41/public_html/sysarcaweb_1.0/ag_orden_dia_rad/reports/print_imagen.php(540): FPDF->Output()
+#3 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/fpdf/fpdf.php on line 273
+[08-Oct-2020 15:25:43 America/Mexico_City] PHP Fatal error:  Uncaught Exception: FPDF error: Some data has already been output, can't send PDF file (output started at /home/labora41/public_html/sysarcaweb_1.0/ag_orden_dia_rad/reports/print_imagen.php:410) in /home/labora41/public_html/sysarcaweb_1.0/fpdf/fpdf.php:273
+Stack trace:
+#0 /home/labora41/public_html/sysarcaweb_1.0/fpdf/fpdf.php(1054): FPDF->Error('Some data has a...')
+#1 /home/labora41/public_html/sysarcaweb_1.0/fpdf/fpdf.php(1001): FPDF->_checkoutput()
+#2 /home/labora41/public_html/sysarcaweb_1.0/ag_orden_dia_rad/reports/print_imagen.php(540): FPDF->Output()
+#3 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/fpdf/fpdf.php on line 273
+[12-Oct-2020 13:23:26 America/Mexico_City] PHP Fatal error:  Uncaught Exception: FPDF error: Unsupported image type: /img_rx/151180/archivo ya existe in /home/labora41/public_html/sysarcaweb_1.0/fpdf/fpdf.php:273
+Stack trace:
+#0 /home/labora41/public_html/sysarcaweb_1.0/fpdf/fpdf.php(886): FPDF->Error('Unsupported ima...')
+#1 /home/labora41/public_html/sysarcaweb_1.0/ag_orden_dia_rad/reports/print_imagen.php(383): FPDF->Image('../img_rx/15118...', 13, 65, 0, 0)
+#2 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/fpdf/fpdf.php on line 273
+[12-Oct-2020 13:23:28 America/Mexico_City] PHP Fatal error:  Uncaught Exception: FPDF error: Unsupported image type: /img_rx/151180/archivo ya existe in /home/labora41/public_html/sysarcaweb_1.0/fpdf/fpdf.php:273
+Stack trace:
+#0 /home/labora41/public_html/sysarcaweb_1.0/fpdf/fpdf.php(886): FPDF->Error('Unsupported ima...')
+#1 /home/labora41/public_html/sysarcaweb_1.0/ag_orden_dia_rad/reports/print_imagen.php(383): FPDF->Image('../img_rx/15118...', 13, 65, 0, 0)
+#2 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/fpdf/fpdf.php on line 273
+[12-Oct-2020 13:23:35 America/Mexico_City] PHP Fatal error:  Uncaught Exception: FPDF error: Unsupported image type: /img_rx/151180/archivo ya existe in /home/labora41/public_html/sysarcaweb_1.0/fpdf/fpdf.php:273
+Stack trace:
+#0 /home/labora41/public_html/sysarcaweb_1.0/fpdf/fpdf.php(886): FPDF->Error('Unsupported ima...')
+#1 /home/labora41/public_html/sysarcaweb_1.0/ag_orden_dia_rad/reports/print_imagen.php(383): FPDF->Image('../img_rx/15118...', 13, 65, 0, 0)
+#2 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/fpdf/fpdf.php on line 273
+[12-Oct-2020 13:23:37 America/Mexico_City] PHP Fatal error:  Uncaught Exception: FPDF error: Unsupported image type: /img_rx/151180/archivo ya existe in /home/labora41/public_html/sysarcaweb_1.0/fpdf/fpdf.php:273
+Stack trace:
+#0 /home/labora41/public_html/sysarcaweb_1.0/fpdf/fpdf.php(886): FPDF->Error('Unsupported ima...')
+#1 /home/labora41/public_html/sysarcaweb_1.0/ag_orden_dia_rad/reports/print_imagen.php(383): FPDF->Image('../img_rx/15118...', 13, 65, 0, 0)
+#2 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/fpdf/fpdf.php on line 273
+[12-Oct-2020 13:23:56 America/Mexico_City] PHP Fatal error:  Uncaught Exception: FPDF error: Unsupported image type: /img_rx/151180/archivo ya existe in /home/labora41/public_html/sysarcaweb_1.0/fpdf/fpdf.php:273
+Stack trace:
+#0 /home/labora41/public_html/sysarcaweb_1.0/fpdf/fpdf.php(886): FPDF->Error('Unsupported ima...')
+#1 /home/labora41/public_html/sysarcaweb_1.0/ag_orden_dia_rad/reports/print_imagen.php(383): FPDF->Image('../img_rx/15118...', 13, 65, 0, 0)
+#2 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/fpdf/fpdf.php on line 273
+[12-Oct-2020 13:23:58 America/Mexico_City] PHP Fatal error:  Uncaught Exception: FPDF error: Unsupported image type: /img_rx/151180/archivo ya existe in /home/labora41/public_html/sysarcaweb_1.0/fpdf/fpdf.php:273
+Stack trace:
+#0 /home/labora41/public_html/sysarcaweb_1.0/fpdf/fpdf.php(886): FPDF->Error('Unsupported ima...')
+#1 /home/labora41/public_html/sysarcaweb_1.0/ag_orden_dia_rad/reports/print_imagen.php(383): FPDF->Image('../img_rx/15118...', 13, 65, 0, 0)
+#2 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/fpdf/fpdf.php on line 273
+[23-Oct-2020 19:53:20 America/Mexico_City] PHP Fatal error:  Uncaught Exception: FPDF error: Unsupported image type: /img_rx/153045/archivo ya existe in /home/labora41/public_html/sysarcaweb_1.0/fpdf/fpdf.php:273
+Stack trace:
+#0 /home/labora41/public_html/sysarcaweb_1.0/fpdf/fpdf.php(886): FPDF->Error('Unsupported ima...')
+#1 /home/labora41/public_html/sysarcaweb_1.0/ag_orden_dia_rad/reports/print_imagen.php(383): FPDF->Image('../img_rx/15304...', 13, 65, 0, 0)
+#2 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/fpdf/fpdf.php on line 273
+[26-Oct-2020 17:02:22 America/Mexico_City] PHP Fatal error:  Uncaught Exception: FPDF error: Unsupported image type: /img_rx/153392/archivo ya existe in /home/labora41/public_html/sysarcaweb_1.0/fpdf/fpdf.php:273
+Stack trace:
+#0 /home/labora41/public_html/sysarcaweb_1.0/fpdf/fpdf.php(886): FPDF->Error('Unsupported ima...')
+#1 /home/labora41/public_html/sysarcaweb_1.0/ag_orden_dia_rad/reports/print_imagen_zoom.php(40): FPDF->Image('../img_rx/15339...', 5, 3, 0, 0)
+#2 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/fpdf/fpdf.php on line 273
+[26-Oct-2020 17:02:24 America/Mexico_City] PHP Fatal error:  Uncaught Exception: FPDF error: Unsupported image type: /img_rx/153392/archivo ya existe in /home/labora41/public_html/sysarcaweb_1.0/fpdf/fpdf.php:273
+Stack trace:
+#0 /home/labora41/public_html/sysarcaweb_1.0/fpdf/fpdf.php(886): FPDF->Error('Unsupported ima...')
+#1 /home/labora41/public_html/sysarcaweb_1.0/ag_orden_dia_rad/reports/print_imagen_zoom.php(40): FPDF->Image('../img_rx/15339...', 5, 3, 0, 0)
+#2 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/fpdf/fpdf.php on line 273
+[26-Oct-2020 17:02:32 America/Mexico_City] PHP Fatal error:  Uncaught Exception: FPDF error: Unsupported image type: /img_rx/153392/archivo ya existe in /home/labora41/public_html/sysarcaweb_1.0/fpdf/fpdf.php:273
+Stack trace:
+#0 /home/labora41/public_html/sysarcaweb_1.0/fpdf/fpdf.php(886): FPDF->Error('Unsupported ima...')
+#1 /home/labora41/public_html/sysarcaweb_1.0/ag_orden_dia_rad/reports/print_imagen_zoom.php(40): FPDF->Image('../img_rx/15339...', 5, 3, 0, 0)
+#2 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/fpdf/fpdf.php on line 273
+[26-Oct-2020 17:09:47 America/Mexico_City] PHP Fatal error:  Uncaught Exception: FPDF error: Unsupported image type: /img_rx/153392/archivo ya existe in /home/labora41/public_html/sysarcaweb_1.0/fpdf/fpdf.php:273
+Stack trace:
+#0 /home/labora41/public_html/sysarcaweb_1.0/fpdf/fpdf.php(886): FPDF->Error('Unsupported ima...')
+#1 /home/labora41/public_html/sysarcaweb_1.0/ag_orden_dia_rad/reports/print_imagen_zoom.php(40): FPDF->Image('../img_rx/15339...', 5, 3, 0, 0)
+#2 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/fpdf/fpdf.php on line 273
