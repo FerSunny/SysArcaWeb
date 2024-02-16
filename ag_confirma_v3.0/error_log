@@ -1,0 +1,332 @@
+[06-Jun-2019 16:29:25 UTC] PHP Fatal error:  Call to a member function execute() on boolean in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php on line 85
+[10-Jun-2019 19:16:31 UTC] PHP Fatal error:  Call to a member function execute() on boolean in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php on line 85
+[10-Jun-2019 19:16:38 UTC] PHP Fatal error:  Call to a member function execute() on boolean in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php on line 85
+[20-Jun-2019 21:28:31 UTC] PHP Fatal error:  Call to a member function execute() on boolean in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php on line 85
+[21-Jun-2019 17:50:38 UTC] PHP Fatal error:  Call to a member function execute() on boolean in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php on line 85
+[21-Jun-2019 17:50:52 UTC] PHP Fatal error:  Call to a member function execute() on boolean in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php on line 85
+[03-Jul-2019 17:20:11 UTC] PHP Fatal error:  Call to a member function execute() on boolean in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php on line 85
+[03-Jul-2019 17:21:40 UTC] PHP Fatal error:  Call to a member function execute() on boolean in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php on line 85
+[03-Jul-2019 17:22:23 UTC] PHP Fatal error:  Call to a member function execute() on boolean in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php on line 85
+[11-Jul-2019 20:31:43 UTC] PHP Fatal error:  Call to a member function execute() on boolean in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php on line 85
+[11-Jul-2019 20:32:02 UTC] PHP Fatal error:  Call to a member function execute() on boolean in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php on line 85
+[13-Jul-2019 18:49:53 UTC] PHP Fatal error:  Call to a member function execute() on boolean in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php on line 85
+[13-Jul-2019 18:50:00 UTC] PHP Fatal error:  Call to a member function execute() on boolean in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php on line 85
+[22-Jul-2019 21:36:11 UTC] PHP Fatal error:  Call to a member function execute() on boolean in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php on line 85
+[10-Aug-2019 00:29:17 UTC] PHP Fatal error:  Call to a member function execute() on boolean in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php on line 85
+[10-Aug-2019 00:29:20 UTC] PHP Fatal error:  Call to a member function execute() on boolean in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php on line 85
+[10-Aug-2019 00:32:33 UTC] PHP Fatal error:  Call to a member function execute() on boolean in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php on line 85
+[10-Aug-2019 21:01:43 UTC] PHP Fatal error:  Call to a member function execute() on boolean in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php on line 85
+[10-Aug-2019 21:01:50 UTC] PHP Fatal error:  Call to a member function execute() on boolean in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php on line 85
+[10-Aug-2019 21:02:05 UTC] PHP Fatal error:  Call to a member function execute() on boolean in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php on line 85
+[10-Aug-2019 21:02:23 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 3746290 bytes) in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php on line 104
+[10-Aug-2019 21:02:38 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 3746569 bytes) in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php on line 104
+[28-Aug-2019 15:35:31 UTC] PHP Fatal error:  Call to a member function execute() on boolean in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php on line 85
+[10-Sep-2019 15:36:07 UTC] PHP Fatal error:  Uncaught Error: Call to a member function execute() on boolean in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php:85
+Stack trace:
+#0 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php on line 85
+[12-Sep-2019 20:58:00 UTC] PHP Fatal error:  Uncaught Error: Call to a member function execute() on boolean in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php:85
+Stack trace:
+#0 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php on line 85
+[12-Sep-2019 20:58:09 UTC] PHP Fatal error:  Uncaught Error: Call to a member function execute() on boolean in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php:85
+Stack trace:
+#0 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php on line 85
+[12-Sep-2019 20:58:15 UTC] PHP Fatal error:  Uncaught Error: Call to a member function execute() on boolean in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php:85
+Stack trace:
+#0 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php on line 85
+[15-Oct-2019 20:45:54 UTC] PHP Fatal error:  Uncaught Error: Call to a member function execute() on boolean in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php:85
+Stack trace:
+#0 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php on line 85
+[15-Oct-2019 20:46:22 UTC] PHP Fatal error:  Uncaught Error: Call to a member function execute() on boolean in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php:85
+Stack trace:
+#0 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php on line 85
+[29-Nov-2019 08:13:16 America/Mexico_City] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'admon'@'localhost' (using password: YES) in /home/labora41/public_html/sysarcaweb_1.0/controladores/conex.php on line 29
+[29-Nov-2019 16:48:51 America/Mexico_City] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'admon'@'localhost' (using password: YES) in /home/labora41/public_html/sysarcaweb_1.0/controladores/conex.php on line 29
+[30-Nov-2019 21:06:38 America/Mexico_City] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'admon'@'localhost' (using password: YES) in /home/labora41/public_html/sysarcaweb_1.0/controladores/conex.php on line 29
+[01-Dec-2019 19:02:04 America/Mexico_City] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'admon'@'localhost' (using password: YES) in /home/labora41/public_html/sysarcaweb_1.0/controladores/conex.php on line 29
+[03-Dec-2019 15:01:13 America/Mexico_City] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'admon'@'localhost' (using password: YES) in /home/labora41/public_html/sysarcaweb_1.0/controladores/conex.php on line 29
+[03-Dec-2019 16:11:56 America/Mexico_City] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'admon'@'localhost' (using password: YES) in /home/labora41/public_html/sysarcaweb_1.0/controladores/conex.php on line 29
+[03-Dec-2019 17:53:37 America/Mexico_City] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'admon'@'localhost' (using password: YES) in /home/labora41/public_html/sysarcaweb_1.0/controladores/conex.php on line 29
+[04-Dec-2019 14:49:12 America/Mexico_City] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'admon'@'localhost' (using password: YES) in /home/labora41/public_html/sysarcaweb_1.0/controladores/conex.php on line 29
+[04-Dec-2019 20:45:18 America/Mexico_City] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'admon'@'localhost' (using password: YES) in /home/labora41/public_html/sysarcaweb_1.0/controladores/conex.php on line 29
+[05-Dec-2019 09:20:07 America/Mexico_City] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'admon'@'localhost' (using password: YES) in /home/labora41/public_html/sysarcaweb_1.0/controladores/conex.php on line 29
+[05-Dec-2019 12:39:35 America/Mexico_City] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'cmm'@'localhost' (using password: YES) in /home/labora41/public_html/sysarcaweb_1.0/controladores/conex.php on line 29
+[05-Dec-2019 12:40:08 America/Mexico_City] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'cmm'@'localhost' (using password: YES) in /home/labora41/public_html/sysarcaweb_1.0/controladores/conex.php on line 29
+[05-Dec-2019 12:49:32 America/Mexico_City] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'lacc'@'localhost' (using password: YES) in /home/labora41/public_html/sysarcaweb_1.0/controladores/conex.php on line 29
+[05-Dec-2019 12:49:59 America/Mexico_City] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'lacc'@'localhost' (using password: YES) in /home/labora41/public_html/sysarcaweb_1.0/controladores/conex.php on line 29
+[05-Dec-2019 12:50:31 America/Mexico_City] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'lacc'@'localhost' (using password: YES) in /home/labora41/public_html/sysarcaweb_1.0/controladores/conex.php on line 29
+[06-Dec-2019 20:20:23 UTC] PHP Fatal error:  Uncaught Error: Call to a member function execute() on boolean in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php:85
+Stack trace:
+#0 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php on line 85
+[26-Dec-2019 19:36:28 UTC] PHP Fatal error:  Uncaught Error: Call to a member function execute() on boolean in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php:85
+Stack trace:
+#0 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php on line 85
+[26-Dec-2019 19:37:40 UTC] PHP Fatal error:  Uncaught Error: Call to a member function execute() on boolean in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php:85
+Stack trace:
+#0 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php on line 85
+[26-Dec-2019 22:10:23 UTC] PHP Fatal error:  Uncaught Error: Call to a member function execute() on boolean in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php:85
+Stack trace:
+#0 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php on line 85
+[30-Dec-2019 16:09:34 UTC] PHP Fatal error:  Uncaught Error: Call to a member function execute() on boolean in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php:85
+Stack trace:
+#0 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php on line 85
+[30-Dec-2019 16:09:39 UTC] PHP Fatal error:  Uncaught Error: Call to a member function execute() on boolean in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php:85
+Stack trace:
+#0 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php on line 85
+[13-Jan-2020 17:10:16 UTC] PHP Fatal error:  Uncaught Error: Call to a member function execute() on boolean in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php:85
+Stack trace:
+#0 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php on line 85
+[13-Jan-2020 17:10:22 UTC] PHP Fatal error:  Uncaught Error: Call to a member function execute() on boolean in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php:85
+Stack trace:
+#0 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php on line 85
+[13-Jan-2020 17:11:03 UTC] PHP Fatal error:  Uncaught Error: Call to a member function execute() on boolean in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php:85
+Stack trace:
+#0 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php on line 85
+[14-Jan-2020 23:48:31 UTC] PHP Fatal error:  Uncaught Error: Call to a member function execute() on boolean in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php:85
+Stack trace:
+#0 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php on line 85
+[22-Jan-2020 00:12:04 UTC] PHP Fatal error:  Uncaught Error: Call to a member function execute() on boolean in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php:85
+Stack trace:
+#0 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php on line 85
+[22-Jan-2020 00:13:44 UTC] PHP Fatal error:  Uncaught Error: Call to a member function execute() on boolean in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php:85
+Stack trace:
+#0 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php on line 85
+[04-Feb-2020 14:41:53 UTC] PHP Fatal error:  Uncaught Error: Call to a member function execute() on boolean in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php:85
+Stack trace:
+#0 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php on line 85
+[04-Feb-2020 14:42:57 UTC] PHP Fatal error:  Uncaught Error: Call to a member function execute() on boolean in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php:85
+Stack trace:
+#0 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php on line 85
+[06-Feb-2020 17:50:39 UTC] PHP Fatal error:  Uncaught Error: Call to a member function execute() on boolean in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php:85
+Stack trace:
+#0 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php on line 85
+[20-Feb-2020 19:37:56 UTC] PHP Fatal error:  Uncaught Error: Call to a member function execute() on boolean in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php:85
+Stack trace:
+#0 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php on line 85
+[20-Feb-2020 19:38:00 UTC] PHP Fatal error:  Uncaught Error: Call to a member function execute() on boolean in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php:85
+Stack trace:
+#0 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php on line 85
+[25-Mar-2020 16:29:02 UTC] PHP Fatal error:  Uncaught Error: Call to a member function execute() on boolean in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php:85
+Stack trace:
+#0 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php on line 85
+[25-Mar-2020 16:29:26 UTC] PHP Fatal error:  Uncaught Error: Call to a member function execute() on boolean in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php:85
+Stack trace:
+#0 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php on line 85
+[14-Apr-2020 22:53:47 UTC] PHP Fatal error:  Uncaught Error: Call to a member function execute() on boolean in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php:85
+Stack trace:
+#0 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php on line 85
+[14-Apr-2020 22:53:50 UTC] PHP Fatal error:  Uncaught Error: Call to a member function execute() on boolean in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php:85
+Stack trace:
+#0 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php on line 85
+[14-Apr-2020 22:53:54 UTC] PHP Fatal error:  Uncaught Error: Call to a member function execute() on boolean in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php:85
+Stack trace:
+#0 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php on line 85
+[20-Apr-2020 19:49:36 UTC] PHP Fatal error:  Uncaught Error: Call to a member function execute() on boolean in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php:85
+Stack trace:
+#0 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php on line 85
+[24-Apr-2020 18:00:00 UTC] PHP Fatal error:  Uncaught Error: Call to a member function execute() on boolean in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php:85
+Stack trace:
+#0 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php on line 85
+[30-Apr-2020 20:45:59 UTC] PHP Fatal error:  Uncaught Error: Call to a member function execute() on boolean in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php:85
+Stack trace:
+#0 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php on line 85
+[01-May-2020 15:41:31 UTC] PHP Fatal error:  Uncaught Error: Call to a member function execute() on boolean in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php:85
+Stack trace:
+#0 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php on line 85
+[01-May-2020 15:41:45 UTC] PHP Fatal error:  Uncaught Error: Call to a member function execute() on boolean in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php:85
+Stack trace:
+#0 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php on line 85
+[06-Jun-2020 16:54:46 UTC] PHP Fatal error:  Uncaught Error: Call to a member function execute() on boolean in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php:85
+Stack trace:
+#0 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php on line 85
+[06-Jun-2020 17:07:38 UTC] PHP Fatal error:  Uncaught Error: Call to a member function execute() on boolean in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php:85
+Stack trace:
+#0 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php on line 85
+[06-Jun-2020 17:07:38 UTC] PHP Fatal error:  Uncaught Error: Call to a member function execute() on boolean in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php:85
+Stack trace:
+#0 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php on line 85
+[08-Jun-2020 17:41:22 UTC] PHP Fatal error:  Uncaught Error: Call to a member function execute() on boolean in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php:85
+Stack trace:
+#0 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php on line 85
+[13-Jun-2020 19:46:59 UTC] PHP Fatal error:  Uncaught Error: Call to a member function execute() on boolean in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php:85
+Stack trace:
+#0 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php on line 85
+[13-Jun-2020 19:47:06 UTC] PHP Fatal error:  Uncaught Error: Call to a member function execute() on boolean in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php:85
+Stack trace:
+#0 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php on line 85
+[21-Jul-2020 20:56:39 UTC] PHP Fatal error:  Uncaught Error: Call to a member function execute() on boolean in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php:85
+Stack trace:
+#0 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php on line 85
+[25-Jul-2020 19:47:40 UTC] PHP Fatal error:  Uncaught Error: Call to a member function execute() on boolean in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php:85
+Stack trace:
+#0 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php on line 85
+[25-Jul-2020 19:48:38 UTC] PHP Fatal error:  Uncaught Error: Call to a member function execute() on boolean in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php:85
+Stack trace:
+#0 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php on line 85
+[30-Jul-2020 15:14:39 UTC] PHP Fatal error:  Uncaught Error: Call to a member function execute() on boolean in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php:85
+Stack trace:
+#0 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php on line 85
+[30-Jul-2020 15:14:52 UTC] PHP Fatal error:  Uncaught Error: Call to a member function execute() on boolean in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php:85
+Stack trace:
+#0 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php on line 85
+[31-Jul-2020 21:17:58 UTC] PHP Fatal error:  Uncaught Error: Call to a member function execute() on boolean in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php:85
+Stack trace:
+#0 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php on line 85
+[11-Aug-2020 14:40:36 UTC] PHP Fatal error:  Uncaught Error: Call to a member function execute() on boolean in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php:85
+Stack trace:
+#0 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php on line 85
+[11-Aug-2020 14:40:47 UTC] PHP Fatal error:  Uncaught Error: Call to a member function execute() on boolean in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php:85
+Stack trace:
+#0 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php on line 85
+[27-Aug-2020 20:08:31 UTC] PHP Fatal error:  Uncaught Error: Call to a member function execute() on boolean in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php:85
+Stack trace:
+#0 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php on line 85
+[04-Sep-2020 17:42:06 UTC] PHP Fatal error:  Uncaught Error: Call to a member function execute() on boolean in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php:85
+Stack trace:
+#0 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php on line 85
+[04-Sep-2020 17:42:17 UTC] PHP Fatal error:  Uncaught Error: Call to a member function execute() on boolean in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php:85
+Stack trace:
+#0 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php on line 85
+[14-Sep-2020 23:07:54 UTC] PHP Fatal error:  Uncaught Error: Call to a member function execute() on boolean in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php:85
+Stack trace:
+#0 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php on line 85
+[14-Sep-2020 23:08:05 UTC] PHP Fatal error:  Uncaught Error: Call to a member function execute() on boolean in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php:85
+Stack trace:
+#0 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php on line 85
+[14-Sep-2020 23:08:10 UTC] PHP Fatal error:  Uncaught Error: Call to a member function execute() on boolean in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php:85
+Stack trace:
+#0 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php on line 85
+[18-Sep-2020 01:19:59 UTC] PHP Fatal error:  Uncaught Error: Call to a member function execute() on boolean in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php:85
+Stack trace:
+#0 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php on line 85
+[18-Sep-2020 01:20:16 UTC] PHP Fatal error:  Uncaught Error: Call to a member function execute() on boolean in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php:85
+Stack trace:
+#0 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php on line 85
+[24-Sep-2020 15:57:31 UTC] PHP Fatal error:  Uncaught Error: Call to a member function execute() on boolean in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php:85
+Stack trace:
+#0 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php on line 85
+[24-Sep-2020 15:57:57 UTC] PHP Fatal error:  Uncaught Error: Call to a member function execute() on boolean in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php:85
+Stack trace:
+#0 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php on line 85
+[29-Sep-2020 00:39:33 UTC] PHP Fatal error:  Uncaught Error: Call to a member function execute() on boolean in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php:85
+Stack trace:
+#0 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php on line 85
+[02-Oct-2020 17:43:33 UTC] PHP Fatal error:  Uncaught Error: Call to a member function execute() on boolean in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php:85
+Stack trace:
+#0 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php on line 85
+[19-Oct-2020 15:21:01 UTC] PHP Fatal error:  Uncaught Error: Call to a member function execute() on boolean in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php:85
+Stack trace:
+#0 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php on line 85
+[19-Oct-2020 15:21:40 UTC] PHP Fatal error:  Uncaught Error: Call to a member function execute() on boolean in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php:85
+Stack trace:
+#0 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php on line 85
+[05-Dec-2020 16:46:13 UTC] PHP Fatal error:  Uncaught Error: Call to a member function execute() on boolean in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php:85
+Stack trace:
+#0 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php on line 85
+[05-Dec-2020 16:46:30 UTC] PHP Fatal error:  Uncaught Error: Call to a member function execute() on boolean in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php:85
+Stack trace:
+#0 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php on line 85
+[12-Dec-2020 17:35:17 UTC] PHP Fatal error:  Uncaught Error: Call to a member function execute() on boolean in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php:85
+Stack trace:
+#0 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php on line 85
+[12-Dec-2020 17:36:17 UTC] PHP Fatal error:  Uncaught Error: Call to a member function execute() on boolean in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php:85
+Stack trace:
+#0 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php on line 85
+[14-Dec-2020 23:30:49 UTC] PHP Fatal error:  Uncaught Error: Call to a member function execute() on boolean in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php:85
+Stack trace:
+#0 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php on line 85
+[14-Dec-2020 23:30:52 UTC] PHP Fatal error:  Uncaught Error: Call to a member function execute() on boolean in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php:85
+Stack trace:
+#0 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php on line 85
+[08-Jan-2021 19:48:20 UTC] PHP Warning:  mysqli_connect(): (HY000/2002): Connection refused in /home/labora41/public_html/sysarcaweb_1.0/controladores/conex.php on line 8
+[08-Jan-2021 13:48:36 America/Mexico_City] PHP Warning:  mysqli_connect(): (HY000/2002): Connection refused in /home/labora41/public_html/sysarcaweb_1.0/controladores/conex.php on line 8
+[25-Jan-2021 17:22:24 UTC] PHP Fatal error:  Uncaught Error: Call to a member function execute() on boolean in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php:85
+Stack trace:
+#0 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php on line 85
+[06-Feb-2021 21:34:12 UTC] PHP Fatal error:  Uncaught Error: Call to a member function execute() on boolean in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php:85
+Stack trace:
+#0 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php on line 85
+[11-Feb-2021 02:16:14 UTC] PHP Fatal error:  Uncaught Error: Call to a member function execute() on boolean in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php:85
+Stack trace:
+#0 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php on line 85
+[25-Feb-2021 00:10:46 UTC] PHP Fatal error:  Uncaught Error: Call to a member function execute() on boolean in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php:85
+Stack trace:
+#0 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php on line 85
+[25-Feb-2021 00:11:54 UTC] PHP Fatal error:  Uncaught Error: Call to a member function execute() on boolean in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php:85
+Stack trace:
+#0 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php on line 85
+[27-Feb-2021 01:30:30 UTC] PHP Fatal error:  Uncaught Error: Call to a member function execute() on boolean in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php:85
+Stack trace:
+#0 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/listar.php on line 85
