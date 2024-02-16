@@ -1,0 +1,82 @@
+[11-Jun-2019 13:26:15 America/Mexico_City] PHP Warning:  require(../../../fpdf/fpdf.php): failed to open stream: No such file or directory in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/reports/print_plantilla_3.php on line 8
+[11-Jun-2019 13:26:15 America/Mexico_City] PHP Warning:  require(../../../fpdf/fpdf.php): failed to open stream: No such file or directory in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/reports/print_plantilla_3.php on line 8
+[11-Jun-2019 13:26:15 America/Mexico_City] PHP Fatal error:  require(): Failed opening required '../../../fpdf/fpdf.php' (include_path='.:/opt/cpanel/ea-php56/root/usr/share/pear') in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/reports/print_plantilla_3.php on line 8
+[11-Jun-2019 13:26:19 America/Mexico_City] PHP Warning:  require(../../../fpdf/fpdf.php): failed to open stream: No such file or directory in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/reports/print_plantilla_3.php on line 8
+[11-Jun-2019 13:26:19 America/Mexico_City] PHP Warning:  require(../../../fpdf/fpdf.php): failed to open stream: No such file or directory in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/reports/print_plantilla_3.php on line 8
+[11-Jun-2019 13:26:19 America/Mexico_City] PHP Fatal error:  require(): Failed opening required '../../../fpdf/fpdf.php' (include_path='.:/opt/cpanel/ea-php56/root/usr/share/pear') in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/reports/print_plantilla_3.php on line 8
+[11-Jun-2019 13:26:26 America/Mexico_City] PHP Warning:  require(../../../fpdf/fpdf.php): failed to open stream: No such file or directory in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/reports/print_plantilla_3.php on line 8
+[11-Jun-2019 13:26:26 America/Mexico_City] PHP Warning:  require(../../../fpdf/fpdf.php): failed to open stream: No such file or directory in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/reports/print_plantilla_3.php on line 8
+[11-Jun-2019 13:26:26 America/Mexico_City] PHP Fatal error:  require(): Failed opening required '../../../fpdf/fpdf.php' (include_path='.:/opt/cpanel/ea-php56/root/usr/share/pear') in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/reports/print_plantilla_3.php on line 8
+[11-Jun-2019 13:26:31 America/Mexico_City] PHP Warning:  require(../../../fpdf/fpdf.php): failed to open stream: No such file or directory in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/reports/print_plantilla_3.php on line 8
+[11-Jun-2019 13:26:31 America/Mexico_City] PHP Warning:  require(../../../fpdf/fpdf.php): failed to open stream: No such file or directory in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/reports/print_plantilla_3.php on line 8
+[11-Jun-2019 13:26:31 America/Mexico_City] PHP Fatal error:  require(): Failed opening required '../../../fpdf/fpdf.php' (include_path='.:/opt/cpanel/ea-php56/root/usr/share/pear') in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/reports/print_plantilla_3.php on line 8
+[11-Jun-2019 13:26:43 America/Mexico_City] PHP Warning:  require(../../../fpdf/fpdf.php): failed to open stream: No such file or directory in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/reports/print_plantilla_3.php on line 8
+[11-Jun-2019 13:26:43 America/Mexico_City] PHP Warning:  require(../../../fpdf/fpdf.php): failed to open stream: No such file or directory in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/reports/print_plantilla_3.php on line 8
+[11-Jun-2019 13:26:43 America/Mexico_City] PHP Fatal error:  require(): Failed opening required '../../../fpdf/fpdf.php' (include_path='.:/opt/cpanel/ea-php56/root/usr/share/pear') in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/reports/print_plantilla_3.php on line 8
+[11-Jun-2019 13:26:55 America/Mexico_City] PHP Warning:  require(../../../fpdf/fpdf.php): failed to open stream: No such file or directory in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/reports/print_plantilla_3.php on line 8
+[11-Jun-2019 13:26:55 America/Mexico_City] PHP Warning:  require(../../../fpdf/fpdf.php): failed to open stream: No such file or directory in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/reports/print_plantilla_3.php on line 8
+[11-Jun-2019 13:26:55 America/Mexico_City] PHP Fatal error:  require(): Failed opening required '../../../fpdf/fpdf.php' (include_path='.:/opt/cpanel/ea-php56/root/usr/share/pear') in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/reports/print_plantilla_3.php on line 8
+[11-Jun-2019 13:27:00 America/Mexico_City] PHP Warning:  require(../../../fpdf/fpdf.php): failed to open stream: No such file or directory in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/reports/print_plantilla_3.php on line 8
+[11-Jun-2019 13:27:00 America/Mexico_City] PHP Warning:  require(../../../fpdf/fpdf.php): failed to open stream: No such file or directory in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/reports/print_plantilla_3.php on line 8
+[11-Jun-2019 13:27:00 America/Mexico_City] PHP Fatal error:  require(): Failed opening required '../../../fpdf/fpdf.php' (include_path='.:/opt/cpanel/ea-php56/root/usr/share/pear') in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/reports/print_plantilla_3.php on line 8
+[11-Jun-2019 13:27:03 America/Mexico_City] PHP Warning:  require(../../../fpdf/fpdf.php): failed to open stream: No such file or directory in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/reports/print_plantilla_3.php on line 8
+[11-Jun-2019 13:27:03 America/Mexico_City] PHP Warning:  require(../../../fpdf/fpdf.php): failed to open stream: No such file or directory in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/reports/print_plantilla_3.php on line 8
+[11-Jun-2019 13:27:03 America/Mexico_City] PHP Fatal error:  require(): Failed opening required '../../../fpdf/fpdf.php' (include_path='.:/opt/cpanel/ea-php56/root/usr/share/pear') in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/reports/print_plantilla_3.php on line 8
+[11-Jun-2019 13:27:04 America/Mexico_City] PHP Warning:  require(../../../fpdf/fpdf.php): failed to open stream: No such file or directory in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/reports/print_plantilla_3.php on line 8
+[11-Jun-2019 13:27:04 America/Mexico_City] PHP Warning:  require(../../../fpdf/fpdf.php): failed to open stream: No such file or directory in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/reports/print_plantilla_3.php on line 8
+[11-Jun-2019 13:27:04 America/Mexico_City] PHP Fatal error:  require(): Failed opening required '../../../fpdf/fpdf.php' (include_path='.:/opt/cpanel/ea-php56/root/usr/share/pear') in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/reports/print_plantilla_3.php on line 8
+[11-Jun-2019 13:27:29 America/Mexico_City] PHP Warning:  require(../../../fpdf/fpdf.php): failed to open stream: No such file or directory in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/reports/print_plantilla_3.php on line 8
+[11-Jun-2019 13:27:29 America/Mexico_City] PHP Warning:  require(../../../fpdf/fpdf.php): failed to open stream: No such file or directory in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/reports/print_plantilla_3.php on line 8
+[11-Jun-2019 13:27:29 America/Mexico_City] PHP Fatal error:  require(): Failed opening required '../../../fpdf/fpdf.php' (include_path='.:/opt/cpanel/ea-php56/root/usr/share/pear') in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/reports/print_plantilla_3.php on line 8
+[11-Jun-2019 13:32:39 America/Mexico_City] PHP Warning:  require(../../../fpdf/fpdf.php): failed to open stream: No such file or directory in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/reports/print_plantilla_3.php on line 8
+[11-Jun-2019 13:32:39 America/Mexico_City] PHP Warning:  require(../../../fpdf/fpdf.php): failed to open stream: No such file or directory in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/reports/print_plantilla_3.php on line 8
+[11-Jun-2019 13:32:39 America/Mexico_City] PHP Fatal error:  require(): Failed opening required '../../../fpdf/fpdf.php' (include_path='.:/opt/cpanel/ea-php56/root/usr/share/pear') in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/reports/print_plantilla_3.php on line 8
+[11-Jun-2019 13:47:48 America/Mexico_City] PHP Warning:  require(../../../fpdf/fpdf.php): failed to open stream: No such file or directory in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/reports/print_plantilla_3.php on line 8
+[11-Jun-2019 13:47:48 America/Mexico_City] PHP Warning:  require(../../../fpdf/fpdf.php): failed to open stream: No such file or directory in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/reports/print_plantilla_3.php on line 8
+[11-Jun-2019 13:47:48 America/Mexico_City] PHP Fatal error:  require(): Failed opening required '../../../fpdf/fpdf.php' (include_path='.:/opt/cpanel/ea-php56/root/usr/share/pear') in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/reports/print_plantilla_3.php on line 8
+[11-Jun-2019 13:48:50 America/Mexico_City] PHP Warning:  require(../../../fpdf/fpdf.php): failed to open stream: No such file or directory in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/reports/print_plantilla_3.php on line 8
+[11-Jun-2019 13:48:50 America/Mexico_City] PHP Warning:  require(../../../fpdf/fpdf.php): failed to open stream: No such file or directory in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/reports/print_plantilla_3.php on line 8
+[11-Jun-2019 13:48:50 America/Mexico_City] PHP Fatal error:  require(): Failed opening required '../../../fpdf/fpdf.php' (include_path='.:/opt/cpanel/ea-php56/root/usr/share/pear') in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/reports/print_plantilla_3.php on line 8
+[11-Jun-2019 13:49:27 America/Mexico_City] PHP Warning:  require(../../../fpdf/fpdf.php): failed to open stream: No such file or directory in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/reports/print_plantilla_3.php on line 8
+[11-Jun-2019 13:49:27 America/Mexico_City] PHP Warning:  require(../../../fpdf/fpdf.php): failed to open stream: No such file or directory in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/reports/print_plantilla_3.php on line 8
+[11-Jun-2019 13:49:27 America/Mexico_City] PHP Fatal error:  require(): Failed opening required '../../../fpdf/fpdf.php' (include_path='.:/opt/cpanel/ea-php56/root/usr/share/pear') in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/reports/print_plantilla_3.php on line 8
+[11-Jun-2019 13:50:58 America/Mexico_City] PHP Warning:  require(../../../fpdf/fpdf.php): failed to open stream: No such file or directory in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/reports/print_plantilla_3.php on line 8
+[11-Jun-2019 13:50:58 America/Mexico_City] PHP Warning:  require(../../../fpdf/fpdf.php): failed to open stream: No such file or directory in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/reports/print_plantilla_3.php on line 8
+[11-Jun-2019 13:50:58 America/Mexico_City] PHP Fatal error:  require(): Failed opening required '../../../fpdf/fpdf.php' (include_path='.:/opt/cpanel/ea-php56/root/usr/share/pear') in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/reports/print_plantilla_3.php on line 8
+[11-Jun-2019 13:51:47 America/Mexico_City] PHP Warning:  require(../../../fpdf/fpdf.php): failed to open stream: No such file or directory in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/reports/print_plantilla_3.php on line 8
+[11-Jun-2019 13:51:47 America/Mexico_City] PHP Warning:  require(../../../fpdf/fpdf.php): failed to open stream: No such file or directory in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/reports/print_plantilla_3.php on line 8
+[11-Jun-2019 13:51:47 America/Mexico_City] PHP Fatal error:  require(): Failed opening required '../../../fpdf/fpdf.php' (include_path='.:/opt/cpanel/ea-php56/root/usr/share/pear') in /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/reports/print_plantilla_3.php on line 8
+[11-Jun-2019 14:09:07 America/Mexico_City] PHP Warning:  getimagesize(../../../utl_tickets/codigo_ok.jpg): failed to open stream: No such file or directory in /home/labora41/public_html/sysarcaweb_1.0/fpdf/fpdf.php on line 1242
+[11-Jun-2019 14:09:07 America/Mexico_City] PHP Fatal error:  Uncaught exception 'Exception' with message 'FPDF error: Missing or incorrect image file: ../../../utl_tickets/codigo_ok.jpg' in /home/labora41/public_html/sysarcaweb_1.0/fpdf/fpdf.php:273
+Stack trace:
+#0 /home/labora41/public_html/sysarcaweb_1.0/fpdf/fpdf.php(1244): FPDF->Error('Missing or inco...')
+#1 /home/labora41/public_html/sysarcaweb_1.0/fpdf/fpdf.php(887): FPDF->_parsejpg('../../../utl_ti...')
+#2 /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/reports/print_plantilla_3.php(156): FPDF->Image('../../../utl_ti...', 170, 50, 30, 30)
+#3 /home/labora41/public_html/sysarcaweb_1.0/fpdf/fpdf.php(336): PDF->Header()
+#4 /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/reports/print_plantilla_3.php(347): FPDF->AddPage()
+#5 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/fpdf/fpdf.php on line 273
+[22-Jun-2019 17:39:34 America/Mexico_City] PHP Warning:  fopen(../../pdf_graficas/82115_236.png): failed to open stream: No such file or directory in /home/labora41/public_html/sysarcaweb_1.0/fpdf/fpdf.php on line 1261
+[22-Jun-2019 17:39:34 America/Mexico_City] PHP Fatal error:  Uncaught exception 'Exception' with message 'FPDF error: Can't open image file: ../../pdf_graficas/82115_236.png' in /home/labora41/public_html/sysarcaweb_1.0/fpdf/fpdf.php:273
+Stack trace:
+#0 /home/labora41/public_html/sysarcaweb_1.0/fpdf/fpdf.php(1263): FPDF->Error('Can't open imag...')
+#1 /home/labora41/public_html/sysarcaweb_1.0/fpdf/fpdf.php(887): FPDF->_parsepng('../../pdf_grafi...')
+#2 /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/reports/print_plantilla_1_curva.php(384): FPDF->Image('../../pdf_grafi...', 20, 130, 160, 0)
+#3 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/fpdf/fpdf.php on line 273
+[22-Jun-2019 17:45:11 America/Mexico_City] PHP Warning:  fopen(../../pdf_graficas/82115_236.png): failed to open stream: No such file or directory in /home/labora41/public_html/sysarcaweb_1.0/fpdf/fpdf.php on line 1261
+[22-Jun-2019 17:45:11 America/Mexico_City] PHP Fatal error:  Uncaught exception 'Exception' with message 'FPDF error: Can't open image file: ../../pdf_graficas/82115_236.png' in /home/labora41/public_html/sysarcaweb_1.0/fpdf/fpdf.php:273
+Stack trace:
+#0 /home/labora41/public_html/sysarcaweb_1.0/fpdf/fpdf.php(1263): FPDF->Error('Can't open imag...')
+#1 /home/labora41/public_html/sysarcaweb_1.0/fpdf/fpdf.php(887): FPDF->_parsepng('../../pdf_grafi...')
+#2 /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/reports/print_plantilla_1_curva.php(384): FPDF->Image('../../pdf_grafi...', 20, 130, 160, 0)
+#3 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/fpdf/fpdf.php on line 273
+[22-Jun-2019 17:49:16 America/Mexico_City] PHP Warning:  fopen(../../pdf_graficas/82115_236.png): failed to open stream: No such file or directory in /home/labora41/public_html/sysarcaweb_1.0/fpdf/fpdf.php on line 1261
+[22-Jun-2019 17:49:16 America/Mexico_City] PHP Fatal error:  Uncaught exception 'Exception' with message 'FPDF error: Can't open image file: ../../pdf_graficas/82115_236.png' in /home/labora41/public_html/sysarcaweb_1.0/fpdf/fpdf.php:273
+Stack trace:
+#0 /home/labora41/public_html/sysarcaweb_1.0/fpdf/fpdf.php(1263): FPDF->Error('Can't open imag...')
+#1 /home/labora41/public_html/sysarcaweb_1.0/fpdf/fpdf.php(887): FPDF->_parsepng('../../pdf_grafi...')
+#2 /home/labora41/public_html/sysarcaweb_1.0/ag_confirma_v3.0/reports/print_plantilla_1_curva.php(384): FPDF->Image('../../pdf_grafi...', 20, 130, 160, 0)
+#3 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/fpdf/fpdf.php on line 273

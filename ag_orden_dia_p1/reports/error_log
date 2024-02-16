@@ -1,0 +1,1 @@
+[24-Jan-2019 08:11:30 America/Mexico_City] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home3/labora41/public_html/sysarcaweb/so_factura/config/conexion.php on line 11

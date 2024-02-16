@@ -1,0 +1,2 @@
+[29-Aug-2019 04:58:17 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/labora41/public_html/sysarcaweb_1.0/ag_orden_dia_ekg/reports/print_result.php on line 172
+[29-Aug-2019 06:05:08 UTC] PHP Parse error:  syntax error, unexpected '==' (T_IS_EQUAL) in /home/labora41/public_html/sysarcaweb_1.0/ag_orden_dia_ekg/reports/print_result.php on line 415

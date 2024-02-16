@@ -1,0 +1,12 @@
+[08-Sep-2020 11:23:28 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on boolean in /home/labora41/public_html/sysarcaweb_1.0/ag_orden_dia_pacientes/ag_orden_dia/plantilla_1_curva_5h/frm_registro_update.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/ag_orden_dia_pacientes/ag_orden_dia/plantilla_1_curva_5h/frm_registro_update.php on line 34
+[08-Sep-2020 11:23:32 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on boolean in /home/labora41/public_html/sysarcaweb_1.0/ag_orden_dia_pacientes/ag_orden_dia/plantilla_1_curva_5h/frm_registro_update.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/ag_orden_dia_pacientes/ag_orden_dia/plantilla_1_curva_5h/frm_registro_update.php on line 34
+[08-Sep-2020 11:23:50 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on boolean in /home/labora41/public_html/sysarcaweb_1.0/ag_orden_dia_pacientes/ag_orden_dia/plantilla_1_curva_5h/frm_registro_update.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/ag_orden_dia_pacientes/ag_orden_dia/plantilla_1_curva_5h/frm_registro_update.php on line 34

@@ -1,0 +1,1 @@
+[22-Jun-2019 22:39:09 UTC] PHP Warning:  file_put_contents(../../../pdf_graficas/82115_236.png): failed to open stream: No such file or directory in /home/labora41/public_html/sysarcaweb_1.0/ag_orden_dia_pacientes/ag_orden_dia/plantilla_1_curva_5h/guardar_img.php on line 19
