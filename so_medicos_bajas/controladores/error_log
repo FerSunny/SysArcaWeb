@@ -1,0 +1,21 @@
+[01-Aug-2019 13:25:13 America/Mexico_City] PHP Warning:  mysqli_query(): MySQL server has gone away in /home/labora41/public_html/sysarcaweb_1.0/so_medicos/controladores/registro_medicos.php on line 41
+[01-Aug-2019 13:25:13 America/Mexico_City] PHP Warning:  mysqli_query(): Error reading result set's header in /home/labora41/public_html/sysarcaweb_1.0/so_medicos/controladores/registro_medicos.php on line 41
+[01-Aug-2019 18:25:14 UTC] PHP Warning:  mysqli_connect(): (HY000/2002): Connection refused in /home/labora41/public_html/sysarcaweb_1.0/controladores/conex.php on line 8
+[01-Aug-2019 18:25:14 UTC] PHP Warning:  mysqli_connect(): (HY000/2002): Connection refused in /home/labora41/public_html/sysarcaweb_1.0/controladores/conex.php on line 8
+[01-Aug-2019 18:25:14 UTC] PHP Warning:  mysqli_connect(): (HY000/2002): Connection refused in /home/labora41/public_html/sysarcaweb_1.0/controladores/conex.php on line 8
+[01-Aug-2019 18:25:14 UTC] PHP Warning:  mysqli_connect(): (HY000/2002): Connection refused in /home/labora41/public_html/sysarcaweb_1.0/controladores/conex.php on line 8
+[01-Aug-2019 18:25:15 UTC] PHP Warning:  mysqli_connect(): (HY000/2002): Connection refused in /home/labora41/public_html/sysarcaweb_1.0/controladores/conex.php on line 8
+[01-Aug-2019 18:25:15 UTC] PHP Warning:  mysqli_connect(): (HY000/2002): Connection refused in /home/labora41/public_html/sysarcaweb_1.0/controladores/conex.php on line 8
+[01-Aug-2019 18:25:15 UTC] PHP Warning:  mysqli_connect(): (HY000/2002): Connection refused in /home/labora41/public_html/sysarcaweb_1.0/controladores/conex.php on line 8
+[01-Aug-2019 18:25:15 UTC] PHP Warning:  mysqli_connect(): (HY000/2002): Connection refused in /home/labora41/public_html/sysarcaweb_1.0/controladores/conex.php on line 8
+[01-Aug-2019 18:25:15 UTC] PHP Warning:  mysqli_connect(): (HY000/2002): Connection refused in /home/labora41/public_html/sysarcaweb_1.0/controladores/conex.php on line 8
+[01-Aug-2019 18:25:15 UTC] PHP Warning:  mysqli_connect(): (HY000/2002): Connection refused in /home/labora41/public_html/sysarcaweb_1.0/controladores/conex.php on line 8
+[01-Aug-2019 18:25:15 UTC] PHP Warning:  mysqli_connect(): (HY000/2002): Connection refused in /home/labora41/public_html/sysarcaweb_1.0/controladores/conex.php on line 8
+[01-Aug-2019 18:25:15 UTC] PHP Warning:  mysqli_connect(): (HY000/2002): Connection refused in /home/labora41/public_html/sysarcaweb_1.0/controladores/conex.php on line 8
+[01-Aug-2019 18:25:15 UTC] PHP Warning:  mysqli_connect(): (HY000/2002): Connection refused in /home/labora41/public_html/sysarcaweb_1.0/controladores/conex.php on line 8
+[01-Aug-2019 18:25:15 UTC] PHP Warning:  mysqli_connect(): (HY000/2002): Connection refused in /home/labora41/public_html/sysarcaweb_1.0/controladores/conex.php on line 8
+[01-Aug-2019 18:25:15 UTC] PHP Warning:  mysqli_connect(): (HY000/2002): Connection refused in /home/labora41/public_html/sysarcaweb_1.0/controladores/conex.php on line 8
+[01-Aug-2019 18:25:15 UTC] PHP Warning:  mysqli_connect(): (HY000/2002): Connection refused in /home/labora41/public_html/sysarcaweb_1.0/controladores/conex.php on line 8
+[01-Aug-2019 18:25:15 UTC] PHP Warning:  mysqli_connect(): (HY000/2002): Connection refused in /home/labora41/public_html/sysarcaweb_1.0/controladores/conex.php on line 8
+[01-Aug-2019 18:25:16 UTC] PHP Warning:  mysqli_connect(): (HY000/2002): Connection refused in /home/labora41/public_html/sysarcaweb_1.0/controladores/conex.php on line 8
+[01-Aug-2019 18:25:16 UTC] PHP Warning:  mysqli_connect(): (HY000/2002): Connection refused in /home/labora41/public_html/sysarcaweb_1.0/controladores/conex.php on line 8

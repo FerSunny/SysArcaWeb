@@ -1,0 +1,5 @@
+[21-Jun-2019 19:40:19 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 86 bytes) in /home/labora41/public_html/sysarcaweb_1.0/so_medicos/listar.php on line 22
+[01-Aug-2019 18:25:13 UTC] PHP Warning:  mysqli_query(): MySQL server has gone away in /home/labora41/public_html/sysarcaweb_1.0/so_medicos/listar.php on line 56
+[01-Aug-2019 18:25:14 UTC] PHP Warning:  mysqli_query(): Error reading result set's header in /home/labora41/public_html/sysarcaweb_1.0/so_medicos/listar.php on line 56
+[01-Aug-2019 18:25:16 UTC] PHP Warning:  mysqli_connect(): (HY000/2002): Connection refused in /home/labora41/public_html/sysarcaweb_1.0/controladores/conex.php on line 8
+[01-Aug-2019 18:25:16 UTC] PHP Warning:  mysqli_connect(): (HY000/2002): Connection refused in /home/labora41/public_html/sysarcaweb_1.0/controladores/conex.php on line 8

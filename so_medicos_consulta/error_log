@@ -1,0 +1,78 @@
+[25-Jun-2019 18:47:36 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 75 bytes) in /home/labora41/public_html/sysarcaweb_1.0/so_medicos_consulta/listar.php on line 22
+[26-Jun-2019 18:19:38 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 41005800 bytes) in /home/labora41/public_html/sysarcaweb_1.0/so_medicos_consulta/listar.php on line 16
+[26-Jun-2019 18:20:29 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 41005800 bytes) in /home/labora41/public_html/sysarcaweb_1.0/so_medicos_consulta/listar.php on line 16
+[28-Jun-2019 20:28:04 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 41005800 bytes) in /home/labora41/public_html/sysarcaweb_1.0/so_medicos_consulta/listar.php on line 16
+[30-Jun-2019 13:46:24 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 51742944 bytes) in /home/labora41/public_html/sysarcaweb_1.0/so_medicos_consulta/listar.php on line 16
+[30-Jun-2019 13:46:43 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 51742944 bytes) in /home/labora41/public_html/sysarcaweb_1.0/so_medicos_consulta/listar.php on line 16
+[01-Jul-2019 14:49:33 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 51742944 bytes) in /home/labora41/public_html/sysarcaweb_1.0/so_medicos_consulta/listar.php on line 16
+[02-Jul-2019 18:18:48 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 86532864 bytes) in /home/labora41/public_html/sysarcaweb_1.0/so_medicos_consulta/listar.php on line 16
+[04-Jul-2019 17:45:30 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 108353784 bytes) in /home/labora41/public_html/sysarcaweb_1.0/so_medicos_consulta/listar.php on line 16
+[04-Jul-2019 23:01:12 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 111684408 bytes) in /home/labora41/public_html/sysarcaweb_1.0/so_medicos_consulta/listar.php on line 16
+[04-Jul-2019 23:02:25 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 111684408 bytes) in /home/labora41/public_html/sysarcaweb_1.0/so_medicos_consulta/listar.php on line 16
+[04-Jul-2019 23:02:47 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 111684408 bytes) in /home/labora41/public_html/sysarcaweb_1.0/so_medicos_consulta/listar.php on line 16
+[05-Jul-2019 19:31:59 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 111684408 bytes) in /home/labora41/public_html/sysarcaweb_1.0/so_medicos_consulta/listar.php on line 16
+[05-Jul-2019 22:12:22 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 111684408 bytes) in /home/labora41/public_html/sysarcaweb_1.0/so_medicos_consulta/listar.php on line 16
+[05-Jul-2019 23:36:48 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 111684408 bytes) in /home/labora41/public_html/sysarcaweb_1.0/so_medicos_consulta/listar.php on line 16
+[12-Jul-2019 17:08:31 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 116407896 bytes) in /home/labora41/public_html/sysarcaweb_1.0/so_medicos_consulta/listar.php on line 16
+[12-Jul-2019 17:22:22 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 116407896 bytes) in /home/labora41/public_html/sysarcaweb_1.0/so_medicos_consulta/listar.php on line 16
+[12-Jul-2019 17:50:10 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 116407896 bytes) in /home/labora41/public_html/sysarcaweb_1.0/so_medicos_consulta/listar.php on line 16
+[12-Jul-2019 18:00:13 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 116407896 bytes) in /home/labora41/public_html/sysarcaweb_1.0/so_medicos_consulta/listar.php on line 16
+[13-Jul-2019 02:08:55 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 130714584 bytes) in /home/labora41/public_html/sysarcaweb_1.0/so_medicos_consulta/listar.php on line 16
+[13-Jul-2019 02:09:40 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 130714584 bytes) in /home/labora41/public_html/sysarcaweb_1.0/so_medicos_consulta/listar.php on line 16
+[14-Jul-2019 18:44:31 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 139720152 bytes) in /home/labora41/public_html/sysarcaweb_1.0/so_medicos_consulta/listar.php on line 16
+[14-Jul-2019 18:45:03 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 139720152 bytes) in /home/labora41/public_html/sysarcaweb_1.0/so_medicos_consulta/listar.php on line 16
+[16-Jul-2019 22:13:04 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 139720152 bytes) in /home/labora41/public_html/sysarcaweb_1.0/so_medicos_consulta/listar.php on line 16
+[17-Jul-2019 01:03:57 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 160114416 bytes) in /home/labora41/public_html/sysarcaweb_1.0/so_medicos_consulta/listar.php on line 16
+[18-Jul-2019 14:32:56 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 160114416 bytes) in /home/labora41/public_html/sysarcaweb_1.0/so_medicos_consulta/listar.php on line 16
+[19-Jul-2019 23:44:24 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 160114416 bytes) in /home/labora41/public_html/sysarcaweb_1.0/so_medicos_consulta/listar.php on line 16
+[28-Jul-2019 16:50:03 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 203956632 bytes) in /home/labora41/public_html/sysarcaweb_1.0/so_medicos_consulta/listar.php on line 16
+[28-Jul-2019 23:37:26 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 203956632 bytes) in /home/labora41/public_html/sysarcaweb_1.0/so_medicos_consulta/listar.php on line 16
+[31-Jul-2019 19:31:56 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 417290808 bytes) in /home/labora41/public_html/sysarcaweb_1.0/so_medicos_consulta/listar.php on line 16
+[01-Aug-2019 17:26:39 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 462942480 bytes) in /home/labora41/public_html/sysarcaweb_1.0/so_medicos_consulta/listar.php on line 16
+[01-Aug-2019 18:25:13 UTC] PHP Warning:  mysqli_query(): MySQL server has gone away in /home/labora41/public_html/sysarcaweb_1.0/so_medicos_consulta/listar.php on line 34
+[01-Aug-2019 18:25:14 UTC] PHP Warning:  mysqli_query(): Error reading result set's header in /home/labora41/public_html/sysarcaweb_1.0/so_medicos_consulta/listar.php on line 34
+[01-Aug-2019 18:25:13 UTC] PHP Warning:  mysqli_query(): MySQL server has gone away in /home/labora41/public_html/sysarcaweb_1.0/so_medicos_consulta/listar.php on line 34
+[01-Aug-2019 18:25:14 UTC] PHP Warning:  mysqli_query(): Error reading result set's header in /home/labora41/public_html/sysarcaweb_1.0/so_medicos_consulta/listar.php on line 34
+[01-Aug-2019 18:25:13 UTC] PHP Warning:  mysqli_query(): MySQL server has gone away in /home/labora41/public_html/sysarcaweb_1.0/so_medicos_consulta/listar.php on line 34
+[01-Aug-2019 18:25:14 UTC] PHP Warning:  mysqli_query(): Error reading result set's header in /home/labora41/public_html/sysarcaweb_1.0/so_medicos_consulta/listar.php on line 34
+[01-Aug-2019 18:25:13 UTC] PHP Warning:  mysqli_query(): MySQL server has gone away in /home/labora41/public_html/sysarcaweb_1.0/so_medicos_consulta/listar.php on line 34
+[01-Aug-2019 18:25:14 UTC] PHP Warning:  mysqli_query(): Error reading result set's header in /home/labora41/public_html/sysarcaweb_1.0/so_medicos_consulta/listar.php on line 34
+[01-Aug-2019 18:25:13 UTC] PHP Warning:  mysqli_query(): MySQL server has gone away in /home/labora41/public_html/sysarcaweb_1.0/so_medicos_consulta/listar.php on line 34
+[01-Aug-2019 18:25:14 UTC] PHP Warning:  mysqli_query(): Error reading result set's header in /home/labora41/public_html/sysarcaweb_1.0/so_medicos_consulta/listar.php on line 34
+[01-Aug-2019 18:25:13 UTC] PHP Warning:  Empty row packet body in /home/labora41/public_html/sysarcaweb_1.0/so_medicos_consulta/listar.php on line 16
+[01-Aug-2019 18:25:13 UTC] PHP Warning:  Empty row packet body in /home/labora41/public_html/sysarcaweb_1.0/so_medicos_consulta/listar.php on line 16
+[01-Aug-2019 18:25:13 UTC] PHP Warning:  mysqli_query(): MySQL server has gone away in /home/labora41/public_html/sysarcaweb_1.0/so_medicos_consulta/listar.php on line 34
+[01-Aug-2019 18:25:14 UTC] PHP Warning:  mysqli_query(): Error reading result set's header in /home/labora41/public_html/sysarcaweb_1.0/so_medicos_consulta/listar.php on line 34
+[01-Aug-2019 18:25:13 UTC] PHP Warning:  Empty row packet body in /home/labora41/public_html/sysarcaweb_1.0/so_medicos_consulta/listar.php on line 16
+[01-Aug-2019 18:25:13 UTC] PHP Warning:  Empty row packet body in /home/labora41/public_html/sysarcaweb_1.0/so_medicos_consulta/listar.php on line 16
+[01-Aug-2019 18:25:13 UTC] PHP Warning:  Empty row packet body in /home/labora41/public_html/sysarcaweb_1.0/so_medicos_consulta/listar.php on line 16
+[01-Aug-2019 18:25:13 UTC] PHP Warning:  Empty row packet body in /home/labora41/public_html/sysarcaweb_1.0/so_medicos_consulta/listar.php on line 16
+[01-Aug-2019 18:25:13 UTC] PHP Warning:  Empty row packet body in /home/labora41/public_html/sysarcaweb_1.0/so_medicos_consulta/listar.php on line 16
+[01-Aug-2019 18:25:13 UTC] PHP Warning:  Empty row packet body in /home/labora41/public_html/sysarcaweb_1.0/so_medicos_consulta/listar.php on line 16
+[01-Aug-2019 18:25:13 UTC] PHP Warning:  Empty row packet body in /home/labora41/public_html/sysarcaweb_1.0/so_medicos_consulta/listar.php on line 16
+[01-Aug-2019 18:25:13 UTC] PHP Warning:  Empty row packet body in /home/labora41/public_html/sysarcaweb_1.0/so_medicos_consulta/listar.php on line 16
+[01-Aug-2019 18:25:13 UTC] PHP Warning:  Empty row packet body in /home/labora41/public_html/sysarcaweb_1.0/so_medicos_consulta/listar.php on line 16
+[01-Aug-2019 18:25:13 UTC] PHP Warning:  Empty row packet body in /home/labora41/public_html/sysarcaweb_1.0/so_medicos_consulta/listar.php on line 16
+[01-Aug-2019 18:25:13 UTC] PHP Warning:  Empty row packet body in /home/labora41/public_html/sysarcaweb_1.0/so_medicos_consulta/listar.php on line 16
+[01-Aug-2019 18:25:13 UTC] PHP Warning:  Empty row packet body in /home/labora41/public_html/sysarcaweb_1.0/so_medicos_consulta/listar.php on line 16
+[01-Aug-2019 18:25:13 UTC] PHP Warning:  Empty row packet body in /home/labora41/public_html/sysarcaweb_1.0/so_medicos_consulta/listar.php on line 16
+[01-Aug-2019 18:25:13 UTC] PHP Warning:  mysqli_query(): MySQL server has gone away in /home/labora41/public_html/sysarcaweb_1.0/so_medicos_consulta/listar.php on line 34
+[01-Aug-2019 18:25:14 UTC] PHP Warning:  mysqli_query(): Error reading result set's header in /home/labora41/public_html/sysarcaweb_1.0/so_medicos_consulta/listar.php on line 34
+[01-Aug-2019 18:25:13 UTC] PHP Warning:  mysqli_query(): MySQL server has gone away in /home/labora41/public_html/sysarcaweb_1.0/so_medicos_consulta/listar.php on line 34
+[01-Aug-2019 18:25:14 UTC] PHP Warning:  mysqli_query(): Error reading result set's header in /home/labora41/public_html/sysarcaweb_1.0/so_medicos_consulta/listar.php on line 34
+[01-Aug-2019 18:25:15 UTC] PHP Warning:  mysqli_query(): (00000/0):  in /home/labora41/public_html/sysarcaweb_1.0/so_medicos_consulta/listar.php on line 16
+[01-Aug-2019 18:25:16 UTC] PHP Warning:  mysqli_query(): (00000/0):  in /home/labora41/public_html/sysarcaweb_1.0/so_medicos_consulta/listar.php on line 16
+[01-Aug-2019 18:25:16 UTC] PHP Warning:  mysqli_query(): (00000/0):  in /home/labora41/public_html/sysarcaweb_1.0/so_medicos_consulta/listar.php on line 16
+[01-Aug-2019 18:25:16 UTC] PHP Warning:  mysqli_query(): (00000/0):  in /home/labora41/public_html/sysarcaweb_1.0/so_medicos_consulta/listar.php on line 16
+[01-Aug-2019 18:25:16 UTC] PHP Warning:  mysqli_query(): (00000/0):  in /home/labora41/public_html/sysarcaweb_1.0/so_medicos_consulta/listar.php on line 16
+[01-Aug-2019 18:25:16 UTC] PHP Warning:  mysqli_query(): (00000/0):  in /home/labora41/public_html/sysarcaweb_1.0/so_medicos_consulta/listar.php on line 16
+[01-Aug-2019 18:25:16 UTC] PHP Warning:  mysqli_query(): (00000/0):  in /home/labora41/public_html/sysarcaweb_1.0/so_medicos_consulta/listar.php on line 16
+[01-Aug-2019 18:25:16 UTC] PHP Warning:  mysqli_query(): (00000/0):  in /home/labora41/public_html/sysarcaweb_1.0/so_medicos_consulta/listar.php on line 16
+[01-Aug-2019 18:25:16 UTC] PHP Warning:  mysqli_query(): (00000/0):  in /home/labora41/public_html/sysarcaweb_1.0/so_medicos_consulta/listar.php on line 16
+[01-Aug-2019 18:25:16 UTC] PHP Warning:  mysqli_query(): (00000/0):  in /home/labora41/public_html/sysarcaweb_1.0/so_medicos_consulta/listar.php on line 16
+[01-Aug-2019 18:25:17 UTC] PHP Warning:  mysqli_query(): (00000/0):  in /home/labora41/public_html/sysarcaweb_1.0/so_medicos_consulta/listar.php on line 16
+[01-Aug-2019 18:25:17 UTC] PHP Warning:  mysqli_query(): (00000/0):  in /home/labora41/public_html/sysarcaweb_1.0/so_medicos_consulta/listar.php on line 16
+[01-Aug-2019 18:25:17 UTC] PHP Warning:  mysqli_query(): (00000/0):  in /home/labora41/public_html/sysarcaweb_1.0/so_medicos_consulta/listar.php on line 16
+[01-Aug-2019 18:25:18 UTC] PHP Warning:  mysqli_query(): (00000/0):  in /home/labora41/public_html/sysarcaweb_1.0/so_medicos_consulta/listar.php on line 16
+[01-Aug-2019 18:25:18 UTC] PHP Warning:  mysqli_query(): (00000/0):  in /home/labora41/public_html/sysarcaweb_1.0/so_medicos_consulta/listar.php on line 16
+[01-Aug-2019 18:25:18 UTC] PHP Warning:  mysqli_query(): (00000/0):  in /home/labora41/public_html/sysarcaweb_1.0/so_medicos_consulta/listar.php on line 16

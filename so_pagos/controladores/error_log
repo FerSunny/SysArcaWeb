@@ -1,0 +1,4 @@
+[04-Dec-2018 16:47:42 America/Mexico_City] PHP Warning:  mysqli_free_result() expects parameter 1 to be mysqli_result, boolean given in /home3/labora41/public_html/sysarcaweb/so_pagos/controladores/actualizar.php on line 28
+[07-Jan-2019 16:17:18 America/Mexico_City] PHP Warning:  mysqli_free_result() expects parameter 1 to be mysqli_result, boolean given in /home3/labora41/public_html/sysarcaweb/so_pagos/controladores/actualizar.php on line 28
+[28-Jan-2019 10:14:24 America/Mexico_City] PHP Warning:  mysqli_free_result() expects parameter 1 to be mysqli_result, boolean given in /home3/labora41/public_html/sysarcaweb/so_pagos/controladores/actualizar.php on line 28
+[06-Feb-2019 16:43:53 America/Mexico_City] PHP Warning:  mysqli_free_result() expects parameter 1 to be mysqli_result, boolean given in /home3/labora41/public_html/sysarcaweb/so_pagos/controladores/actualizar.php on line 28
