@@ -1,0 +1,2 @@
+[13-Jun-2020 16:58:18 America/Mexico_City] PHP Warning:  unlink(../img/19.jpg): No such file or directory in /home/labora41/public_html/sysarcaweb_1.0/so_carrusel/datos_ajax/editar.php on line 27
+[13-Jun-2020 16:59:25 America/Mexico_City] PHP Warning:  unlink(../img/19.jpg): No such file or directory in /home/labora41/public_html/sysarcaweb_1.0/so_carrusel/datos_ajax/editar.php on line 27

@@ -1,0 +1,6 @@
+[13-Sep-2019 01:50:49 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on boolean in /home/labora41/public_html/sysarcaweb_1.0/se_reporte_asistencia/reportes/funciones.php:352
+Stack trace:
+#0 /home/labora41/public_html/sysarcaweb_1.0/se_reporte_asistencia/reportes/asistencia.php(81): Asistencia->Observaciones(19, '2019-09-09')
+#1 /home/labora41/public_html/sysarcaweb_1.0/se_reporte_asistencia/reportes/asistencia.php(128): PDF->Obs(Array, '2019-09-09')
+#2 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/se_reporte_asistencia/reportes/funciones.php on line 352

@@ -1,0 +1,2 @@
+[13-Jul-2020 12:40:35 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home/labora41/public_html/sysarcaweb_1.0/select/select_estado.php on line 48
+[01-Aug-2020 18:12:46 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home/labora41/public_html/sysarcaweb_1.0/select/select_estado.php on line 48
