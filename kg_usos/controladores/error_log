@@ -1,0 +1,12 @@
+[13-Oct-2019 18:57:27 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to a member function execute() on boolean in /home/labora41/public_html/sysarcaweb_1.0/kg_usos/controladores/agregar.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/kg_usos/controladores/agregar.php on line 14
+[13-Oct-2019 18:57:35 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to a member function execute() on boolean in /home/labora41/public_html/sysarcaweb_1.0/kg_usos/controladores/agregar.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/kg_usos/controladores/agregar.php on line 14
+[13-Oct-2019 18:57:35 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to a member function execute() on boolean in /home/labora41/public_html/sysarcaweb_1.0/kg_usos/controladores/agregar.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/kg_usos/controladores/agregar.php on line 14

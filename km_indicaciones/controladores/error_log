@@ -1,0 +1,2 @@
+[15-Oct-2020 18:01:47 UTC] PHP Warning:  mysqli_close(): Couldn't fetch mysqli in /home/labora41/public_html/sysarcaweb_1.0/km_indicaciones/controladores/eliminar_muestra.php on line 66
+[15-Oct-2020 18:01:52 UTC] PHP Warning:  mysqli_close(): Couldn't fetch mysqli in /home/labora41/public_html/sysarcaweb_1.0/km_indicaciones/controladores/eliminar_muestra.php on line 66
