@@ -1,0 +1,88 @@
+<?php 
+	include("../controladores/conex.php");
+	date_default_timezone_set('America/Mexico_City');
+	$FechaHoy=date("d/m/Y : H : i : s");
+?>
+
+<form id="form_unidad" action="" method="post">
+		<div class="modal fade" id="myModals" role="dialog">
+			<div class="modal-dialog">
+				<!-- Modal content-->
+					<div class="modal-content">
+						<div class="modal-header">
+							<h2 style="color:blue;text-align:center" class="modal-title">
+								 Nueva Unidad de medida</h2>
+									<button type="button"  class="close" data-dismiss="modal">&times;</button>
+								</div>
+								<div style="color:#000000;background:#EFFBF5" class="modal-body">
+									<div class="row">
+									 <div class="col">
+											<div class="md-form mt-0">
+												<div class="md-form">                
+												<input type="text" name="unidad" id="unidad" class="form-control" maxlength="30" required>
+											<label for="unidad">Unidad de medida</label>
+										</div>
+									</div>
+								</div>
+								 <div class="col">
+									<div class="md-form mt-0">
+										<div class="md-form">
+											<input type="text" name="abrev" id="abrev" class="form-control" maxlength="15" required>
+											<label for="abrev">Abreviatura</label>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					<div class="modal-footer">
+							<button type="submit" class="btn btn-success" id="btniniciar"  >Ingresar</button>
+							<button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+					</div>
+			</div>
+		</div>
+</div>
+</form>
+
+<!-- Editar -->
+
+<form id="frmedit" class="form-horizontal" method="POST">
+		<div id="cuadro1" class="col-sm-12 col-md-12 col-lg-12 ocultar">
+			<div class="modal fade" id="form_editar" tabindex="-1" role="dialog" aria-labelledby="modalEliminarLabel">
+					<div class="modal-dialog" role="document">
+						<div class="modal-content">
+							<input type="hidden" class="form-control  form-control-sm" id="ca" name="ca" minlength="1" maxlength="100" >
+									<div class="modal-header">
+											<h2 style="color:blue;text-align:center" class="modal-title" id="modalEliminarLabel">
+														Editar Unidad de medida</h2>
+											<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+										</div>
+									 <div style="color:#000000;background:#EFFBF5" class="modal-body">
+									<div class="row">
+									 <div class="col">
+											<div class="md-form mt-0">
+												<div class="md-form">                
+												<input type="text" name="unidad" id="unidad" class="form-control" maxlength="30" required>
+											<label for="unidad">Unidad de medida</label>
+										</div>
+									</div>
+								</div>
+								 <div class="col">
+									<div class="md-form mt-0">
+										<div class="md-form">
+											<input type="text" name="abrev" id="abrev" class="form-control" maxlength="15" required>
+											<label for="abrev">Abreviatura</label>
+										</div>
+									</div>
+								</div>
+							</div>
+								</div><!--Cierre modal body-->
+								<div class="modal-footer">
+										<button type="submit" class="btn btn-success" id="btniniciar"  >Ingresar</button>
+										<button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+								</div>
+						</div>
+				</div>
+			</div>
+		</div>
+</form>
+

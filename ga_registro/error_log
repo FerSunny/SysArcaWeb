@@ -1,0 +1,4 @@
+[24-Jan-2019 13:10:06 UTC] PHP Warning:  mysqli_connect(): (HY000/2002): Connection refused in /home3/labora41/public_html/sysarcaweb/controladores/conex.php on line 8
+[24-Jan-2019 14:11:29 UTC] PHP Warning:  mysqli_connect(): (HY000/2002): Connection refused in /home3/labora41/public_html/sysarcaweb/controladores/conex.php on line 8
+[24-Jan-2019 14:11:36 UTC] PHP Warning:  mysqli_connect(): (HY000/2002): Connection refused in /home3/labora41/public_html/sysarcaweb/controladores/conex.php on line 8
+[05-Dec-2019 18:46:45 UTC] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'ansp'@'localhost' (using password: YES) in /home/labora41/public_html/sysarcaweb_1.0/controladores/conex.php on line 29
