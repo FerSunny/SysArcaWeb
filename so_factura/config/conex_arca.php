@@ -2,8 +2,8 @@
 // conexion a la base de datos bd_arca
 	$server = "localhost";
 	
-	$user = "labora41_root";
-	$password = "ArcaRoot_2017";
+	$user = "root";
+	$password = "";
 	$bd = "labora41_bd_arca";
 /*
 	$user = "root";
