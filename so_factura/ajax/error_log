@@ -1,0 +1,828 @@
+[23-Nov-2018 18:22:44 America/Mexico_City] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home/labora41/public_html/sysarcaweb/so_factura/config/conexion.php on line 11
+[23-Nov-2018 18:23:41 America/Mexico_City] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home/labora41/public_html/sysarcaweb/so_factura/config/conexion.php on line 11
+[01-Dec-2018 10:24:08 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[01-Dec-2018 10:51:47 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[01-Dec-2018 10:53:11 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[03-Dec-2018 07:20:36 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[03-Dec-2018 09:21:17 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[03-Dec-2018 09:22:51 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[03-Dec-2018 11:05:48 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[03-Dec-2018 12:05:10 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[03-Dec-2018 15:01:48 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[03-Dec-2018 19:26:55 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[04-Dec-2018 08:52:21 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[04-Dec-2018 08:56:48 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[04-Dec-2018 12:47:16 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[04-Dec-2018 14:12:49 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[04-Dec-2018 18:23:51 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[05-Dec-2018 10:29:55 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[05-Dec-2018 12:00:33 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[05-Dec-2018 14:36:45 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[05-Dec-2018 14:38:04 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[05-Dec-2018 14:38:43 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[05-Dec-2018 14:40:22 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[05-Dec-2018 14:41:34 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[05-Dec-2018 14:42:09 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[05-Dec-2018 15:15:49 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[05-Dec-2018 15:17:31 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[05-Dec-2018 15:28:19 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[05-Dec-2018 15:48:22 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[06-Dec-2018 10:25:36 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[06-Dec-2018 10:43:50 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[06-Dec-2018 16:12:18 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[06-Dec-2018 17:05:36 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[07-Dec-2018 10:43:19 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[07-Dec-2018 11:32:42 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[07-Dec-2018 16:44:01 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[08-Dec-2018 10:13:40 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[08-Dec-2018 17:07:59 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[08-Dec-2018 17:09:02 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[09-Dec-2018 10:06:11 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[10-Dec-2018 13:16:41 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[10-Dec-2018 15:59:22 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[10-Dec-2018 16:09:51 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[10-Dec-2018 16:13:47 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[10-Dec-2018 16:37:37 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[10-Dec-2018 17:08:59 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[10-Dec-2018 18:35:56 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[10-Dec-2018 18:36:16 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[10-Dec-2018 18:48:14 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[11-Dec-2018 09:59:01 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[11-Dec-2018 10:55:30 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[11-Dec-2018 14:55:13 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[12-Dec-2018 08:24:27 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[12-Dec-2018 09:31:48 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[13-Dec-2018 17:12:58 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[13-Dec-2018 17:53:35 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[14-Dec-2018 09:04:35 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[14-Dec-2018 11:12:49 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[14-Dec-2018 11:39:58 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[14-Dec-2018 13:44:07 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[14-Dec-2018 16:03:37 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[14-Dec-2018 16:28:34 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[14-Dec-2018 16:58:37 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[15-Dec-2018 09:25:29 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[15-Dec-2018 10:08:22 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[15-Dec-2018 11:36:21 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[15-Dec-2018 17:06:49 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[17-Dec-2018 07:23:58 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[17-Dec-2018 09:53:41 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[17-Dec-2018 16:42:36 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[17-Dec-2018 17:09:14 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[18-Dec-2018 09:05:32 America/Mexico_City] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home3/labora41/public_html/sysarcaweb/so_factura/config/conexion.php on line 11
+[18-Dec-2018 09:05:46 America/Mexico_City] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home3/labora41/public_html/sysarcaweb/so_factura/config/conexion.php on line 11
+[18-Dec-2018 10:36:29 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[18-Dec-2018 10:37:47 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[18-Dec-2018 12:02:42 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[18-Dec-2018 17:59:36 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[19-Dec-2018 08:49:32 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[19-Dec-2018 16:08:47 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[19-Dec-2018 16:19:02 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[19-Dec-2018 16:21:55 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[20-Dec-2018 11:53:28 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[21-Dec-2018 08:21:19 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[21-Dec-2018 08:43:01 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[21-Dec-2018 09:05:50 America/Mexico_City] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home3/labora41/public_html/sysarcaweb/so_factura/config/conexion.php on line 11
+[21-Dec-2018 09:05:51 America/Mexico_City] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home3/labora41/public_html/sysarcaweb/so_factura/config/conexion.php on line 11
+[21-Dec-2018 09:05:53 America/Mexico_City] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home3/labora41/public_html/sysarcaweb/so_factura/config/conexion.php on line 11
+[21-Dec-2018 09:05:55 America/Mexico_City] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home3/labora41/public_html/sysarcaweb/so_factura/config/conexion.php on line 11
+[21-Dec-2018 09:05:58 America/Mexico_City] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home3/labora41/public_html/sysarcaweb/so_factura/config/conexion.php on line 11
+[21-Dec-2018 09:05:58 America/Mexico_City] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home3/labora41/public_html/sysarcaweb/so_factura/config/conexion.php on line 11
+[21-Dec-2018 09:06:02 America/Mexico_City] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home3/labora41/public_html/sysarcaweb/so_factura/config/conexion.php on line 11
+[21-Dec-2018 09:06:08 America/Mexico_City] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home3/labora41/public_html/sysarcaweb/so_factura/config/conexion.php on line 11
+[21-Dec-2018 10:11:21 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[21-Dec-2018 16:23:06 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[22-Dec-2018 10:55:48 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[22-Dec-2018 11:47:01 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[23-Dec-2018 11:30:50 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[23-Dec-2018 11:31:29 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[24-Dec-2018 12:15:37 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[24-Dec-2018 12:18:07 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[27-Dec-2018 08:53:18 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[27-Dec-2018 15:13:41 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[27-Dec-2018 16:50:25 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[28-Dec-2018 08:46:05 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[28-Dec-2018 09:19:35 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[28-Dec-2018 09:25:21 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[28-Dec-2018 10:32:10 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[28-Dec-2018 16:02:19 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[28-Dec-2018 16:05:03 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[28-Dec-2018 16:07:37 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[28-Dec-2018 17:06:59 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[29-Dec-2018 09:23:27 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[29-Dec-2018 09:46:47 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[29-Dec-2018 09:48:41 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[29-Dec-2018 09:50:34 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[29-Dec-2018 09:56:09 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[29-Dec-2018 09:57:15 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[29-Dec-2018 10:04:28 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[29-Dec-2018 10:05:33 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[29-Dec-2018 10:06:44 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[29-Dec-2018 10:07:35 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[29-Dec-2018 10:08:54 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[29-Dec-2018 10:09:50 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[29-Dec-2018 10:13:01 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[29-Dec-2018 10:17:56 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[29-Dec-2018 10:28:51 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[29-Dec-2018 10:30:01 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[29-Dec-2018 10:31:57 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[29-Dec-2018 10:33:15 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[29-Dec-2018 10:34:59 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[29-Dec-2018 10:36:05 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[29-Dec-2018 10:38:06 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[29-Dec-2018 10:44:20 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[29-Dec-2018 10:46:39 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[29-Dec-2018 10:47:25 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[29-Dec-2018 10:49:13 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[29-Dec-2018 10:51:17 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[29-Dec-2018 10:53:03 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[29-Dec-2018 10:53:53 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[29-Dec-2018 10:54:32 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[29-Dec-2018 10:55:17 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[29-Dec-2018 11:00:09 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[29-Dec-2018 11:00:56 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[29-Dec-2018 11:02:13 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[29-Dec-2018 11:03:09 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[29-Dec-2018 11:04:09 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[29-Dec-2018 11:05:17 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[29-Dec-2018 11:05:59 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[29-Dec-2018 11:06:43 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[29-Dec-2018 11:07:24 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[29-Dec-2018 11:08:16 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[29-Dec-2018 11:09:07 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[29-Dec-2018 11:11:04 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[29-Dec-2018 11:12:36 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[29-Dec-2018 11:13:14 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[29-Dec-2018 11:14:12 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[29-Dec-2018 11:14:59 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[29-Dec-2018 13:15:30 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[29-Dec-2018 13:16:25 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[29-Dec-2018 13:17:09 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[29-Dec-2018 13:18:00 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[29-Dec-2018 13:19:27 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[29-Dec-2018 13:20:14 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[29-Dec-2018 13:21:30 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[29-Dec-2018 13:22:10 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[29-Dec-2018 13:22:55 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[29-Dec-2018 13:24:38 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[29-Dec-2018 13:25:31 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[29-Dec-2018 13:27:00 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[29-Dec-2018 13:28:00 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[29-Dec-2018 13:31:11 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[29-Dec-2018 13:31:54 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[29-Dec-2018 13:32:58 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[29-Dec-2018 13:34:23 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[29-Dec-2018 13:35:08 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[29-Dec-2018 13:36:12 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[29-Dec-2018 13:36:51 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[29-Dec-2018 13:38:22 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[29-Dec-2018 13:39:57 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[29-Dec-2018 13:40:53 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[29-Dec-2018 13:41:42 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[29-Dec-2018 13:42:57 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[29-Dec-2018 13:44:35 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[29-Dec-2018 13:45:38 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[29-Dec-2018 13:47:39 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[29-Dec-2018 13:49:35 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[29-Dec-2018 13:50:11 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[29-Dec-2018 13:51:05 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[29-Dec-2018 13:54:41 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[29-Dec-2018 13:56:00 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[29-Dec-2018 13:56:58 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[29-Dec-2018 13:58:48 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[29-Dec-2018 14:00:04 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[29-Dec-2018 14:00:59 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[29-Dec-2018 14:03:37 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[29-Dec-2018 14:05:02 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[29-Dec-2018 16:04:33 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[30-Dec-2018 09:09:37 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[30-Dec-2018 11:39:27 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[30-Dec-2018 11:40:20 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[31-Dec-2018 08:06:32 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[31-Dec-2018 08:10:29 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[02-Jan-2019 08:22:08 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[02-Jan-2019 09:28:11 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[02-Jan-2019 10:57:03 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[02-Jan-2019 10:57:47 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[02-Jan-2019 11:05:53 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[02-Jan-2019 15:24:56 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[02-Jan-2019 16:51:08 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[03-Jan-2019 11:29:19 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[03-Jan-2019 11:31:03 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[03-Jan-2019 11:32:50 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[03-Jan-2019 11:33:47 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[03-Jan-2019 11:35:27 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[03-Jan-2019 11:40:10 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[03-Jan-2019 11:41:14 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[03-Jan-2019 11:42:06 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[03-Jan-2019 14:51:50 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[03-Jan-2019 14:53:30 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[03-Jan-2019 15:04:07 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[03-Jan-2019 16:05:42 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[04-Jan-2019 08:48:59 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[04-Jan-2019 10:23:20 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[04-Jan-2019 10:44:58 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[04-Jan-2019 12:57:50 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[04-Jan-2019 16:23:44 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[04-Jan-2019 17:14:59 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[05-Jan-2019 08:59:22 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[05-Jan-2019 09:44:25 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[05-Jan-2019 16:03:12 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[07-Jan-2019 09:17:09 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[07-Jan-2019 12:05:30 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[07-Jan-2019 12:31:14 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[07-Jan-2019 12:36:11 America/Mexico_City] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home3/labora41/public_html/sysarcaweb/so_factura/config/conexion.php on line 11
+[07-Jan-2019 12:36:14 America/Mexico_City] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home3/labora41/public_html/sysarcaweb/so_factura/config/conexion.php on line 11
+[07-Jan-2019 16:03:08 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[08-Jan-2019 09:08:44 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[08-Jan-2019 11:30:28 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[08-Jan-2019 12:39:12 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[08-Jan-2019 12:45:02 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[08-Jan-2019 13:39:21 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[08-Jan-2019 16:10:29 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[09-Jan-2019 10:21:31 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[09-Jan-2019 11:17:46 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[09-Jan-2019 11:23:43 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[09-Jan-2019 12:36:56 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[09-Jan-2019 12:58:51 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[09-Jan-2019 14:22:28 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[09-Jan-2019 16:59:14 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[10-Jan-2019 16:28:34 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[11-Jan-2019 08:18:19 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[11-Jan-2019 08:32:30 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[11-Jan-2019 08:53:27 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[11-Jan-2019 11:02:06 America/Mexico_City] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home3/labora41/public_html/sysarcaweb/so_factura/config/conexion.php on line 11
+[11-Jan-2019 11:02:11 America/Mexico_City] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home3/labora41/public_html/sysarcaweb/so_factura/config/conexion.php on line 11
+[11-Jan-2019 11:02:13 America/Mexico_City] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home3/labora41/public_html/sysarcaweb/so_factura/config/conexion.php on line 11
+[11-Jan-2019 11:02:19 America/Mexico_City] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home3/labora41/public_html/sysarcaweb/so_factura/config/conexion.php on line 11
+[11-Jan-2019 16:52:28 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[12-Jan-2019 11:07:32 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[12-Jan-2019 14:47:36 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[12-Jan-2019 14:47:57 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[12-Jan-2019 15:18:57 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[12-Jan-2019 16:32:12 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[14-Jan-2019 08:52:42 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[14-Jan-2019 11:14:40 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[14-Jan-2019 12:57:08 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[14-Jan-2019 15:58:47 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[15-Jan-2019 14:50:14 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[15-Jan-2019 14:51:29 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[15-Jan-2019 15:41:26 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[15-Jan-2019 15:47:36 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[15-Jan-2019 15:48:10 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[15-Jan-2019 17:27:10 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[15-Jan-2019 17:42:10 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[16-Jan-2019 08:54:34 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[16-Jan-2019 14:37:10 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[16-Jan-2019 16:22:25 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[16-Jan-2019 16:50:14 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[17-Jan-2019 17:34:22 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[17-Jan-2019 17:41:47 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[17-Jan-2019 17:45:05 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[17-Jan-2019 18:36:29 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[17-Jan-2019 18:40:39 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[18-Jan-2019 08:50:33 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[18-Jan-2019 09:09:37 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[18-Jan-2019 09:35:05 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[18-Jan-2019 14:28:10 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[19-Jan-2019 12:23:23 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[19-Jan-2019 12:24:11 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[19-Jan-2019 13:37:37 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[19-Jan-2019 13:42:09 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[19-Jan-2019 15:19:43 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[20-Jan-2019 10:32:59 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[20-Jan-2019 14:09:55 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[21-Jan-2019 16:27:30 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[21-Jan-2019 16:30:00 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[21-Jan-2019 17:15:02 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[21-Jan-2019 17:21:21 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[21-Jan-2019 17:50:48 America/Mexico_City] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home3/labora41/public_html/sysarcaweb/so_factura/config/conexion.php on line 11
+[21-Jan-2019 17:50:53 America/Mexico_City] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home3/labora41/public_html/sysarcaweb/so_factura/config/conexion.php on line 11
+[21-Jan-2019 17:50:55 America/Mexico_City] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home3/labora41/public_html/sysarcaweb/so_factura/config/conexion.php on line 11
+[21-Jan-2019 17:50:56 America/Mexico_City] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home3/labora41/public_html/sysarcaweb/so_factura/config/conexion.php on line 11
+[22-Jan-2019 08:44:17 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[22-Jan-2019 08:56:49 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[22-Jan-2019 09:45:34 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[22-Jan-2019 12:00:03 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[22-Jan-2019 15:39:06 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[22-Jan-2019 15:40:14 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[22-Jan-2019 16:37:01 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[22-Jan-2019 18:18:51 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[23-Jan-2019 12:22:36 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[23-Jan-2019 13:42:47 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[23-Jan-2019 16:50:47 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[24-Jan-2019 07:10:12 America/Mexico_City] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home3/labora41/public_html/sysarcaweb/so_factura/config/conexion.php on line 11
+[24-Jan-2019 07:10:26 America/Mexico_City] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home3/labora41/public_html/sysarcaweb/so_factura/config/conexion.php on line 11
+[24-Jan-2019 07:16:44 America/Mexico_City] PHP Warning:  mysqli_query(): MySQL server has gone away in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/buscar_facturas.php on line 30
+[24-Jan-2019 07:16:44 America/Mexico_City] PHP Warning:  mysqli_query(): Error reading result set's header in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/buscar_facturas.php on line 30
+[24-Jan-2019 07:28:15 America/Mexico_City] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home3/labora41/public_html/sysarcaweb/so_factura/config/conexion.php on line 11
+[24-Jan-2019 07:28:22 America/Mexico_City] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home3/labora41/public_html/sysarcaweb/so_factura/config/conexion.php on line 11
+[24-Jan-2019 07:28:30 America/Mexico_City] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home3/labora41/public_html/sysarcaweb/so_factura/config/conexion.php on line 11
+[24-Jan-2019 07:31:11 America/Mexico_City] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home3/labora41/public_html/sysarcaweb/so_factura/config/conexion.php on line 11
+[24-Jan-2019 07:31:11 America/Mexico_City] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home3/labora41/public_html/sysarcaweb/so_factura/config/conexion.php on line 11
+[24-Jan-2019 07:31:24 America/Mexico_City] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home3/labora41/public_html/sysarcaweb/so_factura/config/conexion.php on line 11
+[24-Jan-2019 07:31:25 America/Mexico_City] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home3/labora41/public_html/sysarcaweb/so_factura/config/conexion.php on line 11
+[24-Jan-2019 07:31:25 America/Mexico_City] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home3/labora41/public_html/sysarcaweb/so_factura/config/conexion.php on line 11
+[24-Jan-2019 07:31:25 America/Mexico_City] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home3/labora41/public_html/sysarcaweb/so_factura/config/conexion.php on line 11
+[24-Jan-2019 07:31:26 America/Mexico_City] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home3/labora41/public_html/sysarcaweb/so_factura/config/conexion.php on line 11
+[24-Jan-2019 07:31:26 America/Mexico_City] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home3/labora41/public_html/sysarcaweb/so_factura/config/conexion.php on line 11
+[24-Jan-2019 07:31:26 America/Mexico_City] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home3/labora41/public_html/sysarcaweb/so_factura/config/conexion.php on line 11
+[24-Jan-2019 07:31:26 America/Mexico_City] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home3/labora41/public_html/sysarcaweb/so_factura/config/conexion.php on line 11
+[24-Jan-2019 07:31:26 America/Mexico_City] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home3/labora41/public_html/sysarcaweb/so_factura/config/conexion.php on line 11
+[24-Jan-2019 07:31:27 America/Mexico_City] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home3/labora41/public_html/sysarcaweb/so_factura/config/conexion.php on line 11
+[24-Jan-2019 07:31:27 America/Mexico_City] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home3/labora41/public_html/sysarcaweb/so_factura/config/conexion.php on line 11
+[24-Jan-2019 07:31:27 America/Mexico_City] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home3/labora41/public_html/sysarcaweb/so_factura/config/conexion.php on line 11
+[24-Jan-2019 07:31:27 America/Mexico_City] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home3/labora41/public_html/sysarcaweb/so_factura/config/conexion.php on line 11
+[24-Jan-2019 07:31:27 America/Mexico_City] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home3/labora41/public_html/sysarcaweb/so_factura/config/conexion.php on line 11
+[24-Jan-2019 07:31:27 America/Mexico_City] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home3/labora41/public_html/sysarcaweb/so_factura/config/conexion.php on line 11
+[24-Jan-2019 07:31:28 America/Mexico_City] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home3/labora41/public_html/sysarcaweb/so_factura/config/conexion.php on line 11
+[24-Jan-2019 07:31:28 America/Mexico_City] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home3/labora41/public_html/sysarcaweb/so_factura/config/conexion.php on line 11
+[24-Jan-2019 07:31:28 America/Mexico_City] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home3/labora41/public_html/sysarcaweb/so_factura/config/conexion.php on line 11
+[24-Jan-2019 07:31:28 America/Mexico_City] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home3/labora41/public_html/sysarcaweb/so_factura/config/conexion.php on line 11
+[24-Jan-2019 07:31:28 America/Mexico_City] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home3/labora41/public_html/sysarcaweb/so_factura/config/conexion.php on line 11
+[24-Jan-2019 07:31:28 America/Mexico_City] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home3/labora41/public_html/sysarcaweb/so_factura/config/conexion.php on line 11
+[24-Jan-2019 07:31:29 America/Mexico_City] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home3/labora41/public_html/sysarcaweb/so_factura/config/conexion.php on line 11
+[24-Jan-2019 07:31:29 America/Mexico_City] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home3/labora41/public_html/sysarcaweb/so_factura/config/conexion.php on line 11
+[24-Jan-2019 07:45:51 America/Mexico_City] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home3/labora41/public_html/sysarcaweb/so_factura/config/conexion.php on line 11
+[24-Jan-2019 07:45:51 America/Mexico_City] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home3/labora41/public_html/sysarcaweb/so_factura/config/conexion.php on line 11
+[24-Jan-2019 07:45:55 America/Mexico_City] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home3/labora41/public_html/sysarcaweb/so_factura/config/conexion.php on line 11
+[24-Jan-2019 07:46:05 America/Mexico_City] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home3/labora41/public_html/sysarcaweb/so_factura/config/conexion.php on line 11
+[24-Jan-2019 08:11:14 America/Mexico_City] PHP Warning:  mysqli_query(): MySQL server has gone away in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/insertBill.php on line 53
+[24-Jan-2019 08:11:14 America/Mexico_City] PHP Warning:  mysqli_query(): Error reading result set's header in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/insertBill.php on line 53
+[24-Jan-2019 08:11:14 America/Mexico_City] PHP Warning:  Empty row packet body in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/buscar_facturas.php on line 30
+[24-Jan-2019 08:11:14 America/Mexico_City] PHP Warning:  mysqli_query(): (00000/0):  in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/buscar_facturas.php on line 30
+[24-Jan-2019 08:16:49 America/Mexico_City] PHP Warning:  mysqli_query(): MySQL server has gone away in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/registro_cliente.php on line 46
+[24-Jan-2019 08:16:49 America/Mexico_City] PHP Warning:  mysqli_query(): MySQL server has gone away in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/insertBill.php on line 53
+[24-Jan-2019 08:16:49 America/Mexico_City] PHP Warning:  mysqli_query(): Error reading result set's header in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/registro_cliente.php on line 46
+[24-Jan-2019 08:16:49 America/Mexico_City] PHP Warning:  mysqli_query(): Error reading result set's header in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/insertBill.php on line 53
+[24-Jan-2019 08:16:49 America/Mexico_City] PHP Warning:  mysqli_query(): MySQL server has gone away in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/registro_cliente.php on line 46
+[24-Jan-2019 08:16:49 America/Mexico_City] PHP Warning:  mysqli_query(): Error reading result set's header in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/registro_cliente.php on line 46
+[24-Jan-2019 08:16:49 America/Mexico_City] PHP Warning:  mysqli_query(): MySQL server has gone away in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/registro_cliente.php on line 46
+[24-Jan-2019 08:16:49 America/Mexico_City] PHP Warning:  mysqli_query(): Error reading result set's header in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/registro_cliente.php on line 46
+[24-Jan-2019 08:16:52 America/Mexico_City] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home3/labora41/public_html/sysarcaweb/so_factura/config/conexion.php on line 11
+[24-Jan-2019 08:17:04 America/Mexico_City] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home3/labora41/public_html/sysarcaweb/so_factura/config/conexion.php on line 11
+[24-Jan-2019 08:17:05 America/Mexico_City] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home3/labora41/public_html/sysarcaweb/so_factura/config/conexion.php on line 11
+[24-Jan-2019 08:17:09 America/Mexico_City] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home3/labora41/public_html/sysarcaweb/so_factura/config/conexion.php on line 11
+[24-Jan-2019 14:27:13 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[24-Jan-2019 14:27:51 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[24-Jan-2019 15:41:38 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[24-Jan-2019 15:55:23 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[24-Jan-2019 16:07:49 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[24-Jan-2019 17:45:57 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[25-Jan-2019 11:02:30 America/Mexico_City] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home3/labora41/public_html/sysarcaweb/so_factura/config/conexion.php on line 11
+[25-Jan-2019 11:02:38 America/Mexico_City] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home3/labora41/public_html/sysarcaweb/so_factura/config/conexion.php on line 11
+[25-Jan-2019 11:02:43 America/Mexico_City] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home3/labora41/public_html/sysarcaweb/so_factura/config/conexion.php on line 11
+[25-Jan-2019 11:02:46 America/Mexico_City] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home3/labora41/public_html/sysarcaweb/so_factura/config/conexion.php on line 11
+[25-Jan-2019 11:02:48 America/Mexico_City] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home3/labora41/public_html/sysarcaweb/so_factura/config/conexion.php on line 11
+[25-Jan-2019 12:41:31 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[25-Jan-2019 12:43:46 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[25-Jan-2019 12:46:10 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[25-Jan-2019 15:25:27 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[26-Jan-2019 10:15:14 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[26-Jan-2019 12:05:33 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[26-Jan-2019 12:57:39 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[27-Jan-2019 09:51:01 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[28-Jan-2019 09:52:54 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[28-Jan-2019 10:22:33 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[28-Jan-2019 10:48:31 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[28-Jan-2019 15:38:32 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[28-Jan-2019 17:16:55 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[29-Jan-2019 08:47:29 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[29-Jan-2019 10:57:05 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[29-Jan-2019 12:08:54 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[29-Jan-2019 12:09:58 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[29-Jan-2019 12:14:16 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[29-Jan-2019 13:27:24 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[29-Jan-2019 15:28:23 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[29-Jan-2019 17:10:10 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[29-Jan-2019 17:19:51 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[29-Jan-2019 19:15:24 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[30-Jan-2019 08:42:07 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[30-Jan-2019 09:45:04 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[30-Jan-2019 11:11:00 America/Mexico_City] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home3/labora41/public_html/sysarcaweb/so_factura/config/conexion.php on line 11
+[30-Jan-2019 11:11:04 America/Mexico_City] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home3/labora41/public_html/sysarcaweb/so_factura/config/conexion.php on line 11
+[30-Jan-2019 11:11:08 America/Mexico_City] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home3/labora41/public_html/sysarcaweb/so_factura/config/conexion.php on line 11
+[30-Jan-2019 11:11:10 America/Mexico_City] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home3/labora41/public_html/sysarcaweb/so_factura/config/conexion.php on line 11
+[30-Jan-2019 11:54:42 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[30-Jan-2019 13:05:44 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[30-Jan-2019 16:38:42 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[30-Jan-2019 16:39:59 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[30-Jan-2019 16:41:28 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[30-Jan-2019 16:43:33 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[30-Jan-2019 16:55:02 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[30-Jan-2019 17:55:07 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[31-Jan-2019 08:18:32 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[31-Jan-2019 11:05:43 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[31-Jan-2019 11:06:14 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[31-Jan-2019 11:07:31 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[31-Jan-2019 11:08:52 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[31-Jan-2019 11:09:33 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[31-Jan-2019 11:10:28 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[31-Jan-2019 11:11:21 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[31-Jan-2019 11:12:45 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[31-Jan-2019 11:13:41 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[31-Jan-2019 11:14:42 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[31-Jan-2019 11:15:29 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[31-Jan-2019 11:16:04 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[31-Jan-2019 11:16:55 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[31-Jan-2019 11:18:35 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[31-Jan-2019 11:19:44 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[31-Jan-2019 11:21:35 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[31-Jan-2019 11:24:19 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[31-Jan-2019 11:24:51 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[31-Jan-2019 11:26:22 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[31-Jan-2019 11:27:11 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[31-Jan-2019 11:35:07 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[31-Jan-2019 11:36:13 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[31-Jan-2019 11:37:20 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[31-Jan-2019 11:37:39 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[31-Jan-2019 11:38:26 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[31-Jan-2019 11:40:02 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[31-Jan-2019 11:40:33 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[31-Jan-2019 11:41:22 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[31-Jan-2019 11:42:27 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[31-Jan-2019 11:45:23 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[31-Jan-2019 11:47:15 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[31-Jan-2019 11:50:12 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[31-Jan-2019 11:51:03 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[31-Jan-2019 11:51:11 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[31-Jan-2019 11:52:41 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[31-Jan-2019 11:53:46 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[31-Jan-2019 11:57:01 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[31-Jan-2019 12:00:31 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[31-Jan-2019 12:05:26 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[31-Jan-2019 12:06:20 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[31-Jan-2019 12:07:17 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[31-Jan-2019 12:08:29 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[31-Jan-2019 12:09:24 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[31-Jan-2019 12:09:59 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[31-Jan-2019 12:10:49 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[31-Jan-2019 12:11:38 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[31-Jan-2019 12:12:12 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[31-Jan-2019 12:13:29 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[31-Jan-2019 12:14:31 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[31-Jan-2019 12:15:23 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[31-Jan-2019 12:17:58 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[31-Jan-2019 12:48:04 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[31-Jan-2019 12:48:54 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[31-Jan-2019 12:49:52 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[31-Jan-2019 12:50:55 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[31-Jan-2019 12:52:17 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[31-Jan-2019 12:53:12 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[31-Jan-2019 12:55:07 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[31-Jan-2019 12:55:48 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[31-Jan-2019 12:56:31 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[31-Jan-2019 12:57:18 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[31-Jan-2019 12:58:23 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[31-Jan-2019 13:00:28 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[31-Jan-2019 13:01:54 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[31-Jan-2019 13:02:50 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[31-Jan-2019 13:04:48 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[31-Jan-2019 13:06:10 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[31-Jan-2019 13:08:22 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[31-Jan-2019 13:09:20 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[31-Jan-2019 13:13:07 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[31-Jan-2019 13:14:00 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[31-Jan-2019 13:14:50 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[31-Jan-2019 13:18:57 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[31-Jan-2019 13:20:15 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[31-Jan-2019 13:20:59 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[31-Jan-2019 13:22:40 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[31-Jan-2019 13:23:45 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[31-Jan-2019 13:25:32 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[31-Jan-2019 13:29:02 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[31-Jan-2019 13:30:05 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[31-Jan-2019 13:30:36 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[31-Jan-2019 13:31:27 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[31-Jan-2019 13:34:35 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[31-Jan-2019 13:35:39 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[31-Jan-2019 13:36:28 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[31-Jan-2019 13:37:09 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[31-Jan-2019 13:47:22 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[31-Jan-2019 13:48:13 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[31-Jan-2019 13:48:46 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[31-Jan-2019 13:49:12 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[31-Jan-2019 13:50:00 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[31-Jan-2019 13:50:57 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[31-Jan-2019 13:51:54 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[31-Jan-2019 13:53:03 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[31-Jan-2019 13:53:40 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[31-Jan-2019 13:54:21 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[31-Jan-2019 13:55:00 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[31-Jan-2019 13:55:30 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[31-Jan-2019 13:56:03 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[31-Jan-2019 13:56:38 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[31-Jan-2019 13:57:19 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[31-Jan-2019 13:58:09 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[31-Jan-2019 13:58:51 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[31-Jan-2019 13:59:57 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[31-Jan-2019 14:00:59 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[31-Jan-2019 14:02:27 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[31-Jan-2019 14:03:24 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[31-Jan-2019 14:04:11 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[31-Jan-2019 14:05:00 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[31-Jan-2019 14:10:51 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[31-Jan-2019 14:22:33 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[31-Jan-2019 14:24:02 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[31-Jan-2019 14:24:47 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[31-Jan-2019 14:25:47 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[31-Jan-2019 14:43:58 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[31-Jan-2019 15:33:00 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[31-Jan-2019 15:34:37 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[31-Jan-2019 15:36:49 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[31-Jan-2019 16:09:15 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[01-Feb-2019 10:26:36 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[01-Feb-2019 11:26:27 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[01-Feb-2019 13:14:22 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[01-Feb-2019 15:38:11 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[01-Feb-2019 16:18:03 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[02-Feb-2019 14:16:03 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[03-Feb-2019 08:54:55 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[03-Feb-2019 09:32:14 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[04-Feb-2019 10:06:45 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[04-Feb-2019 10:07:04 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[04-Feb-2019 10:28:23 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[04-Feb-2019 10:30:15 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[04-Feb-2019 10:44:10 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[04-Feb-2019 10:59:58 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[04-Feb-2019 14:55:17 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[04-Feb-2019 15:15:57 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[04-Feb-2019 15:23:56 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[04-Feb-2019 15:25:02 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[04-Feb-2019 15:25:24 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[04-Feb-2019 15:26:06 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[04-Feb-2019 15:47:57 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[04-Feb-2019 15:48:15 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[05-Feb-2019 07:31:10 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[05-Feb-2019 08:48:00 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[05-Feb-2019 10:10:55 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[05-Feb-2019 10:28:17 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[05-Feb-2019 13:05:50 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[05-Feb-2019 13:11:22 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[05-Feb-2019 13:19:38 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[05-Feb-2019 13:21:11 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[05-Feb-2019 15:25:35 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[06-Feb-2019 08:38:18 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[06-Feb-2019 12:37:34 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[06-Feb-2019 16:00:03 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[06-Feb-2019 16:48:22 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[06-Feb-2019 17:08:25 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[06-Feb-2019 18:32:19 America/Mexico_City] PHP Warning:  exec() has been disabled for security reasons in /home3/labora41/public_html/sysarcaweb/so_factura/ajax/editar_facturacion.php on line 16
+[02-Jun-2019 23:40:15 America/Mexico_City] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 128 bytes) in /home/labora41/public_html/sysarcaweb_1.0/so_factura/ajax/buscar_facturas.php on line 36
+[02-Jun-2019 23:41:53 America/Mexico_City] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 72 bytes) in /home/labora41/public_html/sysarcaweb_1.0/so_factura/ajax/buscar_facturas.php on line 36
+[02-Jun-2019 23:42:34 America/Mexico_City] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 128 bytes) in /home/labora41/public_html/sysarcaweb_1.0/so_factura/ajax/buscar_facturas.php on line 36
+[02-Jun-2019 23:42:41 America/Mexico_City] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 72 bytes) in /home/labora41/public_html/sysarcaweb_1.0/so_factura/ajax/buscar_facturas.php on line 36
+[02-Jun-2019 23:47:21 America/Mexico_City] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 128 bytes) in /home/labora41/public_html/sysarcaweb_1.0/so_factura/ajax/buscar_facturas.php on line 36
+[02-Jun-2019 23:48:22 America/Mexico_City] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 128 bytes) in /home/labora41/public_html/sysarcaweb_1.0/so_factura/ajax/buscar_facturas.php on line 36
+[02-Jun-2019 23:51:14 America/Mexico_City] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 32 bytes) in /home/labora41/public_html/sysarcaweb_1.0/so_factura/ajax/buscar_facturas.php on line 36
+[02-Jun-2019 23:55:06 America/Mexico_City] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 86 bytes) in /home/labora41/public_html/sysarcaweb_1.0/so_factura/ajax/buscar_facturas.php on line 36
+[03-Jun-2019 00:13:47 America/Mexico_City] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 32 bytes) in /home/labora41/public_html/sysarcaweb_1.0/so_factura/ajax/buscar_facturas.php on line 36
+[03-Jun-2019 00:14:48 America/Mexico_City] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 32 bytes) in /home/labora41/public_html/sysarcaweb_1.0/so_factura/ajax/buscar_facturas.php on line 36
+[03-Jun-2019 00:15:02 America/Mexico_City] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 83 bytes) in /home/labora41/public_html/sysarcaweb_1.0/so_factura/ajax/buscar_facturas.php on line 36
+[03-Jun-2019 00:34:00 America/Mexico_City] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 32 bytes) in /home/labora41/public_html/sysarcaweb_1.0/so_factura/ajax/buscar_facturas.php on line 36
+[03-Jun-2019 00:34:26 America/Mexico_City] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 32 bytes) in /home/labora41/public_html/sysarcaweb_1.0/so_factura/ajax/buscar_facturas.php on line 36
+[03-Jun-2019 00:36:46 America/Mexico_City] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 83 bytes) in /home/labora41/public_html/sysarcaweb_1.0/so_factura/ajax/buscar_facturas.php on line 36
+[03-Jun-2019 00:39:14 America/Mexico_City] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 32 bytes) in /home/labora41/public_html/sysarcaweb_1.0/so_factura/ajax/buscar_facturas.php on line 36
+[03-Jun-2019 00:41:28 America/Mexico_City] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 83 bytes) in /home/labora41/public_html/sysarcaweb_1.0/so_factura/ajax/buscar_facturas.php on line 36
+[03-Jun-2019 00:41:51 America/Mexico_City] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 83 bytes) in /home/labora41/public_html/sysarcaweb_1.0/so_factura/ajax/buscar_facturas.php on line 36
+[03-Jun-2019 01:07:27 America/Mexico_City] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 32 bytes) in /home/labora41/public_html/sysarcaweb_1.0/so_factura/ajax/buscar_facturas.php on line 36
+[03-Jun-2019 01:26:59 America/Mexico_City] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 32 bytes) in /home/labora41/public_html/sysarcaweb_1.0/so_factura/ajax/buscar_facturas.php on line 36
+[03-Jun-2019 01:33:04 America/Mexico_City] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 83 bytes) in /home/labora41/public_html/sysarcaweb_1.0/so_factura/ajax/buscar_facturas.php on line 36
+[03-Jun-2019 01:33:10 America/Mexico_City] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 83 bytes) in /home/labora41/public_html/sysarcaweb_1.0/so_factura/ajax/buscar_facturas.php on line 36
+[03-Jun-2019 01:33:11 America/Mexico_City] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 32 bytes) in /home/labora41/public_html/sysarcaweb_1.0/so_factura/ajax/buscar_facturas.php on line 36
+[03-Jun-2019 01:33:28 America/Mexico_City] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 83 bytes) in /home/labora41/public_html/sysarcaweb_1.0/so_factura/ajax/buscar_facturas.php on line 36
+[03-Jun-2019 01:34:01 America/Mexico_City] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 32 bytes) in /home/labora41/public_html/sysarcaweb_1.0/so_factura/ajax/buscar_facturas.php on line 36
+[03-Jun-2019 01:34:48 America/Mexico_City] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 32 bytes) in /home/labora41/public_html/sysarcaweb_1.0/so_factura/ajax/buscar_facturas.php on line 36
+[03-Jun-2019 20:06:06 America/Mexico_City] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 12 bytes) in /home/labora41/public_html/sysarcaweb_1.0/so_factura/ajax/buscar_facturas.php on line 36
+[03-Jun-2019 20:12:48 America/Mexico_City] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 2477314 bytes) in /home/labora41/public_html/sysarcaweb_1.0/so_factura/ajax/buscar_facturas.php on line 39
+[03-Jun-2019 20:13:09 America/Mexico_City] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 2347580 bytes) in /home/labora41/public_html/sysarcaweb_1.0/so_factura/ajax/buscar_facturas.php on line 39
+[03-Jun-2019 20:13:40 America/Mexico_City] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 2347580 bytes) in /home/labora41/public_html/sysarcaweb_1.0/so_factura/ajax/buscar_facturas.php on line 39
+[03-Jun-2019 20:54:20 America/Mexico_City] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 2347580 bytes) in /home/labora41/public_html/sysarcaweb_1.0/so_factura/ajax/buscar_facturas.php on line 39
+[03-Jun-2019 21:04:37 America/Mexico_City] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 2347580 bytes) in /home/labora41/public_html/sysarcaweb_1.0/so_factura/ajax/buscar_facturas.php on line 39
+[03-Jun-2019 21:26:08 America/Mexico_City] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 2347580 bytes) in /home/labora41/public_html/sysarcaweb_1.0/so_factura/ajax/buscar_facturas.php on line 39
+[03-Jun-2019 21:36:00 America/Mexico_City] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 2347580 bytes) in /home/labora41/public_html/sysarcaweb_1.0/so_factura/ajax/buscar_facturas.php on line 39
+[03-Jun-2019 21:37:59 America/Mexico_City] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 2347580 bytes) in /home/labora41/public_html/sysarcaweb_1.0/so_factura/ajax/buscar_facturas.php on line 39
+[03-Jun-2019 21:38:27 America/Mexico_City] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 2347580 bytes) in /home/labora41/public_html/sysarcaweb_1.0/so_factura/ajax/buscar_facturas.php on line 39
+[03-Jun-2019 21:45:00 America/Mexico_City] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 2347580 bytes) in /home/labora41/public_html/sysarcaweb_1.0/so_factura/ajax/buscar_facturas.php on line 39
+[03-Jun-2019 21:55:14 America/Mexico_City] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home/labora41/public_html/sysarcaweb_1.0/so_factura/config/conexion.php on line 11
+[03-Jun-2019 21:58:00 America/Mexico_City] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 2347580 bytes) in /home/labora41/public_html/sysarcaweb_1.0/so_factura/ajax/buscar_facturas.php on line 39
+[03-Jun-2019 22:04:13 America/Mexico_City] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 2347580 bytes) in /home/labora41/public_html/sysarcaweb_1.0/so_factura/ajax/buscar_facturas.php on line 39
+[03-Jun-2019 22:07:09 America/Mexico_City] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 2347580 bytes) in /home/labora41/public_html/sysarcaweb_1.0/so_factura/ajax/buscar_facturas.php on line 39
+[03-Jun-2019 22:08:22 America/Mexico_City] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 2347580 bytes) in /home/labora41/public_html/sysarcaweb_1.0/so_factura/ajax/buscar_facturas.php on line 39
+[06-Jun-2019 10:01:53 America/Mexico_City] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 2327768 bytes) in /home/labora41/public_html/sysarcaweb_1.0/so_factura/ajax/buscar_facturas.php on line 39
+[06-Jun-2019 10:02:21 America/Mexico_City] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 2328032 bytes) in /home/labora41/public_html/sysarcaweb_1.0/so_factura/ajax/buscar_facturas.php on line 39
+[06-Jun-2019 10:05:19 America/Mexico_City] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 2328032 bytes) in /home/labora41/public_html/sysarcaweb_1.0/so_factura/ajax/buscar_facturas.php on line 39
+[06-Jun-2019 10:06:13 America/Mexico_City] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 2328032 bytes) in /home/labora41/public_html/sysarcaweb_1.0/so_factura/ajax/buscar_facturas.php on line 39
+[06-Jun-2019 10:41:18 America/Mexico_City] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 2330822 bytes) in /home/labora41/public_html/sysarcaweb_1.0/so_factura/ajax/buscar_facturas.php on line 39
+[06-Jun-2019 10:41:22 America/Mexico_City] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 2330822 bytes) in /home/labora41/public_html/sysarcaweb_1.0/so_factura/ajax/buscar_facturas.php on line 39
+[06-Jun-2019 10:41:25 America/Mexico_City] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 2330822 bytes) in /home/labora41/public_html/sysarcaweb_1.0/so_factura/ajax/buscar_facturas.php on line 39
+[06-Jun-2019 11:15:20 America/Mexico_City] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 2332163 bytes) in /home/labora41/public_html/sysarcaweb_1.0/so_factura/ajax/buscar_facturas.php on line 39
+[06-Jun-2019 11:51:28 America/Mexico_City] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 2333721 bytes) in /home/labora41/public_html/sysarcaweb_1.0/so_factura/ajax/buscar_facturas.php on line 39
+[06-Jun-2019 11:57:15 America/Mexico_City] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 2333721 bytes) in /home/labora41/public_html/sysarcaweb_1.0/so_factura/ajax/buscar_facturas.php on line 39
+[06-Jun-2019 16:27:39 America/Mexico_City] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 2342711 bytes) in /home/labora41/public_html/sysarcaweb_1.0/so_factura/ajax/buscar_facturas.php on line 39
+[06-Jun-2019 16:28:32 America/Mexico_City] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 2342711 bytes) in /home/labora41/public_html/sysarcaweb_1.0/so_factura/ajax/buscar_facturas.php on line 39
+[06-Jun-2019 16:32:55 America/Mexico_City] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 2343232 bytes) in /home/labora41/public_html/sysarcaweb_1.0/so_factura/ajax/buscar_facturas.php on line 39
+[06-Jun-2019 16:33:13 America/Mexico_City] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 2343232 bytes) in /home/labora41/public_html/sysarcaweb_1.0/so_factura/ajax/buscar_facturas.php on line 39
+[06-Jun-2019 16:33:30 America/Mexico_City] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 2343232 bytes) in /home/labora41/public_html/sysarcaweb_1.0/so_factura/ajax/buscar_facturas.php on line 39
+[06-Jun-2019 16:34:51 America/Mexico_City] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 2343232 bytes) in /home/labora41/public_html/sysarcaweb_1.0/so_factura/ajax/buscar_facturas.php on line 39
+[06-Jun-2019 16:36:26 America/Mexico_City] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 2343232 bytes) in /home/labora41/public_html/sysarcaweb_1.0/so_factura/ajax/buscar_facturas.php on line 39
+[06-Jun-2019 16:36:56 America/Mexico_City] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 2343232 bytes) in /home/labora41/public_html/sysarcaweb_1.0/so_factura/ajax/buscar_facturas.php on line 39
+[06-Jun-2019 16:57:38 America/Mexico_City] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 2343968 bytes) in /home/labora41/public_html/sysarcaweb_1.0/so_factura/ajax/buscar_facturas.php on line 39
+[06-Jun-2019 16:59:04 America/Mexico_City] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 2343968 bytes) in /home/labora41/public_html/sysarcaweb_1.0/so_factura/ajax/buscar_facturas.php on line 39
+[01-Aug-2019 13:25:16 America/Mexico_City] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home/labora41/public_html/sysarcaweb_1.0/so_factura/config/conexion.php on line 11
+[27-Aug-2019 10:20:33 America/Mexico_City] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 2323920 bytes) in /home/labora41/public_html/sysarcaweb_1.0/so_factura/ajax/buscar_facturas.php on line 39
+[27-Aug-2019 10:21:07 America/Mexico_City] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 2323920 bytes) in /home/labora41/public_html/sysarcaweb_1.0/so_factura/ajax/buscar_facturas.php on line 39
+[27-Aug-2019 10:22:16 America/Mexico_City] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 2323920 bytes) in /home/labora41/public_html/sysarcaweb_1.0/so_factura/ajax/buscar_facturas.php on line 39
+[27-Aug-2019 11:12:20 America/Mexico_City] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 2328278 bytes) in /home/labora41/public_html/sysarcaweb_1.0/so_factura/ajax/buscar_facturas.php on line 39
+[27-Aug-2019 12:14:51 America/Mexico_City] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 2332605 bytes) in /home/labora41/public_html/sysarcaweb_1.0/so_factura/ajax/buscar_facturas.php on line 39
+[03-Oct-2019 09:18:09 America/Mexico_City] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home/labora41/public_html/sysarcaweb_1.0/so_factura/ajax/calculatePrice.php on line 142
+[30-Mar-2020 14:01:08 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to undefined function ysqli_query() in /home/labora41/public_html/sysarcaweb_1.0/so_factura/config/conexion.php:16
+Stack trace:
+#0 /home/labora41/public_html/sysarcaweb_1.0/so_factura/ajax/registro_cliente.php(5): require_once()
+#1 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/so_factura/config/conexion.php on line 16
+[30-Mar-2020 14:01:34 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to undefined function ysqli_query() in /home/labora41/public_html/sysarcaweb_1.0/so_factura/config/conexion.php:16
+Stack trace:
+#0 /home/labora41/public_html/sysarcaweb_1.0/so_factura/ajax/registro_cliente.php(5): require_once()
+#1 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/so_factura/config/conexion.php on line 16
+[30-Mar-2020 14:03:23 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to undefined function ysqli_query() in /home/labora41/public_html/sysarcaweb_1.0/so_factura/config/conexion.php:16
+Stack trace:
+#0 /home/labora41/public_html/sysarcaweb_1.0/so_factura/ajax/registro_cliente.php(5): require_once()
+#1 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/so_factura/config/conexion.php on line 16
+[30-Mar-2020 20:04:04 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function ysqli_query() in /home/labora41/public_html/sysarcaweb_1.0/so_factura/config/conexion.php:16
+Stack trace:
+#0 /home/labora41/public_html/sysarcaweb_1.0/so_factura/ajax/registro_cliente.php(5): require_once()
+#1 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/so_factura/config/conexion.php on line 16
+[30-Mar-2020 14:04:28 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to undefined function ysqli_query() in /home/labora41/public_html/sysarcaweb_1.0/so_factura/config/conexion.php:16
+Stack trace:
+#0 /home/labora41/public_html/sysarcaweb_1.0/so_factura/ajax/buscar_facturas.php(8): require_once()
+#1 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/so_factura/config/conexion.php on line 16
+[30-Mar-2020 14:04:58 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to undefined function ysqli_query() in /home/labora41/public_html/sysarcaweb_1.0/so_factura/config/conexion.php:16
+Stack trace:
+#0 /home/labora41/public_html/sysarcaweb_1.0/so_factura/ajax/buscar_facturas.php(8): require_once()
+#1 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/so_factura/config/conexion.php on line 16
+[30-Mar-2020 14:08:11 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to undefined function ysqli_query() in /home/labora41/public_html/sysarcaweb_1.0/so_factura/config/conexion.php:16
+Stack trace:
+#0 /home/labora41/public_html/sysarcaweb_1.0/so_factura/ajax/calculatePrice.php(6): require_once()
+#1 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/so_factura/config/conexion.php on line 16
+[30-Mar-2020 14:08:13 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to undefined function ysqli_query() in /home/labora41/public_html/sysarcaweb_1.0/so_factura/config/conexion.php:16
+Stack trace:
+#0 /home/labora41/public_html/sysarcaweb_1.0/so_factura/ajax/calculatePrice.php(6): require_once()
+#1 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/so_factura/config/conexion.php on line 16
+[30-Mar-2020 14:08:18 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to undefined function ysqli_query() in /home/labora41/public_html/sysarcaweb_1.0/so_factura/config/conexion.php:16
+Stack trace:
+#0 /home/labora41/public_html/sysarcaweb_1.0/so_factura/ajax/calculatePrice.php(6): require_once()
+#1 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/so_factura/config/conexion.php on line 16
+[30-Mar-2020 14:11:30 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to undefined function ysqli_query() in /home/labora41/public_html/sysarcaweb_1.0/so_factura/config/conexion.php:16
+Stack trace:
+#0 /home/labora41/public_html/sysarcaweb_1.0/so_factura/ajax/buscar_facturas.php(8): require_once()
+#1 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/so_factura/config/conexion.php on line 16
+[30-Mar-2020 14:12:00 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to undefined function ysqli_query() in /home/labora41/public_html/sysarcaweb_1.0/so_factura/config/conexion.php:16
+Stack trace:
+#0 /home/labora41/public_html/sysarcaweb_1.0/so_factura/ajax/buscar_facturas.php(8): require_once()
+#1 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/so_factura/config/conexion.php on line 16
+[30-Mar-2020 14:12:01 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to undefined function ysqli_query() in /home/labora41/public_html/sysarcaweb_1.0/so_factura/config/conexion.php:16
+Stack trace:
+#0 /home/labora41/public_html/sysarcaweb_1.0/so_factura/ajax/buscar_facturas.php(8): require_once()
+#1 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/so_factura/config/conexion.php on line 16
+[30-Mar-2020 20:12:23 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function ysqli_query() in /home/labora41/public_html/sysarcaweb_1.0/so_factura/config/conexion.php:16
+Stack trace:
+#0 /home/labora41/public_html/sysarcaweb_1.0/so_factura/ajax/registro_cliente.php(5): require_once()
+#1 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/so_factura/config/conexion.php on line 16
+[30-Mar-2020 20:12:25 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function ysqli_query() in /home/labora41/public_html/sysarcaweb_1.0/so_factura/config/conexion.php:16
+Stack trace:
+#0 /home/labora41/public_html/sysarcaweb_1.0/so_factura/ajax/registro_cliente.php(5): require_once()
+#1 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/so_factura/config/conexion.php on line 16
+[30-Mar-2020 20:12:33 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function ysqli_query() in /home/labora41/public_html/sysarcaweb_1.0/so_factura/config/conexion.php:16
+Stack trace:
+#0 /home/labora41/public_html/sysarcaweb_1.0/so_factura/ajax/registro_cliente.php(5): require_once()
+#1 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/so_factura/config/conexion.php on line 16
+[30-Mar-2020 14:12:38 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to undefined function ysqli_query() in /home/labora41/public_html/sysarcaweb_1.0/so_factura/config/conexion.php:16
+Stack trace:
+#0 /home/labora41/public_html/sysarcaweb_1.0/so_factura/ajax/buscar_facturas.php(8): require_once()
+#1 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/so_factura/config/conexion.php on line 16
+[30-Mar-2020 20:12:50 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function ysqli_query() in /home/labora41/public_html/sysarcaweb_1.0/so_factura/config/conexion.php:16
+Stack trace:
+#0 /home/labora41/public_html/sysarcaweb_1.0/so_factura/ajax/registro_cliente.php(5): require_once()
+#1 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/so_factura/config/conexion.php on line 16
+[30-Mar-2020 20:13:00 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function ysqli_query() in /home/labora41/public_html/sysarcaweb_1.0/so_factura/config/conexion.php:16
+Stack trace:
+#0 /home/labora41/public_html/sysarcaweb_1.0/so_factura/ajax/registro_cliente.php(5): require_once()
+#1 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/so_factura/config/conexion.php on line 16
+[30-Mar-2020 20:13:02 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function ysqli_query() in /home/labora41/public_html/sysarcaweb_1.0/so_factura/config/conexion.php:16
+Stack trace:
+#0 /home/labora41/public_html/sysarcaweb_1.0/so_factura/ajax/registro_cliente.php(5): require_once()
+#1 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/so_factura/config/conexion.php on line 16
+[30-Mar-2020 14:13:10 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to undefined function ysqli_query() in /home/labora41/public_html/sysarcaweb_1.0/so_factura/config/conexion.php:16
+Stack trace:
+#0 /home/labora41/public_html/sysarcaweb_1.0/so_factura/ajax/buscar_facturas.php(8): require_once()
+#1 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/so_factura/config/conexion.php on line 16
+[30-Mar-2020 14:13:31 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to undefined function ysqli_query() in /home/labora41/public_html/sysarcaweb_1.0/so_factura/config/conexion.php:16
+Stack trace:
+#0 /home/labora41/public_html/sysarcaweb_1.0/so_factura/ajax/buscar_facturas.php(8): require_once()
+#1 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/so_factura/config/conexion.php on line 16
+[30-Mar-2020 14:15:48 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to undefined function ysqli_query() in /home/labora41/public_html/sysarcaweb_1.0/so_factura/config/conexion.php:16
+Stack trace:
+#0 /home/labora41/public_html/sysarcaweb_1.0/so_factura/ajax/buscar_facturas.php(8): require_once()
+#1 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/so_factura/config/conexion.php on line 16
+[30-Mar-2020 14:16:10 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to undefined function ysqli_query() in /home/labora41/public_html/sysarcaweb_1.0/so_factura/config/conexion.php:16
+Stack trace:
+#0 /home/labora41/public_html/sysarcaweb_1.0/so_factura/ajax/buscar_facturas.php(8): require_once()
+#1 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/so_factura/config/conexion.php on line 16
+[30-Mar-2020 14:17:26 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to undefined function ysqli_query() in /home/labora41/public_html/sysarcaweb_1.0/so_factura/config/conexion.php:16
+Stack trace:
+#0 /home/labora41/public_html/sysarcaweb_1.0/so_factura/ajax/buscar_facturas.php(8): require_once()
+#1 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/so_factura/config/conexion.php on line 16
+[30-Mar-2020 14:17:55 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to undefined function ysqli_query() in /home/labora41/public_html/sysarcaweb_1.0/so_factura/config/conexion.php:16
+Stack trace:
+#0 /home/labora41/public_html/sysarcaweb_1.0/so_factura/ajax/buscar_facturas.php(8): require_once()
+#1 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/so_factura/config/conexion.php on line 16
+[30-Mar-2020 14:18:16 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to undefined function ysqli_query() in /home/labora41/public_html/sysarcaweb_1.0/so_factura/config/conexion.php:16
+Stack trace:
+#0 /home/labora41/public_html/sysarcaweb_1.0/so_factura/ajax/buscar_facturas.php(8): require_once()
+#1 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/so_factura/config/conexion.php on line 16
+[30-Mar-2020 14:18:26 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to undefined function ysqli_query() in /home/labora41/public_html/sysarcaweb_1.0/so_factura/config/conexion.php:16
+Stack trace:
+#0 /home/labora41/public_html/sysarcaweb_1.0/so_factura/ajax/buscar_facturas.php(8): require_once()
+#1 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/so_factura/config/conexion.php on line 16
+[30-Mar-2020 14:18:39 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to undefined function ysqli_query() in /home/labora41/public_html/sysarcaweb_1.0/so_factura/config/conexion.php:16
+Stack trace:
+#0 /home/labora41/public_html/sysarcaweb_1.0/so_factura/ajax/buscar_facturas.php(8): require_once()
+#1 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/so_factura/config/conexion.php on line 16
+[30-Mar-2020 14:18:51 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to undefined function ysqli_query() in /home/labora41/public_html/sysarcaweb_1.0/so_factura/config/conexion.php:16
+Stack trace:
+#0 /home/labora41/public_html/sysarcaweb_1.0/so_factura/ajax/buscar_facturas.php(8): require_once()
+#1 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/so_factura/config/conexion.php on line 16
+[30-Mar-2020 14:19:09 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to undefined function ysqli_query() in /home/labora41/public_html/sysarcaweb_1.0/so_factura/config/conexion.php:16
+Stack trace:
+#0 /home/labora41/public_html/sysarcaweb_1.0/so_factura/ajax/buscar_facturas.php(8): require_once()
+#1 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/so_factura/config/conexion.php on line 16
+[30-Mar-2020 14:19:15 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to undefined function ysqli_query() in /home/labora41/public_html/sysarcaweb_1.0/so_factura/config/conexion.php:16
+Stack trace:
+#0 /home/labora41/public_html/sysarcaweb_1.0/so_factura/ajax/buscar_facturas.php(8): require_once()
+#1 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/so_factura/config/conexion.php on line 16
+[30-Mar-2020 14:20:05 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to undefined function ysqli_query() in /home/labora41/public_html/sysarcaweb_1.0/so_factura/config/conexion.php:16
+Stack trace:
+#0 /home/labora41/public_html/sysarcaweb_1.0/so_factura/ajax/calculatePrice.php(6): require_once()
+#1 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/so_factura/config/conexion.php on line 16
+[30-Mar-2020 14:22:12 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to undefined function ysqli_query() in /home/labora41/public_html/sysarcaweb_1.0/so_factura/config/conexion.php:16
+Stack trace:
+#0 /home/labora41/public_html/sysarcaweb_1.0/so_factura/ajax/buscar_facturas.php(8): require_once()
+#1 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/so_factura/config/conexion.php on line 16
+[30-Mar-2020 14:23:03 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to undefined function ysqli_query() in /home/labora41/public_html/sysarcaweb_1.0/so_factura/config/conexion.php:16
+Stack trace:
+#0 /home/labora41/public_html/sysarcaweb_1.0/so_factura/ajax/buscar_facturas.php(8): require_once()
+#1 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/so_factura/config/conexion.php on line 16
+[30-Mar-2020 14:23:11 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to undefined function ysqli_query() in /home/labora41/public_html/sysarcaweb_1.0/so_factura/config/conexion.php:16
+Stack trace:
+#0 /home/labora41/public_html/sysarcaweb_1.0/so_factura/ajax/buscar_facturas.php(8): require_once()
+#1 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/so_factura/config/conexion.php on line 16
+[30-Mar-2020 14:25:55 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to undefined function ysqli_query() in /home/labora41/public_html/sysarcaweb_1.0/so_factura/config/conexion.php:16
+Stack trace:
+#0 /home/labora41/public_html/sysarcaweb_1.0/so_factura/ajax/buscar_facturas.php(8): require_once()
+#1 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/so_factura/config/conexion.php on line 16
+[30-Mar-2020 14:40:59 America/Mexico_City] PHP Warning:  require_once(../config/conexion.php): failed to open stream: No such file or directory in /home/labora41/public_html/sysarcaweb_1.0/so_factura/ajax/calculatePrice.php on line 6
+[30-Mar-2020 14:40:59 America/Mexico_City] PHP Fatal error:  require_once(): Failed opening required '../config/conexion.php' (include_path='.:/opt/cpanel/ea-php71/root/usr/share/pear') in /home/labora41/public_html/sysarcaweb_1.0/so_factura/ajax/calculatePrice.php on line 6
+[23-Sep-2020 10:03:49 America/Mexico_City] PHP Warning:  A non-numeric value encountered in /home/labora41/public_html/sysarcaweb_1.0/so_factura/ajax/calculatePrice.php on line 152
+[30-Dec-2020 09:49:53 America/Mexico_City] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home/labora41/public_html/sysarcaweb_1.0/so_factura/config/conexion.php on line 11
+[30-Dec-2020 09:49:53 America/Mexico_City] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home/labora41/public_html/sysarcaweb_1.0/so_factura/config/conexion.php on line 11
+[30-Dec-2020 09:49:54 America/Mexico_City] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home/labora41/public_html/sysarcaweb_1.0/so_factura/config/conexion.php on line 11
+[30-Dec-2020 09:49:54 America/Mexico_City] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home/labora41/public_html/sysarcaweb_1.0/so_factura/config/conexion.php on line 11
+[30-Dec-2020 09:49:54 America/Mexico_City] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home/labora41/public_html/sysarcaweb_1.0/so_factura/config/conexion.php on line 11
+[30-Dec-2020 09:49:54 America/Mexico_City] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home/labora41/public_html/sysarcaweb_1.0/so_factura/config/conexion.php on line 11
+[08-Jan-2021 13:48:35 America/Mexico_City] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home/labora41/public_html/sysarcaweb_1.0/so_factura/config/conexion.php on line 11
