@@ -1,0 +1,47 @@
+[11-Jan-2019 11:02:06 America/Mexico_City] PHP Warning:  mysqli_query(): MySQL server has gone away in /home3/labora41/public_html/sysarcaweb/co_caja/reports/print_c_diario.php on line 576
+[11-Jan-2019 11:02:06 America/Mexico_City] PHP Warning:  mysqli_query(): Error reading result set's header in /home3/labora41/public_html/sysarcaweb/co_caja/reports/print_c_diario.php on line 576
+[11-Jan-2019 11:02:11 America/Mexico_City] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home3/labora41/public_html/sysarcaweb/so_factura/config/conexion.php on line 11
+[11-Jan-2019 11:02:16 America/Mexico_City] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home3/labora41/public_html/sysarcaweb/so_factura/config/conexion.php on line 11
+[11-Jan-2019 11:02:25 America/Mexico_City] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home3/labora41/public_html/sysarcaweb/so_factura/config/conexion.php on line 11
+[30-Mar-2020 14:04:33 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to undefined function ysqli_query() in /home/labora41/public_html/sysarcaweb_1.0/so_factura/config/conexion.php:16
+Stack trace:
+#0 /home/labora41/public_html/sysarcaweb_1.0/co_caja/reports/print_c_diario.php(10): require_once()
+#1 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/so_factura/config/conexion.php on line 16
+[30-Mar-2020 14:04:39 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to undefined function ysqli_query() in /home/labora41/public_html/sysarcaweb_1.0/so_factura/config/conexion.php:16
+Stack trace:
+#0 /home/labora41/public_html/sysarcaweb_1.0/co_caja/reports/print_c_diario.php(10): require_once()
+#1 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/so_factura/config/conexion.php on line 16
+[30-Mar-2020 14:25:53 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to undefined function ysqli_query() in /home/labora41/public_html/sysarcaweb_1.0/so_factura/config/conexion.php:16
+Stack trace:
+#0 /home/labora41/public_html/sysarcaweb_1.0/co_caja/reports/print_c_diario.php(10): require_once()
+#1 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/so_factura/config/conexion.php on line 16
+[30-Mar-2020 14:25:55 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to undefined function ysqli_query() in /home/labora41/public_html/sysarcaweb_1.0/so_factura/config/conexion.php:16
+Stack trace:
+#0 /home/labora41/public_html/sysarcaweb_1.0/co_caja/reports/print_c_diario.php(10): require_once()
+#1 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/so_factura/config/conexion.php on line 16
+[20-Dec-2020 14:36:37 America/Mexico_City] PHP Warning:  mysqli_query(): MySQL server has gone away in /home/labora41/public_html/sysarcaweb_1.0/co_caja/reports/print_c_diario.php on line 161
+[20-Dec-2020 14:36:37 America/Mexico_City] PHP Warning:  mysqli_query(): Error reading result set's header in /home/labora41/public_html/sysarcaweb_1.0/co_caja/reports/print_c_diario.php on line 161
+[20-Dec-2020 14:36:37 America/Mexico_City] PHP Warning:  mysqli_query(): MySQL server has gone away in /home/labora41/public_html/sysarcaweb_1.0/co_caja/reports/print_c_diario.php on line 161
+[20-Dec-2020 14:36:37 America/Mexico_City] PHP Warning:  mysqli_query(): Error reading result set's header in /home/labora41/public_html/sysarcaweb_1.0/co_caja/reports/print_c_diario.php on line 161
+[20-Dec-2020 14:36:37 America/Mexico_City] PHP Warning:  mysqli_query(): MySQL server has gone away in /home/labora41/public_html/sysarcaweb_1.0/co_caja/reports/print_c_diario.php on line 186
+[20-Dec-2020 14:36:37 America/Mexico_City] PHP Warning:  mysqli_query(): Error reading result set's header in /home/labora41/public_html/sysarcaweb_1.0/co_caja/reports/print_c_diario.php on line 186
+[20-Dec-2020 14:36:37 America/Mexico_City] PHP Warning:  mysqli_query(): MySQL server has gone away in /home/labora41/public_html/sysarcaweb_1.0/co_caja/reports/print_c_diario.php on line 256
+[20-Dec-2020 14:36:37 America/Mexico_City] PHP Warning:  mysqli_query(): Error reading result set's header in /home/labora41/public_html/sysarcaweb_1.0/co_caja/reports/print_c_diario.php on line 256
+[20-Dec-2020 14:36:37 America/Mexico_City] PHP Warning:  mysqli_query(): MySQL server has gone away in /home/labora41/public_html/sysarcaweb_1.0/co_caja/reports/print_c_diario.php on line 256
+[20-Dec-2020 14:36:37 America/Mexico_City] PHP Warning:  mysqli_query(): Error reading result set's header in /home/labora41/public_html/sysarcaweb_1.0/co_caja/reports/print_c_diario.php on line 256
+[20-Dec-2020 14:36:37 America/Mexico_City] PHP Warning:  mysqli_query(): MySQL server has gone away in /home/labora41/public_html/sysarcaweb_1.0/co_caja/reports/print_c_diario.php on line 256
+[20-Dec-2020 14:36:37 America/Mexico_City] PHP Warning:  mysqli_query(): Error reading result set's header in /home/labora41/public_html/sysarcaweb_1.0/co_caja/reports/print_c_diario.php on line 256
+[20-Dec-2020 14:36:37 America/Mexico_City] PHP Warning:  mysqli_query(): MySQL server has gone away in /home/labora41/public_html/sysarcaweb_1.0/co_caja/reports/print_c_diario.php on line 464
+[20-Dec-2020 14:36:37 America/Mexico_City] PHP Warning:  mysqli_query(): Error reading result set's header in /home/labora41/public_html/sysarcaweb_1.0/co_caja/reports/print_c_diario.php on line 464
+[20-Dec-2020 14:36:37 America/Mexico_City] PHP Warning:  mysqli_query(): MySQL server has gone away in /home/labora41/public_html/sysarcaweb_1.0/co_caja/reports/print_c_diario.php on line 807
+[20-Dec-2020 14:36:37 America/Mexico_City] PHP Warning:  mysqli_query(): Error reading result set's header in /home/labora41/public_html/sysarcaweb_1.0/co_caja/reports/print_c_diario.php on line 807
+[20-Dec-2020 14:36:37 America/Mexico_City] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home/labora41/public_html/sysarcaweb_1.0/so_factura/config/conexion.php on line 11
+[20-Dec-2020 14:36:37 America/Mexico_City] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home/labora41/public_html/sysarcaweb_1.0/so_factura/config/conexion.php on line 11
+[20-Dec-2020 14:36:37 America/Mexico_City] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home/labora41/public_html/sysarcaweb_1.0/so_factura/config/conexion.php on line 11
+[20-Dec-2020 14:36:38 America/Mexico_City] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home/labora41/public_html/sysarcaweb_1.0/so_factura/config/conexion.php on line 11
+[20-Dec-2020 14:36:38 America/Mexico_City] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home/labora41/public_html/sysarcaweb_1.0/so_factura/config/conexion.php on line 11
+[20-Dec-2020 14:36:38 America/Mexico_City] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home/labora41/public_html/sysarcaweb_1.0/so_factura/config/conexion.php on line 11

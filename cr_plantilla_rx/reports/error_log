@@ -1,0 +1,40 @@
+[17-Aug-2020 22:06:17 America/Mexico_City] PHP Warning:  getimagesize(../../imagenes/logo_lab3.jpg): failed to open stream: No such file or directory in /home/labora41/public_html/sysarcaweb_1.0/fpdf/fpdf.php on line 1242
+[17-Aug-2020 22:06:17 America/Mexico_City] PHP Fatal error:  Uncaught Exception: FPDF error: Missing or incorrect image file: ../../imagenes/logo_lab3.jpg in /home/labora41/public_html/sysarcaweb_1.0/fpdf/fpdf.php:273
+Stack trace:
+#0 /home/labora41/public_html/sysarcaweb_1.0/fpdf/fpdf.php(1244): FPDF->Error('Missing or inco...')
+#1 /home/labora41/public_html/sysarcaweb_1.0/fpdf/fpdf.php(887): FPDF->_parsejpg('../../imagenes/...')
+#2 /home/labora41/public_html/sysarcaweb_1.0/cr_plantilla_rx/reports/print_result.php(141): FPDF->Image('../../imagenes/...', 65, 5, 80, 0)
+#3 /home/labora41/public_html/sysarcaweb_1.0/fpdf/fpdf.php(336): PDF->Header()
+#4 /home/labora41/public_html/sysarcaweb_1.0/cr_plantilla_rx/reports/print_result.php(287): FPDF->AddPage()
+#5 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/fpdf/fpdf.php on line 273
+[17-Aug-2020 22:15:56 America/Mexico_City] PHP Warning:  getimagesize(../../imagenes/logo_lab3.jpg): failed to open stream: No such file or directory in /home/labora41/public_html/sysarcaweb_1.0/fpdf/fpdf.php on line 1242
+[17-Aug-2020 22:15:56 America/Mexico_City] PHP Fatal error:  Uncaught Exception: FPDF error: Missing or incorrect image file: ../../imagenes/logo_lab3.jpg in /home/labora41/public_html/sysarcaweb_1.0/fpdf/fpdf.php:273
+Stack trace:
+#0 /home/labora41/public_html/sysarcaweb_1.0/fpdf/fpdf.php(1244): FPDF->Error('Missing or inco...')
+#1 /home/labora41/public_html/sysarcaweb_1.0/fpdf/fpdf.php(887): FPDF->_parsejpg('../../imagenes/...')
+#2 /home/labora41/public_html/sysarcaweb_1.0/cr_plantilla_rx/reports/print_result.php(141): FPDF->Image('../../imagenes/...', 65, 5, 80, 0)
+#3 /home/labora41/public_html/sysarcaweb_1.0/fpdf/fpdf.php(336): PDF->Header()
+#4 /home/labora41/public_html/sysarcaweb_1.0/cr_plantilla_rx/reports/print_result.php(287): FPDF->AddPage()
+#5 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/fpdf/fpdf.php on line 273
+[17-Aug-2020 22:21:39 America/Mexico_City] PHP Warning:  getimagesize(../../imagenes/logo_lab3.jpg): failed to open stream: No such file or directory in /home/labora41/public_html/sysarcaweb_1.0/fpdf/fpdf.php on line 1242
+[17-Aug-2020 22:21:39 America/Mexico_City] PHP Fatal error:  Uncaught Exception: FPDF error: Missing or incorrect image file: ../../imagenes/logo_lab3.jpg in /home/labora41/public_html/sysarcaweb_1.0/fpdf/fpdf.php:273
+Stack trace:
+#0 /home/labora41/public_html/sysarcaweb_1.0/fpdf/fpdf.php(1244): FPDF->Error('Missing or inco...')
+#1 /home/labora41/public_html/sysarcaweb_1.0/fpdf/fpdf.php(887): FPDF->_parsejpg('../../imagenes/...')
+#2 /home/labora41/public_html/sysarcaweb_1.0/cr_plantilla_rx/reports/print_result.php(141): FPDF->Image('../../imagenes/...', 65, 5, 80, 0)
+#3 /home/labora41/public_html/sysarcaweb_1.0/fpdf/fpdf.php(336): PDF->Header()
+#4 /home/labora41/public_html/sysarcaweb_1.0/cr_plantilla_rx/reports/print_result.php(287): FPDF->AddPage()
+#5 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/fpdf/fpdf.php on line 273
+[17-Aug-2020 22:23:21 America/Mexico_City] PHP Warning:  getimagesize(../../imagenes/logo_lab3.jpg): failed to open stream: No such file or directory in /home/labora41/public_html/sysarcaweb_1.0/fpdf/fpdf.php on line 1242
+[17-Aug-2020 22:23:21 America/Mexico_City] PHP Fatal error:  Uncaught Exception: FPDF error: Missing or incorrect image file: ../../imagenes/logo_lab3.jpg in /home/labora41/public_html/sysarcaweb_1.0/fpdf/fpdf.php:273
+Stack trace:
+#0 /home/labora41/public_html/sysarcaweb_1.0/fpdf/fpdf.php(1244): FPDF->Error('Missing or inco...')
+#1 /home/labora41/public_html/sysarcaweb_1.0/fpdf/fpdf.php(887): FPDF->_parsejpg('../../imagenes/...')
+#2 /home/labora41/public_html/sysarcaweb_1.0/cr_plantilla_rx/reports/print_result.php(141): FPDF->Image('../../imagenes/...', 65, 5, 80, 0)
+#3 /home/labora41/public_html/sysarcaweb_1.0/fpdf/fpdf.php(336): PDF->Header()
+#4 /home/labora41/public_html/sysarcaweb_1.0/cr_plantilla_rx/reports/print_result.php(287): FPDF->AddPage()
+#5 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/fpdf/fpdf.php on line 273

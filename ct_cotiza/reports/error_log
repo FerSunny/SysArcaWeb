@@ -1,0 +1,139 @@
+[30-Dec-2019 11:51:29 America/Mexico_City] PHP Fatal error:  Uncaught Exception: FPDF error: Unexpected end of stream in /home/labora41/public_html/sysarcaweb_1.0/fpdf/fpdf.php:273
+Stack trace:
+#0 /home/labora41/public_html/sysarcaweb_1.0/fpdf/fpdf.php(1408): FPDF->Error('Unexpected end ...')
+#1 /home/labora41/public_html/sysarcaweb_1.0/fpdf/fpdf.php(1272): FPDF->_readstream(Resource id #12, 8)
+#2 /home/labora41/public_html/sysarcaweb_1.0/fpdf/fpdf.php(1264): FPDF->_parsepngstream(Resource id #12, '../reports/code...')
+#3 /home/labora41/public_html/sysarcaweb_1.0/fpdf/fpdf.php(887): FPDF->_parsepng('../reports/code...')
+#4 /home/labora41/public_html/sysarcaweb_1.0/so_factura_pre/reports/tikets.php(136): FPDF->Image('../reports/code...', 0, 35, 100, 40)
+#5 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/fpdf/fpdf.php on line 273
+[13-Feb-2020 15:22:57 America/Mexico_City] PHP Warning:  imagepng(codes/116628.png): failed to open stream: No space left on device in /home/labora41/public_html/sysarcaweb_1.0/so_factura_pre/reports/barcode/barcode.php on line 148
+[13-Feb-2020 15:25:33 America/Mexico_City] PHP Warning:  imagepng(codes/116629.png): failed to open stream: No space left on device in /home/labora41/public_html/sysarcaweb_1.0/so_factura_pre/reports/barcode/barcode.php on line 148
+[13-Feb-2020 15:26:13 America/Mexico_City] PHP Warning:  imagepng(codes/116630.png): failed to open stream: No space left on device in /home/labora41/public_html/sysarcaweb_1.0/so_factura_pre/reports/barcode/barcode.php on line 148
+[13-Feb-2020 15:26:13 America/Mexico_City] PHP Warning:  fopen(../reports/codes/116630.png): failed to open stream: No such file or directory in /home/labora41/public_html/sysarcaweb_1.0/fpdf/fpdf.php on line 1261
+[13-Feb-2020 15:26:13 America/Mexico_City] PHP Fatal error:  Uncaught Exception: FPDF error: Can't open image file: ../reports/codes/116630.png in /home/labora41/public_html/sysarcaweb_1.0/fpdf/fpdf.php:273
+Stack trace:
+#0 /home/labora41/public_html/sysarcaweb_1.0/fpdf/fpdf.php(1263): FPDF->Error('Can't open imag...')
+#1 /home/labora41/public_html/sysarcaweb_1.0/fpdf/fpdf.php(887): FPDF->_parsepng('../reports/code...')
+#2 /home/labora41/public_html/sysarcaweb_1.0/so_factura_pre/reports/tikets.php(136): FPDF->Image('../reports/code...', 0, 35, 100, 40)
+#3 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/fpdf/fpdf.php on line 273
+[13-Feb-2020 15:28:29 America/Mexico_City] PHP Warning:  imagepng(codes/116631.png): failed to open stream: No space left on device in /home/labora41/public_html/sysarcaweb_1.0/so_factura_pre/reports/barcode/barcode.php on line 148
+[13-Feb-2020 15:28:29 America/Mexico_City] PHP Warning:  fopen(../reports/codes/116631.png): failed to open stream: No such file or directory in /home/labora41/public_html/sysarcaweb_1.0/fpdf/fpdf.php on line 1261
+[13-Feb-2020 15:28:29 America/Mexico_City] PHP Fatal error:  Uncaught Exception: FPDF error: Can't open image file: ../reports/codes/116631.png in /home/labora41/public_html/sysarcaweb_1.0/fpdf/fpdf.php:273
+Stack trace:
+#0 /home/labora41/public_html/sysarcaweb_1.0/fpdf/fpdf.php(1263): FPDF->Error('Can't open imag...')
+#1 /home/labora41/public_html/sysarcaweb_1.0/fpdf/fpdf.php(887): FPDF->_parsepng('../reports/code...')
+#2 /home/labora41/public_html/sysarcaweb_1.0/so_factura_pre/reports/tikets.php(136): FPDF->Image('../reports/code...', 0, 35, 100, 40)
+#3 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/fpdf/fpdf.php on line 273
+[13-Feb-2020 15:29:18 America/Mexico_City] PHP Warning:  imagepng(codes/116631.png): failed to open stream: No space left on device in /home/labora41/public_html/sysarcaweb_1.0/so_factura_pre/reports/barcode/barcode.php on line 148
+[13-Feb-2020 15:29:18 America/Mexico_City] PHP Warning:  fopen(../reports/codes/116631.png): failed to open stream: No such file or directory in /home/labora41/public_html/sysarcaweb_1.0/fpdf/fpdf.php on line 1261
+[13-Feb-2020 15:29:18 America/Mexico_City] PHP Fatal error:  Uncaught Exception: FPDF error: Can't open image file: ../reports/codes/116631.png in /home/labora41/public_html/sys[13-Feb-2020 15:30:08 America/Mexico_City] PHP Warning:  imagepng(codes/116631.png): failed to open stream: No space left on device in /home/labora41/public_html/sysarcaweb_1.0/so_factura_pre/reports/barcode/barcode.php on line 148
+[13-Feb-2020 15:30:08 America/Mexico_City] PHP Warning:  fopen(../reports/codes/116631.png): failed to open stream: No such file or directory in /home/labora41/public_html/sysarcaweb_1.0/fpdf/fpdf.php on line 1261
+[13-Feb-2020 15:30:08 America/Mexico_City] PHP Fatal error:  Uncaught Exception: FPDF error: Can't open image file: ../reports/codes/116631.png in /home/labora41/public_html/sysarcaweb_1.0/fpdf/fpdf.php:273
+Stack trace:
+#0 /home/labora41/public_html/sysarcaweb_1.0/fpdf/fpdf.php(1263): FPDF->Error('Can't open imag...')
+#1 /home/labora41/public_html/sysarcaweb_1.0/fpdf/fpdf.php(887): FPDF->_parsepng('../reports/code...')
+#2 /home/labora41/public_html/sysarcaweb_1.0/so_factura_pre/reports/tikets.php(136): FPDF->Image('../reports/code...', 0, 35, 100, 40)
+#3 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/fpdf/fpdf.php on line 273
+[13-Feb-2020 15:30:10 America/Mexico_City] PHP Warning:  imagepng(codes/116631.png): failed to open stream: No space left on device in /home/labora41/public_html/sysarcaweb_1.0/so_factura_pre/reports/barcode/barcode.php on line 148
+[13-Feb-2020 15:30:10 America/Mexico_City] PHP Warning:  fopen(../reports/codes/116631.png): failed to open stream: No such file or directory in /home/labora41/public_html/sysarcaweb_1.0/fpdf/fpdf.php on line 1261
+[13-Feb-2020 15:30:10 America/Mexico_City] PHP Fatal error:  Uncaught Exception: FPDF error: Can't open image file: ../reports/codes/116631.png in /home/labora41/public_html/sysarcaweb_1.0/fpdf/fpdf.php:273
+Stack trace:
+#0 /home/labora41/public_html/sysarcaweb_1.0/fpdf/fpdf.php(1263): FPDF->Error('Can't open imag...')
+#1 /home/labora41/public_html/sysarcaweb_1.0/fpdf/fpdf.php(887): FPDF->_parsepng('../reports/code...')
+#2 /home/labora41/public_html/sysarcaweb_1.0/so_factura_pre/reports/tikets.php(136): FPDF->Image('../reports/code...', 0, 35, 100, 40)
+#3 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/fpdf/fpdf.php on line 273
+[13-Feb-2020 15:30:10 America/Mexico_City] PHP Warning:  imagepng(codes/116631.png): failed to open stream: No space left on device in /home/labora41/public_html/sysarcaweb_1.0/so_factura_pre/reports/barcode/barcode.php on line 148
+[13-Feb-2020 15:30:10 America/Mexico_City] PHP Warning:  fopen(../reports/codes/116631.png): failed to open stream: No such file or directory in /home/labora41/public_html/sysarcaweb_1.0/fpdf/fpdf.php on line 1261
+[13-Feb-2020 15:30:10 America/Mexico_City] PHP Fatal error:  Uncaught Exception: FPDF error: Can't open image file: ../reports/codes/116631.png in /home/labora41/public_html/sysarcaweb_1.0/fpdf/fpdf.php:273
+Stack trace:
+#0 /home/labora41/public_html/sysarcaweb_1.0/fpdf/fpdf.php(1263): FPDF->Error('Can't open imag...')
+#1 /home/labora41/public_html/sysarcaweb_1.0/fpdf/fpdf.php(887): FPDF->_parsepng('../reports/code...')
+#2 /home/labora41/public_html/sysarcaweb_1.0/so_factura_pre/reports/tikets.php(136): FPDF->Image('../reports/code...', 0, 35, 100, 40)
+#3 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/fpdf/fpdf.php on line 273
+[13-Feb-2020 15:30:10 America/Mexico_City] PHP Warning:  imagepng(codes/116631.png): failed to open stream: No space left on device in /home/labora41/public_html/sysarcaweb_1.0/so_factura_pre/reports/barcode/barcode.php on line 148
+[13-Feb-2020 15:30:10 America/Mexico_City] PHP Warning:  fopen(../reports/codes/116631.png): failed to open stream: No such file or directory in /home/labora41/public_html/sysarcaweb_1.0/fpdf/fpdf.php on line 1261
+[13-Feb-2020 15:30:10 America/Mexico_City] PHP Fatal error:  Uncaught Exception: FPDF error: Can't open image file: ../reports/codes/116631.png in /home/labora41/public_html/sysarcaweb_1.0/fpdf/fpdf.php:273
+Stack trace:
+#0 /home/labora41/public_html/sysarcaweb_1.0/fpdf/fpdf.php(1263): FPDF->Error('Can't open imag...')
+#1 /home/labora41/public_html/sysarcaweb_1.0/fpdf/fpdf.php(887): FPDF->_parsepng('../reports/code...')
+#2 /home/labora41/public_html/sysarcaweb_1.0/so_factura_pre/reports/tikets.php(136): FPDF->Image('../reports/code...', 0, 35, 100, 40)
+#3 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/fpdf/fpdf.php on line 273
+[13-Feb-2020 15:42:59 America/Mexico_City] PHP Warning:  imagepng(codes/116632.png): failed to open stream: No space left on device in /home/labora41/public_html/sysarcaweb_1.0/so_factura_pre/reports/barcode/barcode.php on line 148
+[08-Jul-2020 13:49:37 America/Mexico_City] PHP Fatal error:  Cannot declare class NumeroALetras, because the name is already in use in /home/labora41/public_html/sysarcaweb_1.0/so_factura_pre/reports/NumeroLetras/letras.php on line 13
+[08-Jul-2020 13:49:54 America/Mexico_City] PHP Fatal error:  Cannot declare class NumeroALetras, because the name is already in use in /home/labora41/public_html/sysarcaweb_1.0/so_factura_pre/reports/NumeroLetras/letras.php on line 13
+[18-Aug-2020 08:08:31 America/Mexico_City] PHP Fatal error:  Cannot declare class NumeroALetras, because the name is already in use in /home/labora41/public_html/sysarcaweb_1.0/so_factura_pre/reports/NumeroLetras/letras.php on line 13
+[18-Aug-2020 08:08:37 America/Mexico_City] PHP Fatal error:  Cannot declare class NumeroALetras, because the name is already in use in /home/labora41/public_html/sysarcaweb_1.0/so_factura_pre/reports/NumeroLetras/letras.php on line 13
+[18-Aug-2020 08:08:38 America/Mexico_City] PHP Fatal error:  Cannot declare class NumeroALetras, because the name is already in use in /home/labora41/public_html/sysarcaweb_1.0/so_factura_pre/reports/NumeroLetras/letras.php on line 13
+[18-Aug-2020 08:08:39 America/Mexico_City] PHP Fatal error:  Cannot declare class NumeroALetras, because the name is already in use in /home/labora41/public_html/sysarcaweb_1.0/so_factura_pre/reports/NumeroLetras/letras.php on line 13
+[18-Aug-2020 08:08:40 America/Mexico_City] PHP Fatal error:  Cannot declare class NumeroALetras, because the name is already in use in /home/labora41/public_html/sysarcaweb_1.0/so_factura_pre/reports/NumeroLetras/letras.php on line 13
+[18-Aug-2020 08:08:54 America/Mexico_City] PHP Fatal error:  Cannot declare class NumeroALetras, because the name is already in use in /home/labora41/public_html/sysarcaweb_1.0/so_factura_pre/reports/NumeroLetras/letras.php on line 13
+[18-Aug-2020 08:08:55 America/Mexico_City] PHP Fatal error:  Cannot declare class NumeroALetras, because the name is already in use in /home/labora41/public_html/sysarcaweb_1.0/so_factura_pre/reports/NumeroLetras/letras.php on line 13
+[18-Aug-2020 08:09:58 America/Mexico_City] PHP Fatal error:  Cannot declare class NumeroALetras, because the name is already in use in /home/labora41/public_html/sysarcaweb_1.0/so_factura_pre/reports/NumeroLetras/letras.php on line 13
+[18-Aug-2020 08:11:32 America/Mexico_City] PHP Fatal error:  Cannot declare class NumeroALetras, because the name is already in use in /home/labora41/public_html/sysarcaweb_1.0/so_factura_pre/reports/NumeroLetras/letras.php on line 13
+[18-Aug-2020 08:11:33 America/Mexico_City] PHP Fatal error:  Cannot declare class NumeroALetras, because the name is already in use in /home/labora41/public_html/sysarcaweb_1.0/so_factura_pre/reports/NumeroLetras/letras.php on line 13
+[18-Aug-2020 08:13:05 America/Mexico_City] PHP Fatal error:  Cannot declare class NumeroALetras, because the name is already in use in /home/labora41/public_html/sysarcaweb_1.0/so_factura_pre/reports/NumeroLetras/letras.php on line 13
+[18-Aug-2020 08:13:42 America/Mexico_City] PHP Fatal error:  Cannot declare class NumeroALetras, because the name is already in use in /home/labora41/public_html/sysarcaweb_1.0/so_factura_pre/reports/NumeroLetras/letras.php on line 13
+[18-Aug-2020 08:13:43 America/Mexico_City] PHP Fatal error:  Cannot declare class NumeroALetras, because the name is already in use in /home/labora41/public_html/sysarcaweb_1.0/so_factura_pre/reports/NumeroLetras/letras.php on line 13
+[18-Aug-2020 08:22:10 America/Mexico_City] PHP Fatal error:  Cannot declare class NumeroALetras, because the name is already in use in /home/labora41/public_html/sysarcaweb_1.0/so_factura_pre/reports/NumeroLetras/letras.php on line 13
+[18-Aug-2020 08:22:20 America/Mexico_City] PHP Fatal error:  Cannot declare class NumeroALetras, because the name is already in use in /home/labora41/public_html/sysarcaweb_1.0/so_factura_pre/reports/NumeroLetras/letras.php on line 13
+[18-Aug-2020 08:27:00 America/Mexico_City] PHP Fatal error:  Cannot declare class NumeroALetras, because the name is already in use in /home/labora41/public_html/sysarcaweb_1.0/so_factura_pre/reports/NumeroLetras/letras.php on line 13
+[18-Aug-2020 08:27:02 America/Mexico_City] PHP Fatal error:  Cannot declare class NumeroALetras, because the name is already in use in /home/labora41/public_html/sysarcaweb_1.0/so_factura_pre/reports/NumeroLetras/letras.php on line 13
+[18-Aug-2020 08:28:26 America/Mexico_City] PHP Fatal error:  Cannot declare class NumeroALetras, because the name is already in use in /home/labora41/public_html/sysarcaweb_1.0/so_factura_pre/reports/NumeroLetras/letras.php on line 13
+[18-Aug-2020 08:30:10 America/Mexico_City] PHP Fatal error:  Cannot declare class NumeroALetras, because the name is already in use in /home/labora41/public_html/sysarcaweb_1.0/so_factura_pre/reports/NumeroLetras/letras.php on line 13
+[18-Aug-2020 08:30:11 America/Mexico_City] PHP Fatal error:  Cannot declare class NumeroALetras, because the name is already in use in /home/labora41/public_html/sysarcaweb_1.0/so_factura_pre/reports/NumeroLetras/letras.php on line 13
+[18-Aug-2020 08:34:49 America/Mexico_City] PHP Fatal error:  Cannot declare class NumeroALetras, because the name is already in use in /home/labora41/public_html/sysarcaweb_1.0/so_factura_pre/reports/NumeroLetras/letras.php on line 13
+[18-Aug-2020 08:36:12 America/Mexico_City] PHP Fatal error:  Cannot declare class NumeroALetras, because the name is already in use in /home/labora41/public_html/sysarcaweb_1.0/so_factura_pre/reports/NumeroLetras/letras.php on line 13
+[18-Aug-2020 12:07:35 America/Mexico_City] PHP Fatal error:  Cannot declare class NumeroALetras, because the name is already in use in /home/labora41/public_html/sysarcaweb_1.0/so_factura_pre/reports/NumeroLetras/letras.php on line 13
+[18-Aug-2020 12:07:44 America/Mexico_City] PHP Fatal error:  Cannot declare class NumeroALetras, because the name is already in use in /home/labora41/public_html/sysarcaweb_1.0/so_factura_pre/reports/NumeroLetras/letras.php on line 13
+[18-Aug-2020 12:07:47 America/Mexico_City] PHP Fatal error:  Cannot declare class NumeroALetras, because the name is already in use in /home/labora41/public_html/sysarcaweb_1.0/so_factura_pre/reports/NumeroLetras/letras.php on line 13
+[18-Aug-2020 12:30:30 America/Mexico_City] PHP Fatal error:  Cannot declare class NumeroALetras, because the name is already in use in /home/labora41/public_html/sysarcaweb_1.0/so_factura_pre/reports/NumeroLetras/letras.php on line 13
+[19-Aug-2020 11:40:41 America/Mexico_City] PHP Fatal error:  Cannot declare class NumeroALetras, because the name is already in use in /home/labora41/public_html/sysarcaweb_1.0/so_factura_pre/reports/NumeroLetras/letras.php on line 13
+[19-Aug-2020 12:44:39 America/Mexico_City] PHP Fatal error:  Cannot declare class NumeroALetras, because the name is already in use in /home/labora41/public_html/sysarcaweb_1.0/so_factura_pre/reports/NumeroLetras/letras.php on line 13
+[29-Sep-2020 07:51:09 America/Mexico_City] PHP Fatal error:  Cannot declare class NumeroALetras, because the name is already in use in /home/labora41/public_html/sysarcaweb_1.0/so_factura_pre/reports/NumeroLetras/letras.php on line 13
+[29-Sep-2020 07:51:17 America/Mexico_City] PHP Fatal error:  Cannot declare class NumeroALetras, because the name is already in use in /home/labora41/public_html/sysarcaweb_1.0/so_factura_pre/reports/NumeroLetras/letras.php on line 13
+[29-Sep-2020 07:51:41 America/Mexico_City] PHP Fatal error:  Cannot declare class NumeroALetras, because the name is already in use in /home/labora41/public_html/sysarcaweb_1.0/so_factura_pre/reports/NumeroLetras/letras.php on line 13
+[29-Sep-2020 08:02:13 America/Mexico_City] PHP Fatal error:  Cannot declare class NumeroALetras, because the name is already in use in /home/labora41/public_html/sysarcaweb_1.0/so_factura_pre/reports/NumeroLetras/letras.php on line 13
+[29-Sep-2020 08:03:25 America/Mexico_City] PHP Fatal error:  Cannot declare class NumeroALetras, because the name is already in use in /home/labora41/public_html/sysarcaweb_1.0/so_factura_pre/reports/NumeroLetras/letras.php on line 13
+[29-Sep-2020 08:29:09 America/Mexico_City] PHP Fatal error:  Cannot declare class NumeroALetras, because the name is already in use in /home/labora41/public_html/sysarcaweb_1.0/so_factura_pre/reports/NumeroLetras/letras.php on line 13
+[29-Sep-2020 12:13:21 America/Mexico_City] PHP Fatal error:  Cannot declare class NumeroALetras, because the name is already in use in /home/labora41/public_html/sysarcaweb_1.0/so_factura_pre/reports/NumeroLetras/letras.php on line 13
+[29-Sep-2020 12:13:23 America/Mexico_City] PHP Fatal error:  Cannot declare class NumeroALetras, because the name is already in use in /home/labora41/public_html/sysarcaweb_1.0/so_factura_pre/reports/NumeroLetras/letras.php on line 13
+[30-Sep-2020 10:33:22 America/Mexico_City] PHP Fatal error:  Cannot declare class NumeroALetras, because the name is already in use in /home/labora41/public_html/sysarcaweb_1.0/so_factura_pre/reports/NumeroLetras/letras.php on line 13
+[02-Oct-2020 11:47:22 America/Mexico_City] PHP Fatal error:  Cannot declare class NumeroALetras, because the name is already in use in /home/labora41/public_html/sysarcaweb_1.0/so_factura_pre/reports/NumeroLetras/letras.php on line 13
+[03-Feb-2021 09:47:36 America/Mexico_City] PHP Fatal error:  Cannot declare class NumeroALetras, because the name is already in use in /home/labora41/public_html/sysarcaweb_1.0/so_factura_pre/reports/NumeroLetras/letras.php on line 13
+[03-Feb-2021 09:47:39 America/Mexico_City] PHP Fatal error:  Cannot declare class NumeroALetras, because the name is already in use in /home/labora41/public_html/sysarcaweb_1.0/so_factura_pre/reports/NumeroLetras/letras.php on line 13
+[03-Feb-2021 09:47:57 America/Mexico_City] PHP Fatal error:  Cannot declare class NumeroALetras, because the name is already in use in /home/labora41/public_html/sysarcaweb_1.0/so_factura_pre/reports/NumeroLetras/letras.php on line 13
+[03-Feb-2021 09:47:59 America/Mexico_City] PHP Fatal error:  Cannot declare class NumeroALetras, because the name is already in use in /home/labora41/public_html/sysarcaweb_1.0/so_factura_pre/reports/NumeroLetras/letras.php on line 13
+[03-Feb-2021 10:04:14 America/Mexico_City] PHP Fatal error:  Cannot declare class NumeroALetras, because the name is already in use in /home/labora41/public_html/sysarcaweb_1.0/so_factura_pre/reports/NumeroLetras/letras.php on line 13
+[03-Feb-2021 10:09:28 America/Mexico_City] PHP Fatal error:  Cannot declare class NumeroALetras, because the name is already in use in /home/labora41/public_html/sysarcaweb_1.0/so_factura_pre/reports/NumeroLetras/letras.php on line 13
+[03-Feb-2021 15:13:49 America/Mexico_City] PHP Fatal error:  Cannot declare class NumeroALetras, because the name is already in use in /home/labora41/public_html/sysarcaweb_1.0/so_factura_pre/reports/NumeroLetras/letras.php on line 13
+[03-Feb-2021 15:13:53 America/Mexico_City] PHP Fatal error:  Cannot declare class NumeroALetras, because the name is already in use in /home/labora41/public_html/sysarcaweb_1.0/so_factura_pre/reports/NumeroLetras/letras.php on line 13
+[03-Feb-2021 15:13:57 America/Mexico_City] PHP Fatal error:  Cannot declare class NumeroALetras, because the name is already in use in /home/labora41/public_html/sysarcaweb_1.0/so_factura_pre/reports/NumeroLetras/letras.php on line 13
+[03-Feb-2021 15:14:04 America/Mexico_City] PHP Fatal error:  Cannot declare class NumeroALetras, because the name is already in use in /home/labora41/public_html/sysarcaweb_1.0/so_factura_pre/reports/NumeroLetras/letras.php on line 13
+[03-Feb-2021 15:14:10 America/Mexico_City] PHP Fatal error:  Cannot declare class NumeroALetras, because the name is already in use in /home/labora41/public_html/sysarcaweb_1.0/so_factura_pre/reports/NumeroLetras/letras.php on line 13
+[03-Feb-2021 15:14:14 America/Mexico_City] PHP Fatal error:  Cannot declare class NumeroALetras, because the name is already in use in /home/labora41/public_html/sysarcaweb_1.0/so_factura_pre/reports/NumeroLetras/letras.php on line 13
+[03-Feb-2021 15:15:03 America/Mexico_City] PHP Fatal error:  Cannot declare class NumeroALetras, because the name is already in use in /home/labora41/public_html/sysarcaweb_1.0/so_factura_pre/reports/NumeroLetras/letras.php on line 13
+[03-Feb-2021 15:15:46 America/Mexico_City] PHP Fatal error:  Cannot declare class NumeroALetras, because the name is already in use in /home/labora41/public_html/sysarcaweb_1.0/so_factura_pre/reports/NumeroLetras/letras.php on line 13
+[03-Feb-2021 15:16:05 America/Mexico_City] PHP Fatal error:  Cannot declare class NumeroALetras, because the name is already in use in /home/labora41/public_html/sysarcaweb_1.0/so_factura_pre/reports/NumeroLetras/letras.php on line 13
+[03-Feb-2021 15:16:52 America/Mexico_City] PHP Fatal error:  Cannot declare class NumeroALetras, because the name is already in use in /home/labora41/public_html/sysarcaweb_1.0/so_factura_pre/reports/NumeroLetras/letras.php on line 13
+[03-Feb-2021 15:40:44 America/Mexico_City] PHP Fatal error:  Cannot declare class NumeroALetras, because the name is already in use in /home/labora41/public_html/sysarcaweb_1.0/so_factura_pre/reports/NumeroLetras/letras.php on line 13
+[05-Feb-2021 08:19:02 America/Mexico_City] PHP Fatal error:  Cannot declare class NumeroALetras, because the name is already in use in /home/labora41/public_html/sysarcaweb_1.0/so_factura_pre/reports/NumeroLetras/letras.php on line 13
+[11-Feb-2021 08:59:44 America/Mexico_City] PHP Fatal error:  Cannot declare class NumeroALetras, because the name is already in use in /home/labora41/public_html/sysarcaweb_1.0/so_factura_pre/reports/NumeroLetras/letras.php on line 13
+[11-Feb-2021 08:59:54 America/Mexico_City] PHP Fatal error:  Cannot declare class NumeroALetras, because the name is already in use in /home/labora41/public_html/sysarcaweb_1.0/so_factura_pre/reports/NumeroLetras/letras.php on line 13
+[11-Feb-2021 09:00:42 America/Mexico_City] PHP Fatal error:  Cannot declare class NumeroALetras, because the name is already in use in /home/labora41/public_html/sysarcaweb_1.0/so_factura_pre/reports/NumeroLetras/letras.php on line 13
+[11-Feb-2021 09:01:38 America/Mexico_City] PHP Fatal error:  Cannot declare class NumeroALetras, because the name is already in use in /home/labora41/public_html/sysarcaweb_1.0/so_factura_pre/reports/NumeroLetras/letras.php on line 13
+[11-Feb-2021 09:03:33 America/Mexico_City] PHP Fatal error:  Cannot declare class NumeroALetras, because the name is already in use in /home/labora41/public_html/sysarcaweb_1.0/so_factura_pre/reports/NumeroLetras/letras.php on line 13
+[11-Feb-2021 09:03:59 America/Mexico_City] PHP Fatal error:  Cannot declare class NumeroALetras, because the name is already in use in /home/labora41/public_html/sysarcaweb_1.0/so_factura_pre/reports/NumeroLetras/letras.php on line 13
+[11-Feb-2021 09:10:22 America/Mexico_City] PHP Fatal error:  Cannot declare class NumeroALetras, because the name is already in use in /home/labora41/public_html/sysarcaweb_1.0/so_factura_pre/reports/NumeroLetras/letras.php on line 13
+[11-Feb-2021 09:10:42 America/Mexico_City] PHP Fatal error:  Cannot declare class NumeroALetras, because the name is already in use in /home/labora41/public_html/sysarcaweb_1.0/so_factura_pre/reports/NumeroLetras/letras.php on line 13
+[11-Feb-2021 09:10:45 America/Mexico_City] PHP Fatal error:  Cannot declare class NumeroALetras, because the name is already in use in /home/labora41/public_html/sysarcaweb_1.0/so_factura_pre/reports/NumeroLetras/letras.php on line 13
+[11-Feb-2021 09:10:49 America/Mexico_City] PHP Fatal error:  Cannot declare class NumeroALetras, because the name is already in use in /home/labora41/public_html/sysarcaweb_1.0/so_factura_pre/reports/NumeroLetras/letras.php on line 13
+[11-Feb-2021 09:11:30 America/Mexico_City] PHP Fatal error:  Cannot declare class NumeroALetras, because the name is already in use in /home/labora41/public_html/sysarcaweb_1.0/so_factura_pre/reports/NumeroLetras/letras.php on line 13
+[11-Feb-2021 10:09:51 America/Mexico_City] PHP Fatal error:  Cannot declare class NumeroALetras, because the name is already in use in /home/labora41/public_html/sysarcaweb_1.0/so_factura_pre/reports/NumeroLetras/letras.php on line 13
+[11-Feb-2021 10:29:31 America/Mexico_City] PHP Fatal error:  Cannot declare class NumeroALetras, because the name is already in use in /home/labora41/public_html/sysarcaweb_1.0/so_factura_pre/reports/NumeroLetras/letras.php on line 13
