@@ -1,0 +1,1 @@
+[29-Nov-2019 10:02:56 America/Mexico_City] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'admon'@'localhost' (using password: YES) in /home/labora41/public_html/sysarcaweb_1.0/controladores/conex.php on line 29

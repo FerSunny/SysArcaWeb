@@ -1,0 +1,7 @@
+[26-Feb-2021 10:28:31 America/Mexico_City] PHP Fatal error:  Uncaught Exception: FPDF error: Some data has already been output, can't send PDF file (output started at /home/labora41/public_html/sysarcaweb_1.0/pa_recepcion/reports/reporte_entrega.php:98) in /home/labora41/public_html/sysarcaweb_1.0/fpdf/fpdf.php:273
+Stack trace:
+#0 /home/labora41/public_html/sysarcaweb_1.0/fpdf/fpdf.php(1054): FPDF->Error('Some data has a...')
+#1 /home/labora41/public_html/sysarcaweb_1.0/fpdf/fpdf.php(1001): FPDF->_checkoutput()
+#2 /home/labora41/public_html/sysarcaweb_1.0/pa_recepcion/reports/reporte_entrega.php(140): FPDF->Output()
+#3 {main}
+  thrown in /home/labora41/public_html/sysarcaweb_1.0/fpdf/fpdf.php on line 273

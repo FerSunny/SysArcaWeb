@@ -1,0 +1,45 @@
+body
+/* De una tabla */
+.cabeza_y_pie
+{
+font-family: Verdana;
+font-size: 17px;
+text-align: center;
+background-color: #819FF7;
+height: 50px;
+letter-spacing: .2cm;
+font-weight:bold;
+}
+#tamano
+{
+font-family: Verdana;
+font-size: 15px;
+}
+#tamano2
+{
+font-family: Verdana;
+font-size: 12px;
+    
+}
+#tabla1{
+    font-family: Verdana;
+    font-size: 12px;
+}
+/* Del documento */
+.cabecera
+{
+    font-family: Verdana;
+    font-size: 15px;
+    text-align: center;
+    background-color: #FFFFFF;
+    height: 21px;
+}
+.pie_de_pagina
+{
+    font-family: Verdana;
+    font-size: 12px;
+    text-align: center;
+}
+#boton2{
+    left: 5px;
+}
