@@ -1,6 +1,4 @@
-<?php 
-
-
+<?php
 
 session_start();
 
@@ -136,4 +134,3 @@ $conexion->close();
 
 
 ?>
-
