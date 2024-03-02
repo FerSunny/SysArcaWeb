@@ -440,7 +440,7 @@
 
 										<input type="number" name="encu" id="encu" class="form-control" required>
 
-										<label for="producto">Encuestado (Px/Dr)</label>
+										<label for="producto">Encuestado (ID Px/Dr)</label>
 
 									</div>
 
