@@ -40,7 +40,7 @@
   ?>
 
   <div class="container" style="margin-top: 30px;">
-    <h1 style="text-align: center;">Directorio <!-- CAMBIO Se cambia el titulo de la tabla -->
+    <h1 style="text-align: center;">Directorio Medicos <!-- CAMBIO Se cambia el titulo de la tabla -->
 <!--
       <button type="button" class="btn btn-primary pull-right menu" data-toggle="modal" data-target="#myModals"><i class="fa fa-user-plus" aria-hidden="true"></i>&nbsp;Nuevo Producto</button> 
 -->
@@ -61,12 +61,15 @@
             <th>ID </th>
             <th>Tipo</th>
             <th>Nombre</th>
+            <th>Telefono Fijo</th>
+            <th>Telefono Movil</th>
             <th>Fecha Primer Nota</th>
             <th>Fecha ultima Nota</th>
             <th>Numero de OT</th>
-            <th>Color</th>
+            <th>Prioridad</th>
+            <th>Estatus</th>
 
-            <th>Editar</th>
+            <th>Respuesta</th>
             <th>Eliminar</th>
           </tr>
         </thead>

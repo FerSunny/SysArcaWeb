@@ -35,7 +35,7 @@
 				"columns":[
 
 					{"data" : "id"},
-
+					{"data" : "tipo"},
 					{"data" : "nombre"},
 
 					{"data" : "telefono_fijo"},
@@ -44,12 +44,49 @@
 
 					{"data" : "primer"},
 
-					{"data" : "cosultimoto_total"},
+					{"data" : "ultimo"},
 					{"data" : "numot"},
+					{
+						render: function(data,type,row)
+	                    {
+	                        var valid = row['prioridad']
 
+	                        switch (valid) {
+								case '1':
+									return "<button type='button' class='alta btn btn-danger btn-md'><i class='fa fa-user-md'></i></button>"
+									break;
+								case '2':
+									return "<button type='button' class='alta btn btn-warning btn-md'><i class='fa fa-user-md'></i></button>"
+									break;		
+								case '3':
+									return "<button type='button' class='alta btn btn-success btn-md'><i class='fa fa-user-md'></i></button>"
+									break;						
+								default:
+									return "<button type='button' class='alta btn btn-danger btn-md'><i class='fa fa-user-md'></i></button>"
+									break;
+							}
+	                    }
+                	},					
+					{"data" : "estatus"},
 					{"defaultContent": "<button type='button' class='editar btn btn-warning btn-md'><i class='fas fa-edit'></i></button>"},
 
-					{"defaultContent":"<button type='button' class='eliminar btn btn-danger btn-md'><i class='fas fa-trash-alt'></i></button>"}
+					{
+						render: function(data,type,row)
+	                    {
+	                        var valid = row['estatus']
+
+	                        if(valid == 'Pendiente')
+	                        {
+	                            return "<button type='button' disabled class='eliminar btn btn-danger btn-md'><i class='fas fa-trash-alt'></i></button>"
+	                        }else
+	                        {
+	                            return "<button type='button' class='eliminar btn btn-danger btn-md'><i class='fas fa-trash-alt'></i></button>"
+	                        }
+
+	                    }
+                	}
+
+					//{"defaultContent":"<button type='button' class='eliminar btn btn-danger btn-md'><i class='fas fa-trash-alt'></i></button>"}
 
 				],
 
@@ -181,35 +218,17 @@ var editar = function(tbody, table) {
 
 				$("#frmedit  label").attr('class','active')
 
-				$("#frmedit  #dc").val(data.fk_id_cliente)
+				$("#frmedit  #dc").val(data.id)
 
-				$("#frmedit  #pro").val(data.id_producto)
+				$("#frmedit  #pro").val(data.id)
 
-				$("#frmedit  #codigo").val(data.cod_producto)
+				$("#frmedit  #codigo").val(data.id)
 
-				$("#frmedit  #producto").val(data.producto)
+				$("#frmedit  #respues").val(data.fk_id_res_enc)
 
-				$("#frmedit  #desc_p").val(data.desc_producto)
+				$("#frmedit  #observa").val(data.observaciones)
 
-				$("#frmedit  #costo").val(data.costo_producto)
-
-				$("#frmedit  #utilidad").val(data.utilidad)
-
-				$("#frmedit  #c_total").val(data.costo_total)
-
-				$("#frmedit  #depto").val(data.departamento)
-
-				$("#frmedit  #proveedor").val(data.fk_id_proveedor)
-
-				$("#frmedit  #cat").val(data.fk_id_categoria)
-
-				$("#frmedit  #uni_med_mod").val(data.fk_unidad_medida)
-
-				$("#frmedit  #caducidad").val(data.caducidad)
-				$("#frmedit  #almacen").val(data.fk_id_almacen)
-				$("#frmedit  #pasillo").val(data.pasillo)
-				$("#frmedit  #nivel").val(data.nivel)
-			 
+		 
 
 		});
 
@@ -315,7 +334,7 @@ var eliminar= function(tbody, table) {
 
 				if (result.value) {
 
-					 $.post("./controladores/eliminar.php", {'id_producto' : data.id_producto}  , function(data,status)
+					 $.post("./controladores/eliminar.php", {'id' : data.id}  , function(data,status)
 
 					{
 

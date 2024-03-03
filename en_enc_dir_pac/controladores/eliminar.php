@@ -2,9 +2,9 @@
 
 
 include ("../../controladores/conex.php");
-$id_producto= $_POST['id_producto'];
+$id= $_POST['id'];
 
-$query ="UPDATE eb_productos SET estado = 'S' WHERE id_producto = $id_producto ";
+$query ="UPDATE en_enc_directorio SET estado = 'S' WHERE fk_id = $id and tipo = 1";
 $result = $conexion -> query($query);
 
 if ($result) {

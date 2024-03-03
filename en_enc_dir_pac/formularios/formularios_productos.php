@@ -382,7 +382,7 @@
 
 							<h2 style="color:blue;text-align:center" class="modal-title" id="modalEliminarLabel">
 
-									Editar Productos
+									Respuestas
 
 							</h2>
 
@@ -402,7 +402,7 @@
 
 						<div class="md-form">
 
-							<input type="text" name="codigo" id="codigo" class="form-control" required>
+							<input type="text" readonly name="codigo" id="codigo" class="form-control" required>
 
 							<label for="codigo">Código</label>
 
@@ -416,25 +416,9 @@
 
 									<div class="md-form">
 
-										<input type="text" name="producto" id="producto" class="form-control" required>
+										<input type="text" name="observa" id="observa" class="form-control" required>
 
-										<label for="producto">Desacripción corta</label>
-
-									</div>
-
-								</div>
-
-							</div>
-
-							<div class="col">
-
-								<div class="md-form mt-0">
-
-									<div class="md-form">
-
-										<input type="text" name="desc_p" id="desc_p" class="form-control" required>
-
-										<label for="desc_p">Descripción larga</label>
+										<label for="observa">Indique: (el metodo fue: Via telefono, presencial, whatsapp, etc)</label>
 
 									</div>
 
@@ -442,113 +426,11 @@
 
 							</div>
 
-						</div>
 
-						<div class="row">
-
-							<div class="col">
-
-								<div class="md-form mt-0">
-
-									<div class="md-form">
-
-										<input type="number" name="costo" id="costo" class="form-control" step="0.01" onkeyup="calcular(2)" required>
-
-										<label for="costo">Costo</label>
-
-									</div>
-
-								</div>
-
-							</div>
-
-							<div class="col">
-
-								<div class="md-form mt-0">
-
-									<div class="md-form">
-
-										<input type="number" name="utilidad" id="utilidad" class="form-control" value="0" step="0.01" onkeyup="calcular(2)" required>
-
-										<label for="utilidad">Utilidad</label>
-
-									</div>
-
-								</div>
-
-							</div>
-
-							<div class="col">
-
-								<div class="md-form mt-0">
-
-									<div class="md-form">
-
-										<input type="number" name="c_total" id="c_total" class="form-control" step="0.000000000001" required>
-
-										<label for="c_total" id="lbl_total">Precio</label>
-
-									</div>
-
-								</div>
-
-							</div>
 
 						</div>
 
 
-					<div class="row">
-						<div class="col">
-							<div class="md-form mt-0">
-								<label for="">Almacen</label>
-							</div>
-						</div>
-						<div class="col-9">
-							<div class="md-form mt-0">
-								<select class="form-control form-control-sm" name="almacen" 
-								id="almacen" required>
-									<option value="" class="z-depth-5">Seleccione</option>
-										<?php 
-												$query = $conexion -> query("SELECT id_almacen,desc_almacen FROM eb_almacenes WHERE estado = 'A'");
-												while($res = mysqli_fetch_array($query))
-												{
-														echo "<option value =".$res['id_almacen'].">
-																".$res['desc_almacen']."
-																</option>";
-												}
-										?>
-								</select>
-							</div>
-						</div>
-					</div>
-
-
-					<div class="row">
-						<div class="col">
-							<div class="md-form mt-0">
-								<div class="md-form">
-									<input type="text"  name="pasillo" id="pasillo" class="form-control"  required>
-									<label for="pasillo">Pasillo</label>
-								</div>
-							</div>
-						</div>
-						<div class="col">
-							<div class="md-form mt-0">
-								<div class="md-form">
-									<input type="text" name="anaquel" id="anaquel" class="form-control" required>
-									<label for="Anaquel">Anaquel</label>
-								</div>
-							</div>
-						</div>
-						<div class="col">
-							<div class="md-form mt-0">
-								<div class="md-form">
-									<input type="text" name="nivel" id="nivel" class="form-control" >
-									<label for="Nivel" id="Nivel">Nivel</label>
-								</div>
-							</div>
-						</div>
-					</div>	
 
 
 
@@ -558,7 +440,7 @@
 
 								<div class="md-form mt-4">
 
-									<label for="">Departamento</label>
+									<label for="">Respuesta</label>
 
 								</div>
 
@@ -568,23 +450,23 @@
 
 								<div class="md-form mt-0">
 
-									<select class="form-control form-control-sm" name="depto" 
+									<select class="form-control form-control-sm" name="respuesta" 
 
-									id="depto" required>
+									id="respuesta" required>
 
 										<option value="" class="z-depth-5">Seleccione</option>
 
 											<?php 
 
-													$query = $conexion -> query("SELECT id_departamento,desc_departamento FROM eb_departamento WHERE estado = 'A'");
+													$query = $conexion -> query("SELECT id_res_enc,desc_respuesta FROM en_res_enc WHERE estado = 'A'");
 
 													while($res = mysqli_fetch_array($query))
 
 													{
 
-															echo "<option value =".$res['id_departamento'].">
+															echo "<option value =".$res['id_res_enc'].">
 
-																	".$res['desc_departamento']."
+																	".$res['desc_respuesta']."
 
 																	</option>";
 
@@ -600,163 +482,8 @@
 
 						</div>
 
-						<div class="row">
 
-							<div class="col">
 
-								<div class="md-form mt-4">
-
-									<label for="">Proveedor</label>
-
-								</div>
-
-							</div>
-
-							<div class="col-9">
-
-								<div class="md-form mt-0">
-
-									<select class="form-control form-control-sm" name="proveedor" id="proveedor" required>
-
-										<option value="" class="z-depth-5">Seleccione</option>
-
-											<?php 
-
-													$query = $conexion -> query("SELECT id_proveedor,razon_social FROM eb_proveedores WHERE estado = 'A'");
-
-													while($res = mysqli_fetch_array($query))
-
-													{
-
-															echo "<option value =".$res['id_proveedor'].">
-
-																	".$res['razon_social']."
-
-																	</option>";
-
-													}
-
-											?>
-
-									</select>
-
-								</div>
-
-							</div>
-
-						</div>
-
-					<div class="row">
-
-						<div class="col">
-
-							<div class="md-form mt-4">
-
-								<label for="">Categoría</label>
-
-							</div>
-
-						</div>
-
-						<div class="col-9">
-
-							<div class="md-form mt-0">
-
-								<select class="form-control form-control-sm" name="cat" id="cat" required>
-
-									<option value="" class="z-depth-5">Seleccione</option>
-
-										<?php 
-
-												$query = $conexion -> query("SELECT id_categoria,categoria FROM eb_categoria WHERE estado = 'A'");
-
-												while($res = mysqli_fetch_array($query))
-
-												{
-
-														echo "<option value =".$res['id_categoria'].">
-
-																".$res['categoria']."
-
-																</option>";
-
-												}
-
-										?>
-
-								</select>
-
-							</div>
-
-						</div>
-
-					</div>
-
-					<div class="row">
-
-						<div class="col"><br>
-
-							<div class="md-form mt-4">
-
-								<label for="">Unidad de medida</label>
-
-							</div>
-
-						</div>
-
-						<div class="col-9">
-
-							<div class="md-form mt-0">
-
-								<select class="form-control form-control-sm" name="uni_med_mod" id="uni_med_mod" required>
-
-									<option value="" class="z-depth-5">Seleccione</option>
-
-										<?php 
-
-												$query = $conexion -> query("SELECT id_unidad, unidad_medida FROM eb_unidad_medida WHERE estado = 'A'");
-
-												while($res = mysqli_fetch_array($query))
-
-												{
-
-														echo "<option value =".$res['id_unidad'].">
-
-																".$res['unidad_medida']."
-
-																</option>";
-
-												}
-
-										?>
-
-								</select>
-
-							</div>
-
-						</div>
-
-					</div>
-
-					<div class="row">
-
-						<div class="col">
-
-							<div class="md-form mt-0">
-
-								<div class="md-form">
-
-									<input type="date" name="caducidad" id="caducidad" class="form-control" maxlength="100" required>
-
-									<label for="producto">Caducidad del producto</label>
-
-								</div>
-
-							</div>
-
-						</div>
-
-					</div>
 
 					</div>
 
