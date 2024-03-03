@@ -78,10 +78,14 @@
 					{
 						render:function(data,type,row){
 							var registrado;
-
-							return "<form-group style='text-align:center;'>"+
-							"<a id='printer'  href='../eb_equipos/tabla_imagenes.php?id_equipo="+row['id_equipo']+"' class='btn btn-success' role='button'><span  class='fa fa-image'></span></a>"+
-							"</form-group>";
+/*
+									return "<form-group style='text-align:center;'>"+
+									"<a id='printer' target='_blank' href='reports/tikets.php?codigo="+row['codigo']+"' class='btn btn-success btn-md' role='button'><i class='fas fa-file-pdf' ></i></a>"+
+									"</form-group>";
+									*/
+									return "<form-group style='text-align:center;'>"+
+									"<a id='printer'  href='../eb_equipos/tabla_imagenes.php?id_equipo="+row['id_equipo']+"' class='btn btn-success' role='button'><span  class='fa fa-image'></span></a>"+
+									"</form-group>";
 
 						},
 					},
