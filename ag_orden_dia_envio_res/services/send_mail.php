@@ -35,7 +35,6 @@ if($rows > 0)
 {
 	3;
 }
-
 //echo 'datos --> '.$paciente.$e_paciente.$medico.$e_medico;
 
 //Obtenemos nombre del estudio
