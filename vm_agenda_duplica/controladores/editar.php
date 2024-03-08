@@ -15,18 +15,22 @@ $fecha = $_POST['fecha'];
 //$hora = $_POST['hora'];
 
 $id_usuario = $_SESSION['id_usuario'];
-
+//echo 'entro a editar.php';
 // Eliminamos los medicos del dia
+
 $stmt_delete =
 "
 DELETE FROM vm_agenda
 WHERE estado = 'A'
 AND fk_id_usuario = $id_usuario
-AND YEAR(ag.fecha) = $anio
-AND MONTHNAME(ag.`fecha`) = '$mes'
-AND DAY(ag.fecha) = $dia
+AND YEAR(fecha) = $anio
+AND MONTHNAME(`fecha`) = '$mes'
+AND DAY(fecha) = $dia
 "
 ;
+
+//echo 'borra'.$stmt_delete;
+
 $execute_query_delete = mysqli_query($conexion,$stmt_delete);
 
 
@@ -40,7 +44,9 @@ AND YEAR(ag.`fecha`) = $anio
 AND MONTHNAME(ag.`fecha`) = '$mes'
 AND DAY(ag.`fecha`) = $dia
 "
-;
+//echo "sql_mx:".$sql_max;
+
+
   $veces='0';
   if ($result1 = mysqli_query($conexion, $sql_max)) {
     while($row = $result1->fetch_assoc())
@@ -79,6 +85,7 @@ AND DAY(ag.`fecha`) = $dia
 }
 
 echo $estatus;
+
 
 $conexion->close();
 

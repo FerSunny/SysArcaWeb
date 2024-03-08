@@ -160,7 +160,7 @@ function focus_btn()
 
 
 var editar = function(tbody, table) {
-
+	console.log(" editar")
 		$(tbody).on("click", "button.editar", function() 
 
 		{
@@ -201,7 +201,7 @@ $("#frmedit").on('submit', function (e)
 	{
 
 			e.preventDefault()
-
+console.log("antes de editar")
 			$.ajax({
 
 					type: "POST",                 
