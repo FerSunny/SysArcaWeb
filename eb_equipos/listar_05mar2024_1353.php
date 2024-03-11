@@ -41,7 +41,7 @@
  se.`desc_servicio`,
  ar.`desc_area`,
  gc.`desc_gpo_conta`,
- CONCAT(te.`clave_id`,'-',se.`desc_abreviada`,'-',ar.`clave`,'-',su.`desc_corta`,'-',te.`conse`) codigo,
+ CONCAT(te.`clave_id`,'-',se.`desc_abreviada`,'-',ar.`clave`,'-',gc.`clave`,'-',te.`conse`) codigo,
  usuario,
  contra,
  pr.`razon_social`
