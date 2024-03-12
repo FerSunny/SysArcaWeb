@@ -1,0 +1,5 @@
+Aqui radican todos los PDF generados en el modulo de envio de resultados: so_envio_resultados
+y estan disponibles para ser enviados por email. whatsapp o subirlo al link
+
+12mar24
+javier pradel

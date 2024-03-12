@@ -2,8 +2,6 @@
 
     include ("../controladores/conex.php");
 
-  
- 
   $query = "
   SELECT
   fa.`id_factura`,
@@ -11,11 +9,14 @@
   CONCAT(cl.nombre,' ',cl.a_paterno,' ',cl.a_materno) AS nombre,
   df.fk_id_estudio,
   es.`desc_estudio`,
+  es.fk_id_plantilla,
   CASE
   WHEN re.fk_id_factura IS NULL THEN
   1 -- 'Sin resultado en sistema'
-  WHEN re.entregada IS NULL THEN
+  WHEN re.entregada IS NULL and re.validado = 1 THEN
   2 -- 'Pendiente de entregar'
+  WHEN re.entregada IS NULL and re.validado = 0 THEN
+  3 -- 'Pendiente de Validar'
   ELSE
   re.`entregada`
   END entregada,
