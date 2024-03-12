@@ -20,9 +20,6 @@ $numero_factura=$_GET['numero_factura'];
 $studio=$_GET['studio'];
 $fecha = date("Y-m-d H:i:s");
 $veces='0';
-
-//echo 'repiorte';
-
 //Obtenemos el numero de impreisones maximo
 $stmt = $conexion->prepare("SELECT max(num_imp) as id_max FROM cr_plantilla_1_re WHERE fk_id_factura = ? and fk_id_estudio = ?");
     $stmt->bind_param("ii", $numero_factura, $studio);
@@ -51,7 +48,7 @@ date(fa.fecha_factura),
 CONCAT(cl.nombre,' ',cl.a_paterno,' ',cl.a_materno) paciente,
 cl.anios,
 CASE 
-WHEN LENGTH(fa.vmedico) > 0 THEN fa.vmedico
+WHEN fa.vmedico > 0 THEN fa.vmedico
 ELSE CONCAT(med.nombre,' ',med.a_paterno,' ',med.a_materno)
 END medico
 FROM so_factura fa
@@ -98,7 +95,7 @@ WHERE fa.id_factura = ?");
       $stmt->close();
   }else
   {
-    echo "Ourrio un error";
+    echo "Ocurrio un error";
   }
 
   if($tipo=='M'){
@@ -185,7 +182,7 @@ WHERE fa.id_factura = ?");
       $this->Cell(22,5,'ESTUDIO:',0,0,'L');
       $this->SetFont('Arial','',11);
       $this->MultiCell(88,5,$estudio2,0,'L');
-   
+ 
       $this->SetFont('Arial','B',11);
       $this->SetXY(122, 59); 
       $this->Write(0,'EDAD:'); 
@@ -199,7 +196,11 @@ WHERE fa.id_factura = ?");
       if ($studio=='410' or $studio=='966' or $studio=='1051'){
         $this->ln(15);
       }else{
-        $this->ln(20);
+		  if($studio=='2616'){
+			  $this->ln(10);
+		  }else{
+		  	$this->ln(20);
+			}
       }
 
       $this->Cell(5);
@@ -251,18 +252,21 @@ WHERE fa.id_factura = ?");
     $this->Cell(30,5,$verificado,0,0,'L'); 
     $this->ln(10); // aqui
     //$this->Cell(5);
-
-    $stmt = $conexion->prepare("SELECT p2.concepto,posini,tipfue,tamfue FROM cr_plantilla_1 p2 WHERE p2.fk_id_estudio = ? AND p2.estado = 'A' AND p2.tipo = 'F' order by orden");
+//echo "19";
+    $stmt = $conexion->prepare("SELECT p2.concepto
+      -- ,posini,tipfue,tamfue 
+      FROM cr_plantilla_1 p2 WHERE p2.fk_id_estudio = ? AND p2.estado = 'A' AND p2.tipo = 'F' order by orden");
     $stmt->bind_param('i',$studio);
     $stmt->execute();
-    $stmt->bind_result($concepto,$posini,$tipfue,$tamfue);
+    //$stmt->bind_result($concepto,$posini,$tipfue,$tamfue);
+    $stmt->bind_result($concepto);
         //$stmt->close();
-
+ 
     $this->Image('../imagenes/firma.gif',153,230,40,0);
-    $this->SetFont('Arial','',$tamfue);
+    $this->SetFont('Arial','', $tamfuev);
     while ($stmt->fetch())
     {
-       $this->Cell(($posini-=1));
+       $this->Cell(($posiniv-=1));
       $eventos = array($concepto);
       $firma=$eventos[0];
       $this->Cell(170,5,utf8_decode($firma),0,0,'L');
@@ -337,11 +341,11 @@ $hay_obs='';
 $observaciones='';
 $nle='0';
 $blanco=' ';
-
+ 
     $stmt = $conexion->prepare("SELECT tipo,concepto, valor,unidad_medida, tamfue, tipfue, posini, observaciones  FROM cr_plantilla_1_re WHERE fk_id_factura = ? AND fk_id_estudio = ? ORDER BY orden");
     $stmt->bind_param('ii',$numero_factura,$studio);
     $stmt->execute();
-    $stmt->bind_result($tipo,$concepto,$valor,$uniadad_medida,$tamfue,$tipfue,$posini,$observaciones);
+    $stmt->bind_result($tipo, $concepto, $valor, $uniadad_medida, $tamfue, $tipfue, $posini, $observaciones);
     $justifica='R';
     $pdf->ln(2);
      if (strlen($observaciones)>0)
@@ -351,12 +355,12 @@ $blanco=' ';
     }
     while ($stmt->fetch())
     {
-      $res = array($tipo,$concepto,$valor,$uniadad_medida,$tamfue,$tipfue,$posini,$observaciones);
+      $res = array($tipo, $concepto, $valor, $uniadad_medida, $tamfue, $tipfue, $posini, $observaciones);
         $pdf->Cell(9);
-        $pdf->SetFont('Arial',$tipfue,$tamfue);
+        $pdf->SetFont('Arial', $tipfue, $tamfue);
         $pdf->Cell(70,5,utf8_decode($concepto),0,0,'L');
         $pdf->Cell(9);
-        $pdf->SetFont('Arial',$tipfue,$tamfue);
+        $pdf->SetFont('Arial', $tipfue, $tamfue);
         $pdf->Cell(80,5,utf8_decode($valor.' '.$uniadad_medida),0,0,'L');
         //AYUNO
         //INGESTA DE GLUCOSA   75.0 gramos
@@ -364,7 +368,7 @@ $blanco=' ';
 
 
       }
-      /*
+
       if ($studio == 235) 
       {
         $pdf->ln(-20);
@@ -377,8 +381,7 @@ $blanco=' ';
         $pdf->SetX(-40);
         $pdf->SetFont('Arial',$tipfue,$tamfue);
         $pdf->Cell(26,5,utf8_decode('INGESTA DE GLUCOSA   75.0 gramos'),0,0,$justifica);
-      }else
-      {
+      }else{
         $pdf->ln(-28);
         $pdf->Cell(9);
         $pdf->SetX(-70);
@@ -390,36 +393,34 @@ $blanco=' ';
         $pdf->SetFont('Arial',$tipfue,$tamfue);
         $pdf->Cell(26,5,utf8_decode('INGESTA DE GLUCOSA   75.0 gramos'),0,0,$justifica);
       }
-*/
- 
-   $pdf->Image('../../pdf_graficas/'.$numero_factura.'_'.$studio.'.png',20,130,160,0);
 
- //   $pdf->SetX(230);
-//    $pdf->SetY(210);
+ //echo "13";
+   $pdf->Image('../../pdf_graficas/'.$numero_factura.'_'.$studio.'.png',13,130,145,80);
+//echo "14";
+    $pdf->SetX(230);
+    $pdf->SetY(200);
     //
-   // $pdf->Cell(1);
 
-   $pdf->ln(85);
     $stmt = $conexion->prepare("SELECT tipo,concepto,posini,tamfue FROM cr_plantilla_1 WHERE fk_id_estudio = ? AND tipo = 'T'");
     $stmt->bind_param('i',$studio);
     $stmt->execute();
-    $stmt->bind_result($tipo,$concepto,$posini,$tamfue);
+    $stmt->bind_result($tipo, $concepto, $posini, $tamfue);
     $pdf->Cell(9);
 
     while($stmt->fetch())
     {
-     //   $pdf->Cell(12);
-      $eventos = trim($concepto);
-
-      $pdf->SetFont('Arial','',$tamfue);
-      //$pdf->SetX(22);
-      $pdf->Cell(50,3,utf8_decode($eventos),0,'L');
-     // $pdf->ln(-4);
+        $pdf->Cell(12);
+      $eventos = array($concepto);
+      $res=$eventos[0];
+      $pdf->SetFont('Arial','', $tamfue);
+      $pdf->SetX(22);
+      $pdf->Cell(150,5,utf8_decode($res),0,'L');
+      $pdf->ln(4);
       //$pdf->MultiCell(150,5,utf8_decode('a'),0,'L');
     }
 
     if(strlen($observaciones)>0){
-      $pdf->ln(4);
+      $pdf->ln(2);
       $pdf->Cell(5);
       $pdf->SetTextColor(191, 54, 12);
       $pdf->SetFont('Arial','B',12);

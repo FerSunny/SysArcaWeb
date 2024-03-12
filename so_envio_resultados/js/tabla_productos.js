@@ -32,6 +32,10 @@
 							{
 								return '<span class="badge badge-warning">Pendiente de entregar</span>'
 							}else
+							if(row['entregada'] == '3')
+							{
+								return '<span class="badge badge-primary">Pendiente de Validar</span>'
+							}else
 									{
                     return "<p class='btn btn-success'>"+row['entregada']+"</p>"
 							}
@@ -53,19 +57,78 @@
 
 						}
 					},
-          {"defaultContent": "<button type='button' disabled class='codigo btn btn-primary btn-sm'><i class='fa fa-envelope'></i></button>"},
+          {"defaultContent": "<button type='button'  class='email btn btn-primary btn-sm'><i class='fa fa-envelope'></i></button>"},
           {"defaultContent": "<button type='button' disabled class='editar btn btn-warning btn-sm'><i class='fa fa-phone' ></i></button>"},
           {"defaultContent":"<button type='button' disabled class='eliminar btn btn-danger btn-sm'><i class='fa fa-link'></i></button>"}
         ],
         "language": idioma_espanol
       });
-      codigo("#dt_productos tbody", table)
+      email("#dt_productos tbody", table)
       agregar("#dt_productos tbody", table)
       editar("#dt_productos tbody", table)
       eliminar("#dt_productos tbody", table)
         
 }
- 
+
+/* enviar resultados por email */
+var email = function(tbody, table) {
+  $(tbody).on("click", "button.email", function() 
+  {
+      var data = table.row($(this).parents("tr")).data();
+      var factura = data.id_factura
+      var estudio = data.fk_id_estudio
+      var plantilla_id = data.fk_id_plantilla
+      var tipo_salida = 1
+
+      switch(plantilla_id) {
+        case '1':
+          console.log('factura:'+factura+' estudio:'+estudio+' tipo salida:'+tipo_salida)
+          //console.log('tipo_salida '+tipo_salida)
+          $.post("./reports/pdf_plantilla_1.php", {'factura' : factura, 'estudio' : estudio, 'tipo_salida' : tipo_salida} ,function(data, status){
+            if(data == 1)
+            {
+              // code
+            }else{
+              swal('No se genero el PDF para ser enviado, notifique a su area de sistemas: soporte.producto@medisyslabs.onmicrosoft.com')
+            }
+          }
+          );
+          break;
+        case 2:
+          // code block
+          break;
+        default:
+          swal('Sin plantilla'+plantilla_id)
+         // stop
+      }
+/*
+          $.post("./controladores/email.php", {'factura' : factura, 'estudio' : estudio, 'plantilla' : plantilla_id} ,function(data, status){
+              if(data == 1)
+              {
+                  var table = $("#dt_resultados").DataTable()
+                  table.ajax.reload()
+                  Swal.fire({
+                            position: 'top-end',
+                            type: 'success',
+                            title: 'Validando datos, espere porfavor',
+                            showConfirmButton: false,
+                            timer: 1000
+                          })
+                  //window.opener.document.location="../ag_orden_dia_p1_nvo/tabla_agenda.php";
+              }else
+              {
+                  Swal.fire('Error MySQL Codigo: ' + data)
+              }
+          });
+*/
+
+  });
+}
+
+
+
+
+/* 
 var codigo= function(tbody, table) {
   $(tbody).on("click", "button.codigo", function() 
   {
@@ -74,6 +137,7 @@ var codigo= function(tbody, table) {
   
   });
 }
+*/
 
 var agregar= function(tbody, table) {
     $(tbody).on("click", "button.agregar", function() 
@@ -230,7 +294,7 @@ var eliminar= function(tbody, table) {
     });
   }
 
-
+/*
 function calcular(val)
 {
   if(val == 1)
@@ -268,7 +332,7 @@ function calcular(val)
   
 
 }
-
+*/
     /* Idioma para el DataTable */
 var idioma_espanol = {
     "sProcessing": "Procesando...",
