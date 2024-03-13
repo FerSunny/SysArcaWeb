@@ -42,7 +42,7 @@
 					{"data" : "fecha"},
 
 					{"data" : "hora"},
-
+					{"data" : "hora_termino"},
 					{"data" : "paciente"},
 					{"data" : "iniciales"},
 
@@ -111,43 +111,29 @@ $("#form_productos").on('submit', function (e)
 					success: function(data)            
 
 						{
-
 							if(data==1)
-
 							{
-
 								var table = $('#dt_productos').DataTable(); // accede de nuevo a la DataTable.
-
 								table.ajax.reload(); // Recarga el  DataTable
-
 								document.getElementById("form_productos").reset();
-
 								swal('datos agregados correctamente')
-
 								console.log(data)
-
 							}else
-
 							if(data == 1062)
-
 							{
-
 								swal('El codigo del producto ya existe')
-
 							}
-
 							else
-
+							if(data == 2)
 							{
-
-								swal('Error en MySQL, Error numero:  '+ data)
-
-								console.log(data)
-
+								swal('El horario ya esta ocupado')
 							}
-
+							else
+							{
+								swal('Error en MySQL, Error numero:  '+ data)
+								console.log(data)
+							}
 						}
-
 					});          
 
 	});
@@ -180,36 +166,28 @@ var editar = function(tbody, table) {
 
 				$("#frmedit  label").attr('class','active')
 
-				$("#frmedit  #dc").val(data.fk_id_cliente)
+				$("#frmedit  #dc").val(data.id_evento)
 
-				$("#frmedit  #pro").val(data.id_producto)
+				$("#frmedit  #pro").val(data.id_evento)
 
-				$("#frmedit  #codigo").val(data.cod_producto)
+				$("#frmedit  #codigo").val(data.id_evento)
 
-				$("#frmedit  #producto").val(data.producto)
+				$("#frmedit  #fecha").val(data.fecha)
 
-				$("#frmedit  #desc_p").val(data.desc_producto)
+				$("#frmedit  #hora").val(data.hora)
 
-				$("#frmedit  #costo").val(data.costo_producto)
+				$("#frmedit  #duracion").val(data.hora_termino)
 
-				$("#frmedit  #utilidad").val(data.utilidad)
+				$("#frmedit  #sucursal").val(data.fk_id_sucursal)
 
-				$("#frmedit  #c_total").val(data.costo_total)
+				$("#frmedit  #area").val(data.fk_id_area)
 
-				$("#frmedit  #depto").val(data.departamento)
+				$("#frmedit  #observa").val(data.observaciones)
 
-				$("#frmedit  #proveedor").val(data.fk_id_proveedor)
+				$("#frmedit  #cliente_id").val(data.paciente)
 
-				$("#frmedit  #cat").val(data.fk_id_categoria)
-
-				$("#frmedit  #uni_med_mod").val(data.fk_unidad_medida)
-
-				$("#frmedit  #caducidad").val(data.caducidad)
-				$("#frmedit  #almacen").val(data.fk_id_almacen)
-				$("#frmedit  #pasillo").val(data.pasillo)
-				$("#frmedit  #nivel").val(data.nivel)
+				$("#frmedit  #estudio_id").val(data.iniciales)
 			 
-
 		});
 
 }
@@ -247,19 +225,16 @@ $("#frmedit").on('submit', function (e)
 								table.ajax.reload(); // Recarga el  DataTable
 
 								swal('datos agregados correctamente')
-
-								console.log(data)
-
 							}
-
 							else
-
+							if(data == 2)
 							{
-
+								swal('El horario ya esta ocupado')
+							}
+							else
+							{
 								swal('Error en MySQL, Error numero:  '+data)
-
 								console.log(data)
-
 							}
 
 						}
@@ -314,7 +289,7 @@ var eliminar= function(tbody, table) {
 
 				if (result.value) {
 
-					 $.post("./controladores/eliminar.php", {'id_producto' : data.id_producto}  , function(data,status)
+					 $.post("./controladores/eliminar.php", {'id_evento' : data.id_evento}  , function(data,status)
 
 					{
 

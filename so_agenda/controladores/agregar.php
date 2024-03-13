@@ -16,7 +16,7 @@ $fecha  = $_POST['fecha'];
 
 $hora = $_POST['hora'];
 
-$duracion = $_POST['duracion']; 
+$hora_termino = $_POST['duracion']; 
 
 $sucursal = $_POST['sucursal']; 
 
@@ -40,7 +40,7 @@ if ($result_p = mysqli_query($conexion, $stmt_p)) {
     }
   }
 
-// obtenemos el id_medico del estudio
+// obtenemos el id del estudio
 $id_estudio=0;
 $stmt_e="SELECT id_estudio FROM km_estudios WHERE iniciales = '$estudio_id'";
 // echo $sql_max;
@@ -52,54 +52,69 @@ if ($result_e = mysqli_query($conexion, $stmt_e)) {
   }
 
 
-
-$query ="
-INSERT INTO so_agenda
-            (fk_id_empresa,
-             id_evento,
-             fk_id_sucursal,
-             fecha,
-             hora,
-             fk_id_paciente,
-             fk_id_area,
-             fk_id_estudio,
-             observaciones,
-             fk_id_usuario,
-             estado)
-VALUES (1,
-        0,
-        $sucursal,
-        '$fecha',
-        '$hora',
-        $id_paciente,
-        $area,
-        $id_estudio,
-        '$observa',
-        $id_usuario,
-        'A')
+// validamos si existe el horario en la BD
+$existe=0;
+$stmt_ex="
+select 
+count(*) existe
+from so_agenda ag
+where ag.`fk_id_sucursal` = $sucursal
+AND ag.`fk_id_area` = $area
+and ag.`fecha` = '$fecha'
+and ag.estado = 'A'
+and '$hora' between hora and hora_termino
 ";
-
-
-
-$result = $conexion -> query($query);
-
-if ($result) {
-
-    echo 1;
-
-   
-
+// echo $sql_max;
+if ($result_ex = mysqli_query($conexion, $stmt_ex)) {
+    while($row_ex = $result_ex->fetch_assoc())
+    {
+        $existe=$row_ex['existe'];
+    }
+  }
+//echo "aqui:".$existe;
+if($existe == 0)
+{
+    $query ="
+    INSERT INTO so_agenda
+                (fk_id_empresa,
+                id_evento,
+                fk_id_sucursal,
+                fecha,
+                hora,
+                hora_termino,
+              
+                fk_id_paciente,
+                fk_id_area,
+                fk_id_estudio,
+                observaciones,
+                fk_id_usuario,
+                estado)
+    VALUES (1,
+            0,
+            $sucursal,
+            '$fecha',
+            '$hora',
+            '$hora_termino', 
+            $id_paciente,
+            $area,
+            $id_estudio,
+            '$observa',
+            $id_usuario,
+            'A')
+    ";
+    //echo $query;
+    $result = $conexion -> query($query);
+    if ($result) {
+        echo 1;
+    }else{
+      $codigo = mysqli_errno($conexion); 
+      echo $codigo;
+    }
 }else{
-
-  $codigo = mysqli_errno($conexion); 
-
-  echo $codigo;
-
+  echo 2;
 }
 
+
 $conexion->close();
-
-
-
 ?>
 

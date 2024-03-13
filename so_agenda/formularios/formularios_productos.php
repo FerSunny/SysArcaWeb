@@ -98,16 +98,16 @@ input[type=text]{ margin: 5px;
 							</div>
 
 						</div>
-
+<!-- Duracion -->
 						<div class="col">
 
 							<div class="md-form mt-0">
 
 								<div class="md-form">
 
-									<input type="number" name="duracion" id="duracion" class="form-control" value="30">
+									<input type="time" name="duracion" id="duracion" class="form-control" >
 
-									<label for="desc_p">Tiempo (minutos) </label>
+									<label for="desc_p">Hora Termino</label>
 
 								</div>
 
@@ -271,7 +271,7 @@ input[type=text]{ margin: 5px;
 							<label for="codigo">Código</label>
 
 						</div>
-
+<!-- fecha  -->
 						<div class="row">
 
 							<div class="col">
@@ -289,14 +289,14 @@ input[type=text]{ margin: 5px;
 								</div>
 
 							</div>
-
+<!-- hora -->
 							<div class="col">
 
 								<div class="md-form mt-0">
 
 									<div class="md-form">
 
-										<input type="time" name="hora" id="horas" class="form-control" required>
+										<input type="time" name="hora" id="hora" class="form-control" required>
 
 										<label for="desc_p">Hora inicio</label>
 
@@ -306,16 +306,16 @@ input[type=text]{ margin: 5px;
 
 							</div>
 
-
+<!-- tiempo -->
 							<div class="col">
 
 								<div class="md-form mt-0">
 
 									<div class="md-form">
 
-										<input type="number" name="tiempo" id="tiempo" class="form-control" required>
+										<input type="time" name="duracion" id="duracion" class="form-control" required>
 
-										<label for="desc_p">Tiempo (minutos) </label>
+										<label for="desc_p">Hora termino</label>
 
 									</div>
 
@@ -324,7 +324,7 @@ input[type=text]{ margin: 5px;
 							</div>
 
 						</div>
-
+<!-- sucursal -->
 						<div class="row">
 							<div class="col">
 								<div class="md-form mt-0">
@@ -349,7 +349,7 @@ input[type=text]{ margin: 5px;
 								</div>
 							</div>
 						</div>	
-
+<!-- area -->
 
 					<div class="row">
 						<div class="col">
@@ -375,7 +375,7 @@ input[type=text]{ margin: 5px;
 							</div>
 						</div>
 					</div>
-
+<!-- observaciones -->
 					<div class="row">
 						<div class="col">
 							<div class="md-form mt-0">
@@ -395,7 +395,7 @@ input[type=text]{ margin: 5px;
 						</div>
 						<div class="col-9">          
 			                <div class="input_container">
-			                    <input autocomplete="off" type="text" id="cliente_id" name="cliente_id" onkeyup="autocompletar_p()">
+			                    <input autocomplete="off" readonly type="text" id="cliente_id" name="cliente_id" onkeyup="autocompletar_p()">
 			                    <ul id="lista_id"></ul>
 			                </div>
 						</div>
@@ -410,7 +410,7 @@ input[type=text]{ margin: 5px;
 						</div>
 						<div class="col-9">          
 			                <div class="input_container">
-			                    <input autocomplete="off" type="text" id="estudio_id" name="estudio_id" onkeyup="autocompletar_e()">
+			                    <input autocomplete="off" readonly type="text" id="estudio_id" name="estudio_id" onkeyup="autocompletar_e()">
 			                    <ul id="lista_id_e"></ul>
 			                </div>
 						</div>

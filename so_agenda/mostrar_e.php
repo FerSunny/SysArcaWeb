@@ -3,7 +3,7 @@
 function conexion() {
 	//Declaramos el servidor, la BD, el usuario Mysql y Contraseña BD.
     //return new PDO('mysql:host=localhost;dbname=bd_arca', 'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION, PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
-    return new PDO('mysql:host=localhost;dbname=labora41_bd_arca', 'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION, PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
+    return new PDO('mysql:host=localhost;dbname=labora41_bd_arca', 'labora41_root', 'ArcaRoot_2017', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION, PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
 }
 
 $pdo = conexion();

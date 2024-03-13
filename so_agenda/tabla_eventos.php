@@ -8,7 +8,7 @@
 <html lang="es">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=gb18030">
-  <title>Productos</title> <!-- CAMBIO  Titulo de la forma -->
+  <title>Agenda estudios</title> <!-- CAMBIO  Titulo de la forma -->
   <link rel="icon" type="image/png" href="../imagenes/ico/capital.png" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -69,9 +69,10 @@
             <th>Sucursal</th>
             <th>Area</th>
             <th>Fecha</th>
-            <th>Hora</th>
-            <th>paciente</th>
-			<th>Estudio</th>
+            <th>Hora Inicio</th>
+            <th>Hora Termino</th>
+            <th>Paciente</th>
+			      <th>Estudio</th>
             <th>Editar</th>
             <th>Eliminar</th>
           </tr>

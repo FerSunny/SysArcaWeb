@@ -18,83 +18,99 @@ $pro = $_POST['pro'];
 
 $codigo  = $_POST['codigo'];
 
-$producto =$_POST['producto'];
+$fecha  = $_POST['fecha'];
 
-$desc_p = $_POST['desc_p']; 
+$hora = $_POST['hora'];
 
-$costo = $_POST['costo'];
+$hora_termino = $_POST['duracion']; 
 
-$utilidad = $_POST['utilidad']; 
+$sucursal = $_POST['sucursal']; 
 
-$c_total = $_POST['c_total']; 
+$area = $_POST['area']; 
 
-$depto = $_POST['depto']; 
+$observa = $_POST['observa']; 
 
-$proveedor = $_POST['proveedor'];
+$paciente_id = $_POST['cliente_id']; 
 
-$cat = $_POST['cat'];
+$estudio_id = $_POST['estudio_id'];
 
-$caducidad = $_POST['caducidad'];
+// validamos si se modifico los horarios
+$stmt_ag="
+select 
+ag.*
+from so_agenda ag
+where ag.id_evento = $codigo
+";
+// echo $sql_max;
+if ($result_ag = mysqli_query($conexion, $stmt_ag)) {
+    while($row_ag = $result_ag->fetch_assoc())
+    {
+        $hora_bd=$row_ag['hora'];
+        $hora_termino_bd=$row_ag['hora_termino'];
+    }
+  }
 
-$unidad_medida=$_POST['uni_med_mod'];
-$almacen=$_POST['almacen'];
-$pasillo=$_POST['pasillo'];
-$nivel=$_POST['nivel'];
-$anaquel=$_POST['anaquel'];
-
-
-$query = "UPDATE eb_productos
-
-SET
-
-
-
- cod_producto = '$codigo',
-
- producto = '$producto',
-
- desc_producto = '$desc_p',
-
- costo_producto = '$costo',
-
- utilidad = '$utilidad',
-
- costo_total = '$c_total',
-
- departamento = '$depto',
-
- fk_id_proveedor = '$proveedor',
-
- fk_id_categoria = '$cat',
-
- fk_unidad_medida = '$unidad_medida',
-
- caducidad = '$caducidad',
-
- fecha_actualizacion = Now(),
- fk_id_almacen = $almacen,
- pasillo = '$pasillo',
- anaquel = '$anaquel',
- nivel='$nivel'
-
-WHERE id_producto = '$pro'";
-
-
-
-
-
-$result = $conexion -> query($query);
-
-if ($result) {
-
-    echo 1;
-
+if($hora <> $hora_bd){
+  // validamos si existe el horario en la BD
+  $existe=0;
+  $stmt_ex="
+  select 
+  count(*) existe
+  from so_agenda ag
+  where ag.`fk_id_sucursal` = $sucursal
+  AND ag.`fk_id_area` = $area
+  and ag.`fecha` = '$fecha'
+  and ag.estado = 'A'
+  and '$hora' between hora and hora_termino
+  ";
+  // echo $sql_max;
+  if ($result_ex = mysqli_query($conexion, $stmt_ex)) {
+      while($row_ex = $result_ex->fetch_assoc())
+      {
+          $existe=$row_ex['existe'];
+      }
+  }
+  if ($existe == 0){
+    $query = "
+    update so_agenda
+    set 
+      fk_id_sucursal = $sucursal,
+      fecha = '$fecha',
+      hora = '$hora',
+      hora_termino = '$hora_termino',
+      fk_id_area = $area,
+      observaciones = '$observa' 
+    where id_evento = $codigo
+    ";
+    $result = $conexion -> query($query);
+    if ($result) {
+        echo 1;
+    }else{
+      $codigo = mysqli_errno($conexion); 
+      echo $codigo;
+    }
+  }else{
+    echo 2;
+  }
 }else{
-
-  $codigo = mysqli_errno($conexion); 
-
-  echo $codigo;
-
+  $query = "
+  update so_agenda
+  set 
+    fk_id_sucursal = $sucursal,
+    fecha = '$fecha',
+    hora = '$hora',
+    hora_termino = '$hora_termino',
+    fk_id_area = $area,
+    observaciones = '$observa' 
+  where id_evento = $codigo
+  ";
+  $result = $conexion -> query($query);
+  if ($result) {
+      echo 1;
+  }else{
+    $codigo = mysqli_errno($conexion); 
+    echo $codigo;
+  }
 }
 
 $conexion->close();

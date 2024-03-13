@@ -2,9 +2,9 @@
 
 
 include ("../../controladores/conex.php");
-$id_producto= $_POST['id_producto'];
+$id_evento = $_POST['id_evento'];
 
-$query ="UPDATE eb_productos SET estado = 'S' WHERE id_producto = $id_producto ";
+$query ="UPDATE so_agenda SET estado = 'S' WHERE id_evento = $id_evento ";
 $result = $conexion -> query($query);
 
 if ($result) {

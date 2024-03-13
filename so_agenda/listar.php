@@ -16,6 +16,7 @@
   LEFT OUTER JOIN so_clientes c ON (c.`id_cliente` = a.`fk_id_paciente`)
   LEFT OUTER JOIN km_areas d ON (d.`id_area` = a.`fk_id_area`)
   LEFT OUTER JOIN km_estudios e ON (e.`id_estudio` = a.`fk_id_estudio`)
+  WHERE a.estado = 'A'
   ";
 
 //echo $query;
