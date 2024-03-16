@@ -49,7 +49,7 @@ $stmt->fetch();
 $token = 'EAAOQZBzYCNvoBO8myZADRmly5X9KDyWCOgwmsmsMr9P2ssm43FpSGdsOs1ZAZAFLfGdFpbM9w73H6cXFQkuVYjy6ZCx5Nqsber8sjaZCw1qq8w96celmpZB2M1xm7OwlG67pxO0uHzkwXnsDoeAq8sWuUFUCJhZAQzRWwNhaptYCwFU5THZCSjqNUGmgZC0bzRZAMJU';
 
 //Teléfono del paciente
-$telefono = '52' . '5519605386';
+$telefono = '52' . '5551850684';
 
 //URL a donde se envía el mensaje
 $url = 'https://graph.facebook.com/v17.0/108646072324432/messages';
@@ -57,7 +57,6 @@ $url = 'https://graph.facebook.com/v17.0/108646072324432/messages';
 $ruta = $ruta;
 
 //Configuración del mensaje
-
 $mensaje = ''
 .'{'
   .'"messaging_product": "whatsapp",'
@@ -118,6 +117,7 @@ print_r($response);
 
 //Obtenemos el código de la respuesta
 $status_code = curl_getinfo($curl, CURLINFO_HTTP_CODE);
+echo '<br><br>' . $status_code;
 
 //Cerramos el curl
 curl_close($curl);
