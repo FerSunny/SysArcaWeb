@@ -41,8 +41,9 @@
   WHERE (CHAR_LENGTH(c.telefono_fijo) = 10 AND c.telefono_fijo REGEXP '^[0-9]+$')
   OR (CHAR_LENGTH(c.telefono_movil) = 10 AND c.telefono_movil REGEXP '^[0-9]+$')
   GROUP BY 1,2,3,4,5,6,7
+  LIMIT 1000
   ";
-
+//echo $query;
 
 	$resultado = mysqli_query($conexion, $query);
 

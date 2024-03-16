@@ -65,14 +65,17 @@
         <thead>
           <tr>
             <!-- CAMBIO Se cambian las columnas segun las columnas a mostrar -->
-            <th>Id Evento </th>
+            <th>Id </th>
             <th>Sucursal</th>
             <th>Area</th>
             <th>Fecha</th>
             <th>Hora Inicio</th>
             <th>Hora Termino</th>
             <th>Paciente</th>
-			      <th>Estudio</th>
+			      
+            <th>Tel. Fijo</th>
+            <th>Tel. Movil</th>
+            <th>Estudio</th>
             <th>Editar</th>
             <th>Eliminar</th>
           </tr>

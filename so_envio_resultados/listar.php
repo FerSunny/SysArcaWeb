@@ -13,15 +13,16 @@
   CASE
   WHEN re.fk_id_factura IS NULL THEN
   1 -- 'Sin resultado en sistema'
-  WHEN re.entregada IS NULL and re.validado = 1 THEN
+  WHEN re.fk_id_factura IS NOT NULL AND re.entregada IS NULL AND re.validado = 1 AND fa.resta = '0.00' THEN
   2 -- 'Pendiente de entregar'
-  WHEN re.entregada IS NULL and re.validado = 0 THEN
+  WHEN re.fk_id_factura IS NOT NULL AND re.entregada IS NULL AND re.validado = 0 THEN
   3 -- 'Pendiente de Validar'
   ELSE
   re.`entregada`
   END entregada,
   us.iniciales,
-  fa.resta
+  fa.resta,
+  fa.fk_id_cliente
   FROM 
   so_factura fa
   LEFT OUTER JOIN so_clientes cl ON (cl.id_cliente = fa.fk_id_cliente),
@@ -30,7 +31,7 @@
   LEFT OUTER JOIN vw_resultado re ON (re.`fk_id_factura` = df.`id_factura` AND re.`fk_id_estudio` = df.`fk_id_estudio`)
   LEFT OUTER JOIN se_usuarios us ON (us.id_usuario = re.usuario)
   WHERE fa.`estado_factura` <> 5
-  AND CAST(`fa`.`fecha_factura` AS DATE) BETWEEN CURDATE() - INTERVAL 30 DAY AND CURDATE() + INTERVAL 30 DAY
+  AND CAST(`fa`.`fecha_factura` AS DATE) BETWEEN CURDATE() - INTERVAL 30 DAY AND CURDATE() + INTERVAL 15 DAY
   AND fa.`id_factura` = df.`id_factura`
   ";
 
