@@ -57,14 +57,46 @@
 
 						}
 					},
-          {"defaultContent": "<button type='button'  class='email btn btn-primary btn-sm'><i class='fa fa-envelope'></i></button>"},
-          {"defaultContent": "<button type='button' disabled class='editar btn btn-warning btn-sm'><i class='fa fa-phone' ></i></button>"},
+          // envio por email
+          {
+            render: function(data,type,row)
+            {
+                var entregar = row['entregada']
+
+                if(entregar == '2')
+                {
+                    return "<button type='button'  class='email btn btn-primary btn-sm'><i class='fa fa-envelope'></i></button>"
+                }else
+                {
+                    return "<button disabled type='button'  class='email btn btn-primary btn-sm'><i class='fa fa-envelope'></i></button>"
+                }
+
+            }
+          },
+          // envio por whatsapp
+          {
+            render: function(data,type,row)
+            {
+                var entregar = row['entregada']
+
+                if(entregar == '2')
+                {
+                    return "<button type='button'  class='whatsapp btn btn-primary btn-sm'><i class='fa fa-phone'></i></button>"
+                }else
+                {
+                    return "<button disabled type='button'  class='whatsapp btn btn-primary btn-sm'><i class='fa fa-phone'></i></button>"
+                }
+
+            }
+          },
+         // {"defaultContent": "<button type='button'  class='email btn btn-primary btn-sm'><i class='fa fa-envelope'></i></button>"},
+         // {"defaultContent": "<button type='button' disabled class='editar btn btn-warning btn-sm'><i class='fa fa-phone' ></i></button>"},
           {"defaultContent":"<button type='button' disabled class='eliminar btn btn-danger btn-sm'><i class='fa fa-link'></i></button>"}
         ],
         "language": idioma_espanol
       });
       email("#dt_productos tbody", table)
-      agregar("#dt_productos tbody", table)
+      whatsapp("#dt_productos tbody", table)
       editar("#dt_productos tbody", table)
       eliminar("#dt_productos tbody", table)
         
@@ -78,16 +110,33 @@ var email = function(tbody, table) {
       var factura = data.id_factura
       var estudio = data.fk_id_estudio
       var plantilla_id = data.fk_id_plantilla
+      var id_cliente = data.fk_id_cliente
       var tipo_salida = 1
 
       switch(plantilla_id) {
         case '1':
-          console.log('factura:'+factura+' estudio:'+estudio+' tipo salida:'+tipo_salida)
+          //console.log('factura:'+factura+' estudio:'+estudio+' tipo salida:'+tipo_salida)
           //console.log('tipo_salida '+tipo_salida)
           $.post("./reports/pdf_plantilla_1.php", {'factura' : factura, 'estudio' : estudio, 'tipo_salida' : tipo_salida} ,function(data, status){
             if(data == 1)
             {
-              // code
+              //console.log('previo al envio')
+              $.post("./controladores/email.php", {'factura' : factura, 'estudio' : estudio, 'plantilla' : plantilla_id, 'id_cliente' : id_cliente} ,function(data, status){
+                //console.log('envio el mail, estado: '+data)
+                if(data == 1)
+                {
+                    Swal.fire({
+                              position: 'top-end',
+                              type: 'success',
+                              title: 'Email enviado.. ',
+                              showConfirmButton: false,
+                            })
+                    //window.opener.document.location="../ag_orden_dia_p1_nvo/tabla_agenda.php";
+                }else
+                {
+                    Swal.fire('No se envio el email, error: '+data)
+                }
+            });
             }else{
               swal('No se genero el PDF para ser enviado, notifique a su area de sistemas: soporte.producto@medisyslabs.onmicrosoft.com')
             }
@@ -101,31 +150,59 @@ var email = function(tbody, table) {
           swal('Sin plantilla'+plantilla_id)
          // stop
       }
-/*
-          $.post("./controladores/email.php", {'factura' : factura, 'estudio' : estudio, 'plantilla' : plantilla_id} ,function(data, status){
-              if(data == 1)
-              {
-                  var table = $("#dt_resultados").DataTable()
-                  table.ajax.reload()
-                  Swal.fire({
-                            position: 'top-end',
-                            type: 'success',
-                            title: 'Validando datos, espere porfavor',
-                            showConfirmButton: false,
-                            timer: 1000
-                          })
-                  //window.opener.document.location="../ag_orden_dia_p1_nvo/tabla_agenda.php";
-              }else
-              {
-                  Swal.fire('Error MySQL Codigo: ' + data)
-              }
-          });
-*/
-
   });
 }
 
+/* enviar resultados por whatsapp */
+var whatsapp = function(tbody, table) {
+  $(tbody).on("click", "button.whatsapp", function() 
+  {
+      var data = table.row($(this).parents("tr")).data();
+      var factura = data.id_factura
+      var estudio = data.fk_id_estudio
+      var plantilla_id = data.fk_id_plantilla
+      var id_cliente = data.fk_id_cliente
+      var tipo_salida = 1
 
+      switch(plantilla_id) {
+        case '1':
+          //console.log('factura:'+factura+' estudio:'+estudio+' tipo salida:'+tipo_salida)
+          //console.log('tipo_salida '+tipo_salida)
+          $.post("./reports/pdf_plantilla_1.php", {'factura' : factura, 'estudio' : estudio, 'tipo_salida' : tipo_salida} ,function(data, status){
+            if(data == 1)
+            {
+              //console.log('previo al envio')
+              $.post("./controladores/whatsapp.php", {'factura' : factura, 'estudio' : estudio, 'plantilla' : plantilla_id, 'id_cliente' : id_cliente} ,function(data, status){
+                //console.log('envio el mail, estado: '+data)
+                if(data == 1)
+                {
+                    Swal.fire({
+                              position: 'top-end',
+                              type: 'success',
+                              title: 'Validando datos, espere porfavor',
+                              showConfirmButton: false,
+                            })
+                    //window.opener.document.location="../ag_orden_dia_p1_nvo/tabla_agenda.php";
+                }else
+                {
+                    Swal.fire('No se envio el email, error: '+data)
+                }
+            });
+            }else{
+              swal('No se genero el PDF para ser enviado, notifique a su area de sistemas: soporte.producto@medisyslabs.onmicrosoft.com')
+            }
+          }
+          );
+          break;
+        case 2:
+          // code block
+          break;
+        default:
+          swal('Sin plantilla'+plantilla_id)
+         // stop
+      }
+  });
+}
 
 
 /* 

@@ -44,6 +44,8 @@
 					{"data" : "hora"},
 					{"data" : "hora_termino"},
 					{"data" : "paciente"},
+					{"data" : "telefono_fijo"},
+					{"data" : "telefono_movil"},
 					{"data" : "iniciales"},
 
 					{"defaultContent": "<button type='button' class='editar btn btn-warning btn-md'><i class='fas fa-edit'></i></button>"},

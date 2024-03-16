@@ -67,7 +67,7 @@ function envia_email($tipo,$email,$atach,$asunto,$contenido){
             $mail->addCC($email_jaz,'Acuse JI');
             $mail->addCC($email_lab,'Acuse LB');
         }else{
-            $mail->addCC($email_acu,'Acuse Enviado');
+            $mail->addCC($email_acu,'Acuse Paciente');
         }
         
         // Contenido del correo

@@ -10,8 +10,8 @@ date_default_timezone_set('America/Mexico_City');
 
 $fk_id_perfil = $_SESSION['fk_id_perfil'];
 //se recibe los paramteros para la generación del reporte
-$numero_factura=$_POST['factura'];
-$studio=$_POST['estudio'];
+$numero_factura=  $_POST['factura'];
+$studio=  $_POST['estudio'];
 $tipo_salida = $_POST['tipo_salida']; // 0 = navegador - 1 = PDF
 
 // actualiza las veces que se ha impreso el resultado
@@ -362,7 +362,7 @@ function Header()
         {
           $this->Cell(($row['posini']-=6));
           $firma=$row['concepto'];
-          $this->Image('../imagenes/firma.gif',153,227,40,0);
+          $this->Image('../imagenes/firma1.jpg',153,227,40,0);
           $this->SetFont('Arial','',$row['tamfue']);
           $this->Cell(170,5,utf8_decode($firma),0,0,'L');
           $this->ln(4);
@@ -676,7 +676,7 @@ CASE
 //  $pdf->Output();
 //}else{
   $pdf->Output("../pdfs/".$numero_factura."_".$studio.".pdf","F");
-  //echo 1;
+  echo 1;
 //}
 
 ?>
