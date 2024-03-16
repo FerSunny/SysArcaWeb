@@ -669,14 +669,12 @@ CASE
       }  
   }
 
-//for($i=1;$i<=20;$i++)
-//    $pdf->Cell(0,10,'Imprimiendo línea número '.$i,0,1);
 
-//if($tipo_salida == 0){
-//  $pdf->Output();
-//}else{
-  $pdf->Output("../pdfs/".$numero_factura."_".$studio.".pdf","F");
+ $pdf->Output();
+/*
+  echo 'reporte';
+  $pdf->Output("pdf_resenv/".$numero_factura."_".$studio.".pdf","F");
   echo 1;
-//}
+*/
 
 ?>

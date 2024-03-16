@@ -1,18 +1,19 @@
 <?php
+//echo 'llego a reporte';
 session_start();
 //mysqli_query($con, "SET CHARACTER SET utf8");
 date_default_timezone_set('America/Mexico_City');
 //header('Content-Type: text/html; charset=ISO-8859-1');
-require('../../fpdf/fpdf.php');
+ require('../../fpdf/fpdf.php');
  require_once ("../../so_factura/config/db.php");//Contiene las variables de configuracion para conectar a la base de datos
  require_once ("../../so_factura/config/conexion.php");//Contiene funcion que conecta a la base de datos
 
 $fk_id_perfil = $_SESSION['fk_id_perfil'];
 //se recibe los paramteros para la generación del reporte
-$numero_factura=$_GET['numero_factura'];
-$studio=$_GET['studio'];
-$tipo_salida = $_GET['tipo_salida']; // 0 = navegador - 1 = PDF
-echo 'llego a reporte';
+$numero_factura=  $_POST['factura'];
+$studio=  $_POST['estudio'];
+$tipo_salida = $_POST['tipo_salida']; // 0 = navegador - 1 = PDF
+
 // actualiza las veces que se ha impreso el resultado
 $sql_max="select max(num_imp) as num_imp FROM cr_plantilla_1_re
 where fk_id_factura=".$numero_factura." and fk_id_estudio=".$studio;
@@ -361,7 +362,7 @@ function Header()
         {
           $this->Cell(($row['posini']-=6));
           $firma=$row['concepto'];
-          $this->Image('../imagenes/firma.gif',153,227,40,0);
+          $this->Image('../imagenes/firma1.jpg',153,227,40,0);
           $this->SetFont('Arial','',$row['tamfue']);
           $this->Cell(170,5,utf8_decode($firma),0,0,'L');
           $this->ln(4);
@@ -674,7 +675,7 @@ CASE
 //if($tipo_salida == 0){
 //  $pdf->Output();
 //}else{
-  $pdf->Output("../pdfs/".$numero_factura."_".$studio.".pdf","F");
+  $pdf->Output("/pdf_resenv/".$numero_factura."_".$studio.".pdf","F");
   echo 1;
 //}
 

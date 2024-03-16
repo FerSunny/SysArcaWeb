@@ -62,7 +62,7 @@
             <th>Estudio</th>
             <th>estatus</th>
             <th>Entrego</th>
-            <th>Pagado</th>
+            <th>Saldo</th>
             <th>Email</th>
             <th>Whatsapp</th>
             <th>Link</th>
