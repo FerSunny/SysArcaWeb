@@ -50,12 +50,14 @@ eb_equipos te,
 km_servicios se,
 km_areas ar,
 km_gpo_conta gc,
-eb_proveedores pr
+eb_proveedores pr,
+kg_sucursales su
 WHERE te.`estado` = 'A'
 AND te.`fk_id_servicio` = se.`id_servicio`
 AND te.`fk_id_area` = ar.`id_area`
 AND te.`fk_id_gpo_conta` = gc.`id_gpo_conta`
 AND te.`fk_id_proveedor` = pr.`id_proveedor`
+AND te.`fk_id_sucursal` + su.`id_sucursal`
   ";
 
 //echo $query;

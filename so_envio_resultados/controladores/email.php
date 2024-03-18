@@ -1,5 +1,5 @@
 <?php 
-
+session_start();
 
 include ("../../controladores/conex.php");
 include("../../emails/multiple.php");
@@ -23,10 +23,9 @@ if($regreso == 1){
         UPDATE cr_plantilla_1_re
         SET 
         fecha_hora_entregada = NOW(),
-        fk_id_usuario = $id_usuario
-        WHERE 
-            AND fk_id_factura = $fk_id_factura
-            AND fk_id_estudio = $fk_id_estudio
+        fk_id_usuario = '$id_usuario'
+        WHERE fk_id_factura = $id_factura
+        AND fk_id_estudio = $id_estudio
         ";
         $execute_query_update = mysqli_query($conexion,$sql_up);
         break;
@@ -37,16 +36,29 @@ if($regreso == 1){
         SET 
         fecha_hora_entregada = NOW(),
         fk_id_usuario = $id_usuario
-        WHERE 
-            AND fk_id_factura = $fk_id_factura
-            AND fk_id_estudio = $fk_id_estudio
+        WHERE fk_id_factura = $id_factura
+            AND fk_id_estudio = $id_estudio
+        ";
+        $execute_query_update = mysqli_query($conexion,$sql_up);
+        break;
+    case '3':
+        $sql_up=
+        "
+        UPDATE cr_plantilla_cvo_re
+        SET 
+        fecha_hora_entregada = NOW(),
+        fk_id_usuario = $id_usuario
+        WHERE fk_id_factura = $id_factura
+            AND fk_id_estudio = $id_estudio
         ";
         $execute_query_update = mysqli_query($conexion,$sql_up);
         break;
     default:
-        # code...
+        echo '<script> alert("Update de entregada fallida, No hay plantilla para este estudio")</script>';
         break;
-}
+    }
+}else{
+    echo '<script> alert("Update de entregada fallida, el email no se envio")</script>';
 }
 
 

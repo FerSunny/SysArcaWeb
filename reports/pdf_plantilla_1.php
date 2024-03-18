@@ -4,9 +4,9 @@ session_start();
 //mysqli_query($con, "SET CHARACTER SET utf8");
 date_default_timezone_set('America/Mexico_City');
 //header('Content-Type: text/html; charset=ISO-8859-1');
- require('../../fpdf/fpdf.php');
- require_once ("../../so_factura/config/db.php");//Contiene las variables de configuracion para conectar a la base de datos
- require_once ("../../so_factura/config/conexion.php");//Contiene funcion que conecta a la base de datos
+ require('../fpdf/fpdf.php');
+ require_once ("../so_factura/config/db.php");//Contiene las variables de configuracion para conectar a la base de datos
+ require_once ("../so_factura/config/conexion.php");//Contiene funcion que conecta a la base de datos
 
 $fk_id_perfil = $_SESSION['fk_id_perfil'];
 //se recibe los paramteros para la generación del reporte
@@ -230,11 +230,11 @@ function Header()
             $tipfuem,
             $tamfuem;
 
-    $this->Image('../imagenes/logo_arca.png',10,5,40,0);
-    $this->Image('../imagenes/pacal.jpg',160,7,25,0);
-    $this->Image('../imagenes/codigo1.jpg',170,35,20,20);
+    $this->Image('./imagenes/logo_arca.png',10,5,40,0);
+    $this->Image('./imagenes/pacal.jpg',160,7,25,0);
+    $this->Image('./imagenes/codigo1.jpg',170,35,20,20);
 
-    $this->Image('../../imagenes/logo_arca_sys_web.jpg',70,150,70,0);
+    $this->Image('../imagenes/logo_arca_sys_web.jpg',70,150,70,0);
 
     $this->Ln(10);
     $this->Cell(5);
@@ -362,7 +362,7 @@ function Header()
         {
           $this->Cell(($row['posini']-=6));
           $firma=$row['concepto'];
-          $this->Image('../imagenes/firma1.jpg',153,227,40,0);
+          $this->Image('./imagenes/firma1.jpg',153,227,40,0);
           $this->SetFont('Arial','',$row['tamfue']);
           $this->Cell(170,5,utf8_decode($firma),0,0,'L');
           $this->ln(4);
@@ -377,21 +377,21 @@ function Header()
     $this->SetXY(65,257); 
     $this->Write(0,'www.laboratoriosarca.com.mx');
 
-    $this->Image('../imagenes/whatsapp.jpg',10,258,7,0);
+    $this->Image('./imagenes/whatsapp.jpg',10,258,7,0);
     $this->SetTextColor(27,94,32); 
     $this->SetFont('Arial','B',12);
     $this->SetXY(16,262); 
     $this->Write(0,'55 3121 0700');
     $this->SetTextColor(0,0,0);
 
-    $this->Image('../imagenes/telefono.jpg',50,258,7,0);
+    $this->Image('./imagenes/telefono.jpg',50,258,7,0);
     $this->SetTextColor(230,81,0); 
     $this->SetFont('Arial','B',12);
     $this->SetXY(56,262); 
     $this->Write(0,'ARCATEL: 216 141 44');
     $this->SetTextColor(0,0,0);
 
-    $this->Image('../imagenes/email.jpg',105,259,7,0);
+    $this->Image('./imagenes/email.jpg',105,259,7,0);
     $this->SetTextColor(26,35,126); 
     $this->SetFont('Arial','B',11);
     $this->SetXY(110,262); 
@@ -675,7 +675,7 @@ CASE
 //if($tipo_salida == 0){
 //  $pdf->Output();
 //}else{
-  $pdf->Output("/pdf_resenv/".$numero_factura."_".$studio.".pdf","F");
+  $pdf->Output("../pdf_resenv/".$numero_factura."_".$studio.".pdf","F");
   echo 1;
 //}
 

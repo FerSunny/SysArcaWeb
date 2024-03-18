@@ -114,6 +114,7 @@ var email = function(tbody, table) {
       var tipo_salida = 1
 
       switch(plantilla_id) {
+// envio plantilla 2
         case '1':
           $.post("../reports/pdf_plantilla_1.php", {'factura' : factura, 'estudio' : estudio, 'tipo_salida' : tipo_salida} ,function(data, status){
             if(data == 1)
@@ -133,13 +134,14 @@ var email = function(tbody, table) {
                 }
             });
             }else{
-              swal('No se genero el PDF para ser enviado, notifique a su area de sistemas: soporte.producto@medisyslabs.onmicrosoft.com')
+              swal('No se genero el PDF (p1) para ser enviado, notifique a su area de sistemas: soporte.producto@medisyslabs.onmicrosoft.com-->'+data)
             }
           }
           );
           break;
+// envio plantilla 2
         case '2':
-          $.post("/reports/pdf_plantilla_2.php", {'factura' : factura, 'estudio' : estudio, 'tipo_salida' : tipo_salida} ,function(data, status){
+          $.post("../reports/pdf_plantilla_2.php", {'factura' : factura, 'estudio' : estudio, 'tipo_salida' : tipo_salida} ,function(data, status){
             if(data == 1)
             {
               $.post("./controladores/email.php", {'factura' : factura, 'estudio' : estudio, 'plantilla' : plantilla_id, 'id_cliente' : id_cliente} ,function(data, status){
@@ -157,11 +159,36 @@ var email = function(tbody, table) {
                 }
             });
             }else{
-              swal('No se genero el PDF para ser enviado, notifique a su area de sistemas: soporte.producto@medisyslabs.onmicrosoft.com')
+              swal('No se genero el PDF (p2) para ser enviado, notifique a su area de sistemas: soporte.producto@medisyslabs.onmicrosoft.com->'+data)
             }
           }
           );
           break;
+        // envio plantilla 3
+        case '2':
+          $.post("../reports/pdf_plantilla_3.php", {'factura' : factura, 'estudio' : estudio, 'tipo_salida' : tipo_salida} ,function(data, status){
+            if(data == 1)
+            {
+              $.post("./controladores/email.php", {'factura' : factura, 'estudio' : estudio, 'plantilla' : plantilla_id, 'id_cliente' : id_cliente} ,function(data, status){
+                if(data == 1)
+                {
+                    Swal.fire({
+                              position: 'top-end',
+                              type: 'success',
+                              title: 'Email enviado.. ',
+                              showConfirmButton: false,
+                            })
+                }else
+                {
+                    Swal.fire('No se envio el email, error: '+data+' Envie este mensseja a su area de sistemas')
+                }
+            });
+            }else{
+              swal('No se genero el PDF (p3) para ser enviado, notifique a su area de sistemas: soporte.producto@medisyslabs.onmicrosoft.com->'+data)
+            }
+          }
+          );
+          break;          
         default:
           swal('Sin plantilla'+plantilla_id)
          // stop
@@ -179,7 +206,7 @@ var whatsapp = function(tbody, table) {
       var plantilla_id = data.fk_id_plantilla
       var id_cliente = data.fk_id_cliente
       var tipo_salida = 1
-
+console.log('Plantilla:'+pllantilla_id)
       switch(plantilla_id) {
         case '1':
           console.log('factura:'+factura+' estudio:'+estudio+' tipo salida:'+tipo_salida)
