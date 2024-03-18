@@ -23,7 +23,7 @@ $stmt->bind_param("i",$id_factura);
 $stmt->execute();
 $resultado = $stmt->get_result();
 $numero = $resultado->fetch_assoc();
-echo "El número del paciente es: " . $numero['whatsapp'] . " ";
+//echo "El número del paciente es: " . $numero['whatsapp'] . " ";
 
 //Recuperamos los datos del paciente
 $stmt = $mysqli->prepare("SELECT CONCAT(cl.nombre, ' ', cl.a_paterno, ' ', cl.a_materno) paciente FROM so_factura fa
@@ -113,11 +113,16 @@ curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 $response = json_decode(curl_exec($curl), true);
 
 //Imprimimos la respuesta
-print_r($response);
+//print_r($response);
 
-//Obtenemos el código de la respuesta
+//Regresamos un valor dependiendo del estatus
 $status_code = curl_getinfo($curl, CURLINFO_HTTP_CODE);
-echo '<br><br>' . $status_code;
+if($status_code == 200){
+  return 1;
+  //echo '<br><br>' . $status_code;
+} else {
+  return 0;
+}
 
 //Cerramos el curl
 curl_close($curl);
