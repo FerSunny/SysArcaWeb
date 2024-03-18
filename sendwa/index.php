@@ -20,7 +20,12 @@ $ruta = $_POST['ruta'];
 if(isset($id_factura) && isset($ruta)){
     echo '<br>El folio del paciente es: ' . $id_factura . '<br><br>';
     echo '<br>La ruta es: ' . $ruta . '<br><br>';
-    enviaWA($id_factura, $ruta);
+    $resultado = enviaWA($id_factura, $ruta);
+    if($resultado == 1){
+        echo "Enviado correctamente";
+    } else {
+        echo "No enviado";
+    }
 } else {
     echo '<br>Faltan datos';
 }

@@ -49,7 +49,7 @@ $stmt->fetch();
 $token = 'EAAOQZBzYCNvoBO8myZADRmly5X9KDyWCOgwmsmsMr9P2ssm43FpSGdsOs1ZAZAFLfGdFpbM9w73H6cXFQkuVYjy6ZCx5Nqsber8sjaZCw1qq8w96celmpZB2M1xm7OwlG67pxO0uHzkwXnsDoeAq8sWuUFUCJhZAQzRWwNhaptYCwFU5THZCSjqNUGmgZC0bzRZAMJU';
 
 //Teléfono del paciente
-$telefono = '52' . '5551850684';
+$telefono = '52' . '5570508884';
 
 //URL a donde se envía el mensaje
 $url = 'https://graph.facebook.com/v17.0/108646072324432/messages';
@@ -110,14 +110,19 @@ curl_setopt($curl, CURLOPT_HTTPHEADER, $header);
 curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 
 //Obtenemos la respuesta de envío de información
-$response = json_decode(curl_exec($curl), true);
+//$response = json_decode(curl_exec($curl), true);
 
 //Imprimimos la respuesta
-print_r($response);
+//print_r($response);
 
-//Obtenemos el código de la respuesta
+//Regresamos un valor dependiendo del estatus
 $status_code = curl_getinfo($curl, CURLINFO_HTTP_CODE);
-echo '<br><br>' . $status_code;
+if($status_code == 200){
+  return 1;
+  //echo '<br><br>' . $status_code;
+} else {
+  return 0;
+}
 
 //Cerramos el curl
 curl_close($curl);
