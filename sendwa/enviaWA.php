@@ -4,8 +4,8 @@ function enviaWA($id_factura, $ruta){
 
 //Datos de conexión a la base de datos
 $server = "localhost";
-$user = "root";
-$password = "";
+$user = "labora41_root";
+$password = "ArcaRoot_2017";
 $database = "labora41_bd_arca";
 
 //Creamos la conexión
@@ -26,13 +26,13 @@ $numero = $resultado->fetch_assoc();
 //echo "El número del paciente es: " . $numero['whatsapp'] . " ";
 
 //Recuperamos los datos del paciente
-$stmt = $mysqli->prepare("SELECT CONCAT(cl.nombre, ' ', cl.a_paterno, ' ', cl.a_materno) paciente FROM so_factura fa
+$stmt = $mysqli->prepare("SELECT replace(cl.telefono_movil,'-','') as celular, CONCAT(cl.nombre, ' ', cl.a_paterno, ' ', cl.a_materno) paciente FROM so_factura fa
 LEFT OUTER JOIN so_clientes cl ON (cl.`id_cliente` = fa.`fk_id_cliente`)
 WHERE id_factura = ?");
 $stmt->bind_param("i",$id_factura);
 $stmt->execute();
 $stmt->store_result();
-$stmt->bind_result($paciente);
+$stmt->bind_result($celular,$paciente);
 $stmt->fetch();
 
 //Recuperamos el estudio
@@ -49,7 +49,7 @@ $stmt->fetch();
 $token = 'EAAOQZBzYCNvoBO8myZADRmly5X9KDyWCOgwmsmsMr9P2ssm43FpSGdsOs1ZAZAFLfGdFpbM9w73H6cXFQkuVYjy6ZCx5Nqsber8sjaZCw1qq8w96celmpZB2M1xm7OwlG67pxO0uHzkwXnsDoeAq8sWuUFUCJhZAQzRWwNhaptYCwFU5THZCSjqNUGmgZC0bzRZAMJU';
 
 //Teléfono del paciente
-$telefono = '52' . '5551850684';
+$telefono = '52' . $celular;
 
 //URL a donde se envía el mensaje
 $url = 'https://graph.facebook.com/v17.0/108646072324432/messages';
@@ -118,14 +118,17 @@ $response = json_decode(curl_exec($curl), true);
 //Regresamos un valor dependiendo del estatus
 $status_code = curl_getinfo($curl, CURLINFO_HTTP_CODE);
 if($status_code == 200){
+  //Cerramos el curl
+  curl_close($curl); 
   return 1;
   //echo '<br><br>' . $status_code;
 } else {
+  //Cerramos el curl
+  curl_close($curl);
   return 0;
 }
 
-//Cerramos el curl
-curl_close($curl);
+
 }
 
 ?>
