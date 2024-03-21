@@ -34,7 +34,7 @@
 
 				"columns":[
 
-					{"data" : "id_termometro"},
+					{"data" : "id_termohigrometros"},
 
 					{"data" : "descripcion"},
 
@@ -221,7 +221,7 @@ var editar = function(tbody, table) {
 
 				$("#frmedit  label").attr('class','active')
 
-				$("#frmedit  #codigo").val(data.id_termometro)
+				$("#frmedit  #codigo").val(data.id_termohigrometros)
 				$("#frmedit  #fk_id_equipo").val(data.fk_id_equipo)
 
 				$("#frmedit  #fecha_calibracion").val(data.fecha_calibracion)
@@ -353,7 +353,7 @@ var eliminar= function(tbody, table) {
 
 				if (result.value) {
 
-					 $.post("./controladores/eliminar.php", {'id_producto' : data.id_termometro}  , function(data,status)
+					 $.post("./controladores/eliminar.php", {'id_producto' : data.id_termohigrometros}  , function(data,status)
 
 					{
 

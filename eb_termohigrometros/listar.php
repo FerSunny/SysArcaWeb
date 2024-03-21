@@ -11,7 +11,7 @@ $fk_id_perfil=$_SESSION['fk_id_perfil'];
   eq.`descripcion`,
   pr.`razon_social`
  FROM 
- eb_termometros te,
+ eb_termohigrometros te,
  eb_equipos eq,
  eb_proveedores pr
  WHERE te.`estado` = 'A'

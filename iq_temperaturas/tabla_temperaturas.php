@@ -116,7 +116,7 @@
 
             <th>Id </th>
 
-            <th>Termometro</th>
+            <th>Equipo</th>
 
             <th>Area</th>
 
@@ -124,7 +124,9 @@
             <th>Lectura</th>
             <th>V. Correccion</th>
             <th>V. Corregido</th>
+            <!--
             <th>Tem. Aceptable</th>
+            -->
 
             <th>Editar</th>
 

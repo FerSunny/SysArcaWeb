@@ -35,7 +35,7 @@ $incertidumbre_3    = $_POST['incertidumbre_3'];
 
 
 $query = "
-UPDATE  eb_termometros 
+UPDATE  eb_termohigrometros 
 SET   
    fk_id_equipo  = $fk_id_equipo,
    fecha_calibracion  = '$fecha_calibracion',
@@ -56,7 +56,7 @@ SET
    valor_medido_3  = '$valor_medido_3',
    correccion_3  = '$correccion_3',
    incertidumbre_3  = '$incertidumbre_3'
-WHERE  id_termometro  = '$codigo'
+WHERE  id_termohigrometros  = '$codigo'
 ";
 
 $result = $conexion -> query($query);

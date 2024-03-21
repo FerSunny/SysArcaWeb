@@ -42,22 +42,51 @@
 
 					<div class="row">
 
-						<div class="col">
-
-							<div class="md-form mt-0">
-
-								<div class="md-form">
-
-									<input type="number" step="any" name="temperatura" id="temperatura" class="form-control" maxlength="7" required>
-
-									<label for="producto"> Lectura </label>
-
+<!-- Equipos  -->
+						<div class="row">
+							<div class="col">
+								<div class="md-form mt-0">
+									<label for="">Equipo</label>
 								</div>
-
 							</div>
 
+							<div class="col-9">
+								<div class="md-form mt-0">
+									<select class="form-control form-control-sm" name="equipo" 
+									id="equipo" required>
+										<option value="" class="z-depth-5">Seleccione</option>
+											<?php 
+													$query = $conexion -> query("SELECT eq.`id_equipo`,eq.`descripcion` FROM eb_equipos  eq
+																				WHERE (eq.`descripcion` LIKE '%termo%' OR eq.`descripcion` LIKE '%higro%') AND estado = 'A' ");
+													while($res = mysqli_fetch_array($query))
+													{
+															echo "<option value =".$res['id_equipo'].">
+																	".$res['descripcion']."
+																	</option>";
+													}
+											?>
+									</select>
+								</div>
+							</div>
 						</div>
 
+
+
+
+
+<!-- Lectura  -->
+						<div class="col">
+							<div class="md-form mt-0">
+								<div class="md-form">
+									<input type="number" step="any" name="temperatura" id="temperatura" class="form-control" maxlength="7" required>
+									<label for="producto"> Lectura </label>
+								</div>
+							</div>
+						</div>
+
+
+
+<!--
 						<div class="col">
 
 							<div class="md-form mt-0">
@@ -73,68 +102,40 @@
 							</div>
 
 						</div>
-
+-->
 					</div>
 
 
 
-
+<!--
 
 					<div class="row">
-
 						<div class="col">
-
 							<div class="md-form mt-0">
-
 								<label for="">Equipo</label>
-
 							</div>
-
 						</div>
-
-
-
-
 
 						<div class="col-9">
-
 							<div class="md-form mt-0">
-
 								<select class="form-control form-control-sm" name="equipo" 
-
 								id="equipo" required>
-
 									<option value="" class="z-depth-5">Seleccione</option>
-
 										<?php 
-
 												$query = $conexion -> query("SELECT id_termometro,descripcion FROM eb_termometros WHERE estado = 'A' ");
-
 												while($res = mysqli_fetch_array($query))
-
 												{
-
 														echo "<option value =".$res['id_termometro'].">
-
 																".$res['descripcion']."
-
 																</option>";
-
 												}
-
 										?>
-
 								</select>
-
 							</div>
-
 						</div>
-
-						
-
 					</div>
 
-
+-->
 
 
 

@@ -36,9 +36,9 @@ $incertidumbre_3    = $_POST['incertidumbre_3'];
 
 
 $query ="
-INSERT INTO  eb_termometros 
+INSERT INTO  eb_termohigrometros 
             ( fk_id_empresa ,
-              id_termometro ,
+              id_termohigrometros ,
               fk_id_equipo ,
               fecha_calibracion ,
               duracion ,

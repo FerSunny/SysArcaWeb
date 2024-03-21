@@ -22,7 +22,7 @@
 
 						<h2 style="color:blue;text-align:center" class="modal-title">
 
-								Nuevo Termometro
+								Nuevo Termohigrometros
 
 						</h2>
 
@@ -55,7 +55,7 @@
 									<option value="" class="z-depth-5">Seleccione</option>
 										<?php 
 												$query = $conexion -> query("SELECT eq.`id_equipo`,eq.`descripcion` FROM eb_equipos  eq
-																			WHERE eq.`descripcion` LIKE '%termo%' and estado = 'A'");
+																			WHERE eq.`descripcion` LIKE '%higro%' and estado = 'A'");
 												while($res = mysqli_fetch_array($query))
 												{
 														echo "<option value =".$res['id_equipo'].">
@@ -309,7 +309,7 @@
 
 							<h2 style="color:blue;text-align:center" class="modal-title" id="modalEliminarLabel">
 
-									Editar Termometros
+									Editar Termohigrometros
 
 							</h2>
 
@@ -351,7 +351,7 @@
 											<option value="" class="z-depth-5">Seleccione</option>
 												<?php 
 														$query = $conexion -> query("SELECT eq.`id_equipo`,eq.`descripcion` FROM eb_equipos  eq
-																					WHERE eq.`descripcion` LIKE '%termo%' and estado = 'A'");
+																					WHERE eq.`descripcion` LIKE '%higro%' and estado = 'A'");
 														while($res = mysqli_fetch_array($query))
 														{
 																echo "<option value =".$res['id_equipo'].">

@@ -165,7 +165,7 @@ var email = function(tbody, table) {
           );
           break;
         // envio plantilla 3
-        case '2':
+        case '3':
           $.post("../reports/pdf_plantilla_3.php", {'factura' : factura, 'estudio' : estudio, 'tipo_salida' : tipo_salida} ,function(data, status){
             if(data == 1)
             {
@@ -206,12 +206,12 @@ var whatsapp = function(tbody, table) {
       var plantilla_id = data.fk_id_plantilla
       var id_cliente = data.fk_id_cliente
       var tipo_salida = 1
-console.log('Plantilla:'+pllantilla_id)
+//console.log('Plantilla:'+pllantilla_id)
       switch(plantilla_id) {
         case '1':
-          console.log('factura:'+factura+' estudio:'+estudio+' tipo salida:'+tipo_salida)
+          //console.log('factura:'+factura+' estudio:'+estudio+' tipo salida:'+tipo_salida)
           //console.log('tipo_salida '+tipo_salida)
-          $.post("./reports/pdf_plantilla_1.php", {'factura' : factura, 'estudio' : estudio, 'tipo_salida' : tipo_salida} ,function(data, status){
+          $.post("../reports/pdf_plantilla_1.php", {'factura' : factura, 'estudio' : estudio, 'tipo_salida' : tipo_salida} ,function(data, status){
             if(data == 1)
             {
               //console.log('previo al envio')
@@ -222,13 +222,13 @@ console.log('Plantilla:'+pllantilla_id)
                     Swal.fire({
                               position: 'top-end',
                               type: 'success',
-                              title: 'Validando datos, espere porfavor',
+                              title: 'Mensaje envia corretamente',
                               showConfirmButton: false,
                             })
                     //window.opener.document.location="../ag_orden_dia_p1_nvo/tabla_agenda.php";
                 }else
                 {
-                    Swal.fire('No se envio el email, error: '+data)
+                    Swal.fire('No se envio el whatsapp, error: '+data)
                 }
             });
             }else{
@@ -237,8 +237,63 @@ console.log('Plantilla:'+pllantilla_id)
           }
           );
           break;
-        case 2:
-          // code block
+        case '2':
+            //console.log('factura:'+factura+' estudio:'+estudio+' tipo salida:'+tipo_salida)
+            //console.log('tipo_salida '+tipo_salida)
+            $.post("../reports/pdf_plantilla_2.php", {'factura' : factura, 'estudio' : estudio, 'tipo_salida' : tipo_salida} ,function(data, status){
+              if(data == 1)
+              {
+                //console.log('previo al envio')
+                $.post("./controladores/whatsapp.php", {'factura' : factura, 'estudio' : estudio, 'plantilla' : plantilla_id, 'id_cliente' : id_cliente} ,function(data, status){
+                  //console.log('envio el mail, estado: '+data)
+                  if(data == 1)
+                  {
+                      Swal.fire({
+                                position: 'top-end',
+                                type: 'success',
+                                title: 'Mensaje envia corretamente',
+                                showConfirmButton: false,
+                              })
+                      //window.opener.document.location="../ag_orden_dia_p1_nvo/tabla_agenda.php";
+                  }else
+                  {
+                      Swal.fire('No se envio el whatsapp, error: '+data)
+                  }
+              });
+              }else{
+                swal('No se genero el PDF para ser enviado, notifique a su area de sistemas: soporte.producto@medisyslabs.onmicrosoft.com-->'+data)
+              }
+            }
+          );
+          break;
+        case '3':
+            //console.log('factura:'+factura+' estudio:'+estudio+' tipo salida:'+tipo_salida)
+            //console.log('tipo_salida '+tipo_salida)
+            $.post("../reports/pdf_plantilla_3.php", {'factura' : factura, 'estudio' : estudio, 'tipo_salida' : tipo_salida} ,function(data, status){
+              if(data == 1)
+              {
+                //console.log('previo al envio')
+                $.post("./controladores/whatsapp.php", {'factura' : factura, 'estudio' : estudio, 'plantilla' : plantilla_id, 'id_cliente' : id_cliente} ,function(data, status){
+                  //console.log('envio el mail, estado: '+data)
+                  if(data == 1)
+                  {
+                      Swal.fire({
+                                position: 'top-end',
+                                type: 'success',
+                                title: 'Mensaje envia corretamente',
+                                showConfirmButton: false,
+                              })
+                      //window.opener.document.location="../ag_orden_dia_p1_nvo/tabla_agenda.php";
+                  }else
+                  {
+                      Swal.fire('No se envio el whatsapp, error: '+data)
+                  }
+              });
+              }else{
+                swal('No se genero el PDF para ser enviado, notifique a su area de sistemas: soporte.producto@medisyslabs.onmicrosoft.com-->'+data)
+              }
+            }
+          );
           break;
         default:
           swal('Sin plantilla'+plantilla_id)

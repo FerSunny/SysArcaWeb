@@ -36,7 +36,7 @@
 
 					{"data" : "id_temperatura"},
 
-					{"data" : "codigo"},
+					{"data" : "descripcion"},
 
 					{"data" : "desc_area"},
 
@@ -44,33 +44,34 @@
 					{"data" : "temperatura"},
 
 					{"data" : "valor_correccion"},
-				//	{"data" : "valor_corregido"},
-
 					{
 
                         render: function( data, type, row, meta )
                         {
-						var maximo = row['valor_maximo']
-                            if (row['valor_corregido'] >= row['valor_minimo']) //&& row['valor_corregido'] < row['valor_maximo']) 
-                            {
-								console.log(row['valor_corregido'])
-								console.log(maximo)
-								if(row['valor_corregido'] <= maximo){
-									return "<p class='btn btn-success btn-md'>"+row['valor_corregido']+"</p>"
-								}
-                                return "<p class='btn btn-danger btn-md'>"+row['valor_corregido']+"</p>"
-                            }else
-                            {
-                                return "<p class='btn btn-danger btn-md'>"+row['valor_corregido']+"</p>"
-                            }
+							var minimo =  row['temp_refere_1']
+							var medio =   row['temp_refere_2']
+							var maximo =  row['temp_refere_3']
 
+							var medicion =  row['temperatura']
+
+							switch (medicion) {
+								case (medicion <= minimo):
+									return "<p class='btn btn-danger btn-md'>"+row['valor_corregido']+"</p>"
+									break;
+								case (medicion >= maximo):
+									return "<p class='btn btn-danger btn-md'>"+row['valor_corregido']+"</p>"
+									break;
+								default:
+									return "<p class='btn btn-success btn-md'>"+row['valor_corregido']+"</p>"
+									break;
+							}
                         },
 
                     },
 
 
 
-					{"data" : "intervalo_aceptable"},
+				//	{"data" : "intervalo_aceptable"},
 
 					{"defaultContent": "<button type='button' class='editar btn btn-warning btn-md'><i class='fas fa-edit'></i></button>"},
 

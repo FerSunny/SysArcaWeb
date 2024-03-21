@@ -10,8 +10,9 @@ $id_cliente= $_POST['id_cliente'];
 $id_usuario = $_SESSION['id_usuario'];
 
 //enviamos el email
-$ruta="www.laboratoriosarca.com/sysarcaweb_1.0/pdfs/".$id_factura."_".$id_estudio.".pdf";
+$ruta="https://www.laboratoriosarca.com/sysarcaweb_1.0/pdf_resenv/".$id_factura."_".$id_estudio.".pdf";
 $atach = $ruta;
+//echo 'ruta'.$ruta;
 $asunto="Ha Recibido un email de Laboratorios de analsis Clinicos ARCA";
 $contenido="Ha recibido sus resultados del estudio practicado";
 $regreso = multiple(1,$id_cliente,$atach,$asunto,$contenido); //destinatario,id,adjunto,mensaje,contenido

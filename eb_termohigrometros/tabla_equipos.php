@@ -15,7 +15,7 @@
 
   <meta http-equiv="Content-Type" content="text/html; charset=gb18030">
 
-  <title>Termometros</title> <!-- CAMBIO  Titulo de la forma -->
+  <title>termohigrometros</title> <!-- CAMBIO  Titulo de la forma -->
 
   <link rel="icon" type="image/png" href="../imagenes/ico/capital.png" />
 
@@ -79,9 +79,9 @@
 
   <div class="container" style="margin-top: 30px;">
 
-    <h1 style="text-align: center;">Tabla de Termometros  <!-- CAMBIO Se cambia el titulo de la tabla -->
+    <h1 style="text-align: center;">Tabla de Termohigrometros  <!-- CAMBIO Se cambia el titulo de la tabla -->
 
-      <button type="button" class="btn btn-primary pull-right menu" data-toggle="modal" data-target="#myModals"><i class="fa fa-user-plus" aria-hidden="true"></i>&nbsp;Nuevo Termometro</button> <!-- CAMBIO Se cambia el boton de altas -->
+      <button type="button" class="btn btn-primary pull-right menu" data-toggle="modal" data-target="#myModals"><i class="fa fa-user-plus" aria-hidden="true"></i>&nbsp;Nuevo Termohigrometros</button> <!-- CAMBIO Se cambia el boton de altas -->
 
     </h1>
 
