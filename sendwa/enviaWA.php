@@ -17,14 +17,6 @@ if($mysqli->connect_errno != 0){
     exit();
 }
 
-//Recuperamos el whatsapp del paciente
-$stmt = $mysqli->prepare("SELECT whatsapp FROM so_factura WHERE id_factura = ?");
-$stmt->bind_param("i",$id_factura);
-$stmt->execute();
-$resultado = $stmt->get_result();
-$numero = $resultado->fetch_assoc();
-//echo "El número del paciente es: " . $numero['whatsapp'] . " ";
-
 //Recuperamos los datos del paciente
 $stmt = $mysqli->prepare("SELECT replace(cl.telefono_movil,'-','') as celular, CONCAT(cl.nombre, ' ', cl.a_paterno, ' ', cl.a_materno) paciente FROM so_factura fa
 LEFT OUTER JOIN so_clientes cl ON (cl.`id_cliente` = fa.`fk_id_cliente`)
