@@ -1,5 +1,7 @@
 <?php
 
+include 'controladores/conex.php';
+
 function enviaWA($id_factura, $ruta){
 
 //Datos de conexión a la base de datos
@@ -16,14 +18,6 @@ if($mysqli->connect_errno != 0){
     echo $mysqli->connect_error;
     exit();
 }
-
-//Recuperamos el whatsapp del paciente
-$stmt = $mysqli->prepare("SELECT whatsapp FROM so_factura WHERE id_factura = ?");
-$stmt->bind_param("i",$id_factura);
-$stmt->execute();
-$resultado = $stmt->get_result();
-$numero = $resultado->fetch_assoc();
-//echo "El número del paciente es: " . $numero['whatsapp'] . " ";
 
 //Recuperamos los datos del paciente
 $stmt = $mysqli->prepare("SELECT replace(cl.telefono_movil,'-','') as celular, CONCAT(cl.nombre, ' ', cl.a_paterno, ' ', cl.a_materno) paciente FROM so_factura fa
