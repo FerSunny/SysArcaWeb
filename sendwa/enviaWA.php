@@ -1,13 +1,11 @@
 <?php
 
-include 'controladores/conex.php';
-
 function enviaWA($id_factura, $ruta){
 
 //Datos de conexión a la base de datos
 $server = "localhost";
-$user = "labora41_root";
-$password = "ArcaRoot_2017";
+$user = "root";
+$password = "";
 $database = "labora41_bd_arca";
 
 //Creamos la conexión
@@ -43,7 +41,7 @@ $stmt->fetch();
 $token = 'EAAOQZBzYCNvoBO8myZADRmly5X9KDyWCOgwmsmsMr9P2ssm43FpSGdsOs1ZAZAFLfGdFpbM9w73H6cXFQkuVYjy6ZCx5Nqsber8sjaZCw1qq8w96celmpZB2M1xm7OwlG67pxO0uHzkwXnsDoeAq8sWuUFUCJhZAQzRWwNhaptYCwFU5THZCSjqNUGmgZC0bzRZAMJU';
 
 //Teléfono del paciente
-$telefono = '52' . $celular;
+$telefono = '52' . '5551850684';
 
 //URL a donde se envía el mensaje
 $url = 'https://graph.facebook.com/v17.0/108646072324432/messages';
