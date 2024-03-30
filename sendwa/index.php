@@ -14,6 +14,8 @@
 </body>
 <?php include 'enviaWA.php';
 
+require ('../ag_confirma_v3.0/reports/print_plantilla_1.php');
+
 $id_factura = $_POST['id_facura'];
 $ruta = $_POST['ruta'];
 
