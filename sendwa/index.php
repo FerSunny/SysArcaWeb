@@ -14,9 +14,12 @@
 </body>
 <?php include 'enviaWA.php';
 
+require ('../sendwa/creaPDF.php');
+
 $id_factura = $_POST['id_facura'];
 $ruta = $_POST['ruta'];
 
+//creaPDF();
 if(isset($id_factura) && isset($ruta)){
     echo '<br>El folio del paciente es: ' . $id_factura . '<br><br>';
     echo '<br>La ruta es: ' . $ruta . '<br><br>';
