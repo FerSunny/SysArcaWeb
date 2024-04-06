@@ -246,49 +246,33 @@ var editar = function(tbody, table) {
 
 
 
-
-
 				$("#frmedit  label").attr('class','active')
 
 				$("#frmedit  #dc").val(data.id_equipo)
-
 				$("#frmedit  #pro").val(data.id_equipo)
-
 				$("#frmedit  #codigo").val(data.id_equipo)
 
 				$("#frmedit  #descripcion").val(data.descripcion)
 
-				$("#frmedit  #vminimo").val(data.valor_minimo)
-
-				$("#frmedit  #vmaximo").val(data.valor_maximo)
-
-				$("#frmedit  #servicio").val(data.fk_id_servicio)
-
-				$("#frmedit  #area").val(data.fk_id_area)
-
-				$("#frmedit  #gpo_conta").val(data.fk_id_gpo_conta)		
-				$("#frmedit  #conse").val(data.conse)
+				//$("#frmedit  #vminimo").val(data.valor_minimo)
+				//$("#frmedit  #vmaximo").val(data.valor_maximo)
 				$("#frmedit  #serie").val(data.numero_serie)
-
 				$("#frmedit  #marca").val(data.marca)
+
 				$("#frmedit  #modelo").val(data.modelo)
-				//$("#frmedit  #fcalibra").val(data.fecha_calibracion)
-				//$("#frmedit  #fultimo").val(data.fecha_ult_mto)	
-				//$("#frmedit  #vcorrige").val(data.valor_corre)
-				//$("#frmedit  #dmto").val(data.dias_mto)
+				$("#frmedit  #fecha_alta").val(data.fecha_rece)
+
+				$("#frmedit  #fecha_marcha").val(data.fecha_marcha)
+				$("#frmedit  #fecha_expira_g").val(data.fecha_expira_g)					
 
 				$("#frmedit  #sucursal").val(data.fk_id_sucursal)
 				$("#frmedit  #servicio").val(data.fk_id_servicio)
 				$("#frmedit  #area").val(data.fk_id_area)
-				$("#frmedit  #gpo_conta").val(data.fk_id_gpo_conta)
-				$("#frmedit  #conse").val(data.conse)
-
-				$("#frmedit  #fecha_alta").val(data.fecha_alta)
-				// $("#frmedit  #fecha_rece").val(data.fecha_rece)
-				$("#frmedit  #fecha_marcha").val(data.fecha_marcha)
-				$("#frmedit  #fecha_expira_g").val(data.fecha_expira_g)
-
+				$("#frmedit  #gpo_conta").val(data.fk_id_gpo_conta)	
 				$("#frmedit  #proveedor").val(data.fk_id_proveedor)
+
+
+				$("#frmedit  #conse").val(data.conse)																								
 
 				$("#frmedit  #usuario").val(data.usuario)
 				$("#frmedit  #pass").val(data.contra)
