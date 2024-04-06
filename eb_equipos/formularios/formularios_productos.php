@@ -606,7 +606,7 @@
 
 										<input type="date" name="fecha_alta" id="fecha_alta" class="form-control"  required>
 
-										<label for="fecha_alta"> Fecha Alta </label>
+										<label for="fecha_alta"> Fecha Recepcion	 </label>
 
 									</div>
 

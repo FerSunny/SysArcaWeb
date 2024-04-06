@@ -75,7 +75,7 @@ function multiple($tipo,$valor,$atach,$asunto,$contenido)
         echo $contenido;
         */
         $valida = envia_email($tipo,$email,$atach,$asunto,$contenido);
-        //$valida='2'.$contenido;
+        $valida=1;
     }
 
     return $valida;

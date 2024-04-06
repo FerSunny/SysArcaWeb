@@ -34,89 +34,26 @@
 
 				"columns":[
 
-					{"data" : "id_equipo"},
+					{"data" : "iniciales"},
+					{"data" : "anioagenda"},
 
-					{"data" : "numero_serie"},
+					{"data" : "mesagenda"},
 
-					{"data" : "codigo"},
-
-					{"data" : "marca"},
-
-					{"data" : "modelo"},
-
-					{"data" : "descripcion"},
-
-					{"data" : "razon_social"},
+					{"data" : "medicos"},
 
 
-					{"defaultContent": "<button type='button' class='editar btn btn-warning btn-md'><i class='fas fa-edit'></i></button>"},
 
-					{"defaultContent":"<button type='button' class='eliminar btn btn-danger btn-md'><i class='fas fa-trash-alt'></i></button>"},
-					// mantenimiento correctivo
+// boton de imagenes					
 					{
 						render:function(data,type,row){
 							var registrado;
-
-									return "<form-group style='text-align:center;'>"+
-									"<a id='printer' disabled target='_blank' href='../eb_equipos/tabla_equipo_cor.php?id_equipo="+row['id_equipo']+"' class='btn btn-info btn-md' role='button'><i class='fa fa-cogs' ></i></a>"+
-									"</form-group>";
-
-						},
-					},
-					// calendario mnto preventivo
-					{
-						render:function(data,type,row){
-							var registrado;
-
-									return "<form-group style='text-align:center;'>"+
-									"<a id='printer' target='_blank' href='../eb_equipos/tabla_equipo_cal.php?id_equipo="+row['id_equipo']+"' class='btn btn-light btn-md' role='button'><i class='fa fa-calendar' ></i></a>"+
-									"</form-group>";
-
-						},
-					},
-					//Documentos PDF
-					{
-						render:function(data,type,row){
-							var registrado;
-
+					
 							return "<form-group style='text-align:center;'>"+
-							"<a id='printer'  href='../eb_equipos/tabla_imagenes.php?id_equipo="+row['id_equipo']+"' class='btn btn-success' role='button'><span  class='fa fa-image'></span></a>"+
-							"</form-group>";
+							"<a id='printer'  href='../vm_agenda_duplica/tabla_dias.php?mesagendanum="+row['mesagendanum']+"&anioagenda="+row['anioagenda']+"&id_usuario="+row['id_usuario']+"' target=“_blank” class='btn btn-blue-grey btn-md' role='button'><span  class='fa fa-image' style='color: white;'></span></a>"+
+							"</form-group>";											
+											
+						}
 
-						},
-					},
-					//Calibracion
-					{
-						render:function(data,type,row){
-							var registrado;
-
-									return "<form-group style='text-align:center;'>"+
-									"<a id='printer' target='_blank' href='reports/tikets.php?codigo="+row['codigo']+"' class='btn btn-primary btn-md' role='button'><i class='fa fa-stethoscope' ></i></a>"+
-									"</form-group>";
-
-						},
-					},
-					//Check - list
-					{
-						render:function(data,type,row){
-							var registrado;
-
-									return "<form-group style='text-align:center;'>"+
-									"<a id='printer' target='_blank' href='reports/tikets.php?codigo="+row['codigo']+"' class='btn btn-secondary btn-md' role='button'><i class='fa fa-list' ></i></a>"+
-									"</form-group>";
-
-						},
-					},
-					//Codigo de barras
-					{
-						render:function(data,type,row){
-							var registrado;
-
-									return "<form-group style='text-align:center;'>"+
-									"<a id='printer' target='_blank' href='reports/tikets.php?codigo="+row['codigo']+"' class='btn btn-warning btn-md' role='button'><i class='fa fa-barcode' ></i></a>"+
-									"</form-group>";
-
-						},
 					}
 
 
@@ -144,9 +81,9 @@ var agregar= function(tbody, table) {
 
 				var data = table.row($(this).parents("tr")).data();
 
-				$("#form_productos  #dc").val(data.fk_id_cliente)
+				$("#form_productos  #dc").val(data.id_queja)
 
-				$("#form_productos  #pro").val(data.id_producto)
+				$("#form_productos  #pro").val(data.id_queja)
 
 				$("#form_productos").modal("show")
 
@@ -246,36 +183,37 @@ var editar = function(tbody, table) {
 
 
 
+
+
 				$("#frmedit  label").attr('class','active')
 
-				$("#frmedit  #dc").val(data.id_equipo)
-				$("#frmedit  #pro").val(data.id_equipo)
-				$("#frmedit  #codigo").val(data.id_equipo)
+				$("#frmedit  #dc").val(data.id_queja)
 
-				$("#frmedit  #descripcion").val(data.descripcion)
+				$("#frmedit  #pro").val(data.id_queja)
 
-				//$("#frmedit  #vminimo").val(data.valor_minimo)
-				//$("#frmedit  #vmaximo").val(data.valor_maximo)
-				$("#frmedit  #serie").val(data.numero_serie)
-				$("#frmedit  #marca").val(data.marca)
+				$("#frmedit  #codigo").val(data.id_queja)
 
-				$("#frmedit  #modelo").val(data.modelo)
-				$("#frmedit  #fecha_alta").val(data.fecha_rece)
+				$("#frmedit  #q_o_s").val(data.fk_id_inconformidad)
 
-				$("#frmedit  #fecha_marcha").val(data.fecha_marcha)
-				$("#frmedit  #fecha_expira_g").val(data.fecha_expira_g)					
+				$("#frmedit  #fecha_queja").val(data.fecha_queja)
+
+				$("#frmedit  #origen").val(data.fk_id_origen)
+
+				$("#frmedit  #tipo").val(data.fk_id_tipo_queja)
+
+				$("#frmedit  #medico").val(data.fk_id_medicos)
+
+				$("#frmedit  #paciente").val(data.fk_id_paciente)
+
+				$("#frmedit  #empleado").val(data.fk_id_empleado)
+
+				$("#frmedit  #orden").val(data.fk_id_folio)
 
 				$("#frmedit  #sucursal").val(data.fk_id_sucursal)
-				$("#frmedit  #servicio").val(data.fk_id_servicio)
-				$("#frmedit  #area").val(data.fk_id_area)
-				$("#frmedit  #gpo_conta").val(data.fk_id_gpo_conta)	
-				$("#frmedit  #proveedor").val(data.fk_id_proveedor)
 
+				$("#frmedit  #inconformidad").val(data.descripcion)
 
-				$("#frmedit  #conse").val(data.conse)																								
-
-				$("#frmedit  #usuario").val(data.usuario)
-				$("#frmedit  #pass").val(data.contra)
+			 	$("#frmedit  #observaciones").val(data.observaciones)
 
 		});
 
@@ -381,7 +319,7 @@ var eliminar= function(tbody, table) {
 
 				if (result.value) {
 
-					 $.post("./controladores/eliminar.php", {'id_equipo' : data.id_equipo}  , function(data,status)
+					 $.post("./controladores/eliminar.php", {'id_queja' : data.id_queja}  , function(data,status)
 
 					{
 
@@ -513,6 +451,68 @@ function calcular(val)
 
 }
 
+function listmedicos() {
+
+    var data_result;
+
+    $(".js-data-example-ajax-m").select2({
+        ajax: {
+            type: "GET",
+            url: "./ajax/autocomplete/medicos.php",
+            dataType: 'json',
+            delay: 250,
+            data: function(params) {
+                return {
+                    q: params.term, // search term
+                    page: params.page
+                };
+            },
+            processResults: function(data, params) {
+                // parse the results into the format expected by Select2
+                // since we are using custom formatting functions we do not need to
+                // alter the remote JSON data, except to indicate that infinite
+                // scrolling can be used
+                console.log("Imprimiendo valores medico")
+                console.log(data)
+                data_result = data;
+                console.log("arreglo recibido medico", data);
+                params.page = params.page || 1;
+
+                return {
+                    results: $.map(data, function(item) {
+                        return {
+                            text: item.value,
+                            id: item.id_medico
+                        }
+                    }),
+                    pagination: {
+                        more: (params.page * 30) < data.total_count
+                    }
+                };
+            },
+            cache: true
+        },
+        escapeMarkup: function(markup) { return markup; }, // let our custom formatter work
+        minimumInputLength: 1
+        // templateResult: formatRepo, // omitted for brevity, see the source of this page
+        // templateSelection: formatRepoSelection // omitted for brevity, see the source of this page
+    }).on('change', function(e) {
+        var str = $("#s2id_search_code .select2-choice span").text();
+        var idselect = $('#fi_medico').val();
+
+     /*
+        for (var i = 0; i < data_result.length; i++) {
+            if (data_result[i].id_cliente == idselect) {
+                $('#tel1').val(data_result[i].telefono_fijo);
+                $('#mail').val(data_result[i].mail);
+                break;
+            }
+        }
+    */
+    }).on('select', function(e) {
+        console.log("select");
+    });
+}
 
 
 		/* Idioma para el DataTable */

@@ -38,7 +38,6 @@ function envia_email($tipo,$email,$atach,$asunto,$contenido){
         $email_jaz="jaz.carapia@laboratoriosarca.com.mx";
         $email_sop="soporte.producto@medisyslabs.onmicrosoft.com";
         $email_lab="servicios.laboratorio@laboratoriosarca.mx";
-        $email_acu="acuses@laboratoriosarca.mx";
 
     require 'PHPMailer/src/Exception.php';
     require 'PHPMailer/src/PHPMailer.php';
@@ -66,27 +65,17 @@ function envia_email($tipo,$email,$atach,$asunto,$contenido){
             $mail->addCC($email_sop,'Acuse SP');
             $mail->addCC($email_jaz,'Acuse JI');
             $mail->addCC($email_lab,'Acuse LB');
-            $mail->addAttachment();
-        }else{
-            $mail->addCC($email_acu,'Acuse Enviado');
-            $mail->addAttachment("../../pdf_resenv/".$atach);
         }
-        
         
         // Contenido del correo
         $mail->isHTML(true);
         $mail->Subject = $asunto; //'Asunto del correo';
         $mail->Body  = $contenido; //'Contenido del correo <b>en HTML!</b>';
-
-        //$mail->addAttachment();
-
-        $mail->addAttachment("../../pdf_resenv/".$atach);
-
+       // $mail->addAttachment($atach);
         $mail->AltBody = 'Contenido del correo en texto plano para los clientes de correo que no soporten HTML';
         $mail->send();
         $estenv = 1; //'El mensaje se ha enviado';
     } catch (Exception $e) {
         $estenv = 0; //"El mensaje no se ha enviado. Mailer Error: {$mail->ErrorInfo}";
     }
-    echo $estenv;
 }

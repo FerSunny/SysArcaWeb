@@ -111,8 +111,6 @@ var email = function(tbody, table) {
       var estudio = data.fk_id_estudio
       var plantilla_id = data.fk_id_plantilla
       var id_cliente = data.fk_id_cliente
-      var desc_estudio = data.desc_estudio
-
       var tipo_salida = 1
 
       switch(plantilla_id) {

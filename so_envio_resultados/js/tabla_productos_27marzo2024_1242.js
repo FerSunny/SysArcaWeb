@@ -111,8 +111,6 @@ var email = function(tbody, table) {
       var estudio = data.fk_id_estudio
       var plantilla_id = data.fk_id_plantilla
       var id_cliente = data.fk_id_cliente
-      var desc_estudio = data.desc_estudio
-
       var tipo_salida = 1
 
       switch(plantilla_id) {
@@ -121,7 +119,7 @@ var email = function(tbody, table) {
           $.post("../reports/pdf_plantilla_1.php", {'factura' : factura, 'estudio' : estudio, 'tipo_salida' : tipo_salida} ,function(data, status){
             if(data == 1)
             {
-              $.post("./controladores/email.php", {'factura' : factura, 'estudio' : estudio, 'plantilla' : plantilla_id, 'id_cliente' : id_cliente, 'desc_estudio' : desc_estudio} ,function(data, status){
+              $.post("./controladores/email.php", {'factura' : factura, 'estudio' : estudio, 'plantilla' : plantilla_id, 'id_cliente' : id_cliente} ,function(data, status){
                 if(data == 1)
                 {
                     Swal.fire({
@@ -146,7 +144,7 @@ var email = function(tbody, table) {
           $.post("../reports/pdf_plantilla_2.php", {'factura' : factura, 'estudio' : estudio, 'tipo_salida' : tipo_salida} ,function(data, status){
             if(data == 1)
             {
-              $.post("./controladores/email.php", {'factura' : factura, 'estudio' : estudio, 'plantilla' : plantilla_id, 'id_cliente' : id_cliente, 'desc_estudio' : desc_estudio} ,function(data, status){
+              $.post("./controladores/email.php", {'factura' : factura, 'estudio' : estudio, 'plantilla' : plantilla_id, 'id_cliente' : id_cliente} ,function(data, status){
                 if(data == 1)
                 {
                     Swal.fire({
@@ -171,7 +169,7 @@ var email = function(tbody, table) {
           $.post("../reports/pdf_plantilla_3.php", {'factura' : factura, 'estudio' : estudio, 'tipo_salida' : tipo_salida} ,function(data, status){
             if(data == 1)
             {
-              $.post("./controladores/email.php", {'factura' : factura, 'estudio' : estudio, 'plantilla' : plantilla_id, 'id_cliente' : id_cliente, 'desc_estudio' : desc_estudio} ,function(data, status){
+              $.post("./controladores/email.php", {'factura' : factura, 'estudio' : estudio, 'plantilla' : plantilla_id, 'id_cliente' : id_cliente} ,function(data, status){
                 if(data == 1)
                 {
                     Swal.fire({

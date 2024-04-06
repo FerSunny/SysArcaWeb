@@ -28,97 +28,22 @@
 
 					"method":"POST",
 
-					"url": "listar.php"
+					"url": "listar_dias.php"
 
 				},
 
 				"columns":[
 
-					{"data" : "id_equipo"},
+					{"data" : "anioagenda"},
+					{"data" : "mesagenda"},
+					{"data" : "diagenda"},
+					{"data" : "diagendanombre"},
+				//	{"data" : "desc_estudio"},
+					{"data" : "medicos"},
 
-					{"data" : "numero_serie"},
+					{"defaultContent": "<button type='button' class='editar btn btn-warning btn-md'><i class='fas fa-edit'></i></button>"} //,
 
-					{"data" : "codigo"},
-
-					{"data" : "marca"},
-
-					{"data" : "modelo"},
-
-					{"data" : "descripcion"},
-
-					{"data" : "razon_social"},
-
-
-					{"defaultContent": "<button type='button' class='editar btn btn-warning btn-md'><i class='fas fa-edit'></i></button>"},
-
-					{"defaultContent":"<button type='button' class='eliminar btn btn-danger btn-md'><i class='fas fa-trash-alt'></i></button>"},
-					// mantenimiento correctivo
-					{
-						render:function(data,type,row){
-							var registrado;
-
-									return "<form-group style='text-align:center;'>"+
-									"<a id='printer' disabled target='_blank' href='../eb_equipos/tabla_equipo_cor.php?id_equipo="+row['id_equipo']+"' class='btn btn-info btn-md' role='button'><i class='fa fa-cogs' ></i></a>"+
-									"</form-group>";
-
-						},
-					},
-					// calendario mnto preventivo
-					{
-						render:function(data,type,row){
-							var registrado;
-
-									return "<form-group style='text-align:center;'>"+
-									"<a id='printer' target='_blank' href='../eb_equipos/tabla_equipo_cal.php?id_equipo="+row['id_equipo']+"' class='btn btn-light btn-md' role='button'><i class='fa fa-calendar' ></i></a>"+
-									"</form-group>";
-
-						},
-					},
-					//Documentos PDF
-					{
-						render:function(data,type,row){
-							var registrado;
-
-							return "<form-group style='text-align:center;'>"+
-							"<a id='printer'  href='../eb_equipos/tabla_imagenes.php?id_equipo="+row['id_equipo']+"' class='btn btn-success' role='button'><span  class='fa fa-image'></span></a>"+
-							"</form-group>";
-
-						},
-					},
-					//Calibracion
-					{
-						render:function(data,type,row){
-							var registrado;
-
-									return "<form-group style='text-align:center;'>"+
-									"<a id='printer' target='_blank' href='reports/tikets.php?codigo="+row['codigo']+"' class='btn btn-primary btn-md' role='button'><i class='fa fa-stethoscope' ></i></a>"+
-									"</form-group>";
-
-						},
-					},
-					//Check - list
-					{
-						render:function(data,type,row){
-							var registrado;
-
-									return "<form-group style='text-align:center;'>"+
-									"<a id='printer' target='_blank' href='reports/tikets.php?codigo="+row['codigo']+"' class='btn btn-secondary btn-md' role='button'><i class='fa fa-list' ></i></a>"+
-									"</form-group>";
-
-						},
-					},
-					//Codigo de barras
-					{
-						render:function(data,type,row){
-							var registrado;
-
-									return "<form-group style='text-align:center;'>"+
-									"<a id='printer' target='_blank' href='reports/tikets.php?codigo="+row['codigo']+"' class='btn btn-warning btn-md' role='button'><i class='fa fa-barcode' ></i></a>"+
-									"</form-group>";
-
-						},
-					}
-
+				//	{"defaultContent":"<button type='button' class='eliminar btn btn-danger btn-md'><i class='fas fa-trash-alt'></i></button>"}
 
 				],
 
@@ -235,7 +160,7 @@ function focus_btn()
 
 
 var editar = function(tbody, table) {
-
+	console.log(" editar")
 		$(tbody).on("click", "button.editar", function() 
 
 		{
@@ -246,36 +171,24 @@ var editar = function(tbody, table) {
 
 
 
+
+
 				$("#frmedit  label").attr('class','active')
 
-				$("#frmedit  #dc").val(data.id_equipo)
-				$("#frmedit  #pro").val(data.id_equipo)
-				$("#frmedit  #codigo").val(data.id_equipo)
+				$("#frmedit  #dc").val(data.anioagenda)
 
-				$("#frmedit  #descripcion").val(data.descripcion)
+				$("#frmedit  #pro").val(data.anioagenda)
 
-				//$("#frmedit  #vminimo").val(data.valor_minimo)
-				//$("#frmedit  #vmaximo").val(data.valor_maximo)
-				$("#frmedit  #serie").val(data.numero_serie)
-				$("#frmedit  #marca").val(data.marca)
+				//$("#frmedit  #codigo").val(data.anioagenda)
 
-				$("#frmedit  #modelo").val(data.modelo)
-				$("#frmedit  #fecha_alta").val(data.fecha_rece)
+				$("#frmedit  #anio").val(data.anioagenda)
 
-				$("#frmedit  #fecha_marcha").val(data.fecha_marcha)
-				$("#frmedit  #fecha_expira_g").val(data.fecha_expira_g)					
+				$("#frmedit  #mes").val(data.mesagenda)
 
-				$("#frmedit  #sucursal").val(data.fk_id_sucursal)
-				$("#frmedit  #servicio").val(data.fk_id_servicio)
-				$("#frmedit  #area").val(data.fk_id_area)
-				$("#frmedit  #gpo_conta").val(data.fk_id_gpo_conta)	
-				$("#frmedit  #proveedor").val(data.fk_id_proveedor)
+				$("#frmedit  #dia").val(data.diagenda)
 
+				$("#frmedit  #medicos").val(data.medicos)
 
-				$("#frmedit  #conse").val(data.conse)																								
-
-				$("#frmedit  #usuario").val(data.usuario)
-				$("#frmedit  #pass").val(data.contra)
 
 		});
 
@@ -288,7 +201,7 @@ $("#frmedit").on('submit', function (e)
 	{
 
 			e.preventDefault()
-
+console.log("antes de editar")
 			$.ajax({
 
 					type: "POST",                 
@@ -313,7 +226,7 @@ $("#frmedit").on('submit', function (e)
 
 								table.ajax.reload(); // Recarga el  DataTable
 
-								swal('datos agregados correctamente')
+								swal('Se agregaron correctamente los medicos')
 
 								console.log(data)
 
@@ -381,7 +294,7 @@ var eliminar= function(tbody, table) {
 
 				if (result.value) {
 
-					 $.post("./controladores/eliminar.php", {'id_equipo' : data.id_equipo}  , function(data,status)
+					 $.post("./controladores/eliminar.php", {'id_producto' : data.id_producto}  , function(data,status)
 
 					{
 

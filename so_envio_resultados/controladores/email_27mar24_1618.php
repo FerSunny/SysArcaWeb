@@ -13,11 +13,8 @@ $id_usuario = $_SESSION['id_usuario'];
 
 //enviamos el email
 $ruta="../pdf_resenv/".$id_factura."_".$id_estudio.".pdf";
- 
-//enviamos el email //
-$ruta="$id_factura"."_".$id_estudio.".pdf";
 $atach = $ruta;
-echo 'atach:'.$atach;
+//echo 'ruta'.$ruta;
 $asunto="Ha Recibido un email de Laboratorios de analsis Clinicos ARCA";
 $contenido="Ha recibido los resultados del estudio ".$desc_estudio;
 $regreso = multiple(1,$id_cliente,$atach,$asunto,$contenido); //destinatario,id,adjunto,mensaje,contenido
@@ -68,6 +65,6 @@ if($regreso == 1){
 }
 
 
-echo $regreso;
+echo '-'.$regreso.'-->'.$ruta;
 
 ?>

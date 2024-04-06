@@ -66,8 +66,8 @@ SET
   contra = '$pass'
 WHERE id_equipo = $codigo
 ";
-//echo "qury update:".$query;
-//echo "<script>console.log('Console: " . $query . "' );</script>";
+echo "qury update:".$query;
+
 $result = $conexion -> query($query);
 
 if ($result) {
