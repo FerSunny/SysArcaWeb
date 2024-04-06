@@ -65,6 +65,6 @@ if($regreso == 1){
 }
 
 
-echo $regreso;
+echo '-'.$regreso.'-->'.$ruta;
 
 ?>
