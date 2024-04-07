@@ -14,8 +14,6 @@
 </body>
 <?php include 'enviaWA.php';
 
-require ('../sendwa/creaPDF.php');
-
 $id_factura = $_POST['id_facura'];
 $ruta = $_POST['ruta'];
 
