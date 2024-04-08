@@ -8,14 +8,15 @@
 <body>
     <form method="post">
         <input name="id_facura" type="text" placeholder="Inserte el folio aquí">
-        <input name="ruta" type="text" placeholder="Inserte la ruta al pdf aquí">
+        \<!--<input name="ruta" type="text" placeholder="Inserte la ruta al pdf aquí">\-->
         <button type="submit">Enviar datos</button>
     </form>
 </body>
 <?php include 'enviaWA.php';
 
 $id_factura = $_POST['id_facura'];
-$ruta = $_POST['ruta'];
+//$ruta = $_POST['ruta'];
+$ruta = '/pdf/manual.pdf';
 
 //creaPDF();
 if(isset($id_factura) && isset($ruta)){
