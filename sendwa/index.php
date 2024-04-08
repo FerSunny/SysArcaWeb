@@ -12,11 +12,14 @@
         <button type="submit">Enviar datos</button>
     </form>
 </body>
-<?php include 'enviaWA.php';
+<?php 
+
+include 'enviaWA.php';
 
 $id_factura = $_POST['id_facura'];
 //$ruta = $_POST['ruta'];
-$ruta = '/pdf/manual.pdf';
+
+
 
 //creaPDF();
 if(isset($id_factura) && isset($ruta)){
