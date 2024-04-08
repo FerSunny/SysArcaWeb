@@ -46,7 +46,7 @@ function envia_email($tipo,$email,$atach,$asunto,$contenido){
 
     // Inicio
     $mail = new PHPMailer(true);
-    $estenv =0;
+
     try {
         // Configuracion SMTP
         //$mail->SMTPDebug = SMTP::DEBUG_SERVER;                         // Mostrar salida (Desactivar en producción)
@@ -62,28 +62,6 @@ function envia_email($tipo,$email,$atach,$asunto,$contenido){
         // Destinatarios
 
         $mail->addAddress($email, $email);  // Email y nombre del destinatario
-        switch ($tipo) {
-            case '4':
-                $mail->addCC($email_sop,'Acuse SP');
-                $mail->addCC($email_jaz,'Acuse JI');
-                $mail->addCC($email_lab,'Acuse LB');
-                $mail->addAttachment();
-                break;
-            case '5':
-                $mail->addCC($email_sop,'Acuse SP');
-                $mail->addCC($email_jaz,'Acuse JI');
-                $mail->addCC($email_lab,'Acuse LB');
-                $mail->addAttachment();
-                break;  
-            case '6':
-                $mail->addCC($email_acu,'Acuse ER'); // acuse a Envio de resultado
-                $mail->addAttachment("../../pdf_resenv/".$atach);
-                break;          
-            default:
-                $mail->addAttachment();
-                break;
-        }
-        /*
         if($tipo == 4 or $tipo == 5){
             $mail->addCC($email_sop,'Acuse SP');
             $mail->addCC($email_jaz,'Acuse JI');
@@ -93,29 +71,22 @@ function envia_email($tipo,$email,$atach,$asunto,$contenido){
             $mail->addCC($email_acu,'Acuse Enviado');
             $mail->addAttachment("../../pdf_resenv/".$atach);
         }
-        */
+        
         
         // Contenido del correo
         $mail->isHTML(true);
         $mail->Subject = $asunto; //'Asunto del correo';
         $mail->Body  = $contenido; //'Contenido del correo <b>en HTML!</b>';
-       // $mail->addAttachment("../../pdf_resenv/".$atach);
+
+        //$mail->addAttachment();
+
+        $mail->addAttachment("../../pdf_resenv/".$atach);
+
         $mail->AltBody = 'Contenido del correo en texto plano para los clientes de correo que no soporten HTML';
         $mail->send();
-
         $estenv = 1; //'El mensaje se ha enviado';
-        //echo $estenv;
-        //echo 'se envio';
-        //echo 1;
-
     } catch (Exception $e) {
-        $estenv =0; //"El mensaje no se ha enviado. Mailer Error: {$mail->ErrorInfo}";
-        //echo 'no se envio';
-        //echo $estenv;
+        $estenv = 0; //"El mensaje no se ha enviado. Mailer Error: {$mail->ErrorInfo}";
     }
-    //echo 'no se';
     echo $estenv;
-    //echo 1;
-
 }
-?>

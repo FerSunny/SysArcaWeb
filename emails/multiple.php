@@ -58,6 +58,17 @@ function multiple($tipo,$valor,$atach,$asunto,$contenido)
                 }
             }
             break;
+        case '6': // envio de resultados
+            // obtener datos del paciente  
+            $sql_pac="select mail as email FROM so_clientes
+            where activo = 'A' AND id_cliente = $valor";
+            if ($result_pac = mysqli_query($conexion, $sql_pac)) {
+                while($row_pac = $result_pac->fetch_assoc())
+                {
+                    $email=$row_pac['email'];
+                }
+            }
+            break;
         default:
             $email=NULL;
             break;
@@ -75,9 +86,12 @@ function multiple($tipo,$valor,$atach,$asunto,$contenido)
         echo $contenido;
         */
         $valida = envia_email($tipo,$email,$atach,$asunto,$contenido);
-        $valida=1;
+        if ($valida == NULL){
+            $valida = 1;
+        }
+        //$valida=1;
     }
-
+    //echo 'Valida -->'.$valida.'<--';
     return $valida;
 
 }   

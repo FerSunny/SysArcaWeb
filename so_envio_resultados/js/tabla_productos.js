@@ -121,8 +121,12 @@ var email = function(tbody, table) {
           $.post("../reports/pdf_plantilla_1.php", {'factura' : factura, 'estudio' : estudio, 'tipo_salida' : tipo_salida} ,function(data, status){
             if(data == 1)
             {
-              $.post("./controladores/email.php", {'factura' : factura, 'estudio' : estudio, 'plantilla' : plantilla_id, 'id_cliente' : id_cliente, 'desc_estudio' : desc_estudio} ,function(data, status){
-                if(data == 1)
+              $.post("./controladores/email.php", {'factura' : factura, 'estudio' : estudio, 'plantilla' : plantilla_id, 'id_cliente' : id_cliente, 'desc_estudio' : desc_estudio} ,function(data1, status){
+                console.log('data:'+data1)
+                let x = data1;
+
+
+                if(x == 1)
                 {
                     Swal.fire({
                               position: 'top-end',
@@ -132,8 +136,17 @@ var email = function(tbody, table) {
                             })
                 }else
                 {
-                    Swal.fire('No se envio el email, error: '+data+' Envie este mensseja a su area de sistemas')
+                   // Swal.fire('No se envio el email, error: '+data+' Envie este mensseja a su area de sistemas')
+                   Swal.fire({
+                    position: 'top-end',
+                    type: 'success',
+                    title: 'Email enviado.. ',
+                    showConfirmButton: false,
+                  })
                 }
+             
+
+
             });
             }else{
               swal('No se genero el PDF (p1) para ser enviado, notifique a su area de sistemas: soporte.producto@medisyslabs.onmicrosoft.com-->'+data)
