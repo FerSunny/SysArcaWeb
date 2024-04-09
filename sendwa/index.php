@@ -18,7 +18,7 @@ include 'enviaWA.php';
 
 $id_factura = $_POST['id_facura'];
 //$ruta = $_POST['ruta'];
-$ruta = 'fcaenlinea.unam.mx/anexos/1244/guia-tecnica-elaborar-manuales-procedimientos.pdf';
+$ruta = 'https://www.laboratoriosarca.com/sysarcaweb_1.0/pdf_resenv/20032408004_2577.pdf';
 
 
 //creaPDF();
