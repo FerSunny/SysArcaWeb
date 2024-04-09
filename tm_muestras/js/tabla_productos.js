@@ -34,21 +34,21 @@
 
 				"columns":[
 
-					{"data" : "cod_producto"},
+					{"data" : "desc_corta"},
 
-					{"data" : "producto"},
+					{"data" : "fecha"},
 
-					{"data" : "razon_social"},
+					{"data" : "hora"},
 
-					{"data" : "costo_producto"},
+					{"data" : "pendientes"},
 
-					{"data" : "utilidad"},
+					{"data" : "procesadas"},
 
-					{"data" : "costo_total"},
+					{"data" : "todas"},
 
-					{"defaultContent": "<button type='button' class='editar btn btn-warning btn-md'><i class='fas fa-edit'></i></button>"},
+					{"defaultContent": "<button disabled type='button' class='editar btn btn-warning btn-md'><i class='fa fa-print''></i></button>"}
 
-					{"defaultContent":"<button type='button' class='eliminar btn btn-danger btn-md'><i class='fas fa-trash-alt'></i></button>"}
+					//{"defaultContent":"<button type='button' class='eliminar btn btn-danger btn-md'><i class='fas fa-trash-alt'></i></button>"}
 
 				],
 

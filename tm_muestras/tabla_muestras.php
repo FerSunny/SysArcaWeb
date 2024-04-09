@@ -41,7 +41,9 @@
 
   <div class="container" style="margin-top: 30px;">
     <h1 style="text-align: center;">Tabla de Muestras  <!-- CAMBIO Se cambia el titulo de la tabla -->
-      <button type="button" class="btn btn-primary pull-right menu" data-toggle="modal" data-target="#myModals"><i class="fa fa-user-plus" aria-hidden="true"></i>&nbsp;Nuevo Producto</button> <!-- CAMBIO Se cambia el boton de altas -->
+    <!--
+      <button type="button" class="btn btn-primary pull-right menu" data-toggle="modal" data-target="#myModals"><i class="fa fa-user-plus" aria-hidden="true"></i>&nbsp;Nuevo Producto</button>
+-->
     </h1>
   </div>
 
@@ -56,14 +58,12 @@
         <thead>
           <tr>
             <!-- CAMBIO Se cambian las columnas segun las columnas a mostrar -->
-            <th>Id </th>
-            <th>OT</th>
-            <th>Paciente</th>
-            <th>Estudio</th>
+            <th>Sucursal </th>
+            <th>Fecha</th>
             <th>Hora</th>
-            <th>Total</th>
+            <th>Pendiente</th>
             <th>Procesadas</th>
-            <th>Pendientes</th>
+            <th>Total</th>
             <th>Imprimir</th>
           </tr>
         </thead>
