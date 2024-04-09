@@ -32,6 +32,9 @@
   LEFT OUTER JOIN se_usuarios us ON (us.id_usuario = re.usuario)
   WHERE fa.`estado_factura` <> 5
   AND CAST(`fa`.`fecha_factura` AS DATE) BETWEEN CURDATE() - INTERVAL 30 DAY AND CURDATE() + INTERVAL 15 DAY
+
+  AND CAST(`fa`.`fecha_factura` AS DATE) BETWEEN CURDATE() - INTERVAL 70 DAY AND CURDATE() + INTERVAL 15 DAY
+
   AND fa.`id_factura` = df.`id_factura`
   ";
 
