@@ -41,7 +41,7 @@ $stmt->fetch();
 $token = 'EAAOQZBzYCNvoBO8myZADRmly5X9KDyWCOgwmsmsMr9P2ssm43FpSGdsOs1ZAZAFLfGdFpbM9w73H6cXFQkuVYjy6ZCx5Nqsber8sjaZCw1qq8w96celmpZB2M1xm7OwlG67pxO0uHzkwXnsDoeAq8sWuUFUCJhZAQzRWwNhaptYCwFU5THZCSjqNUGmgZC0bzRZAMJU';
 
 //Teléfono del paciente
-$telefono = '52' . '5551850684';
+$telefono = '52' . '5519605386';
 
 //URL a donde se envía el mensaje
 $url = 'https://graph.facebook.com/v17.0/108646072324432/messages';
