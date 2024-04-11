@@ -30,8 +30,8 @@ $stmt->fetch();
 //Recuperamos el estudio
 $stmt = $mysqli->prepare("SELECT desc_estudio FROM so_detalle_factura de
 LEFT OUTER JOIN km_estudios es ON (es.`id_estudio` = de.`fk_id_estudio`)
-WHERE id_factura = ?");
-$stmt->bind_param("i",$id_factura);
+WHERE id_factura = ? AND fk_id_estudio = ?");
+$stmt->bind_param("ii",$id_factura,$id_estudio);
 $stmt->execute();
 $stmt->store_result();
 $stmt->bind_result($estudio);
@@ -105,7 +105,7 @@ curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 $response = json_decode(curl_exec($curl), true);
 
 //Imprimimos la respuesta
-print_r($response);
+//print_r($response);
 
 //Regresamos un valor dependiendo del estatus
 $status_code = curl_getinfo($curl, CURLINFO_HTTP_CODE);
