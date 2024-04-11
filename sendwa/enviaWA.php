@@ -4,8 +4,8 @@ function enviaWA($id_factura, $ruta, $id_estudio){
 
 //Datos de conexión a la base de datos
 $server = "localhost";
-$user = "root";
-$password = "";
+$user = "labora41_root";
+$password = "ArcaRoot_2017";
 $database = "labora41_bd_arca";
 
 //Creamos la conexión
