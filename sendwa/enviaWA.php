@@ -1,6 +1,6 @@
 <?php
 
-function enviaWA($id_factura, $ruta){
+function enviaWA($id_factura, $ruta, $id_estudio){
 
 //Datos de conexión a la base de datos
 $server = "localhost";
