@@ -46,7 +46,15 @@
 
 					{"data" : "todas"},
 
-					{"defaultContent": "<button disabled type='button' class='editar btn btn-warning btn-md'><i class='fa fa-print''></i></button>"}
+					//{"defaultContent": "<button disabled type='button' class='editar btn btn-warning btn-md'><i class='fa fa-print''></i></button>"}
+
+					{
+						render:function(data,type,row){
+									return "<form-group style='text-align:center;'>"+
+									"<a id='printer' target='_blank' href='./reports/report_work.php?fecha="+row['fecha']+"&hora="+row['hora']+"' class='btn btn-warning btn-md' role='button'><i class='fa fa fa-print' style='color: blue;'></i></a>"+
+									"</form-group>";	
+									}
+					}
 
 					//{"defaultContent":"<button type='button' class='eliminar btn btn-danger btn-md'><i class='fas fa-trash-alt'></i></button>"}
 

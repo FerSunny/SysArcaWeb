@@ -32,7 +32,7 @@
   WHERE t.`fk_id_estudio` = es.`id_estudio`
   AND t.`fk_id_sucursal` = s.`id_sucursal`
   AND YEAR(t.fecha_toma) = YEAR(CURDATE())
-  AND MONTH(t.`fecha_toma`) = MONTH(CURDATE())
+  -- AND MONTH(t.`fecha_toma`) = MONTH(CURDATE())
   GROUP BY 1,2,3
   ORDER BY 1,2,3
   ";
