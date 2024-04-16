@@ -10,7 +10,7 @@ $id_plantilla= $_POST['plantilla'];
 $id_cliente= $_POST['id_cliente'];
 
 switch ($id_plantilla) {
-    case '1':
+    case '2':
         $ruta="https://laboratoriosarca.com/sysarcaweb_1.0/pdf_resenv/".$id_factura."_".$id_estudio.".pdf";
         //$ruta="localhost/sysarcaweb/so_envio_resultados/pdfs/".$id_factura."_".$id_estudio.".pdf";
         $atach = $ruta;
