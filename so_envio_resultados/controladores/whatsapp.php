@@ -11,6 +11,7 @@ $id_cliente= $_POST['id_cliente'];
 
 switch ($id_plantilla) {
     case '1':
+        echo 'p1';
         $ruta="https://laboratoriosarca.com/sysarcaweb_1.0/pdf_resenv/".$id_factura."_".$id_estudio.".pdf";
         //$ruta="localhost/sysarcaweb/so_envio_resultados/pdfs/".$id_factura."_".$id_estudio.".pdf";
         $atach = $ruta;
@@ -25,7 +26,36 @@ switch ($id_plantilla) {
      //   echo $regreso;
       //  $regreso=1;
         break;
-    
+    case '2':
+        $ruta="https://laboratoriosarca.com/sysarcaweb_1.0/pdf_resenv/".$id_factura."_".$id_estudio.".pdf";
+        //$ruta="localhost/sysarcaweb/so_envio_resultados/pdfs/".$id_factura."_".$id_estudio.".pdf";
+        $atach = $ruta;
+        //echo 'Atach:'.$atach;
+        $asunto="Ha Recibido un email de Laboratorios de analsis Clinicos ARCA";
+        $contenido="Ha recibido sus resultados del estudio practicado";
+        //echo $asunto;
+        //echo $contenido;
+        $regreso=enviaWA($id_factura, $atach,$id_estudio);
+        //$regreso = multiple(1,$id_cliente,$atach,$asunto,$contenido); //destinatario,id,adjunto,mensaje,contenido
+        // echo 'regreso'.$regreso;
+        //   echo $regreso;
+        //  $regreso=1;
+        break;
+    case '3':
+        $ruta="https://laboratoriosarca.com/sysarcaweb_1.0/pdf_resenv/".$id_factura."_".$id_estudio.".pdf";
+        //$ruta="localhost/sysarcaweb/so_envio_resultados/pdfs/".$id_factura."_".$id_estudio.".pdf";
+        $atach = $ruta;
+        //echo 'Atach:'.$atach;
+        $asunto="Ha Recibido un email de Laboratorios de analsis Clinicos ARCA";
+        $contenido="Ha recibido sus resultados del estudio practicado";
+        //echo $asunto;
+        //echo $contenido;
+        $regreso=enviaWA($id_factura, $atach,$id_estudio);
+        //$regreso = multiple(1,$id_cliente,$atach,$asunto,$contenido); //destinatario,id,adjunto,mensaje,contenido
+        // echo 'regreso'.$regreso;
+        //   echo $regreso;
+        //  $regreso=1;
+        break;
     default:
         # code...
         break;

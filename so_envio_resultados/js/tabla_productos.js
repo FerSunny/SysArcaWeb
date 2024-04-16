@@ -229,9 +229,9 @@ var whatsapp = function(tbody, table) {
           $.post("../reports/pdf_plantilla_1.php", {'factura' : factura, 'estudio' : estudio, 'tipo_salida' : tipo_salida} ,function(data, status){
             if(data == 1)
             {
-              //console.log('previo al envio')
+              console.log('previo al envio')
               $.post("./controladores/whatsapp.php", {'factura' : factura, 'estudio' : estudio, 'plantilla' : plantilla_id, 'id_cliente' : id_cliente} ,function(data, status){
-                //console.log('envio el mail, estado: '+data)
+                console.log('envio el mail, estado: '+data)
                 if(data == 1)
                 {
                     Swal.fire({
@@ -285,9 +285,10 @@ var whatsapp = function(tbody, table) {
             //console.log('factura:'+factura+' estudio:'+estudio+' tipo salida:'+tipo_salida)
             //console.log('tipo_salida '+tipo_salida)
             $.post("../reports/pdf_plantilla_3.php", {'factura' : factura, 'estudio' : estudio, 'tipo_salida' : tipo_salida} ,function(data, status){
+              console.log('data=>+data')
               if(data == 1)
               {
-                //console.log('previo al envio')
+                console.log('previo al envio')
                 $.post("./controladores/whatsapp.php", {'factura' : factura, 'estudio' : estudio, 'plantilla' : plantilla_id, 'id_cliente' : id_cliente} ,function(data, status){
                   //console.log('envio el mail, estado: '+data)
                   if(data == 1)
