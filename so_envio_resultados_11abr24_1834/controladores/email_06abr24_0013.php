@@ -18,8 +18,7 @@ $atach = $ruta;
 $asunto="Ha Recibido un email de Laboratorios de analsis Clinicos ARCA";
 $contenido="Ha recibido los resultados del estudio ".$desc_estudio;
 $regreso = multiple(6,$id_cliente,$atach,$asunto,$contenido); //destinatario,id,adjunto,mensaje,contenido
-echo "regreso-->".$regreso.'<--';
-if($regreso == '1'){
+if($regreso == 1){
     switch ($id_plantilla) {
     case '1':
         $sql_up=

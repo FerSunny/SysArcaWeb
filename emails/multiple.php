@@ -86,9 +86,10 @@ function multiple($tipo,$valor,$atach,$asunto,$contenido)
         echo $contenido;
         */
         $valida = envia_email($tipo,$email,$atach,$asunto,$contenido);
-        if ($valida == NULL){
+        /*if ($valida == NULL){
             $valida = 1;
         }
+        */
         //$valida=1;
     }
     //echo 'Valida -->'.$valida.'<--';
