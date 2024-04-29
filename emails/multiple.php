@@ -3,7 +3,7 @@
 function multiple($tipo,$valor,$atach,$asunto,$contenido)
 {
     include ("../../controladores/conex.php");
-    include("envia_email.php");
+    include("envia_email2.php");
     $email="";
     switch ($tipo) {
         case '1': // paciente
@@ -85,7 +85,7 @@ function multiple($tipo,$valor,$atach,$asunto,$contenido)
         echo $asunto;
         echo $contenido;
         */
-        $valida = envia_email($tipo,$email,$atach,$asunto,$contenido);
+        $valida = envia_email2($tipo,$email,$atach,$asunto,$contenido);
         /*if ($valida == NULL){
             $valida = 1;
         }
