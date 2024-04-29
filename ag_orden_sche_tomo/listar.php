@@ -71,7 +71,7 @@ WHERE pq.estado = 'A'
   AND su.id_sucursal = fa.fk_id_sucursal
   AND cl.id_cliente = fa.fk_id_cliente
   AND fa.estado_factura <> 5
-  AND DATE(fa.fecha_entrega) BETWEEN DATE_SUB(CURDATE(), INTERVAL 10 DAY) AND DATE_ADD(CURDATE(), INTERVAL 7 DAY)
+  AND DATE(fa.fecha_entrega) BETWEEN DATE_SUB(CURDATE(), INTERVAL 80 DAY) AND DATE_ADD(CURDATE(), INTERVAL 7 DAY)
 
  ) res
 LEFT OUTER JOIN cr_plantilla_ekg_re p2 ON (p2.fk_id_factura = res.id_factura AND p2.fk_id_estudio = res.fk_id_estudio)
@@ -139,7 +139,7 @@ WHERE fa.estado_factura <> 5
 AND es.fk_id_plantilla = '8'
 AND es.id_estudio = df.fk_id_estudio
 
-AND DATE(fa.fecha_entrega) BETWEEN DATE_SUB(CURDATE(), INTERVAL 10 DAY) AND DATE_ADD(CURDATE(), INTERVAL 7 DAY)
+AND DATE(fa.fecha_entrega) BETWEEN DATE_SUB(CURDATE(), INTERVAL 90 DAY) AND DATE_ADD(CURDATE(), INTERVAL 7 DAY)
 AND fa.fk_id_sucursal ".$condicion;
 
 //echo $query;

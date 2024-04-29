@@ -7,19 +7,16 @@ $id_factura= $_POST['factura'];
 $id_estudio= $_POST['estudio'];
 $id_plantilla= $_POST['plantilla'];
 $id_cliente= $_POST['id_cliente'];
-$desc_estudio= $_POST['desc_estudio'];
-
 $id_usuario = $_SESSION['id_usuario'];
 
-//enviamos el email //
-$ruta=$id_factura."_".$id_estudio.".pdf";
+//enviamos el email
+$ruta="https://www.laboratoriosarca.com/sysarcaweb_1.0/pdf_resenv/".$id_factura."_".$id_estudio.".pdf";
 $atach = $ruta;
-//echo 'atach:'.$atach;
+//echo 'ruta'.$ruta;
 $asunto="Ha Recibido un email de Laboratorios de analsis Clinicos ARCA";
-$contenido="Ha recibido los resultados del estudio ".$desc_estudio;
-$regreso = multiple(6,$id_cliente,$atach,$asunto,$contenido); //destinatario,id,adjunto,mensaje,contenido
-echo "regreso-->".$regreso.'<--';
-if($regreso == '1'){
+$contenido="Ha recibido sus resultados del estudio practicado";
+$regreso = multiple(1,$id_cliente,$atach,$asunto,$contenido); //destinatario,id,adjunto,mensaje,contenido
+if($regreso == 1){
     switch ($id_plantilla) {
     case '1':
         $sql_up=
