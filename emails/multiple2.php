@@ -1,6 +1,6 @@
 <?php
 
-function multiple($tipo,$valor,$atach,$asunto,$contenido)
+function multiple2($tipo,$valor,$atach,$asunto,$contenido)
 {
     include ("../../controladores/conex.php");
     include("envia_email2.php");

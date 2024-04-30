@@ -2,7 +2,7 @@
 session_start();
 
 include ("../../controladores/conex.php");
-include("../../emails/multiple.php");
+include("../../emails/multiple2.php");
 $id_factura= $_POST['factura'];
 $id_estudio= $_POST['estudio'];
 $id_plantilla= $_POST['plantilla'];
@@ -17,8 +17,8 @@ $atach = $ruta;
 //echo 'atach:'.$atach;
 $asunto="Ha Recibido un email de Laboratorios de analsis Clinicos ARCA";
 $contenido="Ha recibido los resultados del estudio ".$desc_estudio;
-$regreso = multiple(6,$id_cliente,$atach,$asunto,$contenido); //destinatario,id,adjunto,mensaje,contenido
-echo "regreso-->".$regreso.'<--';
+$regreso = multiple2(6,$id_cliente,$atach,$asunto,$contenido); //destinatario,id,adjunto,mensaje,contenido
+//echo "regreso-->".$regreso.'<--';
 if($regreso == '1'){
     switch ($id_plantilla) {
     case '1':

@@ -122,10 +122,45 @@ var email = function(tbody, table) {
             if(data == 1)
             {
               $.post("./controladores/email.php", {'factura' : factura, 'estudio' : estudio, 'plantilla' : plantilla_id, 'id_cliente' : id_cliente, 'desc_estudio' : desc_estudio} ,function(data1, status){
-                console.log('data:'+data1)
+                console.log('pradel:'+data1)
                 let x = data1;
 
-
+                switch (data1) {
+                  case "0":
+                    Swal.fire({
+                      position: 'top-end',
+                      type: 'error',
+                      title: 'Error de envio (phpmail)...',
+                      showConfirmButton: false,
+                    })
+                    break;
+                  case "1":
+                    Swal.fire({
+                      position: 'top-end',
+                      type: 'success',
+                      title: 'Email enviado..',
+                      showConfirmButton: false,
+                    })
+                    break; 
+                  case "2":
+                    Swal.fire({
+                      position: 'top-end',
+                      type: 'error',
+                      title: 'Error de envio (sintaxis emal)...',
+                      showConfirmButton: false,
+                    })
+                    break;               
+                  default:
+                    console.log('pradel-->'+data1+'<--')
+                    Swal.fire({
+                      position: 'top-end',
+                      type: 'success',
+                      title: 'Email No enviado (default)..',
+                      showConfirmButton: false,
+                    })
+                    break;
+                }
+/*
                 if(x == 1)
                 {
                     Swal.fire({
@@ -144,7 +179,7 @@ var email = function(tbody, table) {
                     showConfirmButton: false,
                   })
                 }
-             
+ */            
 
 
             });
@@ -160,18 +195,45 @@ var email = function(tbody, table) {
             if(data == 1)
             {
               $.post("./controladores/email.php", {'factura' : factura, 'estudio' : estudio, 'plantilla' : plantilla_id, 'id_cliente' : id_cliente, 'desc_estudio' : desc_estudio} ,function(data, status){
-                if(data == 1)
-                {
+                console.log('data:'+data)
+                let x = data;
+
+                switch (x) {
+                  case "0":
                     Swal.fire({
-                              position: 'top-end',
-                              type: 'success',
-                              title: 'Email enviado.. ',
-                              showConfirmButton: false,
-                            })
-                }else
-                {
-                    Swal.fire('No se envio el email, error: '+data+' Envie este mensseja a su area de sistemas')
-                }
+                      position: 'top-end',
+                      type: 'error',
+                      title: 'Error de envio (phpmail)...',
+                      showConfirmButton: false,
+                    })
+                    break;
+                  case "1":
+                    Swal.fire({
+                      position: 'top-end',
+                      type: 'success',
+                      title: 'Email enviado..',
+                      showConfirmButton: false,
+                    })
+                    break; 
+                  case "2":
+                    Swal.fire({
+                      position: 'top-end',
+                      type: 'error',
+                      title: 'Error de envio (sintaxis emal)...',
+                      showConfirmButton: false,
+                    })
+                    break;               
+                  default:
+                    Swal.fire({
+                      position: 'top-end',
+                      type: 'success',
+                      title: 'Email No enviado (default)..',
+                      showConfirmButton: false,
+                    })
+                    break;
+                }  
+
+
             });
             }else{
               swal('No se genero el PDF (p2) para ser enviado, notifique a su area de sistemas: soporte.producto@medisyslabs.onmicrosoft.com->'+data)
@@ -185,6 +247,46 @@ var email = function(tbody, table) {
             if(data == 1)
             {
               $.post("./controladores/email.php", {'factura' : factura, 'estudio' : estudio, 'plantilla' : plantilla_id, 'id_cliente' : id_cliente, 'desc_estudio' : desc_estudio} ,function(data, status){
+                console.log('data:'+data)
+                let x = data;
+
+                switch (x) {
+                  case "0":
+                    Swal.fire({
+                      position: 'top-end',
+                      type: 'error',
+                      title: 'Error de envio (phpmail)...',
+                      showConfirmButton: false,
+                    })
+                    break;
+                  case "1":
+                    Swal.fire({
+                      position: 'top-end',
+                      type: 'success',
+                      title: 'Email enviado..',
+                      showConfirmButton: false,
+                    })
+                    break; 
+                  case "2":
+                    Swal.fire({
+                      position: 'top-end',
+                      type: 'error',
+                      title: 'Error de envio (sintaxis emal)...',
+                      showConfirmButton: false,
+                    })
+                    break;               
+                  default:
+                    Swal.fire({
+                      position: 'top-end',
+                      type: 'success',
+                      title: 'Email No enviado (default)..',
+                      showConfirmButton: false,
+                    })
+                    break;
+                }  
+
+
+                /*
                 if(data == 1)
                 {
                     Swal.fire({
@@ -197,6 +299,7 @@ var email = function(tbody, table) {
                 {
                     Swal.fire('No se envio el email, error: '+data+' Envie este mensseja a su area de sistemas')
                 }
+                */
             });
             }else{
               swal('No se genero el PDF (p3) para ser enviado, notifique a su area de sistemas: soporte.producto@medisyslabs.onmicrosoft.com->'+data)
@@ -229,9 +332,46 @@ var whatsapp = function(tbody, table) {
           $.post("../reports/pdf_plantilla_1.php", {'factura' : factura, 'estudio' : estudio, 'tipo_salida' : tipo_salida} ,function(data, status){
             if(data == 1)
             {
-              console.log('previo al envio')
+              //console.log('previo al envio')
               $.post("./controladores/whatsapp.php", {'factura' : factura, 'estudio' : estudio, 'plantilla' : plantilla_id, 'id_cliente' : id_cliente} ,function(data, status){
-                console.log('envio el mail, estado: '+data)
+               // console.log('envio el mail, estado: '+data)
+                switch (data) {
+                  case "0":
+                    Swal.fire({
+                      position: 'top-end',
+                      type: 'error',
+                      title: 'Error de envio (sendwa)...',
+                      showConfirmButton: false,
+                    })
+                    break;
+                  case "1":
+                    Swal.fire({
+                      position: 'top-end',
+                      type: 'success',
+                      title: 'WhatsApp enviado..',
+                      showConfirmButton: false,
+                    })
+                    break; 
+                  case "2":
+                    Swal.fire({
+                      position: 'top-end',
+                      type: 'error',
+                      title: 'Error de envio (sintaxis movil)...',
+                      showConfirmButton: false,
+                    })
+                    break;               
+                  default:
+                    Swal.fire({
+                      position: 'top-end',
+                      type: 'success',
+                      title: 'WhatsApp No enviado (default)..',
+                      showConfirmButton: false,
+                    })
+                    break;
+                } 
+
+
+                /*
                 if(data == 1)
                 {
                     Swal.fire({
@@ -245,6 +385,7 @@ var whatsapp = function(tbody, table) {
                 {
                     Swal.fire('No se envio el whatsapp, error: '+data)
                 }
+                */
             });
             }else{
               swal('No se genero el PDF para ser enviado, notifique a su area de sistemas: soporte.producto@medisyslabs.onmicrosoft.com-->'+data)
@@ -261,6 +402,44 @@ var whatsapp = function(tbody, table) {
                 //console.log('previo al envio')
                 $.post("./controladores/whatsapp.php", {'factura' : factura, 'estudio' : estudio, 'plantilla' : plantilla_id, 'id_cliente' : id_cliente} ,function(data, status){
                   //console.log('envio el mail, estado: '+data)
+                  switch (data) {
+                    case "0":
+                      Swal.fire({
+                        position: 'top-end',
+                        type: 'error',
+                        title: 'Error de envio (sendWa)...',
+                        showConfirmButton: false,
+                      })
+                      break;
+                    case "1":
+                      Swal.fire({
+                        position: 'top-end',
+                        type: 'success',
+                        title: 'WhatsApp enviado..',
+                        showConfirmButton: false,
+                      })
+                      break; 
+                    case "2":
+                      Swal.fire({
+                        position: 'top-end',
+                        type: 'error',
+                        title: 'Error de envio (sintaxis movil)...',
+                        showConfirmButton: false,
+                      })
+                      break;               
+                    default:
+                      Swal.fire({
+                        position: 'top-end',
+                        type: 'success',
+                        title: 'WhatsApp No enviado (default)..',
+                        showConfirmButton: false,
+                      })
+                      break;
+                  } 
+
+
+                 
+/*                 
                   if(data == 1)
                   {
                       Swal.fire({
@@ -274,6 +453,9 @@ var whatsapp = function(tbody, table) {
                   {
                       Swal.fire('No se envio el whatsapp, error: '+data)
                   }
+
+*/
+
               });
               }else{
                 swal('No se genero el PDF para ser enviado, notifique a su area de sistemas: soporte.producto@medisyslabs.onmicrosoft.com-->'+data)
@@ -291,6 +473,43 @@ var whatsapp = function(tbody, table) {
                 console.log('previo al envio')
                 $.post("./controladores/whatsapp.php", {'factura' : factura, 'estudio' : estudio, 'plantilla' : plantilla_id, 'id_cliente' : id_cliente} ,function(data, status){
                   //console.log('envio el mail, estado: '+data)
+                  switch (data) {
+                    case "0":
+                      Swal.fire({
+                        position: 'top-end',
+                        type: 'error',
+                        title: 'Error de envio (SendWa)...',
+                        showConfirmButton: false,
+                      })
+                      break;
+                    case "1":
+                      Swal.fire({
+                        position: 'top-end',
+                        type: 'success',
+                        title: 'WhatsApp enviado..',
+                        showConfirmButton: false,
+                      })
+                      break; 
+                    case "2":
+                      Swal.fire({
+                        position: 'top-end',
+                        type: 'error',
+                        title: 'Error de envio (sintaxis movil)...',
+                        showConfirmButton: false,
+                      })
+                      break;               
+                    default:
+                      Swal.fire({
+                        position: 'top-end',
+                        type: 'success',
+                        title: 'WhatsApp No enviado (default)..',
+                        showConfirmButton: false,
+                      })
+                      break;
+                  } 
+                  
+                  
+                  /*
                   if(data == 1)
                   {
                       Swal.fire({
@@ -304,6 +523,7 @@ var whatsapp = function(tbody, table) {
                   {
                       Swal.fire('No se envio el whatsapp, error: '+data)
                   }
+                  */
               });
               }else{
                 swal('No se genero el PDF para ser enviado, notifique a su area de sistemas: soporte.producto@medisyslabs.onmicrosoft.com-->'+data)

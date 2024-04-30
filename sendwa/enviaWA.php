@@ -4,10 +4,10 @@ function enviaWA($id_factura, $ruta, $id_estudio){
 
 //Datos de conexión a la base de datos
 $server = "localhost";
-//$user = "labora41_root";
-$user = "root";
-//$password = "ArcaRoot_2017";
-$password = "";
+$user = "labora41_root";
+//$user = "root";
+$password = "ArcaRoot_2017";
+//$password = "";
 $database = "labora41_bd_arca";
 
 //Creamos la conexión
@@ -107,7 +107,7 @@ curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 $response = json_decode(curl_exec($curl), true);
 
 //Imprimimos la respuesta
-print_r($response);
+//print_r($response);
 
 //Regresamos un valor dependiendo del estatus
 $status_code = curl_getinfo($curl, CURLINFO_HTTP_CODE);

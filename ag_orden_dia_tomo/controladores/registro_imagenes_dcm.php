@@ -131,8 +131,7 @@ if($subio!=1){
 
 // DATOS DE ACCESO AL SERVIDOR
 $ftp_server="108.175.7.121";
-$ftp_usuario="tomo_ftp";
-$ftp_pass="Iqsv85$2";
+ 
 
 $existe=0;
 $listo=0;

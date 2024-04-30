@@ -11,7 +11,7 @@
 
         $mail = new PHPMailer;
         $mail->isSMTP();
-        $mail->SMTPDebug = 2;
+        $mail->SMTPDebug = 0;
         $mail->Host = 'smtp.ionos.mx';
         $mail->Port = 587;
         $mail->SMTPAuth = true;
@@ -27,10 +27,10 @@
         $mail->Body = $contenido;
         //$mail->addAttachment('attachment.txt');
         if (!$mail->send()) {
-            echo 'Mailer Error: ' . $mail->ErrorInfo;
+            //echo 'Mailer Error: ' . $mail->ErrorInfo;
             $regreso = 0;
         } else {
-            echo 'The email message was sent.';
+            //echo 'The email message was sent.';
             $regreso = 1;
         }
         return $regreso;
