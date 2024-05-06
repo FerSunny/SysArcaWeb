@@ -1,14 +1,17 @@
 <?php
   session_start();
   if (isset($_SESSION['nombre']) && $_SESSION['ingreso']=='YES')
-  
-  {
+  {  
+  $id_doc=$_GET['id_doc'];
+  $num_version=$_GET['num_version'];
+  $desc_doc=$_GET['desc_doc'];
+
 ?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=gb18030">
-  <title>Lista Maestra</title> <!-- CAMBIO  Titulo de la forma -->
+  <title>Ficheros</title> <!-- CAMBIO  Titulo de la forma -->
   <link rel="icon" type="image/png" href="../imagenes/ico/capital.png" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -36,13 +39,17 @@
 <body background="../imagenes/logo_arca_sys_web.jpg">
   <?php
     include("../includes/barra.php");
-    include("formularios/formularios_documentos.php"); // CAMBIO programa de la forma
+    include("formularios/formularios_ficheros.php"); // CAMBIO programa de la forma
    // include("formularios/formularios_imagenes.php");
   ?>
 
   <div class="container" style="margin-top: 30px;">
-    <h1 style="text-align: center;">Tabla de Documentos  <!-- CAMBIO Se cambia el titulo de la tabla -->
-      <button type="button" class="btn btn-primary pull-right menu" data-toggle="modal" data-target="#myModals"><i class="fa fa-book" aria-hidden="true"></i>&nbsp;Nuevo Documento</button> <!-- CAMBIO Se cambia el boton de altas -->
+    <h1 style="text-align: center;">Lista de ficheros  <!-- CAMBIO Se cambia el titulo de la tabla -->
+      <button type="button" class="btn btn-primary pull-right menu" data-toggle="modal" data-target="#myModals"><i class="fa fa-book" aria-hidden="true"></i>&nbsp;Nuevo Fichero</button> <!-- CAMBIO Se cambia el boton de altas -->
+      <h2>Ficheros para el documento: <br>
+          <?php
+            echo  '<b>('.$desc_doc.') '
+          ?>
     </h1>
   </div>
   
@@ -58,22 +65,15 @@
         <thead>
           <tr>
             <!-- CAMBIO Se cambian las columnas segun las columnas a mostrar -->
-            <th>Id </th>
-            <th>Tipo </th>
-            <th>Grupo</th>
-            <th>Clave</th>
-            <th>Documento</th>
-            <th># Copias Elec</th>
-            <th>Ubicacion Elec</th>
-            <th># Copias Fisico</th>
-            <th>Ubicacion Fisico</th>
-            <th># Revision</th>
-            <th># Version</th>
-            <th>Fecha Emision</th>
-            <th>Fecha Prox. Revision</th>
+            <th>Id Fichro</th>
+            <th>Nombre </th>
+            <th>ruta</th>
+            <th>Tamano</th>
+            <th>Estatus</th>
             <th>Editar</th>
             <th>Eliminar</th>
-            <th>Ficheros</th>
+            <th>Ver</th>
+            <th>Descargarlo</th>
 
           </tr>
         </thead>
@@ -93,7 +93,7 @@
   
   <!-- DataTable 1.10.19 14/03/2019-->
   <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.18/datatables.min.js"></script>
-  <script language="javascript" src="js/tabla_lista.js"></script>
+  <script language="javascript" src="js/tabla_ficheros.js"></script>
 </body>
 </html>
 <?php
