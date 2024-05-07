@@ -121,7 +121,7 @@ input[type=text]{ margin: 5px;
 					<div class="row">
 						<div class="col">
 							<div class="md-form mt-0">
-								<label for="">Sucursal Asistira</label>
+								<label for="">Sucursal</label>
 							</div>
 						</div>
 						<div class="col-9">
@@ -328,7 +328,7 @@ input[type=text]{ margin: 5px;
 						<div class="row">
 							<div class="col">
 								<div class="md-form mt-0">
-									<label for="">Sucursal Asistira</label>
+									<label for="">Sucursal</label>
 								</div>
 							</div>
 							<div class="col-9">

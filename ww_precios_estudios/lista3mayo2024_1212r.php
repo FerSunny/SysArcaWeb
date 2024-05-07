@@ -50,15 +50,15 @@ LEFT OUTER JOIN kg_promociones p ON (p.id_promocion = e.fk_id_promosion and ((CU
 LEFT OUTER JOIN km_indicaciones i ON (i.id_indicaciones = e.fk_id_indicaciones) 
 LEFT OUTER JOIN kg_comisiones j ON (j.id_comision = e.fk_id_comision ) 
 WHERE estatus IN ('A')
-AND substr(e.desc_estudio,1,5) <> 'MAQDN'
-   
+AND substr(e.desc_estudio,1,5) <> 'MAQDN'{
+    /*
 AND e.id_estudio NOT IN (
 	151, 152, 153, 904, 905, 625, 307, 314, 628, 275, 301, 304, 876, 1155, 486, 274, 
 	616, 586, 587, 217, 410, 870, 622, 412, 632, 640, 235, 641, 720, 886, 731, 585, 
 	566, 528, 130, 749, 1997, 1120, 1122, 1121, 1124, 678, 679, 661, 663, 646, 645, 
 	2137, 680, 848,494
 	)
-
+    */
 ";
 
 	$resultado = mysqli_query($conexion, $query);
