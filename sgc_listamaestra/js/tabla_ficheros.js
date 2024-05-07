@@ -119,7 +119,7 @@ $("#form_productos").on('submit', function (e)
 
 					type: "POST",                 
 
-					url: "controladores/agregar.php",                    
+					url: "controladores/agregar_fichero.php",                    
 
 					data: $("#form_productos").serialize(),
 
