@@ -28,43 +28,31 @@
 
 					"method":"POST",
 
-					"url": "listar.php"
+					"url": "listar_ficheros.php"
 
 				},
 
 				"columns":[
 
-					{"data" : "id_doc"},
+					{"data" : "id_imagen"},
 
-					{"data" : "desc_tipo_docu"},
+					{"data" : "doc_name"},
 
-					{"data" : "desc_grupo"},
+					{"data" : "doc_ruta"},
 
-					{"data" : "clave"},
+					{"data" : "doc_size"},
 
-					{"data" : "desc_doc"},
-
-					{"data" : "ele_numcopias"},
-
-					{"data" : "ele_ubica"},
-
-					{"data" : "imp_numcopias"},
-
-					{"data" : "imp_ubica"},
-
-					{"data" : "num_revision"},
-
-					{"data" : "num_version"},
-
-					{"data" : "fecha_emision"},
-
-					{"data" : "fecha_pro_rev"},
-
+					{"data" : "estado_doc"},
 
 
 					{"defaultContent": "<button type='button' class='editar btn btn-warning btn-md'><i class='fas fa-edit'></i></button>"},
 
 					{"defaultContent":"<button type='button' class='eliminar btn btn-danger btn-md'><i class='fas fa-trash-alt'></i></button>"},
+
+					{"defaultContent":"<button type='button' class='ver btn btn-primary btn-md'><i class='fa fa-book'></i></button>"},
+
+					{"defaultContent":"<button type='button' class='descarga btn btn-danger btn-md'><i class='fa fa-cloud-download'></i></button>"}
+					/*
 					{
 						render:function(data,type,row){
 
@@ -78,7 +66,7 @@
 
 
 					}
-
+					*/
 				],
 
 				"language": idioma_espanol
@@ -91,7 +79,9 @@
 
 			eliminar("#dt_productos tbody", table)
 
-			subir("#dt_productos tbody", table)	
+			ver("#dt_productos tbody", table)
+
+			descarga("#dt_productos tbody", table)	
 
 }
 
