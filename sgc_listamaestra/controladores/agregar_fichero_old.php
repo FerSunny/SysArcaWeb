@@ -8,12 +8,16 @@ include ("../../controladores/conex.php");
 
 $fk_id_usuario = $_SESSION['id_usuario'];
 
-if(isset($_POST['import_data'])){
+//if(isset($_POST['file'])){
+    echo 'paso isste';
     // validate to check uploaded file is a valid csv file
     $file_mimes = array('text/x-comma-separated-values', 'text/comma-separated-values', 'application/octet-stream', 
     'application/vnd.ms-excel', 'application/x-csv', 'text/x-csv', 'text/csv', 'application/csv', 'application/excel',
      'application/vnd.msexcel', 'text/plain');
+     $pradel = $_FILES['file']['name'];
+     echo 'pradel'.$pradel;
     if(!empty($_FILES['file']['name']) && in_array($_FILES['file']['type'],$file_mimes)){
+        echo 'paso tipo';
         if(is_uploaded_file($_FILES['file']['tmp_name'])){
             $csv_file = fopen($_FILES['file']['tmp_name'], 'r');
             //fgetcsv($csv_file);
@@ -39,8 +43,8 @@ if(isset($_POST['import_data'])){
     } else {
             $import_status = '?import_status=invalid_file';
     }
-}
-
+//}
+echo 1;
 $conexion->close();
 
 //}

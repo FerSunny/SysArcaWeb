@@ -1,24 +1,19 @@
 <?php
 
 	include ("../controladores/conex.php");
-
-  
+    session_start();
+    $id_doc= $_SESSION['id_doc'];
  
   $query = "
   SELECT 
   lf.*,
-  lm.`desc_doc`,
-  CASE lf.`doc_status`
-  WHEN 'D' THEN
-  'Disponible'
-  WHEN 'E' THEN
-  'Descargado'
-  END AS estado_doc
+  us.`iniciales`
   FROM 
   sgc_lista_ficheros lf,
-  sgc_lista_maestra lm
+  se_usuarios us
   WHERE lf.`estado` = 'A'
-  AND lf.`fk_id_doc` = lm.`fk_id_docu`
+  AND lf.fk_id_doc = $id_doc 
+  AND lf.`fk_id_usuario` = us.`id_usuario`
   ";
 
 

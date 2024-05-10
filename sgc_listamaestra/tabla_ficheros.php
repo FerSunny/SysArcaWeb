@@ -6,6 +6,10 @@
   $num_version=$_GET['num_version'];
   $desc_doc=$_GET['desc_doc'];
 
+  $_SESSION['id_doc']=$id_doc;
+	$_SESSION['num_version']=$num_version;
+  $_SESSION['desc_doc']=$desc_doc;
+
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -61,20 +65,27 @@
       </h3>
     </div>
     <div class="container table-responsive">
-      <table id="dt_productos" class="table table-bordered table-hover" cellspacing="1" width="100%">
+      <table id="dt_imagenes" class="table table-bordered table-hover" cellspacing="1" width="100%">
         <thead>
           <tr>
             <!-- CAMBIO Se cambian las columnas segun las columnas a mostrar -->
-            <th>Id Fichro</th>
+            <th>Id Doc</th>
+            <th>Id fichero</th>
+            <th>Usuario Publico Inicial</th>
+            <th>Fecha Publico Inicial</th>
             <th>Nombre </th>
             <th>ruta</th>
-            <th>Tamano</th>
+            <th>Tipo</th>
+            <th>Version</th>
+            
+            <th>Revision</th>
             <th>Estatus</th>
             <th>Editar</th>
             <th>Eliminar</th>
+            <!--
             <th>Ver</th>
             <th>Descargarlo</th>
-
+-->
           </tr>
         </thead>
       </table>

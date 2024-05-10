@@ -10,7 +10,7 @@
 
 
 
-<form id="form_productos" action="" method="post">
+<form id="form_productos" action="controladores/registro_ficheros.php" method="post" enctype="multipart/form-data" >
 
 	<div class="modal fade" id="myModals" role="dialog">
 
@@ -41,8 +41,8 @@
 					</div>
 
 <!-- selecciona fichero  -->
-					<div class="col-md-3">
-                        <input type="file" name="file" />
+					<div class="col-xs-8">
+                        <input input type="file" class="form-control" id="fn_archivo" required name="fn_archivo[]" multiple />
                     </div>
 
 					
@@ -90,7 +90,7 @@
 
 							<h2 style="color:blue;text-align:center" class="modal-title" id="modalEliminarLabel">
 
-									Editar Documentos
+									Nueva version
 
 							</h2>
 
@@ -116,130 +116,20 @@
 
 						</div>
 
-<!-- Grupo  -->
-
-						<div class="row"><br>
-							<div class="col">
-								<div class="md-form mt-4">
-									<label for="">Lista</label>
-								</div>
-							</div>
-
-							<div class="col-9">
-								<div class="md-form mt-0">
-									<select class="form-control form-control-sm" name="lista" 
-									id="lista" required>
-										<option value="" class="z-depth-5">Seleccione</option>
-											<?php 
-													$query = $conexion -> query("SELECT id_tipo_docu,desc_tipo_docu FROM sgc_documentos WHERE estado = 'A'");
-
-													while($res = mysqli_fetch_array($query))
-													{
-															echo "<option value =".$res['id_tipo_docu'].">
-																	".$res['desc_tipo_docu']."
-																	</option>";
-													}
-											?>
-									</select>
-								</div>
-							</div>
-						</div>
-
-
-<!-- Grupo  -->
-
-						<div class="row"><br>
-							<div class="col">
-								<div class="md-form mt-4">
-									<label for="">Grupo</label>
-								</div>
-							</div>
-
-							<div class="col-9">
-								<div class="md-form mt-0">
-									<select class="form-control form-control-sm" name="grupo" 
-									id="grupo" required>
-										<option value="" class="z-depth-5">Seleccione</option>
-											<?php 
-													$query = $conexion -> query("SELECT id_grupo,desc_grupo FROM sgc_grupos WHERE estado = 'A'");
-
-													while($res = mysqli_fetch_array($query))
-													{
-															echo "<option value =".$res['id_grupo'].">
-																	".$res['desc_grupo']."
-																	</option>";
-													}
-											?>
-									</select>
-								</div>
-							</div>
-						</div>
-<!-- tipo  -->
-						<div class="row">
-							<div class="col">
-								<div class="md-form mt-4">
-									<label for="">Tipo</label>
-								</div>
-							</div>
-
-							<div class="col-9">
-								<div class="md-form mt-0">
-									<select class="form-control form-control-sm" name="tipo" 
-								id="tipo" required>
-									<option value="" class="z-depth-5">Seleccione</option>
-										<?php 
-												$query = $conexion -> query("SELECT id_tipo,desc_tipo FROM sgc_tipos WHERE estado = 'A'");
-												while($res = mysqli_fetch_array($query))
-												{
-														echo "<option value =".$res['id_tipo'].">
-																".$res['desc_tipo']."
-																</option>";
-												}
-										?>
-								</select>
-								</div>
-							</div>
-						</div>
-
-					<div class="row">
-
-						<div class="col">
-
-							<div class="md-form mt-4">
-
-								<label for="">Modulo</label>
-
-							</div>
-
-						</div>
-
-<!-- MOdulo -->
-						<div class="col-9">
-							<div class="md-form mt-0">
-								<select class="form-control form-control-sm" name="modulo" 
-								id="modulo" required>
-									<option value="" class="z-depth-5">Seleccione</option>
-										<?php 
-												$query = $conexion -> query("SELECT id_modulo,desc_modulo FROM sgc_modulos WHERE estado = 'A'");
-												while($res = mysqli_fetch_array($query))
-												{
-														echo "<option value =".$res['id_modulo'].">
-																".$res['desc_modulo']."
-																</option>";
-												}
-										?>
-								</select>
-							</div>
-						</div>
-					</div>
-
 
 <!-- consecutivo -->
 					<div class="row">
 						<div class="col">
 							<div class="md-form mt-0">
 								<div class="md-form">
-									<input type="number" name="consecutivo" id="consecutivo" class="form-control" maxlength="3" step="1" min="1" required>
+								<select class="form-control" id="fi_estado" name="fn_estado">
+                                        <option value="P O S I T I V O">Positivo</option>
+                                        <option value="N E G A T I V O">Negativo</option>
+                                        <option value="A">A</option>
+                                        <option value="B">B</option>
+                                        <option value="AB">AB</option>
+                                        <option value="O">O</option>
+                                    </select>
 									<label for="producto"> Consecutivo</label>
 								</div>
 							</div>
@@ -250,7 +140,7 @@
 						<div class="col">
 							<div class="md-form mt-0">
 								<div class="md-form">
-									<input type="text" name="descripcion" id="descripcion" class="form-control" maxlength="100" required>
+									<input type="text" name="nombre" id="nombre" class="form-control" maxlength="100" required>
 									<label for="producto"> Descripción</label>
 								</div>
 							</div>
@@ -263,7 +153,7 @@
 						<div class="col">
 							<div class="md-form mt-0">
 								<div class="md-form">
-									<input type="number"  name="encopias" id="encopias" class="form-control" min="1" maxlength="5" step="1"  required>
+									<input type="text"  name="fk_id_doc" id="fk_id_doc" class="form-control"  required>
 									<label for="costo">Electronico # copias</label>
 								</div>
 							</div>
