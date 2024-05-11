@@ -278,6 +278,9 @@ function Header()
           case 54:
               $this->Image('../imagenes/dr_agustin.jpg',77,215,42,0);
               break;
+          case 93:
+              $this->Image('../imagenes/firma1_dra_yoalli.jpg',77,215,42,0);
+              break;
           case 183:
               $this->Image('../imagenes/firma_Dr_Zarate_v2.png',77,215,42,0);
               break;    

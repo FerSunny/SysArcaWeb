@@ -1,0 +1,183 @@
+WBS,Tarea,Comienzo,Fin,Recurso
+1,4. Requisitos Generales,2 de abril de 2024,30 de abril de 2024,
+1.1,4.1 Imparcialidad,5 de abril de 2024,11 de abril de 2024,
+1.1.1,"política de imparcialidad, FOR-RRH-36",5 de abril de 2024,5 de abril de 2024,
+1.1.1.1,Firma de personal activo,5 de abril de 2024,5 de abril de 2024,Eloisa Flores
+1.1.2,"código de ética, FOR-RRH-04",11 de abril de 2024,11 de abril de 2024,Eloisa Flores
+1.1.3,"compromiso de confidencialidad, FOR-RRH03)",8 de abril de 2024,8 de abril de 2024,Eloisa Flores
+1.1.4,declaración de conflicto de interés (FOR-RRH-05).,9 de abril de 2024,9 de abril de 2024,Eloisa Flores
+1.2,4.2 Confidencialidad,2 de abril de 2024,2 de abril de 2024,
+1.2.1,Contrato de confidencialidad para entidades externa,2 de abril de 2024,2 de abril de 2024,Eloisa Flores
+1.3,4.3 Requisitos relativos a los pacientes,16 de abril de 2024,29 de abril de 2024,
+1.3.1,derechos y deberes de los pacientes (DOC-GEN-02),16 de abril de 2024,17 de abril de 2024,
+1.3.1.1,Marketing digital,16 de abril de 2024,16 de abril de 2024,Ismael Rincon
+1.3.1.2,Impreta,17 de abril de 2024,17 de abril de 2024,Ismael Rincon
+1.3.2,procedimiento de atención a pacientes (POT-REC-01),18 de abril de 2024,18 de abril de 2024,Ismael Rincon
+1.3.3,catalogo de servicios (FOR-VEN-03),19 de abril de 2024,19 de abril de 2024,Visitaduria Medica
+1.3.4,revisión mensual de los indicadores de desempeño analítico (FOR-CAL-04),23 de abril de 2024,25 de abril de 2024,
+1.3.4.1,PNC Preexamen,23 de abril de 2024,23 de abril de 2024,Ismael Rincon
+1.3.4.2,Tiempo de espera,24 de abril de 2024,24 de abril de 2024,Ismael Rincon
+1.3.4.3,Entrega Oportuna,25 de abril de 2024,25 de abril de 2024,Ismael Rincon
+1.3.5,actividades no conformidades y acciones no correctivas. (FOR-CAL-09),26 de abril de 2024,26 de abril de 2024,Ismael Rincon
+1.3.6,"Manual para la toma, identificación, manejo, conservación y transporte de muestras (MAN-PRE-01)",27 de abril de 2024,27 de abril de 2024,Ismael Rincon
+1.3.7,control de registro (PRO-CAL-03),29 de abril de 2024,29 de abril de 2024,Ismael Rincon
+1.4,Actualización de Insumos por estudio,30 de abril de 2024,30 de abril de 2024,Daniela M. Olivares Muñiz
+2,5. Requisitos estructurales y de gobernanza,3 de mayo de 2024,14 de mayo de 2024,
+2.1,5.1 Entidad Legal,3 de mayo de 2024,9 de mayo de 2024,
+2.1.1,Descripción de puestos,3 de mayo de 2024,3 de mayo de 2024,Eloisa Flores
+2.1.2,Mapa de procesos (DOC-CAL-01).,6 de mayo de 2024,6 de mayo de 2024,Eloisa Flores
+2.1.3,manual de organización (MAN-RRH-01).,8 de mayo de 2024,8 de mayo de 2024,
+2.1.3.1,Actualizar organigrama,8 de mayo de 2024,8 de mayo de 2024,Javier pradel
+2.1.4,Aviso de COFEPRIS,9 de mayo de 2024,9 de mayo de 2024,Jazmin I. Carapia Valladares
+2.2,5.5 Objetivos y politicas,13 de mayo de 2024,14 de mayo de 2024,
+2.2.1,Lista maestra de indicadores FOR-CAL-04),13 de mayo de 2024,13 de mayo de 2024,Javier pradel
+2.2.2,Plan de mejora (FOR-CAL-15),14 de mayo de 2024,14 de mayo de 2024,todos
+3,7. Requisitos de proceso,1 de abril de 2024,26 de abril de 2027,
+3.1,7.3.5 Intervalos de referencia biológicos y límites de decisión clínica ,1 de abril de 2024,3 de junio de 2024,
+3.1.1,verifiar los puntos de referencia con el sistema,1 de abril de 2024,5 de abril de 2024,Marisol Briseño
+3.1.2,prueba con 10 individuos con l glucosa o QS6,2 de abril de 2024,5 de abril de 2024,Marisol Briseño
+3.1.3,"en el infore de resultado, colocar la leyenda de cambio de referencia o una carta al medico",12 de abril de 2024,17 de abril de 2024,Marisol Briseño
+3.1.4,Los intervalos de referencia biológicos y los limites de decisión clínica se deben revisar cada 3 años,1 de abril de 2024,5 de abril de 2024,Marisol Briseño
+3.1.5,mensualente  actualizan ,21 de mayo de 2024,3 de junio de 2024,
+3.1.5.1,Desempeño Control de Calidad Interno (FOR-CCI-10),21 de mayo de 2024,27 de mayo de 2024,Marisol Briseño
+3.1.5.2,Gráficos desempeñó PEEC  (FOR-EEC-01),28 de mayo de 2024,3 de junio de 2024,Marisol Briseño
+3.2,7.3.7.1 Generalidades ,24 de abril de 2024,6 de mayo de 2024,
+3.2.1,incluir el nuevo equipo de abbott,24 de abril de 2024,29 de abril de 2024,Marisol Briseño
+3.2.2,"Calidad interna, modificar",30 de abril de 2024,6 de mayo de 2024,Marisol Briseño
+3.3,7.3.7 Aseguramiento de la validez de los resultados del análisis ,7 de mayo de 2024,13 de mayo de 2024,Marisol Briseño
+3.4,Pendientes de ubicar,1 de abril de 2024,9 de noviembre de 2026,
+3.4.1,Solicitar capacitacion al proveedor del equipo de URO,29 de septiembre de 2026,9 de noviembre de 2026,Marisol Briseño
+3.4.2,De URO iraema a carlos toribio,29 de septiembre de 2026,9 de noviembre de 2026,Marisol Briseño
+3.4.3,Capacitacion de RPBI,29 de septiembre de 2026,9 de noviembre de 2026,Jazmin I. Carapia Valladares
+3.4.4,Constancias de Abbott,1 de abril de 2024,5 de abril de 2024,Marisol Briseño
+3.4.5,Constancias de Glico de david a alexis,1 de abril de 2024,5 de abril de 2024,Marisol Briseño
+3.4.6,Subir los insertos de cada equipo,1 de abril de 2024,12 de abril de 2024,
+3.4.6.1,Digitalizar insertos,1 de abril de 2024,5 de abril de 2024,Marisol Briseño
+3.4.6.2,Inventario de insertos para dar clave,1 de abril de 2024,5 de abril de 2024,Marisol Briseño
+3.4.6.3,Subirlos a cada equio,8 de abril de 2024,12 de abril de 2024,Marisol Briseño
+3.4.7,Constancia de hemato a frank a david y alexis e irasema,29 de septiembre de 2026,9 de noviembre de 2026,Marisol Briseño
+3.4.8,Plan de capacitación 2024 y 2023,1 de abril de 2024,12 de abril de 2024,Marisol Briseño
+3.4.9,Registro de calibraciones en cada equipo,1 de abril de 2024,5 de abril de 2024,Marisol Briseño
+3.4.10,Resguardo de resultados de referenciaa,29 de septiembre de 2026,9 de noviembre de 2026,Marisol Briseño
+3.5,IQ,10 de noviembre de 2026,26 de abril de 2027,
+3.5.1,Recepcion de mustras,10 de noviembre de 2026,21 de diciembre de 2026,Marisol Briseño
+3.5.2,inicio de proceso,22 de diciembre de 2026,1 de febrero de 2027,Marisol Briseño
+3.5.3,terminacion de proceso,2 de febrero de 2027,15 de marzo de 2027,Marisol Briseño
+3.5.4,validacion de resultados,16 de marzo de 2027,26 de abril de 2027,Marisol Briseño
+3.6,Cursogramos,1 de abril de 2024,12 de abril de 2024,
+3.6.1,Uroanalisis,1 de abril de 2024,5 de abril de 2024,Marisol Briseño
+3.6.2,Hemato y glico,8 de abril de 2024,12 de abril de 2024,Marisol Briseño
+3.6.3,QC,1 de abril de 2024,5 de abril de 2024,Marisol Briseño
+3.6.4,Hormonas,1 de abril de 2024,1 de abril de 2024,Marisol Briseño
+3.7,Diagrama de bloques (flujo),1 de abril de 2024,3 de abril de 2024,
+3.7.1,Uroanalisis,2 de abril de 2024,3 de abril de 2024,Marisol Briseño
+3.7.2,QC,2 de abril de 2024,2 de abril de 2024,Marisol Briseño
+3.7.3,Hemato,1 de abril de 2024,1 de abril de 2024,Marisol Briseño
+3.7.4,Glico,1 de abril de 2024,1 de abril de 2024,Marisol Briseño
+3.7.5,Hormonas,1 de abril de 2024,1 de abril de 2024,Marisol Briseño
+3.8,cartas de uso de los equipos,1 de abril de 2024,5 de abril de 2024,
+3.8.1,Las elabora RRHH,1 de abril de 2024,5 de abril de 2024,Marisol Briseño
+3.9,AMEF,1 de abril de 2024,28 de mayo de 2024,
+3.9.1,QC,1 de abril de 2024,2 de abril de 2024,Marisol Briseño
+3.9.2,Hemato,5 de abril de 2024,5 de abril de 2024,Marisol Briseño
+3.9.3,Glico,1 de abril de 2024,26 de abril de 2024,Marisol Briseño
+3.9.4,Hormonas,1 de abril de 2024,26 de abril de 2024,Marisol Briseño
+3.9.5,Uro,27 de abril de 2024,28 de mayo de 2024,Marisol Briseño
+3.10,QC (todas la reaas),6 de abril de 2024,29 de abril de 2024,
+3.10.1,métodos cualitativos (FOR-CCI-04),6 de abril de 2024,11 de abril de 2024,Marisol Briseño
+3.10.2,FOR-CCI-09 Graficas de control de calidad interno 2 niveles,12 de abril de 2024,17 de abril de 2024,Marisol Briseño
+3.10.3,FOR-CCI-01 Verificacion de Metodos Cuantitativos V0,18 de abril de 2024,23 de abril de 2024,Marisol Briseño
+3.10.4,Verificación de métodos (POT-CCI-03),24 de abril de 2024,29 de abril de 2024,Marisol Briseño
+3.11,Procedimiento de recepción de muestras (POT-REC-02),8 de abril de 2024,8 de abril de 2024,Marisol Briseño
+3.12,Instructivo para la recoleccion de eses fecales,1 de abril de 2024,19 de abril de 2024,Marisol Briseño
+3.13,Nuestro laboratorio dispone de procedimientos para responder,6 de abril de 2024,11 de abril de 2024,Victor Baltazar
+3.14,Registro de Recepcion de muestras,1 de abril de 2024,5 de abril de 2024,Marisol Briseño
+3.15,Procedimiento de toma de muestras (POT-PRE-02),2 de abril de 2024,3 de abril de 2024,Marisol Briseño
+3.16,NUevo sanitario,18 de abril de 2024,23 de abril de 2024,Javier Carapia
+3.17,"Lockers, cuantos faltan",2 de abril de 2024,2 de abril de 2024,Marisol Briseño
+3.18,Refrigerador de proceso,12 de abril de 2024,17 de abril de 2024,Javier Carapia
+3.19,Carta de revision de requisitos,6 de abril de 2024,6 de abril de 2024,Marisol Briseño
+3.20,Mapa de proceso,5 de abril de 2024,5 de abril de 2024,Marisol Briseño
+3.21,FOR-REC-06 Formato de toma a domicilio,5 de abril de 2024,5 de abril de 2024,Marisol Briseño
+3.22,POT-PRE-03 envio de muestras a laboratorios de referencia,15 de abril de 2024,19 de abril de 2024,Marisol Briseño
+3.23,Inventario de formatos y POT's de cada area,1 de abril de 2024,5 de abril de 2024,Marisol Briseño
+3.24,Rol para la registro de temperaturas y humedad,2 de abril de 2024,2 de abril de 2024,Marisol Briseño
+3.25,PLan de mejora continua,2 de abril de 2024,2 de abril de 2024,Marisol Briseño
+3.26,Registro de calibraciones en cada equipo,10 de noviembre de 2026,21 de diciembre de 2026,Marisol Briseño
+4,6. Requerimientos de recuros,1 de enero de 2024,28 de septiembre de 2026,
+4.1,6.3 Instalaciones y condiciones ambientales,1 de enero de 2024,28 de septiembre de 2026,
+4.1.1,DOC-GEN-05 Protocolo de limpieza,3 de septiembre de 2024,14 de octubre de 2024,Javier pradel
+4.1.2,Formato Bitacora de RPBI,15 de octubre de 2024,25 de noviembre de 2024,Javier pradel
+4.1.3,Calendario de actividades,18 de febrero de 2025,2 de abril de 2025,
+4.1.3.1,Definicion de turnos y horarios,1 de abril de 2025,2 de abril de 2025,Claudia Reyes
+4.1.3.2,Modificar el procedimiento de limpieza y RPBI,18 de febrero de 2025,31 de marzo de 2025,Javier pradel
+4.1.4,RPBI,1 de abril de 2024,4 de agosto de 2025,
+4.1.4.1,Letreros y ubicacin de los mismos,1 de abril de 2024,4 de abril de 2024,Javier Carapia
+4.1.4.2,Ruta de recoleccion,24 de junio de 2025,4 de agosto de 2025,Javier pradel
+4.1.5,Seguridad e higiene,1 de enero de 2024,28 de septiembre de 2026,
+4.1.5.1,Carpeta para formatos de seguridad e higiene,11 de abril de 2024,8 de diciembre de 2025,
+4.1.5.1.1,Preguntar con VB el tiempo de resguardo de los documentso,16 de septiembre de 2025,27 de octubre de 2025,Javier pradel
+4.1.5.1.2,Colocar otro bote en bacter,11 de abril de 2024,13 de abril de 2024,Claudia Reyes
+4.1.5.1.3,Horario de depurar refri de muestras,11 de abril de 2024,13 de abril de 2024,Marisol Briseño
+4.1.5.1.4,Los manifistos se archvan en la carpeta,11 de abril de 2024,13 de abril de 2024,Claudia Reyes
+4.1.5.1.5,Carpeta de archivar documentos,28 de octubre de 2025,8 de diciembre de 2025,Javier pradel
+4.1.5.2,Exitintores,1 de enero de 2024,3 de abril de 2024,
+4.1.5.2.1,2 caducados,1 de enero de 2024,3 de enero de 2024,Javier Carapia
+4.1.5.2.2,Puerta de emergencia de proceso (quimico) jun.2023,1 de abril de 2024,3 de abril de 2024,Javier Carapia
+4.1.5.2.3,Pasillo de oficinas (quimico) jun.2023,1 de abril de 2024,3 de abril de 2024,Javier Carapia
+4.1.5.2.4,Falta el de tomografia,1 de abril de 2024,3 de abril de 2024,Javier Carapia
+4.1.5.3,Detector de Humo,18 de agosto de 2026,28 de septiembre de 2026,
+4.1.5.3.1,"El de bacter se activo,  11mar2024",18 de agosto de 2026,28 de septiembre de 2026,Javier Carapia
+4.1.5.4,Botiquin de primeros auxilios,1 de abril de 2024,3 de abril de 2024,
+4.1.5.4.1,"Atencion aa pacientes, llenarlo",1 de abril de 2024,3 de abril de 2024,Claudia Reyes
+4.1.5.5,Lavavo de urologia,8 de abril de 2024,10 de abril de 2024,
+4.1.5.5.1,Indicar que lo vacie en el area de limpieza,8 de abril de 2024,10 de abril de 2024,Marisol Briseño
+4.1.5.6,Camaras de seguridad,15 de abril de 2024,17 de abril de 2024,
+4.1.5.6.1,Fernndo va y le mueve,15 de abril de 2024,17 de abril de 2024,Fernando Chavarria
+4.1.5.7,Garrafones de RPBI,1 de abril de 2024,3 de abril de 2024,
+4.1.5.7.1,"Cambiar de garrafon, lo hace angel o el quimico",1 de abril de 2024,3 de abril de 2024,Javier Carapia
+4.1.5.8,Quimica Clinica (equipo) y de Uroanalisis,8 de abril de 2024,10 de abril de 2024,
+4.1.5.8.1,Mover los equipos para asegurar su desague,8 de abril de 2024,10 de abril de 2024,Claudia Reyes
+4.2,6.2 Personal,2 de abril de 2024,11 de abril de 2024,
+4.2.1,FOR-RRH-44 Compromiso de Confidencialidad de Entidades Externas,5 de abril de 2024,10 de abril de 2024,Nisa Alvalrez
+4.2.2,Cambiar el reglemento de trabajo a la plantilla correctaa,5 de abril de 2024,11 de abril de 2024,Eloisa Flores
+4.2.3,Organizacion del expedientes,2 de abril de 2024,2 de abril de 2024,
+4.2.3.1,Lista de actividades,2 de abril de 2024,2 de abril de 2024,
+5,6.8 Productos y servicios proporcionados externamente,1 de abril de 2024,29 de abril de 2024,
+5.1,"asignación de la seccio ""Product no conforme""",1 de abril de 2024,5 de abril de 2024,Jose Carapia
+5.2,Registro de proveedores,5 de abril de 2024,5 de abril de 2024,Jose Carapia
+5.3,POT-COM-01 Evaluacion y seleccion de proveedores jpm v0,5 de abril de 2024,5 de abril de 2024,Jose Carapia
+5.4,Difusión de los horarios de recepción de mercancía,1 de abril de 2024,1 de abril de 2024,Jose Carapia
+5.5,Ordenes de compra,1 de abril de 2024,5 de abril de 2024,Jose Carapia
+5.6,Revison de minimos,10 de abril de 2024,10 de abril de 2024,Jose Carapia
+5.7,Verificación del procedimiento POT-COM-02 Compras y abastecimiento ,8 de abril de 2024,12 de abril de 2024,Jose Carapia
+5.8,Activar el modulo de gastos por sucursal,1 de abril de 2024,5 de abril de 2024,Javier pradel
+5.9,"Autorizacion de gastos de material, se propone que lo haga almacen",1 de abril de 2024,5 de abril de 2024,Jose Carapia
+5.10,AMEF,12 de abril de 2024,29 de abril de 2024,
+5.10.1,Cursograma,12 de abril de 2024,17 de abril de 2024,Jose Carapia
+5.10.2,Diagrama de flujo,18 de abril de 2024,23 de abril de 2024,Jose Carapia
+5.10.3,AMEF formato,24 de abril de 2024,29 de abril de 2024,Jose Carapia
+6,6.4 Equipo,1 de abril de 2024,2 de septiembre de 2024,
+6.1,Solicitar checadores,1 de abril de 2024,17 de abril de 2024,
+6.1.1,LIberar el modulo de RRH para obtener el ID,1 de abril de 2024,17 de abril de 2024,
+6.2,Calibracion de centrifugas,4 de abril de 2024,4 de abril de 2024,Fernando Chavarria
+6.3,Inventario de Equipos,5 de julio de 2024,5 de julio de 2024,Fernando Chavarria
+6.4,Mantenimiento Correctivo,1 de julio de 2024,5 de julio de 2024,Fernando Chavarria
+6.5,Retiro de equipos,1 de abril de 2024,5 de abril de 2024,Fernando Chavarria
+6.6,Calendario de mantenimiento preventivo,1 de abril de 2024,5 de abril de 2024,Fernando Chavarria
+6.7,Identificación de equipos,8 de abril de 2024,8 de abril de 2024,Fernando Chavarria
+6.8,Registro de certificados de calibracion,3 de julio de 2024,3 de julio de 2024,Fernando Chavarria
+6.9,Calibración de equipos termohigrometros,8 de abril de 2024,19 de abril de 2024,Fernando Chavarria
+6.10,Registro de equipos nuevos (abbott),13 de agosto de 2024,2 de septiembre de 2024,Fernando Chavarria
+6.11,"Abbott, impresora",8 de abril de 2024,12 de abril de 2024,Fernando Chavarria
+6.12,"Abbott, registro de formatos de acreditacon",8 de abril de 2024,12 de abril de 2024,Fernando Chavarria
+6.13,"Abbott, documentacion",8 de abril de 2024,12 de abril de 2024,Fernando Chavarria
+6.14,Desocupar cuarto de desecho de impresoras,15 de abril de 2024,19 de abril de 2024,Fernando Chavarria
+6.15,Usuario de equipos para el CP ,13 de agosto de 2024,2 de septiembre de 2024,Javier pradel
+6.16,"Abbott, contactar al call center para el abbott link",1 de abril de 2024,5 de abril de 2024,Fernando Chavarria
+6.17,"Abbott, conexion a internet",8 de abril de 2024,12 de abril de 2024,Fernando Chavarria
+6.18,Todas las PC el escritorio de acreditacion,8 de abril de 2024,12 de abril de 2024,"Javier pradel; Fernando Chavarria"
+6.19,Usuarios no compartidos,8 de abril de 2024,12 de abril de 2024,"Javier pradel; Fernando Chavarria"
+6.20,Compra de Termómetros / higrómetros,2 de abril de 2024,2 de abril de 2024,Fernando Chavarria
+6.21,Balanceo de cargas,3 de abril de 2024,3 de abril de 2024,Fernando Chavarria
+7,SYSARCAWEB,2 de julio de 2024,2 de septiembre de 2024,

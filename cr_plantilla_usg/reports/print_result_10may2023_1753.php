@@ -138,7 +138,7 @@ function Header()
             $tipfuem,
             $tamfuem;
 
-    $this->Image('../../imagenes/logo_arca.png',15,5,50,0);
+    $this->Image('../../imagenes/logo_arca.png',15,5,140,0);
     $this->Image('../../imagenes/pacal.jpg',160,5,40,0);
     //$this->Image('../imagenes/firma.gif',153,225,40,0);
     $this->Ln(18);
