@@ -31,19 +31,24 @@
 					{"data" : "revision"},
 					{"data" : "estatus"},
 					
+
+
 					{
 						render:function(data,type,row){
-
-							return "<form-group style='text-align:center;'>"+
-											"<button type='button' class='editar btn btn-primary btn-md' data-toggle='modal' data-target='#modalEditar'><i class='fa fa-eye'></i></button>"
-											"</form-group>";
-
-										
+									return "<form-group style='text-align:center;'>"+
+									"<a id='printer' target='_blank' href='../sgc_listamaestra/controladores/descargar_file.php?fk_id_doc="+row['fk_id_doc']+"&id_imagen="+row['id_imagen']+"&ruta="+row['ruta']+"&nombre="+row['nombre']+"' class='btn btn-danger btn-md' role='button'><i class='fa fa-download'></i></a>"+
+									"</form-group>";	
 									}
-
-
 					},
-					
+
+					{
+						render:function(data,type,row){
+							return "<form-group style='text-align:center;'>"+
+											"<button type='button' class='editar btn btn-primary btn-md' data-toggle='modal' data-target='#modalEditar'><i class='fa fa-file-archive-o'></i></button>"
+											"</form-group>";
+									}
+					},	
+
 					{
 						render:function(data,type,row){
 									return "<form-group style='text-align:center;'>"+

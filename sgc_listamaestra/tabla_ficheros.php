@@ -77,10 +77,10 @@
             <th>ruta</th>
             <th>Tipo</th>
             <th>Version</th>
-            
             <th>Revision</th>
             <th>Estatus</th>
-            <th>Editar</th>
+            <th>Descargar</th>
+            <th>Actualizar version</th>
             <th>Eliminar</th>
             <!--
             <th>Ver</th>

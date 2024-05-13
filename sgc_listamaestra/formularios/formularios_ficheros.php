@@ -72,194 +72,85 @@
 
 
 
-<!-- Editar -->
+<!--Editar imagenes-->
+<form id="frmedit" class="form-horizontal" action="controladores/actualizar.php" method="POST" enctype="multipart/form-data">
+  <div class="row">
+    <div id="cuadro1" class="col-sm-12 col-md-12 col-lg-12 ocultar">
+      <div class="modal fade" id="modalEditar" tabindex="-1" role="dialog" aria-labelledby="modalEliminarLabel">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="modalEliminarLabel">Ver Imagen</h4>
+            </div>
+            <div class="modal-body">
+
+              <input type="hidden" id="idimagen" name="idimagen" value="0">
+              <input type="hidden" id="opcion" name="opcion" value="modificar">
+<!-- Nota -->              
+              <div class="form-group">
+                <label for="descripcion" class="col-sm-2 control-label">Nota</label>
+                <div class="col-sm-8">
+                  <input id="edit1" name="edit1" maxkength="50" required type="text" class="form-control" readonly="readonly">
+                 </div>
+              </div>
+
+<!-- Esudio -->              
+              <div class="form-group">
+                <label for="descripcion" class="col-sm-2 control-label">Estudio</label>
+                <div class="col-sm-8">
+                  <input id="fi_desc_estudio" name="fn_desc_estudio" maxkength="50" required type="text" class="form-control" readonly="readonly">
+                 </div>
+              </div>
+<!-- nomb imagen -->              
+              <div class="form-group">
+                <label for="nombre_img" class="col-sm-2 control-label">Imagen</label>
+                <div class="col-sm-8">
+                  <input id="fi_nombre" name="fn_nombre" maxkength="50" required="no entry" required type="text" class="form-control" readonly="readonly">
+                 </div>
+              </div>
+<!-- Imagen -->  
+              <div class="form-group">
+                <!--
+                  <label for="descripcion" class="col-sm-2 control-label">Estudio</label>
+                -->
+                <div class="col-sm-8">
+
+    
+
+                  
+                  <img src="" id="fi_imagen" alt="" width="500" >
+
+                  <!--
+                  <input id="fi_desc_estudio" name="fn_desc_estudio" maxkength="50" required type="text" class="form-control" >
+                -->
+                 </div>
+              </div>
 
 
+              
+              <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-8"></div>
+              </div>
 
-<form id="frmedit" class="form-horizontal" method="POST">
-
-	<div id="cuadro1" class="col-sm-12 col-md-12 col-lg-12 ocultar">
-
-		<div class="modal fade" id="form_editar" tabindex="-1" role="dialog" aria-labelledby="modalEliminarLabel">
-
-			<div class="modal-dialog" role="document">
-
-				<div class="modal-content">
-
-					<div class="modal-header">
-
-							<h2 style="color:blue;text-align:center" class="modal-title" id="modalEliminarLabel">
-
-									Nueva version
-
-							</h2>
-
-							 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-
-					</div>
-
-					<div style="color:#000000;background:#EFFBF5" class="modal-body">
-
-						<input type="hidden" id="idperfil" name="idperfil" value="0">
-
-						<input type="hidden" id="opcion" name="opcion" value="modificar">
-
-						<input type="hidden" class="form-control  form-control-sm" id="pro" name="pro">
-
-						 <input type="hidden" class="form-control  form-control-sm" id="dc" name="dc">
-
-						<div class="md-form">
-
-							<input type="text" readonly name="codigo" id="codigo" class="form-control" required>
-
-							<label for="codigo">Código</label>
-
-						</div>
-
-
-<!-- consecutivo -->
-					<div class="row">
-						<div class="col">
-							<div class="md-form mt-0">
-								<div class="md-form">
-								<select class="form-control" id="fi_estado" name="fn_estado">
-                                        <option value="P O S I T I V O">Positivo</option>
-                                        <option value="N E G A T I V O">Negativo</option>
-                                        <option value="A">A</option>
-                                        <option value="B">B</option>
-                                        <option value="AB">AB</option>
-                                        <option value="O">O</option>
-                                    </select>
-									<label for="producto"> Consecutivo</label>
-								</div>
-							</div>
-						</div>
-					</div>					
-<!-- descripcion -->
-					<div class="row">
-						<div class="col">
-							<div class="md-form mt-0">
-								<div class="md-form">
-									<input type="text" name="nombre" id="nombre" class="form-control" maxlength="100" required>
-									<label for="producto"> Descripción</label>
-								</div>
-							</div>
-						</div>
-					</div>
-
-
-<!-- copias Electronico  -->
-					<div class="row">
-						<div class="col">
-							<div class="md-form mt-0">
-								<div class="md-form">
-									<input type="text"  name="fk_id_doc" id="fk_id_doc" class="form-control"  required>
-									<label for="costo">Electronico # copias</label>
-								</div>
-							</div>
-						</div>
-<!-- ubicacion Electronico  -->
-						<div class="col">
-							<div class="md-form mt-0">
-								<div class="md-form">
-									<input type="text" name="eubicacion" id="eubicacion" class="form-control" min="1" maxlength="25"  required>
-									<label for="utilidad">Electronico Ubicacion</label>
-								</div>
-							</div>
-						</div>
-					</div>
-<!-- Fisico copias  -->
-					<div class="row">
-						<div class="col">
-							<div class="md-form mt-0">
-								<div class="md-form">
-									<input type="number"  name="fncopias" id="fncopias" class="form-control" min="1" maxlength="5" step="1"  required>
-									<label for="costo">Fisico # copias</label>
-								</div>
-							</div>
-						</div>
-<!-- Fisico ubicacion  -->
-						<div class="col">
-							<div class="md-form mt-0">
-								<div class="md-form">
-									<input type="text" name="fubicacion" id="fubicacion" class="form-control" min="1" maxlength="25"  required>
-									<label for="utilidad">Fisico Ubicacion</label>
-								</div>
-							</div>
-						</div>
-					</div>
-
-<!-- revision numero  -->
-
-					<div class="row">
-						<div class="col">
-							<div class="md-form mt-0">
-								<div class="md-form">
-									<input type="number"  name="revision" id="revision" class="form-control"  step="1" required>
-									<label for="revision"># Revision</label>
-								</div>
-							</div>
-						</div>
-
-
-<!-- version numero  -->						
-						<div class="col">
-							<div class="md-form mt-0">
-								<div class="md-form">
-									<input type="number" name="version" id="version" class="form-control" step="1" required>
-									<label for="version"># Version</label>
-								</div>
-							</div>
-						</div>
-					</div>					
-
-<!-- fecha emision  -->
-
-					<div class="row">
-
-						<div class="col">
-							<div class="md-form mt-0">
-								<div class="md-form">
-									<input type="date" name="femision" id="femision" class="form-control" >
-									<label for="Nivel" id="emision">Fecha Emision</label>
-								</div>
-							</div>
-						</div>
-<!-- fecha revision  -->
-						<div class="col">
-							<div class="md-form mt-0">
-								<div class="md-form">
-									<input type="date" name="frevision" id="frevision" class="form-control" >
-									<label for="Nivel" id="emision">Fecha Pro. Revision</label>
-								</div>
-							</div>
-						</div>
-					</div>	
-					<br>
-				</div>
-
-					<div class="modal-footer">
-
-							<button type="submit" class="btn btn-success" id="btniniciar">Ingresar</button>
-
-							<button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
-
-					</div>
-
-				</div>
-
-			</div>
-
-		</div>
-
-	</div> 
-
+              <div class="modal-footer">
+                <!--
+                  <button type="submit" class="btn btn-success" id="btniniciar"  >Ingresar</button>
+                -->
+                <button type="button" class="btn btn-default" data-dismiss="modal">Salir</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </form>
 
 
 
 
-        <!-- Modal para subir los ficheros-->
+        <!-- Modal para subir los ficheros
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
@@ -322,3 +213,4 @@
                             }
         </script>
 
+-->
