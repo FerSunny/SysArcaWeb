@@ -13,8 +13,7 @@ $id_usuario = $_SESSION['id_usuario'];
 
 $temperatura = $_POST['temperatura'];
 
-//$valor_c = $_POST['valor_c']; 
-$valor_c = 0;
+$valor_c = $_POST['valor_c']; 
 
 $equipo = $_POST['equipo']; 
 
@@ -26,11 +25,11 @@ $fecha = $_POST['fecha'];
 
 
 $query ="
-INSERT INTO iq_humedad
+INSERT INTO iq_temperaturas
             (fk_id_empresa,
-             id_humedad,
+             id_temperatura,
              fk_id_equipo,
-             humedad,
+             temperatura,
              valor_correccion,
              valor_corregido,
              fecha_registro,

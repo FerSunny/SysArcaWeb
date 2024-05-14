@@ -34,31 +34,28 @@
 
 				"columns":[
 
-					{"data" : "id_temperatura"},
+					{"data" : "id_humedad"},
 
-					{"data" : "descripcion"},
+					{"data" : "codigo"},
 
 					{"data" : "desc_area"},
 
 					{"data" : "fecha_registro"},
-					{"data" : "temperatura"},
+					{"data" : "humedad"},
 
 					{"data" : "valor_correccion"},
-					{"data" : "valor_corregido"},
-/*
+				//	{"data" : "valor_corregido"},
+
 					{
 
                         render: function( data, type, row, meta )
+
                         {
-						var maximo = row['valor_maximo']
-                            if (row['valor_corregido'] >= row['valor_minimo']) //&& row['valor_corregido'] < row['valor_maximo']) 
+
+                            if( (row['valor_corregido'] >= row['valor_minimo']) && (row['valor_corregido'] <= row['valor_maximo']) )
+
                             {
-								console.log(row['valor_corregido'])
-								console.log(maximo)
-								if(row['valor_corregido'] <= maximo){
-									return "<p class='btn btn-success btn-md'>"+row['valor_corregido']+"</p>"
-								}
-                                return "<p class='btn btn-danger btn-md'>"+row['valor_corregido']+"</p>"
+                                return "<p class='btn btn-success btn-md'>"+row['valor_corregido']+"</p>"
                             }else
                             {
                                 return "<p class='btn btn-danger btn-md'>"+row['valor_corregido']+"</p>"
@@ -67,10 +64,10 @@
                         },
 
                     },
-*/
 
 
-					//{"data" : "intervalo_aceptable"},
+
+					{"data" : "intervalo_aceptable"},
 
 					{"defaultContent": "<button type='button' class='editar btn btn-warning btn-md'><i class='fas fa-edit'></i></button>"},
 
@@ -206,13 +203,13 @@ var editar = function(tbody, table) {
 
 				$("#frmedit  label").attr('class','active')
 
-				$("#frmedit  #dc").val(data.id_temperatura)
+				$("#frmedit  #dc").val(data.id_humedad)
 
-				$("#frmedit  #pro").val(data.id_temperatura)
+				$("#frmedit  #pro").val(data.id_humedad)
 
-				$("#frmedit  #codigo").val(data.id_temperatura)
+				$("#frmedit  #codigo").val(data.id_humedad)
 
-				$("#frmedit  #temperatura").val(data.temperatura)
+				$("#frmedit  #temperatura").val(data.humedad)
 
 				$("#frmedit  #equipo").val(data.fk_id_equipo)
 
@@ -328,7 +325,7 @@ var eliminar= function(tbody, table) {
 
 				if (result.value) {
 
-					 $.post("./controladores/eliminar.php", {'id_producto' : data.id_temperatura}  , function(data,status)
+					 $.post("./controladores/eliminar.php", {'id_producto' : data.id_humedad}  , function(data,status)
 
 					{
 

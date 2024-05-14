@@ -36,7 +36,7 @@
 
 					{"data" : "id_temperatura"},
 
-					{"data" : "descripcion"},
+					{"data" : "codigo"},
 
 					{"data" : "desc_area"},
 
@@ -44,8 +44,8 @@
 					{"data" : "temperatura"},
 
 					{"data" : "valor_correccion"},
-					{"data" : "valor_corregido"},
-/*
+				//	{"data" : "valor_corregido"},
+
 					{
 
                         render: function( data, type, row, meta )
@@ -67,10 +67,10 @@
                         },
 
                     },
-*/
 
 
-					//{"data" : "intervalo_aceptable"},
+
+					{"data" : "intervalo_aceptable"},
 
 					{"defaultContent": "<button type='button' class='editar btn btn-warning btn-md'><i class='fas fa-edit'></i></button>"},
 

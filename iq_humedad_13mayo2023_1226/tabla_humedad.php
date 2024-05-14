@@ -18,7 +18,7 @@
 
   <meta http-equiv="Content-Type" content="text/html; charset=gb18030">
 
-  <title>Temperaturas</title> <!-- CAMBIO  Titulo de la forma -->
+  <title>Humedad</title> <!-- CAMBIO  Titulo de la forma -->
 
   <link rel="icon" type="image/png" href="../imagenes/ico/capital.png" />
 
@@ -82,7 +82,7 @@
 
   <div class="container" style="margin-top: 30px;">
 
-    <h1 style="text-align: center;">Tabla de Temperaturas  <!-- CAMBIO Se cambia el titulo de la tabla -->
+    <h1 style="text-align: center;">Tabla de Humedades  <!-- CAMBIO Se cambia el titulo de la tabla -->
 
       <button type="button" class="btn btn-primary pull-right menu" data-toggle="modal" data-target="#myModals"><i class="fa fa-user-plus" aria-hidden="true"></i>&nbsp;Nuevo Registro</button> <!-- CAMBIO Se cambia el boton de altas -->
 
@@ -116,7 +116,7 @@
 
             <th>Id </th>
 
-            <th>Termometro</th>
+            <th>Hidrometro</th>
 
             <th>Area</th>
 
@@ -124,9 +124,8 @@
             <th>Lectura</th>
             <th>V. Correccion</th>
             <th>V. Corregido</th>
-            <!--
             <th>Tem. Aceptable</th>
-            -->
+
             <th>Editar</th>
 
             <th>Eliminar</th>

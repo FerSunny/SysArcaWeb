@@ -64,7 +64,7 @@
 
 								<div class="md-form">
 
-									<input type="number" step="any" name="valor_c" id="valor_c" class="form-control" maxlength="7">
+									<input type="number" readonly step="any" name="valor_c" id="valor_c" class="form-control" maxlength="7">
 
 									<label for="desc_p">Valor de Correccion</label>
 
@@ -108,13 +108,15 @@
 
 										<?php 
 
-												$query = $conexion -> query("SELECT id_termometro,descripcion FROM eb_termometros WHERE estado = 'A' ");
+												$query = $conexion -> query("SELECT id_equipo,descripcion FROM eb_equipos 
+												WHERE estado = 'A' 
+												AND SUBSTR(descripcion,1,4) = 'TERM' ");
 
 												while($res = mysqli_fetch_array($query))
 
 												{
 
-														echo "<option value =".$res['id_termometro'].">
+														echo "<option value =".$res['id_equipo'].">
 
 																".$res['descripcion']."
 
@@ -250,7 +252,7 @@
 
 								<div class="md-form">
 
-									<input type="number" step="any" name="valor_c" id="valor_c" class="form-control" maxlength="7">
+									<input type="number" readonly step="any" name="valor_c" id="valor_c" class="form-control" maxlength="7">
 
 									<label for="desc_p">Valor de Correccion</label>
 
@@ -291,13 +293,15 @@
 
 										<?php 
 
-												$query = $conexion -> query("SELECT id_termometro,descripcion FROM eb_termometros WHERE estado = 'A' ");
+												$query = $conexion -> query("SELECT id_equipo,descripcion FROM eb_equipos 
+												WHERE estado = 'A' 
+												AND SUBSTR(descripcion,1,4) = 'TERM' ");
 
 												while($res = mysqli_fetch_array($query))
 
 												{
 
-														echo "<option value =".$res['id_termometro'].">
+														echo "<option value =".$res['id_equipo'].">
 
 																".$res['descripcion']."
 

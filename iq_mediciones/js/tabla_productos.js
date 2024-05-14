@@ -36,42 +36,20 @@
 
 					{"data" : "id_temperatura"},
 
-					{"data" : "descripcion"},
+					{"data" : "desc_corta"},
+
+					{"data" : "iniciales"},
+
+					{"data" : "desc_servicio"},
 
 					{"data" : "desc_area"},
 
+					{"data" : "descripcion"},
+
 					{"data" : "fecha_registro"},
 					{"data" : "temperatura"},
-
 					{"data" : "valor_correccion"},
-					{
-
-                        render: function( data, type, row, meta )
-                        {
-							var minimo =  row['temp_refere_1']
-							var medio =   row['temp_refere_2']
-							var maximo =  row['temp_refere_3']
-
-							var medicion =  row['temperatura']
-
-							switch (medicion) {
-								case (medicion <= minimo):
-									return "<p class='btn btn-danger btn-md'>"+row['valor_corregido']+"</p>"
-									break;
-								case (medicion >= maximo):
-									return "<p class='btn btn-danger btn-md'>"+row['valor_corregido']+"</p>"
-									break;
-								default:
-									return "<p class='btn btn-success btn-md'>"+row['valor_corregido']+"</p>"
-									break;
-							}
-                        },
-
-                    },
-
-
-
-				//	{"data" : "intervalo_aceptable"},
+					{"data" : "valor_corregido"},
 
 					{"defaultContent": "<button type='button' class='editar btn btn-warning btn-md'><i class='fas fa-edit'></i></button>"},
 
@@ -213,17 +191,11 @@ var editar = function(tbody, table) {
 
 				$("#frmedit  #codigo").val(data.id_temperatura)
 
+				$("#frmedit  #fk_id_equipo").val(data.fk_id_equipo)
+
 				$("#frmedit  #temperatura").val(data.temperatura)
 
-				$("#frmedit  #equipo").val(data.fk_id_equipo)
-
-				$("#frmedit  #valor_c").val(data.valor_correccion)
-
-				$("#frmedit  #fecha").val(data.fecha_registro)
-
-
-
-			 
+				$("#frmedit  #fecha_registro").val(data.fecha_registro)
 
 		});
 
@@ -329,7 +301,7 @@ var eliminar= function(tbody, table) {
 
 				if (result.value) {
 
-					 $.post("./controladores/eliminar.php", {'id_producto' : data.id_temperatura}  , function(data,status)
+					 $.post("./controladores/eliminar.php", {'id_temperatura' : data.id_temperatura}  , function(data,status)
 
 					{
 

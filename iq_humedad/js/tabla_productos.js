@@ -36,7 +36,7 @@
 
 					{"data" : "id_humedad"},
 
-					{"data" : "codigo"},
+					{"data" : "descripcion"},
 
 					{"data" : "desc_area"},
 

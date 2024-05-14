@@ -13,8 +13,7 @@ $id_usuario = $_SESSION['id_usuario'];
 
 $temperatura = $_POST['temperatura'];
 
-//$valor_c = $_POST['valor_c']; 
-$valor_c = 0;
+$valor_c = $_POST['valor_c']; 
 
 $equipo = $_POST['equipo']; 
 
