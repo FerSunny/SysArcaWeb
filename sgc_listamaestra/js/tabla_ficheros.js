@@ -29,16 +29,26 @@
 					{"data" : "tipo"},
 					{"data" : "ver"},
 					{"data" : "revision"},
-					{"data" : "estatus"},
-					
+					{"data" : "estado"},
+					{"data" : "ini_usu_est"},
+					{"data" : "fecha_status"},
 
 
 					{
 						render:function(data,type,row){
-									return "<form-group style='text-align:center;'>"+
-									"<a id='printer' target='_blank' href='../sgc_listamaestra/controladores/descargar_file.php?fk_id_doc="+row['fk_id_doc']+"&id_imagen="+row['id_imagen']+"&ruta="+row['ruta']+"&nombre="+row['nombre']+"' class='btn btn-danger btn-md' role='button'><i class='fa fa-download'></i></a>"+
+							var estatus = row['estatus']
+							if(estatus == "D"){
+								//console.log('entro a D')
+								return "<button disabled type='button' class='editar btn btn-danger btn-md'><i class='fa fa-ban'></i> </button>"	
+							}
+							else{
+								//console.log('No entro a D')
+								return "<form-group style='text-align:center;'>"+
+									"<a id='printer' target='_blank' href='../sgc_listamaestra/controladores/descargar_file.php?fk_id_doc="+row['fk_id_doc']+"&id_imagen="+row['id_imagen']+"&ruta="+row['ruta']+"&nombre="+row['nombre']+"&tipo="+row['tipo']+"&ver="+row['ver']+"' class='btn btn-success btn-md' role='button'><i class='fa fa-download'></i></a>"+
 									"</form-group>";	
-									}
+								}
+						}
+									
 					},
 
 					{

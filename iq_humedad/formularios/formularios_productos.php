@@ -22,7 +22,7 @@
 
 						<h2 style="color:blue;text-align:center" class="modal-title">
 
-								Nuevo Registro
+								Nuevo Registro Humedad
 
 						</h2>
 
@@ -64,7 +64,7 @@
 
 								<div class="md-form">
 
-									<input type="number" step="any" name="valor_c" id="valor_c" class="form-control" maxlength="7">
+									<input type="number" readonly step="any" name="valor_c" id="valor_c" class="form-control" maxlength="7">
 
 									<label for="desc_p">Valor de Correccion</label>
 
@@ -108,13 +108,15 @@
 
 										<?php 
 
-												$query = $conexion -> query("SELECT id_hidro,descripcion FROM eb_hidro WHERE estado = 'A' ");
+												$query = $conexion -> query("SELECT id_equipo,descripcion FROM eb_equipos 
+																			WHERE estado = 'A'
+																			AND SUBSTR(descripcion,1,5) = 'HIGRO'");
 
 												while($res = mysqli_fetch_array($query))
 
 												{
 
-														echo "<option value =".$res['id_hidro'].">
+														echo "<option value =".$res['id_equipo'].">
 
 																".$res['descripcion']."
 
@@ -200,7 +202,7 @@
 
 							<h2 style="color:blue;text-align:center" class="modal-title" id="modalEliminarLabel">
 
-									Editar Temperatura
+									Editar Humedad
 
 							</h2>
 
@@ -250,7 +252,7 @@
 
 								<div class="md-form">
 
-									<input type="number" step="any" name="valor_c" id="valor_c" class="form-control" maxlength="7">
+									<input type="number" readonly step="any" name="valor_c" id="valor_c" class="form-control" maxlength="7">
 
 									<label for="desc_p">Valor de Correccion</label>
 
@@ -291,13 +293,15 @@
 
 										<?php 
 
-												$query = $conexion -> query("SELECT id_hidro,descripcion FROM eb_hidro WHERE estado = 'A' ");
+												$query = $conexion -> query("SELECT id_equipo,descripcion FROM eb_equipos 
+																			WHERE estado = 'A'
+																			AND SUBSTR(descripcion,1,5) = 'HIGRO'");
 
 												while($res = mysqli_fetch_array($query))
 
 												{
 
-														echo "<option value =".$res['id_hidro'].">
+														echo "<option value =".$res['id_equipo'].">
 
 																".$res['descripcion']."
 

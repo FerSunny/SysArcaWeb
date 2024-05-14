@@ -7,12 +7,20 @@
   $query = "
   SELECT 
   lf.*,
-  us.`iniciales`
+  CASE
+  WHEN lf.estatus = 'C' THEN
+  'Carga Inicial'
+  WHEN lf.estatus = 'D' THEN
+  'Descargado'
+  END estado,
+  us.`iniciales`,
+  u.iniciales AS ini_usu_est
   FROM 
-  sgc_lista_ficheros lf,
+  sgc_lista_ficheros lf
+  LEFT OUTER JOIN se_usuarios u ON (u.id_usuario = lf.fk_id_usuario_estatus),
   se_usuarios us
   WHERE lf.`estado` = 'A'
-  AND lf.fk_id_doc = $id_doc 
+  AND lf.fk_id_doc = $id_doc
   AND lf.`fk_id_usuario` = us.`id_usuario`
   ";
 

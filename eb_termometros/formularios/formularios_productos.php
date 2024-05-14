@@ -55,7 +55,8 @@
 									<option value="" class="z-depth-5">Seleccione</option>
 										<?php 
 												$query = $conexion -> query("SELECT eq.`id_equipo`,eq.`descripcion` FROM eb_equipos  eq
-																			WHERE eq.`descripcion` LIKE '%termo%' and estado = 'A'");
+																			WHERE (eq.`descripcion` LIKE '%termo%' OR eq.`descripcion` LIKE 'HIGRO%')
+																			AND estado = 'A'");
 												while($res = mysqli_fetch_array($query))
 												{
 														echo "<option value =".$res['id_equipo'].">
@@ -351,7 +352,8 @@
 											<option value="" class="z-depth-5">Seleccione</option>
 												<?php 
 														$query = $conexion -> query("SELECT eq.`id_equipo`,eq.`descripcion` FROM eb_equipos  eq
-																					WHERE eq.`descripcion` LIKE '%termo%' and estado = 'A'");
+																					WHERE (eq.`descripcion` LIKE '%termo%' OR eq.`descripcion` LIKE 'HIGRO%')
+																					AND estado = 'A'");
 														while($res = mysqli_fetch_array($query))
 														{
 																echo "<option value =".$res['id_equipo'].">

@@ -125,7 +125,7 @@ VALUES (1,
         '$extension',
         '$ruta',
         NOW(),
-        'Carga Inicial',
+        'C',
         'A');
 ";
 
