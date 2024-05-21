@@ -9,10 +9,9 @@ $studio= $_SESSION['studio'];
 
 $estado = $_POST['fn_estado']; //estado
 $img_x_hoja = $_POST['fn_img_x_hoja'];
-//$img_x_hoja = '0';
 //$nombre='pendiente';
 //$ruta='pendiente';
-$fecha_registro=date("y/m/d :H:i:s");
+$fecha_registro=date("y/m/d H:i:s");
 $alt=0;
 $anc=0;
 $nombre='prueba';
@@ -70,8 +69,7 @@ for ($i=0; $i < $file_count; $i++)
 	else{
 		 $nombre= "Tipo de fichero invalido";
 	}
-	$query = "INSERT INTO cr_plantilla_tomo_img(fk_id_empresa,fk_id_factura,fk_id_estudio,id_imagen,nombre,ruta,fecha_registro,estado,alto,ancho,img_x_hoja)
-	VALUES ('$empresa','$numero_factura','$studio',0,'$nombre','$ruta',NOW() ,'$estado','$alt','$anc','$img_x_hoja')";
+	$query = "INSERT INTO cr_plantilla_rx_img(fk_id_empresa,fk_id_factura,fk_id_estudio,id_imagen,nombre,ruta,fecha_registro,estado,alto,ancho,img_x_hoja) VALUES ('$empresa','$numero_factura','$studio',0,'$nombre','$ruta',NOW() ,'$estado','$alt','$anc','$img_x_hoja')";
 
     $resultado = mysqli_query($conexion, $query);
 }

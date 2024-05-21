@@ -6,7 +6,7 @@
 
   $nombre='0';
 
-  $sql="SELECT  ui.id_imagen,ui.nombre FROM cr_plantilla_colpo_img ui
+  $sql="SELECT  ui.id_imagen,ui.nombre FROM cr_plantilla_rx_img ui
         WHERE ui.fk_id_factura = ".$numero_factura."
         AND ui.fk_id_estudio =".$studio;
 //echo $sql;
@@ -18,35 +18,23 @@
     }
   }
 
-  $imagen='img_ekg/'.$numero_factura.'/'.$nombre;
+  $imagen='img_rx/'.$numero_factura.'/'.$nombre;
 
 ?>
 <link rel="stylesheet" href="../css/estilos.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-<script type="text/javascript" src="jquery.js"></script>
-<script type="text/javascript" src="jquery.imageLens.js"></script>
-
-
-<script type="text/javascript">
-  $(document).ready(function(){
-      $('#img_01').imageLens();
-  })
-
-</script>
-
-
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
 <div class="modal fade" id="myModals" role="dialog">
   <div class="modal-dialog">
 
+
       <!-- Modal content-->
-   <form name="AltasEstudio" action="controladores/registro_imagenes.php" method="post" enctype="multipart/form-data" id="fileforms">
+   <form name="AltasEstudio" action="controladores/registro_imagenes.php" method="post" enctype="multipart/form-data" id="fileForms" >
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h2 style="color:blue;text-align:center" class="modal-title">Nueva Imagen</h2>
+          <h2 style="color:blue;text-align:center" class="modal-title">Nueva Imagenes</h2>
     <!--      <h5 style="color:blue;text-align:center" class="modal-title">Datos Generales</h5> -->
         </div>
         <div style="color:#000000;background:#EFFBF5" class="modal-body">
@@ -75,6 +63,7 @@
                     </div>
                   </div>
             </tr>
+
 <!-- imagenes por hoja -->
 
 
@@ -163,7 +152,7 @@
     
 
                   
-                  <img src="" id="img_01" alt="500" width="500" >
+                  <img src="" id="fi_imagen" alt="" width="500" >
 
                   <!--
                   <input id="fi_desc_estudio" name="fn_desc_estudio" maxkength="50" required type="text" class="form-control" >

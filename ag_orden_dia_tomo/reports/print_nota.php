@@ -197,6 +197,15 @@ function Header()
             $posinim,
             $tipfuem,
             $tamfuem,
+            $descripcion,
+            $t_otros_allazgos,
+            $d_otros_allazgos,
+
+            $t_diagnostico,
+            $d_diagnostico,
+     //$firma=$row['firma'];
+            $t_comentarios,
+            $d_comentarios,
             $titulo_desc;
 
     $this->Image('../imagenes/logo_lab3.jpg',55,5,90,0);

@@ -13,7 +13,7 @@ $studio=$_GET['studio'];
 
 
 // Contamos la cantidad de imagenes que tiene el estudio
-$sql_max="select count(id_imagen) as num_img FROM cr_plantilla_rx_img
+$sql_max="select count(id_imagen) as num_img,max(img_x_hoja) as img_x_hoja FROM cr_plantilla_usg_img
 where estado = 'A' and fk_id_factura=".$numero_factura." and fk_id_estudio=".$studio;
 // echo $sql_max;
 $num_img='0';
@@ -21,9 +21,7 @@ if ($result = mysqli_query($con, $sql_max)) {
   while($row = $result->fetch_assoc())
   {
       $num_img=$row['num_img'];
-      //$img_x_hoja=$row['img_x_hoja'];
-      //$v_alto=$row['alto'];
-      //$v_ancho=$row['ancho'];
+      $img_x_hoja=$row['img_x_hoja'];
   }
 }
 
@@ -156,9 +154,11 @@ function Header()
             $tipfuem,
             $tamfuem;
 
-    $this->Image('../imagenes/logo_arca.png',15,5,140,0);
+    $this->Image('../imagenes/logo_arca.png',15,5,50,0);
+    $this->Image('../imagenes/logo_arca_sys_web.jpg',75,150,90,0);
+    
     $this->Image('../imagenes/pacal.jpg',160,5,40,0);
-    $this->Image('../imagenes/codigo1.jpg',170,42,15,15);
+    $this->Image('../imagenes/codigo1.jpg',170,42,10,10);
     $this->Ln(18);
     $this->Cell(5);
     $this->SetFont('Arial','B',15);
@@ -179,7 +179,7 @@ function Header()
     $this->SetFont('Arial','B',11);
     $this->Cell(22,5,'PACIENTE:',0,0,'L');
     $this->SetFont('Arial','',11);
-    $this->Cell(88,5,utf8_decode($paciente),0,0,'L');
+    $this->Cell(88,5,$paciente,0,0,'L');
 
     $this->SetFont('Arial','B',11);
     $this->Cell(15,5,'DR(A):',0,0,'L');
@@ -313,11 +313,47 @@ $pdf->SetFont('Arial','',9);
 */
 $leido=1;
 $derecha=0;
-$img_x_hoja=1;
-$por_red=.93;
-$img_x_hoja=1; 
 
-$sql_imagenes="select * FROM cr_plantilla_rx_img
+// Ajusta tamaño de las imagenes, segun el numero de imagenes por hoja
+
+      switch ($img_x_hoja){
+        case '1':
+          
+            $alto=198.9;
+            $ancho=153.85; 
+            break;
+        case '2':
+          
+            $alto=117;
+            $ancho=90.5;
+            break;
+       case '4':
+          
+            $alto=93.6;
+            $ancho=72.4;
+            break;
+
+       case '6':
+          
+            $alto=81.9;
+            $ancho=63.35;
+            break;
+
+        default:
+          if($v_alto>192 && $v_ancho>148){
+            $alto=85;
+            $ancho=65;
+          }else{
+            $alto=$v_alto;
+            $ancho=$v_ancho;          
+          }
+            $columna=13;
+            $renglon=53;         
+          break;
+      }
+
+
+$sql_imagenes="select * FROM cr_plantilla_usg_img
 where estado = 'A' and fk_id_factura=".$numero_factura." and fk_id_estudio=".$studio;
 //echo $sql_imagenes;
 if ($result = mysqli_query($con, $sql_imagenes)) {
@@ -327,20 +363,11 @@ if ($result = mysqli_query($con, $sql_imagenes)) {
       $ruta=$row['ruta'];
       $v_alto=$row['alto'];
       $v_ancho=$row['ancho'];
-      $img_x_hoja = $row['img_x_hoja'];
-      
-      $imagen="../img_rx/".$numero_factura."/".$row['nombre'];
+
+      $imagen="../img_usg/".$numero_factura."/".$row['nombre'];
 
 // impresion por lineas, segun numero de imagenes
-// Ajusta tamaño de las imagenes, segun el numero de imagenes por hoja
-      
-      
 
-          
-      $alto=$v_alto-($v_alto*$por_red);
-      $ancho=$v_ancho-($v_ancho*$por_red); 
-
-          
         switch ($img_x_hoja){
 // 1 imagen por hoja
           case '1':
