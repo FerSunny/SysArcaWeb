@@ -58,7 +58,7 @@ $mensaje = ''
   .'"to": "'.$telefono.'",'
   .'"type": "template",'
   .'"template": {'
-    .'"name": "entrega_resultados",'
+    .'"name": "resultados",'
     .'"language": { "code": "es" },'
     .'"components":'
      .'['
@@ -107,11 +107,16 @@ curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 $response = json_decode(curl_exec($curl), true);
 
 //Imprimimos la respuesta
-//print_r($response);
+//$arreglo = $response;
+//var_dump($arreglo);
+//echo $arreglo['wa_id'];
 
 //Regresamos un valor dependiendo del estatus
 $status_code = curl_getinfo($curl, CURLINFO_HTTP_CODE);
 if($status_code == 200){
+  //$sql = "INSERT INTO wa_registro "
+  //. "(mensaje_recibido    ,mensaje_enviado   ,id_wa        ,timestamp_wa        ,     telefono_wa) VALUES "
+  //. "('" . $recibido . "' ,'" . $enviado . "','" . $idWA . "','" . $timestamp . "','" . $telefonoCliente . "');";
   //Cerramos el curl
   curl_close($curl); 
   return 1;
