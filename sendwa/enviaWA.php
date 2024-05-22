@@ -1,6 +1,6 @@
 <?php
 
-function enviaWA($id_factura, $ruta, $id_estudio){
+function enviaWA($id_factura, $ruta, $id_estudio, $usuario){
 
 //Datos de conexión a la base de datos
 $server = "localhost";
@@ -114,14 +114,14 @@ $response = json_decode(curl_exec($curl), true);
 //Regresamos un valor dependiendo del estatus
 $status_code = curl_getinfo($curl, CURLINFO_HTTP_CODE);
 if($status_code == 200){
-  //$sql = "INSERT INTO wa_registro "
-  //. "(mensaje_recibido    ,mensaje_enviado   ,id_wa        ,timestamp_wa        ,     telefono_wa) VALUES "
-  //. "('" . $recibido . "' ,'" . $enviado . "','" . $idWA . "','" . $timestamp . "','" . $telefonoCliente . "');";
+  $stmt = $mysqli->prepare("INSERT INTO wa_registro (fecha_hora, estatus, usuario, telefono) VALUE (NOW(), $response, $usuario, $celular)");
+  $stmt->execute();
   //Cerramos el curl
   curl_close($curl); 
   return 1;
-  //echo '<br><br>' . $status_code;
 } else {
+  $stmt = $mysqli->prepare("INSERT INTO wa_registro (fecha_hora, estatus, usuario, telefono) VALUE (NOW(), $response, $usuario, $celular)");
+  $stmt->execute();
   //Cerramos el curl
   curl_close($curl);
   return 0;
