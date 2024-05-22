@@ -114,13 +114,13 @@ $response = json_decode(curl_exec($curl), true);
 //Regresamos un valor dependiendo del estatus
 $status_code = curl_getinfo($curl, CURLINFO_HTTP_CODE);
 if($status_code == 200){
-  $stmt = $mysqli->prepare("INSERT INTO wa_registro (fecha_hora, estatus, usuario, telefono) VALUE (NOW(), $response, $usuario, $celular)");
+  $stmt = $mysqli->prepare("INSERT INTO wa_registro (fecha_hora, estatus, usuario, telefono) VALUES (NOW(), $response, $usuario, $celular)");
   $stmt->execute();
   //Cerramos el curl
   curl_close($curl); 
   return 1;
 } else {
-  $stmt = $mysqli->prepare("INSERT INTO wa_registro (fecha_hora, estatus, usuario, telefono) VALUE (NOW(), $response, $usuario, $celular)");
+  $stmt = $mysqli->prepare("INSERT INTO wa_registro (fecha_hora, estatus, usuario, telefono) VALUES (NOW(), $response, $usuario, $celular)");
   $stmt->execute();
   //Cerramos el curl
   curl_close($curl);
