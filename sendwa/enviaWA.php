@@ -107,26 +107,34 @@ curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 $response = json_decode(curl_exec($curl), true);
 
 //Imprimimos la respuesta
-//$arreglo = $response;
-//var_dump($arreglo);
-//echo $arreglo['wa_id'];
+//print_r($response);
 
 //Regresamos un valor dependiendo del estatus
 $status_code = curl_getinfo($curl, CURLINFO_HTTP_CODE);
 if($status_code == 200){
-  $stmt = $mysqli->prepare("INSERT INTO wa_registro (fecha_hora, estatus, usuario, telefono, fk_id_empresa) VALUES (NOW(), $response, $usuario, $celular, 1)");
+  $estatus = "Aceptado";
+  $fk_id_empresa = 1;
+  $stmt = $mysqli->prepare("INSERT INTO `wa_registro`
+  (fecha_hora, estatus, usuario, telefono, fk_id_empresa)
+  VALUES (NOW(), ?, ?, ?, ?)");
+  $stmt->bind_param("siii", $estatus, $usuario, $celular, $fk_id_empresa);
   $stmt->execute();
   //Cerramos el curl
   curl_close($curl); 
   return 1;
+  
 } else {
-  $stmt = $mysqli->prepare("INSERT INTO wa_registro (fecha_hora, estatus, usuario, telefono, fk_id_empresa) VALUES (NOW(), $response, $usuario, $celular, 1)");
+  $estatus = "Rechazado";
+  $fk_id_usario = 1;
+  $stmt = $mysqli->prepare("INSERT INTO `wa_registro`
+  (fecha_hora, estatus, usuario, telefono, fk_id_empresa)
+  VALUES (NOW(), ?, ?, ?, ?)");
+  $stmt->bind_param("siii", $estatus, $usuario, $celular, $fk_id_empresa);
   $stmt->execute();
   //Cerramos el curl
   curl_close($curl);
   return 0;
 }
-
 
 }
 
