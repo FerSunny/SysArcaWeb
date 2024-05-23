@@ -125,7 +125,7 @@ if($status_code == 200){
   
 } else {
   $estatus = "Rechazado";
-  $fk_id_usario = 1;
+  $fk_id_empresa = 1;
   $stmt = $mysqli->prepare("INSERT INTO `wa_registro`
   (fecha_hora, estatus, usuario, telefono, fk_id_empresa)
   VALUES (NOW(), ?, ?, ?, ?)");
