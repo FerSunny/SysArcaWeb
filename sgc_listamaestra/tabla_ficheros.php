@@ -79,8 +79,8 @@
             <th>Version</th>
             <th>Revision</th>
             <th>Estatus</th>
-            <th>Usuario que descargo</th>
-            <th>Fecha de descarga</th>
+            <th>Usuario estatus</th>
+            <th>Fecha estatus</th>
             <th>Descargar</th>
             <th>Actualizar version</th>
             <th>Eliminar</th>
