@@ -53,10 +53,19 @@
 
 					{
 						render:function(data,type,row){
-							return "<form-group style='text-align:center;'>"+
-											"<button type='button' class='editar btn btn-primary btn-md' data-toggle='modal' data-target='#modalEditar'><i class='fa fa-file-archive-o'></i></button>"
+							var estatus = row['estatus']
+
+							if(estatus == 'D'){
+								return "<form-group style='text-align:center;'>"+
+											"<button type='button' class='editar btn btn-success btn-md' role='button' data-toggle='modal' data-target='#modalEditar'><i class='fa fa-upload'></i></button>"
 											"</form-group>";
-									}
+							}else{
+								return "<form-group style='text-align:center;'>"+
+											"<button type='button' disabled class='editar btn btn-danger btn-md' data-toggle='modal' data-target='#modalEditar'><i class='fa fa-ban'></i></button>"
+											"</form-group>";
+							}
+							
+						}
 					},	
 
 					{
@@ -79,9 +88,9 @@
 			$(tbody).on("click", "button.editar", function(){
 				var data = table.row( $(this).parents("tr") ).data();
 				var codigo = $("#frmedit #codigo").val( data.id_imagen)
-						fk_id_doc = $("#frmedit #fk_id_doc").val( data.fk_id_doc)
+					id_imagen = $("#frmedit #id_imagen").val( data.id_imagen)
 					   	nombre = $("#frmedit #nombre").val( data.nombre)
-
+						version = $("#frmedit #version").val( data.ver)
 
 						console.log(data)
 

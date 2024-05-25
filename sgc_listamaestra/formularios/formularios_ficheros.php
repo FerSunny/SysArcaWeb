@@ -73,7 +73,7 @@
 
 
 <!--Editar imagenes-->
-<form id="frmedit" class="form-horizontal" action="controladores/actualizar.php" method="POST" enctype="multipart/form-data">
+<form id="frmedit" class="form-horizontal" action="controladores/actualiza_fichero.php" method="POST" enctype="multipart/form-data">
   <div class="row">
     <div id="cuadro1" class="col-sm-12 col-md-12 col-lg-12 ocultar">
       <div class="modal fade" id="modalEditar" tabindex="-1" role="dialog" aria-labelledby="modalEliminarLabel">
@@ -81,33 +81,39 @@
           <div class="modal-content">
             <div class="modal-header">
               <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-              <h4 class="modal-title" id="modalEliminarLabel">Ver Imagen</h4>
+              <h4 class="modal-title" id="modalEliminarLabel">Actualizacion de version</h4>
             </div>
             <div class="modal-body">
 
               <input type="hidden" id="idimagen" name="idimagen" value="0">
               <input type="hidden" id="opcion" name="opcion" value="modificar">
-<!-- Nota -->              
+<!-- Nombre -->              
               <div class="form-group">
-                <label for="descripcion" class="col-sm-2 control-label">Nota</label>
+                <label for="Documento" class="col-sm-2 control-label">Documento</label>
                 <div class="col-sm-8">
-                  <input id="edit1" name="edit1" maxkength="50" required type="text" class="form-control" readonly="readonly">
+                  <input id="nombre" name="nombre" maxkength="50" required type="text" class="form-control" readonly="readonly">
                  </div>
               </div>
 
-<!-- Esudio -->              
+<!-- Version -->              
               <div class="form-group">
-                <label for="descripcion" class="col-sm-2 control-label">Estudio</label>
+                <label for="descripcion" class="col-sm-4 control-label">Version Actual</label>
                 <div class="col-sm-8">
-                  <input id="fi_desc_estudio" name="fn_desc_estudio" maxkength="50" required type="text" class="form-control" readonly="readonly">
+                  <input id="version" name="version" maxkength="50" required type="text" class="form-control" readonly="readonly">
                  </div>
               </div>
-<!-- nomb imagen -->              
+<!-- Pregunta , nueva version -->              
               <div class="form-group">
-                <label for="nombre_img" class="col-sm-2 control-label">Imagen</label>
+                <label for="nombre_img" class="col-sm-6 control-label">Cambiara la version?</label>
                 <div class="col-sm-8">
-                  <input id="fi_nombre" name="fn_nombre" maxkength="50" required="no entry" required type="text" class="form-control" readonly="readonly">
-                 </div>
+                  <!--
+                    <input id="fi_nombre" name="fn_nombre" maxkength="50" required="no entry" required type="text" class="form-control" readonly="readonly">
+                  -->  
+                    <select name="nuevaversion" id="nuevaversion">
+                              <option value="S">Si</option>
+                              <option value="N">No</option>
+                    </select>              
+                </div>
               </div>
 <!-- Imagen -->  
               <div class="form-group">
@@ -115,15 +121,7 @@
                   <label for="descripcion" class="col-sm-2 control-label">Estudio</label>
                 -->
                 <div class="col-sm-8">
-
-    
-
-                  
-                  <img src="" id="fi_imagen" alt="" width="500" >
-
-                  <!--
-                  <input id="fi_desc_estudio" name="fn_desc_estudio" maxkength="50" required type="text" class="form-control" >
-                -->
+                  <input input type="file" class="form-control" id="fn_archivo"  name="fn_archivo[]" multiple />
                  </div>
               </div>
 
@@ -134,10 +132,11 @@
               </div>
 
               <div class="modal-footer">
-                <!--
+                
                   <button type="submit" class="btn btn-success" id="btniniciar"  >Ingresar</button>
-                -->
+                <!--
                 <button type="button" class="btn btn-default" data-dismiss="modal">Salir</button>
+                -->
               </div>
             </div>
           </div>
