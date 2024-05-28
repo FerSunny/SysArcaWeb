@@ -13,37 +13,45 @@
     $ver=$_GET['ver'];
 
     $fichero_download = $ruta.$nombre;
-
+    //die('fichero_download'.$fichero_download);
     if (file_exists($fichero_download)) {
-
+ //die('tipo:'.$tipo);   
         header('Content-Description: File Transfer');
         header('Content-Type: application/pdf');
-       
+     
         if ($tipo == 'pdf'){
+           // die('tipo'.$tipo);
             header('Content-Disposition: inline; filename="'.basename($fichero_download).'"'); 
         }else{
             header('Content-Disposition: attachment; filename="'.basename($fichero_download).'"');  
         }  
-   
+ 
         header('Content-Length:'.filesize($fichero_download));
-        
+        readfile($fichero_download);
+
+        if($tipo == 'pdf'){
+            $estatus = 'C';
+        }else{
+            $estatus = 'D';
+        }
+
         $stm_update1=
         "
         UPDATE sgc_lista_ficheros
         SET 
         fk_id_usuario_estatus = '$id_usuario',
         fecha_status = NOW(),
-        estatus = 'D'
+        estatus = '$estatus'
         WHERE fk_id_doc = '$fk_id_doc'
             AND ver = '$ver'
             AND id_imagen = '$id_imagen';
         ";
-        echo $stm_update1;
+        //echo $stm_update1;
         $res_update1 = mysqli_query($conexion, $stm_update1);  
         if ($res_update1) {
+            //die('location');
                 header("location: ../tabla_ficheros.php?id_doc=$fk_id_doc&num_version=$ver&desc_doc=$desc_doc");
-        }
-            else {
+        }else {
                 echo "error en la ejecucion de la consulta. <br />";
                     die('Error de Conexión: ' . $res_update1);
             }
@@ -55,7 +63,7 @@
                 die('Error de Conexión: ' . mysqli_connect_errno());
             }
 
-          readfile($fichero_download);  
+          //readfile($fichero_download);  
     }else{
         die('El fichero a descargar no existe, verificar su area de sistemas');
     }

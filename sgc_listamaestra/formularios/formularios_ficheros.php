@@ -73,7 +73,7 @@
 
 
 <!--Editar imagenes-->
-<form id="frmedit" class="form-horizontal" action="controladores/actualiza_fichero.php" method="POST" enctype="multipart/form-data">
+<form id="frmedit" class="form-horizontal" action="controladores/actualizar_ficheros.php" method="POST" enctype="multipart/form-data">
   <div class="row">
     <div id="cuadro1" class="col-sm-12 col-md-12 col-lg-12 ocultar">
       <div class="modal fade" id="modalEditar" tabindex="-1" role="dialog" aria-labelledby="modalEliminarLabel">
@@ -85,7 +85,7 @@
             </div>
             <div class="modal-body">
 
-              <input type="hidden" id="idimagen" name="idimagen" value="0">
+              <input type="hidden" id="id_imagen" name="id_imagen" value="0">
               <input type="hidden" id="opcion" name="opcion" value="modificar">
 <!-- Nombre -->              
               <div class="form-group">
@@ -115,6 +115,15 @@
                     </select>              
                 </div>
               </div>
+
+<!-- porcentaje de cambio -->              
+              <div class="form-group">
+                              <label for="Porcentaje" class="col-sm-8 control-label">Porcentaje de cambio</label>
+                              <div class="col-sm-3">
+                                <input id="porcentaje" name="porcentaje" maxkength="50" required type="number" class="form-control" min="1" max="100" value="1"  step="0.5" >
+                              </div>
+                            </div>
+
 <!-- Imagen -->  
               <div class="form-group">
                 <!--

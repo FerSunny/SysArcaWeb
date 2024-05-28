@@ -10,7 +10,10 @@ $num_version= $_SESSION['num_version'];
 $desc_doc = $_SESSION['desc_doc'];
 */
 $nuevaversion  = $_POST['nuevaversion'];
-$id_imagen  = $_POST['codigo'];
+$id_imagen  = $_POST['id_imagen'];
+$porcentaje  = $_POST['porcentaje'];
+
+//die('id_imagen'.$id_imagen);
 
 if($nuevaversion == 'N'){
 	// obtenemos el movimiento para copiarlo al histoico antes de sobre escvribirlo
@@ -19,16 +22,80 @@ if($nuevaversion == 'N'){
 	WHERE estado = 'A'
 	AND id_imagen = $id_imagen
 	";
+	//die('stm_select'.$stm_select);
 	if ($res_select = mysqli_query($conexion, $stm_select)) {
 		while($row = $res_select->fetch_assoc())
 		{
-			$fk_id_usuario_estatus=$row['fk_id_usuario_estatus'];
-			$fecha_estatus=$row['fecha_estatus'];
-			$estatus=$row['estatus'];
+
+			$fk_id_doc = $row['fk_id_doc'];
+			$fk_id_usuario = $row['fk_id_usuario'];
+			$fecha_publicacion = $row['fecha_publicacion'];
+			$ver = $row['ver'];
+			$revision = $row['revision'];
+			$nombre = $row['nombre'];
+			$tipo = $row['tipo'];
+			$ruta = $row['ruta'];
+
+			$stm_insert = "
+			INSERT INTO sgc_lista_ficheros
+            (fk_id_empresa,
+             id_imagen,
+             fk_id_doc,
+             fk_id_usuario,
+             fecha_publicacion,
+             ver,
+             revision,
+             nombre,
+             tipo,
+             ruta,
+             fecha_registro,
+             fk_id_usuario_estatus,
+             fecha_status,
+             estatus,
+             estado)
+			VALUES (1,
+					0,
+					$fk_id_doc,
+					$fk_id_usuario,
+					'$fecha_publicacion',
+					$fk_id_doc,
+					$revision,
+					'$nombre',
+					'$tipo',
+					'$ruta',
+					'$fecha_registro',
+					$id_usuario,
+					NOW(),
+					'A',
+					'A');
+			";
+			$res_insert = mysqli_query($conexion, $stm_insert);
+			if ($res_insert){
+				$stm_update=
+				"
+				update sgc_lista_ficheros
+				set estatus = 'E'
+				where id_imagen = $id_imagen
+				";
+				$res_update = mysqli_query($conexion, $stm_update);
+				if ($res_update){
+
+				}else{
+					die('res_update'.$res_update);
+				}
+			}else{
+				die('res_insert'.$res_insert);
+			}
 		}
+	}else{
+		die('error al recuperar el documento'.$stm_select);
+		//die('Error de Conexión: ' . $query);
+		
 	}
 
 }
+header("location: ../tabla_ficheros.php?id_doc=$fk_id_doc&num_version=$fk_id_doc&desc_doc=$nombre");
+/*
 $fecha_registro=date("y/m/d H:i:s");
 $alt=0;
 $anc=0;
@@ -63,29 +130,7 @@ for ($i=0; $i < $file_count; $i++)
 			$tipo=$files_post["type"][$i];
 
 			$extension = strtolower(pathinfo($files_post["name"][$i], PATHINFO_EXTENSION));
-			/*
-			if (str_contains($tipo, 'sheet')) {
-				$extension='Excel';
-			}elseif (str_contains($tipo, 'wordprocessingml')) {
-				$extension='word';
-			}elseif (str_contains($tipo, 'pdf')) {
-				$extension='pdf';
-			}elseif (str_contains($tipo, 'visio')) {
-				$extension='visio';
-			}elseif (str_contains($tipo, 'plain')) {
-				$extension='texto';
-			}elseif (str_contains($tipo, 'jpg')) {
-				$extension='imagen';
-			}elseif (str_contains($tipo, 'gif')) {
-				$extension='imagen';
-			}elseif (str_contains($tipo, 'png')) {
-				$extension='imagen';
-			}elseif (str_contains($tipo, 'bmp')) {
-				$extension='imagen';
-			}else{
-				$extension='Desconocido';
-			}
-			*/	
+
 			if(!file_exists($ruta)){
 				mkdir($ruta);
 			}
@@ -167,4 +212,5 @@ VALUES (1,
       die('Error de Conexión: ' . mysqli_connect_errno());
 
 		}
+*/
 ?>

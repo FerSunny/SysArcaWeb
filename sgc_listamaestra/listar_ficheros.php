@@ -12,6 +12,10 @@
   'Carga Inicial'
   WHEN lf.estatus = 'D' THEN
   'Descargado'
+  WHEN lf.estatus = 'A' THEN
+  'Actulizado , misma version'
+  WHEN lf.estatus = 'E' THEN
+  'Version Desactualizada'
   END estado,
   us.`iniciales`,
   u.iniciales AS ini_usu_est
