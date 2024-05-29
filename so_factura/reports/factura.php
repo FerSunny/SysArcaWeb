@@ -30,14 +30,17 @@ select  so_factura.id_factura,
               'Hombre'
         end as sexo,
         CONCAT(so_clientes.nombre,' ',so_clientes.a_paterno,' ',so_clientes.a_materno) as paciente ,
-        CONCAT(so_clientes.colonia,' ',so_clientes.calle,' #',so_clientes.numero_exterior) as direccion,
-         CONCAT(so_clientes.telefono_fijo,' - ',so_clientes.telefono_movil) AS telefono,
+        CONCAT(IF(so_clientes.colonia = '0','                                                                               ',so_clientes.colonia),' ',IF(so_clientes.calle = '0','',so_clientes.calle),' #',IF(so_clientes.numero_exterior = '0','',so_clientes.numero_exterior)) AS direccion,
+        -- CONCAT(so_clientes.colonia,' ',so_clientes.calle,' #',so_clientes.numero_exterior) as direccion,
+        -- CONCAT(so_clientes.telefono_fijo,' - ',so_clientes.telefono_movil) AS telefono,
+        CONCAT(if(so_clientes.telefono_fijo='','         ',so_clientes.telefono_fijo),' - ',if(so_clientes.telefono_movil='00','              ',so_clientes.telefono_movil)) AS telefono,
         CASE
         WHEN id_medico = 1607 AND LENGTH(vmedico) > 0 THEN
         vmedico
         ELSE
             CONCAT(so_medicos.nombre,' ',so_medicos.a_paterno,' ',so_medicos.a_materno) 
-    END AS nombre_medico,
+        END AS nombre_medico,
+	    if(so_clientes.fecha_nac = '0001-01-01','    Años',
         CASE
             WHEN so_clientes.`anios` > 0 THEN
                 CONCAT(so_clientes.`anios`,' Años')
@@ -45,7 +48,7 @@ select  so_factura.id_factura,
                 CONCAT(so_clientes.`meses`,' Meses')
             WHEN so_clientes.`dias` > 0 THEN
                 CONCAT(so_clientes.`dias`,' Dias')
-        END AS edad,
+        END) AS edad,
         so_clientes.rfc,
         so_factura.fecha_entrega,
         so_factura.fecha_factura,

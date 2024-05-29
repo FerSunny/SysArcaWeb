@@ -284,7 +284,7 @@ var listar = function() {
 							var perfil;
 							var perfil=row['perfil']
 
-							if(perfil==1 || perfil==33 || perfil==45 || perfil==46 || perfil==43)
+							if(perfil==1 || perfil==33 || perfil==45 || perfil==46 )
 							{
 								return "<button type='button' class='editar btn btn-warning btn-sm' data-toggle='modal' data-target='#modalEditar'><i class='fas fa-edit'></i></button>"
 							}
