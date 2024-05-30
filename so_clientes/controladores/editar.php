@@ -55,7 +55,7 @@ if ($res_select = mysqli_query($conexion, $stm_select)) {
 		$fk_id_ocupacion = $row_select['fk_id_ocupacion'];
 		$telefono_fijo = $row_select['telefono_fijo'];
 		$telefono_movil = $row_select['telefono_movil'];
-		$mail = $$row_select['mail'];
+		$mail = $row_select['mail'];
 		$fk_id_estado = $row_select['fk_id_estado'];
 		$fk_id_municipio = $row_select['fk_id_municipio'];
 		$fk_id_localidad = $row_select['fk_id_localidad'];
@@ -142,8 +142,8 @@ if ($res_select = mysqli_query($conexion, $stm_select)) {
 				'$fk_id_usuario_log',
 				NOW()
 			);
-		",
-		echo 'stm_insert-->'.$stm_insert
+		";
+		//echo 'stm_insert-->'.$stm_insert;
 		$res_insert = mysqli_query($conexion, $stm_insert);
 	}
 };
