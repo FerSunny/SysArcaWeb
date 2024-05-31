@@ -1,6 +1,7 @@
 <?php
 session_start();
 include("../../controladores/conex.php");
+//use PHPMailer\PHPMailer\PHPMailer;
 
 date_default_timezone_set('America/Mexico_City');
 $fk_id_sucursal_log=$_SESSION['fk_id_sucursal'];
@@ -31,6 +32,9 @@ $numero =$_POST["numero"];
 $fecha_nac =$_POST["fecha_nac"];
 $box_publicidad =$_POST["box_publicidad"];
 
+$despues=
+$nombre.' '.$a_paterno.' '.$a_materno.' '.$anios.' '.$meses.' '.$dias.' '.$sexo.' '.$estado_civil.' '.$ocupacion.' '.$t_fijo.' '.$movil.' '.
+$mail.' '.$edo.' '.$muni.' '.$loca.' '.$colonia.' '.$cp.' '.$calle.' '.$numero.' '.$fecha_nac.' '.$box_publicidad;
 /*  Rutina para obtener el movimiento antes
 	del cambio y guardar el log
 */
@@ -71,7 +75,12 @@ if ($res_select = mysqli_query($conexion, $stm_select)) {
 		$origen = $row_select['origen'];
 		$fecha_nac = $row_select['fecha_nac'];
 		$pass_word = $row_select['pass_word'];
-		
+
+		$antes=
+		$rfc.' '.$nombre.' '.$a_paterno.' '.$a_materno.' '.$anios.' '.$meses.' '.$dias.' '.$fk_id_sexo.' '.$fk_id_estado_civil.' '.$fk_id_ocupacion.' '.$telefono_fijo.' '.
+		$telefono_movil.' '.$mail.' '.$fk_id_estado.' '.$fk_id_municipio.' '.$fk_id_localidad.' '.$colonia.' '.$cp.' '.$calle.' '.$numero_exterior.' '.$fecha_registro.' '.
+		$fecha_actualizacion.' '.$activo.' '.$publicidad.' '.$fk_id_medico.' '.$origen.' '.$fecha_nac.' '.$pass_word;
+		/* guardamos en el log */
 		$stm_insert=
 		"
 		insert into so_clientes_log
@@ -143,8 +152,45 @@ if ($res_select = mysqli_query($conexion, $stm_select)) {
 				NOW()
 			);
 		";
-		//echo 'stm_insert-->'.$stm_insert;
 		$res_insert = mysqli_query($conexion, $stm_insert);
+		if($res_insert){
+			//use PHPMailer\PHPMailer\PHPMailer;
+			$tipo=1;
+			$email='eloisa.flores@laboratoriosarca.com.mx';
+			$asunto='Modificacion de pacientes';
+			$contenido='El usuario '.$fk_id_usuario_log.' modifico, al paciente'.$nombre.' '.$a_paterno.' '.$a_materno;
+	
+				require './PHPMailer/src/Exception.php';
+				require './PHPMailer/src/PHPMailer.php';
+				require './PHPMailer/src/SMTP.php';
+		
+				$mail = new PHPMailer;
+				$mail->isSMTP();
+				$mail->SMTPDebug = 0;
+				$mail->Host = 'smtp.ionos.mx';
+				$mail->Port = 587;
+				$mail->SMTPAuth = true;
+				$mail->Username = 'atencion.clientes@laboratoriosarca.mx';
+				$mail->Password = 'Arca_2023';
+				$mail->setFrom('atencion.clientes@laboratoriosarca.mx', 'Servicio al paciente');
+				$mail->addReplyTo('atencion.clientes@laboratoriosarca.mx', 'Servicio al paciente');
+				$mail->addCC('atencion.clientes@laboratoriosarca.mx','Modificacion de paciente'); // acuse a Envio de resultado
+				//$mail->addAttachment("../../pdf_resenv/".$atach);
+				$mail->addAddress($email, $email);
+				$mail->Subject = $asunto;
+				$mail->msgHTML(file_get_contents('message.html'), __DIR__);
+				$mail->Body = $contenido;
+				//$mail->addAttachment('attachment.txt');
+				if (!$mail->send()) {
+					//echo 'Mailer Error: ' . $mail->ErrorInfo;
+					$regreso = 0;
+				} else {
+					//echo 'The email message was sent.';
+					$regreso = 1;
+				}
+		}else{
+
+		}
 	}
 };
 

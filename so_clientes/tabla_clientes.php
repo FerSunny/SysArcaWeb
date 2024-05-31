@@ -79,6 +79,9 @@
 						<th>Edo. Civil</th>
 						<th>Telefono</th>
 						<th>Movil</th>
+						<th>Ultima OT</th>
+						<th>Fecha OT</th>
+						<th>Editable</th>
 						<th>Editar</th>
 						<th>Eliminar</th>
 				</tr>

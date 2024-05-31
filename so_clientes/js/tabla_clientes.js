@@ -279,14 +279,29 @@ var listar = function() {
 				{ "data": "desc_estado_civil" },
 				{ "data": "telefono_fijo"},
 				{ "data": "telefono_movil" },
+				{ "data": "id_factura" },
+				{ "data": "fecha_factura" },
+				{ "data": "editable" },
 				{
 						render:function(data,type,row){
 							var perfil;
-							var perfil=row['perfil']
+							var perfil=row['perfil'];
+							var editable=row['editable'];
 
-							if(perfil==1 || perfil==33 || perfil==45 || perfil==46 || perfil==43)
+							if(perfil==43)
 							{
-								return "<button type='button' class='editar btn btn-warning btn-sm' data-toggle='modal' data-target='#modalEditar'><i class='fas fa-edit'></i></button>"
+								if(editable == 'S' ){
+									return "<button type='button' class='editar btn btn-success btn-sm' data-toggle='modal' data-target='#modalEditar'><i class='fas fa-edit'></i></button>"
+								}else{
+									return "<button type='button' disabled class='editar btn btn-danger btn-sm' data-toggle='modal' data-target='#modalEditar'><i class='fas fa-stop'></i></button>";
+								}
+								
+							}else{
+								if(perfil==1 || perfil==33 || perfil==45 || perfil==46){
+									return "<button type='button' class='editar btn btn-success btn-sm' data-toggle='modal' data-target='#modalEditar'><i class='fas fa-edit'></i></button>"
+								}else{
+									return "<button type='button' disabled class='editar btn btn-danger btn-sm' data-toggle='modal' data-target='#modalEditar'><i class='fas fa-stop'></i></button>";
+								}
 							}
 
 					},
@@ -295,16 +310,32 @@ var listar = function() {
 				{
 						render:function(data,type,row){
 							var perfil;
-							var perfil=row['perfil']
+							var perfil=row['perfil'];
+							var editable=row['editable'];
 
-							if(perfil==1 || perfil==33 || perfil==45 || perfil==46 )
+							if(perfil==43 )
 							{
-								return "<button type='button' class='eliminar btn btn-danger btn-sm' data-toggle='modal' data-target='#modalEliminar' ><i class='fas fa-trash-alt'></i></button>"
+								if(editable == 'S'){
+									return "<button type='button' class='eliminar btn btn-success btn-sm' data-toggle='modal' data-target='#modalEliminar' ><i class='fas fa-trash-alt'></i></button>"
+								}else{
+									return "<button type='button' disabled class='eliminar btn btn-danger btn-sm' data-toggle='modal' data-target='#modalEliminar' ><i class='fas fa-stop'></i></button>"
+								}
+							}else{
+								if(perfil==1 || perfil==33 || perfil==45 || perfil==46 ){
+									return "<button type='button' class='eliminar btn btn-success btn-sm' data-toggle='modal' data-target='#modalEliminar' ><i class='fas fa-trash-alt'></i></button>"
+								}else{
+									return "<button type='button' disabled class='eliminar btn btn-danger btn-sm' data-toggle='modal' data-target='#modalEliminar' ><i class='fas fa-stop'></i></button>"
+								}
 							}
+							
+							
+							
+							
+							/*
 							else
 							{
 								return ""
-							}
+							}*/
 
 					},
 				},

@@ -81,14 +81,11 @@
 	NOW(),
 	DATE_SUB(NOW(), INTERVAL 24 HOUR),
 	CASE
-	WHEN f.fecha_factura BETWEEN NOW() AND DATE_SUB(NOW(), INTERVAL 24 HOUR) THEN
+	WHEN DATE(f.fecha_factura) = CURDATE() THEN -- BETWEEN NOW() AND DATE_SUB(NOW(), INTERVAL 24 HOUR) THEN
 	'S'
 	ELSE
 	'N'
-	END AS editable,
-	IF(f.fecha_factura >= NOW() AND f.fecha_factura <= (DATE_SUB(NOW(), INTERVAL 24 HOUR)),'S','N') AS edit1
-
-
+	END AS editable
 
 	FROM  so_clientes c
 	LEFT OUTER JOIN so_sexo s ON (s.id_sexo= c.fk_id_sexo)
