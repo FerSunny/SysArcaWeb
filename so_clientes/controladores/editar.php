@@ -7,7 +7,23 @@ date_default_timezone_set('America/Mexico_City');
 $fk_id_sucursal_log=$_SESSION['fk_id_sucursal'];
 $fk_id_usuario_log=$_SESSION['id_usuario'];
 
+// obtener datos de la sucursal  
+$sql_suc="select desc_sucursal from kg_sucursales s where s.id_sucursal = $fk_id_sucursal_log";
+if ($result_suc = mysqli_query($conexion, $sql_suc)) {
+	while($row_suc = $result_suc->fetch_assoc())
+	{
+		$desc_sucursal=$row_suc['desc_sucursal'];
+	}
+}
 
+// obtener datos del usuario
+$sql_usu="SELECT u.id_usr FROM se_usuarios u WHERE u.id_usuario = $fk_id_usuario_log";
+if ($result_usu = mysqli_query($conexion, $sql_usu)) {
+	while($row_usu = $result_usu->fetch_assoc())
+	{
+		$id_usr=$row_usu['id_usr'];
+	}
+}
 
 $idcliente =$_POST['idcliente'];
 $nombre =$_POST["nombre"];
@@ -156,11 +172,9 @@ if ($res_select = mysqli_query($conexion, $stm_select)) {
 		if($res_insert){
 			$atach="SgcDefinicion.pdf";
 			$asunto="Ha Recibido un email, hubo afectacion al catalogo de pacientes";
-			$contenido="Ha actualizado los datos del paciente (antes) ".$antes." por los datos ".$despues;
+			$contenido="Ha actualizado los datos del paciente (antes) ".$antes." por los datos ".$despues."  realizados por ".$id_usr." de la sucursal ".$desc_sucursal;
 			
-			$regreso = multiple2(2,$$fk_id_usuario_log=$_SESSION['id_usuario'];
-			,$atach,$asunto,$contenido);
-		}
+			$regreso = multiple2(2,19,$atach,$asunto,$contenido);
 		}else{
 
 		}

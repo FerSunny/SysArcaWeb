@@ -45,13 +45,28 @@
                                 IF (DAY( CURDATE( ) ) < DAY( c.fecha_nac ),1,0 ),0)) ),'a',( MONTH(CURDATE()) - MONTH( c.fecha_nac ) + 12 *
                                 IF( MONTH(CURDATE())<MONTH(c.fecha_nac), 1,IF(MONTH(CURDATE())=MONTH(c.fecha_nac),IF (DAY(CURDATE())<DAY(c.fecha_nac),1,0),0)
                                 ) - IF(MONTH(CURDATE())<>MONTH(c.fecha_nac),(DAY(CURDATE())<DAY(c.fecha_nac)), IF (DAY(CURDATE())<DAY(c.fecha_nac),1,0 ) ) ),'m',( (DAY( CURDATE() ) - DAY( c.fecha_nac ) +30 * ( DAY(CURDATE()) < DAY(c.fecha_nac) )) ),'d')
-                        end AS edad
+                        end AS edad,
+                        f.id_factura,
+                        f.fk_id_sucursal,
+                        f.fecha_factura,
+                        NOW(),
+                        DATE_SUB(NOW(), INTERVAL 24 HOUR),
+                        CASE
+                        WHEN DATE(f.fecha_factura) = CURDATE() THEN -- BETWEEN NOW() AND DATE_SUB(NOW(), INTERVAL 24 HOUR) THEN
+                        'S'
+                        ELSE
+                        'N'
+                        END AS editable
 
                         FROM so_clientes c
                         LEFT OUTER JOIN so_sexo s
                         ON (s.fk_id_empresa= 1 AND s.id_sexo = c.fk_id_sexo)
                         LEFT OUTER JOIN kg_estado_civil ec
                         ON (ec.fk_id_empresa=1 AND ec.id_estado_civil = c.fk_id_estado_civil)
+                        LEFT OUTER JOIN	(SELECT `fk_id_cliente`,MAX(`fecha_factura`) ultima_nota FROM so_factura  GROUP BY 1) u ON (c.id_cliente = u.fk_id_cliente)
+	                    LEFT OUTER JOIN so_factura f ON (f.fecha_factura = u.ultima_nota)
+
+
                         WHERE c.activo = 'A'
                         AND nombre like '%#nombreBusqueda#%'
                         AND a_paterno like '%#apellidoPaterno#%'
