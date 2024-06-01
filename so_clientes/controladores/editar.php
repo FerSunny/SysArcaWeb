@@ -1,7 +1,7 @@
 <?php
 session_start();
 include("../../controladores/conex.php");
-//use PHPMailer\PHPMailer\PHPMailer;
+include("../../emails/multiple2.php");
 
 date_default_timezone_set('America/Mexico_City');
 $fk_id_sucursal_log=$_SESSION['fk_id_sucursal'];
@@ -154,40 +154,13 @@ if ($res_select = mysqli_query($conexion, $stm_select)) {
 		";
 		$res_insert = mysqli_query($conexion, $stm_insert);
 		if($res_insert){
-			//use PHPMailer\PHPMailer\PHPMailer;
-			$tipo=1;
-			$email='eloisa.flores@laboratoriosarca.com.mx';
-			$asunto='Modificacion de pacientes';
-			$contenido='El usuario '.$fk_id_usuario_log.' modifico, al paciente'.$nombre.' '.$a_paterno.' '.$a_materno;
-	
-				require './PHPMailer/src/Exception.php';
-				require './PHPMailer/src/PHPMailer.php';
-				require './PHPMailer/src/SMTP.php';
-		
-				$mail = new PHPMailer;
-				$mail->isSMTP();
-				$mail->SMTPDebug = 0;
-				$mail->Host = 'smtp.ionos.mx';
-				$mail->Port = 587;
-				$mail->SMTPAuth = true;
-				$mail->Username = 'atencion.clientes@laboratoriosarca.mx';
-				$mail->Password = 'Arca_2023';
-				$mail->setFrom('atencion.clientes@laboratoriosarca.mx', 'Servicio al paciente');
-				$mail->addReplyTo('atencion.clientes@laboratoriosarca.mx', 'Servicio al paciente');
-				$mail->addCC('atencion.clientes@laboratoriosarca.mx','Modificacion de paciente'); // acuse a Envio de resultado
-				//$mail->addAttachment("../../pdf_resenv/".$atach);
-				$mail->addAddress($email, $email);
-				$mail->Subject = $asunto;
-				$mail->msgHTML(file_get_contents('message.html'), __DIR__);
-				$mail->Body = $contenido;
-				//$mail->addAttachment('attachment.txt');
-				if (!$mail->send()) {
-					//echo 'Mailer Error: ' . $mail->ErrorInfo;
-					$regreso = 0;
-				} else {
-					//echo 'The email message was sent.';
-					$regreso = 1;
-				}
+			$atach="SgcDefinicion.pdf";
+			$asunto="Ha Recibido un email, hubo afectacion al catalogo de pacientes";
+			$contenido="Ha actualizado los datos del paciente (antes) ".$antes." por los datos ".$despues;
+			
+			$regreso = multiple2(2,$$fk_id_usuario_log=$_SESSION['id_usuario'];
+			,$atach,$asunto,$contenido);
+		}
 		}else{
 
 		}
