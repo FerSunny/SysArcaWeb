@@ -61,41 +61,41 @@ select * from so_clientes where id_cliente = $idcliente
 if ($res_select = mysqli_query($conexion, $stm_select)) {
 	while($row_select = $res_select->fetch_assoc())
 	{
-		$fk_id_empresa = $row_select['fk_id_empresa'];
-		$id_cliente = $row_select['id_cliente'];
-		$rfc = $row_select['rfc'];
-		$nombre = $row_select['nombre'];
-		$a_paterno = $row_select['a_paterno'];
-		$a_materno = $row_select['a_materno'];
-		$anios = $row_select['anios'];
-		$meses = $row_select['meses'];
-		$dias = $row_select['dias'];
-		$fk_id_sexo = $row_select['fk_id_sexo'];
-		$fk_id_estado_civil = $row_select['fk_id_estado_civil'];
-		$fk_id_ocupacion = $row_select['fk_id_ocupacion'];
-		$telefono_fijo = $row_select['telefono_fijo'];
-		$telefono_movil = $row_select['telefono_movil'];
-		$mail = $row_select['mail'];
-		$fk_id_estado = $row_select['fk_id_estado'];
-		$fk_id_municipio = $row_select['fk_id_municipio'];
-		$fk_id_localidad = $row_select['fk_id_localidad'];
-		$colonia = $row_select['colonia'];
-		$cp = $row_select['cp'];
-		$calle = $row_select['calle'];
-		$numero_exterior = $row_select['numero_exterior'];
-		$fecha_registro = $row_select['fecha_registro'];
-		$fecha_actualizacion = $row_select['fecha_actualizacion'];
-		$activo = $row_select['activo'];
-		$publicidad = $row_select['publicidad'];
-		$fk_id_medico = $row_select['fk_id_medico'];
-		$origen = $row_select['origen'];
-		$fecha_nac = $row_select['fecha_nac'];
-		$pass_word = $row_select['pass_word'];
+		$lfk_id_empresa = $row_select['fk_id_empresa'];
+		$lid_cliente = $row_select['id_cliente'];
+		$lrfc = $row_select['rfc'];
+		$lnombre = $row_select['nombre'];
+		$la_paterno = $row_select['a_paterno'];
+		$la_materno = $row_select['a_materno'];
+		$lanios = $row_select['anios'];
+		$lmeses = $row_select['meses'];
+		$ldias = $row_select['dias'];
+		$lfk_id_sexo = $row_select['fk_id_sexo'];
+		$lfk_id_estado_civil = $row_select['fk_id_estado_civil'];
+		$lfk_id_ocupacion = $row_select['fk_id_ocupacion'];
+		$ltelefono_fijo = $row_select['telefono_fijo'];
+		$ltelefono_movil = $row_select['telefono_movil'];
+		$lmail = $row_select['mail'];
+		$lfk_id_estado = $row_select['fk_id_estado'];
+		$lfk_id_municipio = $row_select['fk_id_municipio'];
+		$lfk_id_localidad = $row_select['fk_id_localidad'];
+		$lcolonia = $row_select['colonia'];
+		$lcp = $row_select['cp'];
+		$lcalle = $row_select['calle'];
+		$lnumero_exterior = $row_select['numero_exterior'];
+		$lfecha_registro = $row_select['fecha_registro'];
+		$lfecha_actualizacion = $row_select['fecha_actualizacion'];
+		$lactivo = $row_select['activo'];
+		$lpublicidad = $row_select['publicidad'];
+		$lfk_id_medico = $row_select['fk_id_medico'];
+		$lorigen = $row_select['origen'];
+		$lfecha_nac = $row_select['fecha_nac'];
+		$lpass_word = $row_select['pass_word'];
 
 		$antes=
-		$rfc.' '.$nombre.' '.$a_paterno.' '.$a_materno.' '.$anios.' '.$meses.' '.$dias.' '.$fk_id_sexo.' '.$fk_id_estado_civil.' '.$fk_id_ocupacion.' '.$telefono_fijo.' '.
-		$telefono_movil.' '.$mail.' '.$fk_id_estado.' '.$fk_id_municipio.' '.$fk_id_localidad.' '.$colonia.' '.$cp.' '.$calle.' '.$numero_exterior.' '.$fecha_registro.' '.
-		$fecha_actualizacion.' '.$activo.' '.$publicidad.' '.$fk_id_medico.' '.$origen.' '.$fecha_nac.' '.$pass_word;
+		$lrfc.' '.$lnombre.' '.$la_paterno.' '.$la_materno.' '.$lanios.' '.$lmeses.' '.$ldias.' '.$lfk_id_sexo.' '.$lfk_id_estado_civil.' '.$lfk_id_ocupacion.' '.$ltelefono_fijo.' '.
+		$ltelefono_movil.' '.$lmail.' '.$lfk_id_estado.' '.$lfk_id_municipio.' '.$lfk_id_localidad.' '.$lcolonia.' '.$lcp.' '.$lcalle.' '.$lnumero_exterior.' '.$lfecha_registro.' '.
+		$lfecha_actualizacion.' '.$lactivo.' '.$lpublicidad.' '.$lfk_id_medico.' '.$lorigen.' '.$lfecha_nac.' '.$lpass_word;
 		/* guardamos en el log */
 		$stm_insert=
 		"
@@ -133,36 +133,36 @@ if ($res_select = mysqli_query($conexion, $stm_select)) {
              fk_id_sucursal_log,
              fk_id_usuario_log,
              fecha_log)
-		values ('$fk_id_empresa',
-				'$id_cliente',
-				'$rfc',
-				'$nombre',
-				'$a_paterno',
-				'$a_materno',
-				'$anios',
-				'$meses',
-				'$dias',
-				'$fk_id_sexo',
-				'$fk_id_estado_civil',
-				'$fk_id_ocupacion',
-				'$telefono_fijo',
-				'$telefono_movil',
-				'$mail',
-				'$fk_id_estado',
-				'$fk_id_municipio',
-				'$fk_id_localidad',
-				'$colonia',
-				'$cp',
-				'$calle',
-				'$numero_exterior',
-				'$fecha_registro',
-				'$fecha_actualizacion',
-				'$activo',
-				'$publicidad',
-				'$fk_id_medico',
-				'$origen',
-				'$fecha_nac',
-				'$pass_word',
+		values ('$lfk_id_empresa',
+				'$lid_cliente',
+				'$lrfc',
+				'$lnombre',
+				'$la_paterno',
+				'$la_materno',
+				'$lanios',
+				'$lmeses',
+				'$ldias',
+				'$lfk_id_sexo',
+				'$lfk_id_estado_civil',
+				'$lfk_id_ocupacion',
+				'$ltelefono_fijo',
+				'$ltelefono_movil',
+				'$lmail',
+				'$lfk_id_estado',
+				'$lfk_id_municipio',
+				'$lfk_id_localidad',
+				'$lcolonia',
+				'$lcp',
+				'$lcalle',
+				'$lnumero_exterior',
+				'$lfecha_registro',
+				'$lfecha_actualizacion',
+				'$lactivo',
+				'$lpublicidad',
+				'$lfk_id_medico',
+				'$lorigen',
+				'$lfecha_nac',
+				'$lpass_word',
 				'$fk_id_sucursal_log',
 				'$fk_id_usuario_log',
 				NOW()
@@ -178,47 +178,53 @@ if ($res_select = mysqli_query($conexion, $stm_select)) {
 		}else{
 
 		}
+		//mysqli_close($conexion);
 	}
 };
 
 
 $query = "";
 
-$stmt = $conexion->prepare("UPDATE so_clientes
+$stmt = "
+UPDATE so_clientes 
 SET
- nombre = ?,
- a_paterno = ?,
- a_materno = ?,
- anios = ?,
- meses = ?,
- dias = ?,
- fk_id_sexo = ?,
- fk_id_estado_civil = ?,
- fk_id_ocupacion = ?,
- telefono_fijo = ?,
- telefono_movil = ?,
- mail = ?,
- fk_id_estado = ?,
- fk_id_municipio = ?,
- fk_id_localidad = ?,
- colonia = ?,
- cp = ?,
- calle = ?,
- numero_exterior = ?,
- fecha_nac = ?,
- publicidad = ?
-WHERE id_cliente = ?");
+ nombre = '$nombre',
+ a_paterno = '$a_paterno',
+ a_materno = '$a_materno',
+ anios = '$anios',
+ meses = '$meses',
+ dias = '$dias',
+ fk_id_sexo = '$sexo',
+ fk_id_estado_civil = '$estado_civil',
+ fk_id_ocupacion = '$ocupacion',
+ telefono_fijo = '$t_fijo',
+ telefono_movil = '$movil',
+ mail = '$mail',
+ fk_id_estado = '$edo',
+ fk_id_municipio = '$muni',
+ fk_id_localidad = '$loca',
+ colonia = '$colonia',
+ cp = '$cp',
+ calle = '$calle',
+ numero_exterior = '$numero',
+ fecha_nac = '$fecha_nac',
+ publicidad = '$box_publicidad'
+WHERE id_cliente =  $idcliente";
+/*
 $stmt->bind_param("sssiiisiisssiiisisssii",	$nombre,$a_paterno,$a_materno, $anios, $meses,
 																					$dias, $sexo, $estado_civil, $ocupacion, $t_fijo,
 																					$movil, $mail,$edo, $muni, $loca, $colonia, $cp,
 																					$calle, $numero, $fecha_nac, $box_publicidad, $idcliente);
-if($stmt->execute()){
+																					*/
+//echo $stmt;
+$res_stmt = mysqli_query($conexion, $stmt);
+if($res_stmt){
 	echo "Datos Agregados Correctamente";
 }else{
 	$codigo = mysqli_errno($conexion);
   echo $codigo;
 }
 
-$stmt->close();
+mysqli_close($conexion);
 
 ?>
