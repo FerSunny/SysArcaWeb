@@ -46,29 +46,7 @@ for ($i=0; $i < $file_count; $i++)
 			$tipo=$files_post["type"][$i];
 
 			$extension = strtolower(pathinfo($files_post["name"][$i], PATHINFO_EXTENSION));
-			/*
-			if (str_contains($tipo, 'sheet')) {
-				$extension='Excel';
-			}elseif (str_contains($tipo, 'wordprocessingml')) {
-				$extension='word';
-			}elseif (str_contains($tipo, 'pdf')) {
-				$extension='pdf';
-			}elseif (str_contains($tipo, 'visio')) {
-				$extension='visio';
-			}elseif (str_contains($tipo, 'plain')) {
-				$extension='texto';
-			}elseif (str_contains($tipo, 'jpg')) {
-				$extension='imagen';
-			}elseif (str_contains($tipo, 'gif')) {
-				$extension='imagen';
-			}elseif (str_contains($tipo, 'png')) {
-				$extension='imagen';
-			}elseif (str_contains($tipo, 'bmp')) {
-				$extension='imagen';
-			}else{
-				$extension='Desconocido';
-			}
-			*/	
+	
 			if(!file_exists($ruta)){
 				mkdir($ruta);
 			}

@@ -12,8 +12,10 @@ $desc_doc = $_SESSION['desc_doc'];
 $nuevaversion  = $_POST['nuevaversion'];
 $id_imagen  = $_POST['id_imagen'];
 $porcentaje  = $_POST['porcentaje'];
+$version  = $_POST['version'];
+$id_doc  = $_POST['id_doc'];
 
-//die('id_imagen'.$id_imagen);
+//die('id_doc'.$id_doc);
 
 if($nuevaversion == 'N'){
 	// obtenemos el movimiento para copiarlo al histoico antes de sobre escvribirlo
@@ -93,15 +95,16 @@ if($nuevaversion == 'N'){
 		
 	}
 
-}
-header("location: ../tabla_ficheros.php?id_doc=$fk_id_doc&num_version=$fk_id_doc&desc_doc=$nombre");
-/*
-$fecha_registro=date("y/m/d H:i:s");
-$alt=0;
-$anc=0;
-$nombre='prueba';
-// rutina para subir el fichero a al servidor
+}else{
 
+if($porcentaje <25){
+	$nueva_version = $version + .1;
+}else{
+	$nueva_version = $version + 1;
+}
+//die ('Nueva Version: '.$nueva_version) ;
+// rutina para subir los ficheros //  
+$se_subio=0;
 $id_insert=$id_doc;
 $ruta = '../ficheros/'.$id_insert.'/';
 
@@ -115,52 +118,33 @@ $permitidos = array("image/gif","image/png","image/jpeg","image/jpg","text/x-com
 "application/vnd.ms-excel", "application/x-csv", "text/x-csv", "text/csv", "application/csv", "application/excel",
 "application/vnd.msexcel", "text/plain");
 $limite_kb = 4000;
-
 for ($i=0; $i < $file_count; $i++) 
 { 
-
-	//if(in_array($files_post["type"][$i], $permitidos))
-	//{
-		if($files_post["size"][$i] <= $limite_kb * 1024)
-		{
-			$archivo = $ruta.$files_post["name"][$i];
-
-			$nombre=$files_post["name"][$i];
-
-			$tipo=$files_post["type"][$i];
-
-			$extension = strtolower(pathinfo($files_post["name"][$i], PATHINFO_EXTENSION));
-
-			if(!file_exists($ruta)){
-				mkdir($ruta);
-			}
-
-			if(!file_exists($archivo)){
-				
-				$resultado = @move_uploaded_file($files_post["tmp_name"][$i], $archivo);
-				
-				if($resultado){
-					//echo "Archivo Guardado";
-					$atributos=getimagesize($archivo);
-					//$alt=$atributos[0];
-					//$anc=$atributos[1];
-				} else {
-						$nombre= "No pudo bajar el fichero";
-				}
-				
-			} else{
-				// rutina para subir los ficheros duplicados
-				$nombre= "Archivo ya existe";
-			}
+	if($files_post["size"][$i] <= $limite_kb * 1024)
+	{
+		$archivo = $ruta.$files_post["name"][$i];
+		$nombre=$files_post["name"][$i];
+		$tipo=$files_post["type"][$i];
+		$extension = strtolower(pathinfo($files_post["name"][$i], PATHINFO_EXTENSION));
+		if(!file_exists($ruta)){
+			mkdir($ruta);
 		}
-		else{
-			$nombre= "Tamaño excedente (max 819,200)";
+		if(!file_exists($archivo)){
+			$resultado = @move_uploaded_file($files_post["tmp_name"][$i], $archivo);
+			if($resultado){
+				$atributos=getimagesize($archivo);
+				rename ($ruta.$archivo $ruta);
+				$se_subio=1;
+			} else {
+					$nombre= "No pudo subir el fichero";
+			}
+		} else{
+			// rutina para subir los ficheros duplicados
+			$nombre= "Archivo ya existe";
 		}
-
-	//}
-	//else{
-	//	 $nombre= "Tipo de fichero invalido";
-	//}
+	}else{
+		$nombre= "Tamaño excedente (max 819,200)";
+	}
 	$query = "
 	INSERT INTO sgc_lista_ficheros
             (fk_id_empresa,
@@ -176,41 +160,48 @@ for ($i=0; $i < $file_count; $i++)
              fecha_registro,
              estatus,
              estado)
-VALUES (1,
-        0,
-        '$id_doc',
-        '$id_usuario',
-        NOW(),
-        0,
-        0,
-        '$nombre',
-        '$extension',
-        '$ruta',
-        NOW(),
-        'C',
-        'A');
-";
-
+	VALUES (1,
+			0,
+			'$id_doc',
+			'$id_usuario',
+			NOW(),
+			$nueva_version,
+			0,
+			'$nombre',
+			'$extension',
+			'$ruta',
+			NOW(),
+			'C',
+			'A');
+	";
+	//die('$query'.$query);
     $resultado = mysqli_query($conexion, $query);
+	if ($resultado) {
+		if($se_subio == 1){
+			$stm_update1=
+			"
+			update sgc_lista_ficheros
+			set estatus = 'E'
+			where id_imagen = $id_imagen
+			";
+			$res_update1 = mysqli_query($conexion, $stm_update1);
+			if ($res_update1){
+
+			}else{
+				die('res_update'.$res_update1);
+			}			
+		}
+
+		header("location: ../tabla_ficheros.php?id_doc=$id_doc&num_version=$num_version&desc_doc=$desc_doc");
+		//echo "<script>location.href='../tabla_usuarios.php'</script>";
+	}
+	else {
+		echo "error en la ejecucion de la consulta. <br />";
+		  die('Error de Conexión: ' . $query);
+	}
 }
 
-	if ($resultado) {
-			header("location: ../tabla_ficheros.php?id_doc=$id_doc&num_version=$num_version&desc_doc=$desc_doc");
-			//echo "<script>location.href='../tabla_usuarios.php'</script>";
-		}
-		else {
-			echo "error en la ejecucion de la consulta. <br />";
-      		die('Error de Conexión: ' . $query);
-		}
+}
+header("location: ../tabla_ficheros.php?id_doc=$fk_id_doc&num_version=$$ver&desc_doc=$nombre");
 
-		if (mysqli_close($conexion)){
-			echo "desconexion realizada. <br />";
-		}
-		else {
-			echo "error en la desconexión";
-
-      die('Error de Conexión: ' . mysqli_connect_errno());
-
-		}
-*/
 ?>

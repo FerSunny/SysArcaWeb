@@ -87,6 +87,7 @@
 
               <input type="hidden" id="id_imagen" name="id_imagen" value="0">
               <input type="hidden" id="opcion" name="opcion" value="modificar">
+              <input type="hidden" id="id_doc" name="id_doc" >
 <!-- Nombre -->              
               <div class="form-group">
                 <label for="Documento" class="col-sm-2 control-label">Documento</label>

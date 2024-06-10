@@ -93,6 +93,7 @@
 					id_imagen = $("#frmedit #id_imagen").val( data.id_imagen)
 					   	nombre = $("#frmedit #nombre").val( data.nombre)
 						version = $("#frmedit #version").val( data.ver)
+						id_doc = $("#frmedit #id_doc").val( data.fk_id_doc)
 
 						console.log(data)
 
