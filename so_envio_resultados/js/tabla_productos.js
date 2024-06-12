@@ -332,11 +332,12 @@ var whatsapp = function(tbody, table) {
           $.post("../reports/pdf_plantilla_1.php", {'factura' : factura, 'estudio' : estudio, 'tipo_salida' : tipo_salida} ,function(data, status){
             if(data == 1)
             {
-              //console.log('previo al envio')
+              console.log('previo al envio p1')
               $.post("./controladores/whatsapp.php", {'factura' : factura, 'estudio' : estudio, 'plantilla' : plantilla_id, 'id_cliente' : id_cliente} ,function(data, status){
                // console.log('envio el mail, estado: '+data)
                 switch (data) {
                   case "0":
+                   // console.log('data -->'+data)
                     Swal.fire({
                       position: 'top-end',
                       type: 'error',
@@ -361,6 +362,7 @@ var whatsapp = function(tbody, table) {
                     })
                     break;               
                   default:
+                    console.log('data default -->'+data)
                     Swal.fire({
                       position: 'top-end',
                       type: 'success',
@@ -399,7 +401,7 @@ var whatsapp = function(tbody, table) {
             $.post("../reports/pdf_plantilla_2.php", {'factura' : factura, 'estudio' : estudio, 'tipo_salida' : tipo_salida} ,function(data, status){
               if(data == 1)
               {
-                //console.log('previo al envio')
+                console.log('previo al envio p2')
                 $.post("./controladores/whatsapp.php", {'factura' : factura, 'estudio' : estudio, 'plantilla' : plantilla_id, 'id_cliente' : id_cliente} ,function(data, status){
                   //console.log('envio el mail, estado: '+data)
                   switch (data) {
@@ -470,7 +472,7 @@ var whatsapp = function(tbody, table) {
               console.log('data=>+data')
               if(data == 1)
               {
-                console.log('previo al envio')
+                console.log('previo al envio p3')
                 $.post("./controladores/whatsapp.php", {'factura' : factura, 'estudio' : estudio, 'plantilla' : plantilla_id, 'id_cliente' : id_cliente} ,function(data, status){
                   //console.log('envio el mail, estado: '+data)
                   switch (data) {

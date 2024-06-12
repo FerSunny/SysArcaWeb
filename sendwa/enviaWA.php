@@ -4,10 +4,14 @@ function enviaWA($id_factura, $ruta, $id_estudio, $usuario){
 
 //Datos de conexión a la base de datos
 $server = "localhost";
+// activar estas lineas par acceso al productivo
 $user = "labora41_root";
-//$user = "root";
 $password = "ArcaRoot_2017";
+
+// activar estas lineas cuando el accxeso se local
+//$user = "root";
 //$password = "";
+
 $database = "labora41_bd_arca";
 
 //Creamos la conexión
@@ -43,97 +47,156 @@ $stmt->fetch();
 $token = 'EAAOQZBzYCNvoBO8myZADRmly5X9KDyWCOgwmsmsMr9P2ssm43FpSGdsOs1ZAZAFLfGdFpbM9w73H6cXFQkuVYjy6ZCx5Nqsber8sjaZCw1qq8w96celmpZB2M1xm7OwlG67pxO0uHzkwXnsDoeAq8sWuUFUCJhZAQzRWwNhaptYCwFU5THZCSjqNUGmgZC0bzRZAMJU';
 
 //Teléfono del paciente
-$telefono = '52' . $celular;
+$length = strlen($celular);
+if($length <> 10){
+  $estatus = "Rechazado Length";
+  $fk_id_empresa = 1;
 
-//URL a donde se envía el mensaje
-$url = 'https://graph.facebook.com/v17.0/108646072324432/messages';
+  $stmt_insert =
+  "
+    INSERT INTO wa_registro
+                (id,
+                fecha_hora,
+                estatus,
+                telefono,
+                fk_id_usuario)
+    VALUES (0,
+            NOW(),
+            '$estatus',
+            '$celular',
+            '$usuario')
+  ";
+  $execute_stmt_insert = mysqli_query($mysqli,$stmt_insert); 
+  return 2;
+}else{
+    $telefono = '52' . $celular;
 
-$ruta = $ruta;
+    //URL a donde se envía el mensaje
+    $url = 'https://graph.facebook.com/v17.0/108646072324432/messages';
 
-//Configuración del mensaje
-$mensaje = ''
-.'{'
-  .'"messaging_product": "whatsapp",'
-  .'"recipient_type": "individual",'
-  .'"to": "'.$telefono.'",'
-  .'"type": "template",'
-  .'"template": {'
-    .'"name": "resultados",'
-    .'"language": { "code": "es" },'
-    .'"components":'
-     .'['
-      .'{'
-        .'"type": "header",'
-        .'"parameters":'
-         .'['
+    $ruta = $ruta;
+
+    //Configuración del mensaje
+    $mensaje = ''
+    .'{'
+      .'"messaging_product": "whatsapp",'
+      .'"recipient_type": "individual",'
+      .'"to": "'.$telefono.'",'
+      .'"type": "template",'
+      .'"template": {'
+        .'"name": "resultados",'
+        .'"language": { "code": "es" },'
+        .'"components":'
+        .'['
           .'{'
-            .'"type": "document",'
-            .'"document":'
-             .'{'
-              .'"link": "'.$ruta.'"'
-            .'}'
-          .'}'
-        .']'
-      .'},'
-      .'{'
-        .'"type": "body",'
-        .'"parameters":'
-         .'['
-          .'{'
-            .'"type": "text",'
-            .'"text": "'.$paciente.'"'
+            .'"type": "header",'
+            .'"parameters":'
+            .'['
+              .'{'
+                .'"type": "document",'
+                .'"document":'
+                .'{'
+                  .'"link": "'.$ruta.'"'
+                .'}'
+              .'}'
+            .']'
           .'},'
           .'{'
-            .'"type": "text",'
-            .'"text": "'.$estudio.'"'
+            .'"type": "body",'
+            .'"parameters":'
+            .'['
+              .'{'
+                .'"type": "text",'
+                .'"text": "'.$paciente.'"'
+              .'},'
+              .'{'
+                .'"type": "text",'
+                .'"text": "'.$estudio.'"'
+              .'}'
+            .']'
           .'}'
         .']'
       .'}'
-    .']'
-  .'}'
-.'}';
+    .'}';
 
-//Declaramos las cabeceras
-$header = array("Authorization: Bearer " . $token, "Content-Type: application/json",);
+    //Declaramos las cabeceras
+    $header = array("Authorization: Bearer " . $token, "Content-Type: application/json",);
 
-//Iniciamos el curl
-$curl = curl_init();
-curl_setopt($curl, CURLOPT_URL, $url);
-curl_setopt($curl, CURLOPT_POSTFIELDS, $mensaje);
-curl_setopt($curl, CURLOPT_HTTPHEADER, $header);
-curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+    //Iniciamos el curl
+    $curl = curl_init();
+    curl_setopt($curl, CURLOPT_URL, $url);
+    curl_setopt($curl, CURLOPT_POSTFIELDS, $mensaje);
+    curl_setopt($curl, CURLOPT_HTTPHEADER, $header);
+    curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 
-//Obtenemos la respuesta de envío de información
-$response = json_decode(curl_exec($curl), true);
+    //Obtenemos la respuesta de envío de información
+    $response = json_decode(curl_exec($curl), true);
 
-//Imprimimos la respuesta
-//print_r($response);
+    //Imprimimos la respuesta
+    //print_r($response);
 
-//Regresamos un valor dependiendo del estatus
-$status_code = curl_getinfo($curl, CURLINFO_HTTP_CODE);
-if($status_code == 200){
-  $estatus = "Aceptado";
-  $fk_id_empresa = 1;
-  $stmt = $mysqli->prepare("INSERT INTO `wa_registro`
-  (fecha_hora, estatus, usuario, telefono, fk_id_empresa)
-  VALUES (NOW(), ?, ?, ?, ?)");
-  $stmt->bind_param("siii", $estatus, $usuario, $celular, $fk_id_empresa);
-  $stmt->execute();
-  //Cerramos el curl
-  curl_close($curl); 
-  return 1;
-  
-} else {
-  $estatus = "Rechazado";
-  $fk_id_empresa = 1;
-  $stmt = $mysqli->prepare("INSERT INTO `wa_registro`
-  (fecha_hora, estatus, usuario, telefono, fk_id_empresa)
-  VALUES (NOW(), ?, ?, ?, ?)");
-  $stmt->bind_param("siii", $estatus, $usuario, $celular, $fk_id_empresa);
-  $stmt->execute();
-  //Cerramos el curl
-  curl_close($curl);
-  return 0;
+    //Regresamos un valor dependiendo del estatus
+    $status_code = curl_getinfo($curl, CURLINFO_HTTP_CODE);
+    //die('status_code-->'.$status_code);
+    if($status_code == 200){
+      $estatus = "Aceptado";
+      $fk_id_empresa = 1;
+      /*
+      $stmt = $mysqli->prepare("INSERT INTO `wa_registro`
+      (fecha_hora, estatus, usuario, telefono, fk_id_empresa)
+      VALUES (?, ?, ?, ?, ?)");
+      $stmt->bind_param("dsiii", NOW(), $estatus, $usuario, $celular, $fk_id_empresa);
+      $stmt->execute();
+      */
+      $stmt_insert =
+      "
+        INSERT INTO wa_registro
+                    (id,
+                    fecha_hora,
+                    estatus,
+                    telefono,
+                    fk_id_usuario)
+        VALUES (0,
+                NOW(),
+                '$estatus',
+                '$telefono',
+                '$usuario')
+      ";
+      $execute_stmt_insert = mysqli_query($mysqli,$stmt_insert); 
+      //Cerramos el curl
+      curl_close($curl); 
+      return 1;
+      
+    } else {
+      //die('rechazado');
+      $estatus = "Rechazado";
+      $fk_id_empresa = 1;
+      /*
+      $stmt = $mysqli->prepare("INSERT INTO `wa_registro`
+      (fecha_hora, estatus, usuario, telefono, fk_id_empresa)
+      VALUES (NOW(), ?, ?, ?, ?)");
+      $stmt->bind_param("siii", $estatus, $usuario, $celular, $fk_id_empresa);
+      $stmt->execute();
+      */
+      $stmt_insert =
+      "
+        INSERT INTO wa_registro
+                    (id,
+                    fecha_hora,
+                    estatus,
+                    telefono,
+                    fk_id_usuario)
+        VALUES (0,
+                NOW(),
+                '$estatus',
+                '$telefono',
+                '$usuario')
+      ";
+      $execute_stmt_insert = mysqli_query($mysqli,$stmt_insert); 
+      //Cerramos el curl
+      curl_close($curl);
+      return 0;
+  }
 }
 
 }

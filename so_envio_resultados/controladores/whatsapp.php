@@ -21,7 +21,7 @@ switch ($id_plantilla) {
         $contenido="Ha recibido sus resultados del estudio practicado";
         //echo $asunto;
         //echo $contenido;
-        $regreso=enviaWA($id_factura, $atach,$id_estudio);
+        $regreso=enviaWA($id_factura, $atach,$id_estudio,$id_usuario);
         if($regreso == 1){
             $sql_up=
             "
@@ -44,7 +44,7 @@ switch ($id_plantilla) {
         $contenido="Ha recibido sus resultados del estudio practicado";
         //echo $asunto;
         //echo $contenido;
-        $regreso=enviaWA($id_factura, $atach,$id_estudio);
+        $regreso=enviaWA($id_factura, $atach,$id_estudio,$id_usuario);
         if($regreso == 1){
             $sql_up=
             "
@@ -67,7 +67,7 @@ switch ($id_plantilla) {
         $contenido="Ha recibido sus resultados del estudio practicado";
         //echo $asunto;
         //echo $contenido;
-        $regreso=enviaWA($id_factura, $atach,$id_estudio);
+        $regreso=enviaWA($id_factura, $atach,$id_estudio,$id_usuario);
         if($regreso == 1){
             $sql_up=
             "
