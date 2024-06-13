@@ -9,7 +9,7 @@
 <html lang="en">
   <head>
   	<meta charset="utf-8">
-  	<title>Agenda del D&iacute;a RX</title>
+  	<title>Agenda de Tomografias</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <!-- DataTable 1.10.19 14/03/2019-->
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.18/datatables.min.css"/>

@@ -72,46 +72,6 @@
       $sucursal=' ak.fk_id_sucursal = '.$fk_id_sucursal;     
   }
 
-/*  
-  if ($fk_id_perfil==1) 
-    {
-        $agenda = ' ';
-
-        $factura =' ';
-        $id_usuario= ' ';
-
-        $recepcion='';
-        $sucursal=' fa.fk_id_sucursal > 0';
-    }
-    else
-    {
-
-      if($fk_id_perfil==11 or $fk_id_perfil==39 or $fk_id_perfil==9){
-        $agenda = ' ';
-
-        $factura =' ';
-        $id_usuario= ' ';
-
-        $recepcion='';
-
-        $sucursal=' fa.fk_id_sucursal in (7,6,4)';
-
-      }else{
-        $agenda = ',ag_rx ak';
-
-        //$fractura =' AND ak.fk_id_factura = fa.id_factura';
-        //$id_usuario= ' AND ak.fk_id_usuario = '.$_SESSION['id_usuario'];
-
-        $recepcion='  AND ak.fk_id_factura = fa.id_factura AND ak.fk_id_usuario = '.$_SESSION['id_usuario'];
-
-        $sucursal=' ak.fk_id_sucursal = '.$fk_id_sucursal;
-        
-      }
-
- 
-        //$condicion=' = '.$fk_id_sucursal; 
-    }
-    */
   $query="
   SELECT res.*,
         CASE
@@ -159,7 +119,7 @@ FROM km_paquetes pq,
      ".$agenda."
 WHERE pq.estado = 'A'
   AND DATE(fa.fecha_factura) BETWEEN DATE_SUB(CURDATE(), INTERVAL 95 DAY) AND DATE_ADD(CURDATE(), INTERVAL 90 DAY)
-  AND es.fk_id_plantilla = '6'
+  AND es.fk_id_plantilla = '8'
   AND pq.id_paquete = df.fk_id_estudio
   AND df.id_factura = fa.id_factura
   AND es.id_estudio = pq.fk_id_estudio
@@ -167,12 +127,12 @@ WHERE pq.estado = 'A'
   AND cl.id_cliente = fa.fk_id_cliente
   AND fa.estado_factura <> 5
   -- AND DATE(fa.fecha_factura) BETWEEN DATE_SUB(CURDATE(), INTERVAL 95 DAY) AND DATE_ADD(CURDATE(), INTERVAL 90 DAY)
-  AND df.fk_id_estudio IN (SELECT DISTINCT fk_id_estudio FROM cr_plantilla_rx WHERE estado = 'A')
+  AND df.fk_id_estudio IN (SELECT DISTINCT fk_id_estudio FROM cr_plantilla_tomo WHERE estado = 'A')
 
   ".$recepcion."
   AND ".$sucursal."
  ) res
-LEFT OUTER JOIN cr_plantilla_rx_re p2 ON (p2.fk_id_factura = res.id_factura AND p2.fk_id_estudio = res.fk_id_estudio)
+LEFT OUTER JOIN cr_plantilla_tomo_re p2 ON (p2.fk_id_factura = res.id_factura AND p2.fk_id_estudio = res.fk_id_estudio)
 
   UNION
 
@@ -220,14 +180,14 @@ FROM so_factura fa
 LEFT OUTER JOIN kg_sucursales su ON (su.id_sucursal = fa.fk_id_sucursal)
 LEFT OUTER JOIN so_clientes cl ON (cl.id_cliente = fa.fk_id_cliente)
 LEFT OUTER JOIN so_detalle_factura df ON (df.id_factura = fa.id_factura)
-LEFT OUTER JOIN cr_plantilla_rx_re p2 ON (p2.fk_id_factura = df.id_factura AND p2.fk_id_estudio = df.fk_id_estudio)
-LEFT OUTER JOIN cr_plantilla_rx_rad_re ra ON(df.id_factura = ra.fk_id_factura AND df.fk_id_estudio = ra.fk_id_estudio and ra.estado = 'A'),
+LEFT OUTER JOIN cr_plantilla_tomo_re p2 ON (p2.fk_id_factura = df.id_factura AND p2.fk_id_estudio = df.fk_id_estudio)
+LEFT OUTER JOIN cr_plantilla_tomo_rad_re ra ON(df.id_factura = ra.fk_id_factura AND df.fk_id_estudio = ra.fk_id_estudio and ra.estado = 'A'),
 
 km_estudios es
 ".$agenda."
 WHERE fa.estado_factura <> 5
 AND DATE(fa.fecha_factura) BETWEEN DATE_SUB(CURDATE(), INTERVAL 95 DAY) AND DATE_ADD(CURDATE(), INTERVAL 30 DAY)
-AND es.fk_id_plantilla = '6'
+AND es.fk_id_plantilla = '8'
 and es.id_estudio = df.fk_id_estudio
 AND df.fk_id_estudio IN (SELECT DISTINCT fk_id_estudio FROM cr_plantilla_rx WHERE estado = 'A')
 -- AND DATE(fa.fecha_factura) BETWEEN DATE_SUB(CURDATE(), INTERVAL 95 DAY) AND DATE_ADD(CURDATE(), INTERVAL 30 DAY)
