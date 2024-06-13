@@ -14,7 +14,7 @@
 
 
 
-  if( $perfil == 1 or $perfil == 11)
+  if( $perfil == 1 or $perfil == 11 or $perfil == 45  or $perfil == 43)
 
   {
 

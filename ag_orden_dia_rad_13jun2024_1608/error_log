@@ -1,0 +1,16 @@
+[15-Oct-2018 18:12:00 America/Mexico_City] PHP Warning:  include(../includes/barra_colpo.php): failed to open stream: No such file or directory in /home/labora41/public_html/sysarcaweb/ag_orden_dia_colpo_4/tabla_imagenes.php on line 32
+[15-Oct-2018 18:12:00 America/Mexico_City] PHP Warning:  include(../includes/barra_colpo.php): failed to open stream: No such file or directory in /home/labora41/public_html/sysarcaweb/ag_orden_dia_colpo_4/tabla_imagenes.php on line 32
+[15-Oct-2018 18:12:00 America/Mexico_City] PHP Warning:  include(): Failed opening '../includes/barra_colpo.php' for inclusion (include_path='.
+;
+; Windows: \path1') in /home/labora41/public_html/sysarcaweb/ag_orden_dia_colpo_4/tabla_imagenes.php on line 32
+[15-Oct-2018 18:14:31 America/Mexico_City] PHP Warning:  include(../includes/barra_colpo.php): failed to open stream: No such file or directory in /home/labora41/public_html/sysarcaweb/ag_orden_dia_colpo_4/tabla_imagenes.php on line 32
+[15-Oct-2018 18:14:31 America/Mexico_City] PHP Warning:  include(../includes/barra_colpo.php): failed to open stream: No such file or directory in /home/labora41/public_html/sysarcaweb/ag_orden_dia_colpo_4/tabla_imagenes.php on line 32
+[15-Oct-2018 18:14:31 America/Mexico_City] PHP Warning:  include(): Failed opening '../includes/barra_colpo.php' for inclusion (include_path='.
+;
+; Windows: \path1') in /home/labora41/public_html/sysarcaweb/ag_orden_dia_colpo_4/tabla_imagenes.php on line 32
+[15-Oct-2018 23:12:26 America/Mexico_City] PHP Warning:  include(../includes/barra_colpo.php): failed to open stream: No such file or directory in /home/labora41/public_html/sysarcaweb/ag_orden_dia_colpo_4/tabla_imagenes.php on line 32
+[15-Oct-2018 23:12:26 America/Mexico_City] PHP Warning:  include(../includes/barra_colpo.php): failed to open stream: No such file or directory in /home/labora41/public_html/sysarcaweb/ag_orden_dia_colpo_4/tabla_imagenes.php on line 32
+[15-Oct-2018 23:12:26 America/Mexico_City] PHP Warning:  include(): Failed opening '../includes/barra_colpo.php' for inclusion (include_path='.
+;
+; Windows: \path1') in /home/labora41/public_html/sysarcaweb/ag_orden_dia_colpo_4/tabla_imagenes.php on line 32
+[05-Dec-2019 18:58:06 UTC] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'ansp'@'localhost' (using password: YES) in /home/labora41/public_html/sysarcaweb_1.0/controladores/conex.php on line 29

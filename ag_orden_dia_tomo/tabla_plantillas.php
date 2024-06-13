@@ -122,7 +122,7 @@
 			<div class="panel-heading">	
 					<h4>Paciente:
 					<label for="" style="font-size: 24px; font-weight: 900"><?php echo $nombre; ?></label>
-					<input type="hidden" id="factura_get" name="factura_get" value="<?php echo $_GET['factura']?>" readonly>
+					<input type="hidden" id="factura_get" name="factura_get" value="<?php echo $_GET['numero_factura']?>" readonly>
 					</h4>		
 			</div>	
 		</div>	

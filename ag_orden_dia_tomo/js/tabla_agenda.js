@@ -105,7 +105,7 @@ $(document).ready(function(){
 												 {
 												 	case 'No':
 														return "<form-group style='text-align:center;'>"+
-														"<a id='printer'  href='../ag_orden_dia_rx/tabla_plantillas.php?numero_factura="+row['id_factura']+"&studio="+row['fk_id_estudio']+"' class='btn btn-success btn-md' role='button'><span class='fas fa-stethoscope' style='color: white;'></span></a>"+
+														"<a id='printer'  href='../ag_orden_dia_tomo/tabla_plantillas.php?numero_factura="+row['id_factura']+"&studio="+row['fk_id_estudio']+"' class='btn btn-success btn-md' role='button'><span class='fas fa-stethoscope' style='color: white;'></span></a>"+
 														"</form-group>";
 														break;
 													default:
@@ -190,7 +190,7 @@ $(document).ready(function(){
 										default:
 											
 											return "<form-group style='text-align:center;'>"+
-											"<a id='printer'  href='../ag_orden_dia_rx/tabla_imagenes.php?numero_factura="+row['id_factura']+"&studio="+row['fk_id_estudio']+"' class='btn btn-blue-grey btn-md' role='button'><span  class='fa fa-image' style='color: white;'></span></a>"+
+											"<a id='printer'  href='../ag_orden_dia_tomo/tabla_imagenes.php?numero_factura="+row['id_factura']+"&studio="+row['fk_id_estudio']+"' class='btn btn-blue-grey btn-md' role='button'><span  class='fa fa-image' style='color: white;'></span></a>"+
 											"</form-group>";											
 											
 									}

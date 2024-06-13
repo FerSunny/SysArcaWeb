@@ -17,10 +17,10 @@
       us.titulo_desc,
       SUBSTR(us.descripcion,1,40) desc_corta,
       us.descripcion
-    FROM cr_plantilla_rx us
+    FROM cr_plantilla_tomo us
     WHERE us.estado = 'A'
     AND us.fk_id_estudio = ".$studio." 
-    AND us.fk_id_medico = ".$id_usuario;
+    -- AND us.fk_id_medico = ".$id_usuario;
 
  //echo $query;
 
@@ -31,7 +31,7 @@
     if(!$resultado){
         die("Error");
         echo '<script> alert("No hay agenda para este dia")</script>';
-       echo "<script>location.href='../ag_orden_dia_rx/tabla_agenda.php'</script>";
+       echo "<script>location.href='../ag_orden_dia_tomo/tabla_agenda.php'</script>";
 
     }else{
         while($data=mysqli_fetch_assoc($resultado)){
