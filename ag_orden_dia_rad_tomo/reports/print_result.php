@@ -13,7 +13,7 @@ $numero_factura=$_GET['numero_factura'];
 $studio=$_GET['studio'];
 
 // actualiza las veces que se ha impreso el resultado
-$sql_max="select max(num_imp) as num_imp FROM cr_plantilla_rx_rad_re
+$sql_max="select max(num_imp) as num_imp FROM cr_plantilla_tomo_rad_re
 where fk_id_factura=".$numero_factura." and fk_id_estudio=".$studio;
 //echo $sql_max;
 $veces='0';
@@ -22,7 +22,7 @@ if ($result = mysqli_query($con, $sql_max)) {
   {
       $veces=$row['num_imp']+1;
       //echo $veces;
-      $sql_update="UPDATE cr_plantilla_rx_rad_re SET num_imp = '".$veces."'
+      $sql_update="UPDATE cr_plantilla_tomo_rad_re SET num_imp = '".$veces."'
       where fk_id_factura=".$numero_factura." and fk_id_estudio=".$studio;
       //echo $sql_update;
       $execute_query_update = mysqli_query($con,$sql_update);
@@ -44,7 +44,7 @@ $sql_usg="SELECT us.nombre_plantilla, us.titulo_desc, us.descripcion,
   us.ced_medico,
   us.firma_rl,
   us.ced_rl
-FROM cr_plantilla_rx_rad_re us 
+FROM cr_plantilla_tomo_rad_re us 
 WHERE us.estado = 'A'
 AND fk_id_factura=".$numero_factura." and fk_id_estudio=".$studio;
 
@@ -288,7 +288,7 @@ $sql_usg="SELECT us.nombre_plantilla, us.titulo_desc, us.descripcion,
   us.ced_medico,
   us.firma_rl,
   us.ced_rl
-FROM cr_plantilla_rx_rad_re us 
+FROM cr_plantilla_tomo_rad_re us 
 WHERE us.estado = 'A'
 AND fk_id_factura=".$numero_factura." and fk_id_estudio=".$studio;
 

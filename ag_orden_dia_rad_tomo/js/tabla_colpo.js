@@ -364,7 +364,7 @@
 														"</form-group>";
 												default:
 													return "<form-group style='text-align:center;'>"+
-													"<a id='printer'  href='../ag_orden_dia_rad/tabla_imagenes.php?numero_factura="+row['id_factura']+"&studio="+row['fk_id_estudio']+"' class='btn btn-success' role='button'><span  class='fa fa-image'></span></a>"+
+													"<a id='printer'  href='../ag_orden_dia_rad_tomo/tabla_imagenes.php?numero_factura="+row['id_factura']+"&studio="+row['fk_id_estudio']+"' class='btn btn-success' role='button'><span  class='fa fa-image'></span></a>"+
 													"</form-group>";
 													break;
 											}
@@ -387,7 +387,7 @@
 														"</form-group>";
 												default:
 													return "<form-group style='text-align:center;'>"+
-													"<a id='printer'  href='../ag_orden_dia_rad/tabla_imagenes.php?numero_factura="+row['id_factura']+"&studio="+row['fk_id_estudio']+"' class='btn btn-success' role='button'><span  class='fa fa-image'></span></a>"+
+													"<a id='printer'  href='../ag_orden_dia_rad_tomo/tabla_imagenes.php?numero_factura="+row['id_factura']+"&studio="+row['fk_id_estudio']+"' class='btn btn-success' role='button'><span  class='fa fa-image'></span></a>"+
 													"</form-group>";
 													break;
 											}

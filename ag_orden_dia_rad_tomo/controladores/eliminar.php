@@ -5,7 +5,7 @@ $fn_id_factura=$_POST["fn_id_factura"];
 $fn_fk_id_estudio=$_POST["fn_fk_id_estudio"];
 
 
-$query = " UPDATE  cr_plantilla_rx_rad_re SET estado='S' where fk_id_factura ='$fn_id_factura' and fk_id_estudio = '$fn_fk_id_estudio' ";
+$query = " UPDATE  cr_plantilla_tomo_rad_re SET estado='S' where fk_id_factura ='$fn_id_factura' and fk_id_estudio = '$fn_fk_id_estudio' ";
 
 $resultado = mysqli_query($conexion, $query);
 

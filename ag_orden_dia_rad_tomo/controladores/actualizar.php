@@ -19,7 +19,7 @@ $fn_d_comenta = $_POST['fn_d_comenta'];
 
 
 
-$query = " UPDATE  cr_plantilla_rx_rad_re SET titulo_desc='$fn_titulo_desc', descripcion='$fn_descripcion', t_otros_allazgos='$fn_t_allazgos', d_otros_allazgos = '$fn_d_allazgos', t_diagnostico='$fn_t_diagnostico',d_diagnostico='$fn_d_disgnostico',t_comentarios='$fn_t_comenta',d_comentarios='$fn_d_comenta'
+$query = " UPDATE  cr_plantilla_tomo_rad_re SET titulo_desc='$fn_titulo_desc', descripcion='$fn_descripcion', t_otros_allazgos='$fn_t_allazgos', d_otros_allazgos = '$fn_d_allazgos', t_diagnostico='$fn_t_diagnostico',d_diagnostico='$fn_d_disgnostico',t_comentarios='$fn_t_comenta',d_comentarios='$fn_d_comenta'
 where fk_id_factura ='$fn_id_factura' and fk_id_estudio = '$fn_fk_id_estudio' ";
 
 $resultado = mysqli_query($conexion, $query);

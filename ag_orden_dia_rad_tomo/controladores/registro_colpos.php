@@ -23,9 +23,9 @@ $fn_fk_id_estudio = $_POST['fn_fk_id_estudio'];
 
 // se obtiene la firma
 $sql_firma="
-SELECT * FROM cr_plantilla_4 p4
+SELECT * FROM cr_plantilla_tomo p4
 WHERE p4.`fk_id_estudio` = ".$fn_fk_id_estudio."
-AND p4.`tipo` = 'F'
+-- AND p4.`tipo` = 'F'
 AND p4.`estado` = 'A'";
 
  //echo $sql_firma;
@@ -52,7 +52,7 @@ if ($result = mysqli_query($conexion, $sql_firma)) {
 }
 
 
-$query = "INSERT INTO cr_plantilla_rx_rad_re
+$query = "INSERT INTO cr_plantilla_tomo_rad_re
             (fk_id_empresa,
              fk_id_medico,
              fk_id_plantilla,

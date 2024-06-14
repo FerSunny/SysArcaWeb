@@ -46,7 +46,7 @@
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h2 style="color:blue;text-align:center" class="modal-title">Nueva Imagen</h2>
+          <h2 style="color:blue;text-align:center" class="modal-title">Nueva Imagenn</h2>
     <!--      <h5 style="color:blue;text-align:center" class="modal-title">Datos Generales</h5> -->
         </div>
         <div style="color:#000000;background:#EFFBF5" class="modal-body">
@@ -79,19 +79,18 @@
 
 
             <tr>
-              <td>  <label for="" class="col-sm-2 control-label">Imagenes x hoja</label></td>
+              <td>  <label for="" class="col-sm-2 control-label">Carpeta</label></td>
               <td>  <div class="form-group">
 
-                  <select class="col-sm-5 selectpicker" name="fn_img_x_hoja" id="fi_img_x_hoja">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="4">4</option>
-                    <option value="6">6</option>
+                  <select class="col-sm-5 selectpicker" name="carpeta" id="carpeta">
+                    <option value="A">A</option>
+                    <option value="B">B</option>
+                    <option value="C">C</option>
                   </select>
                 </div></td>
             </tr>
 
-<!-- estado del registro --> 
+<!-- estado del registro 
 
             <tr>
               <td>  <label for="" class="col-sm-2 control-label">Estado</label></td>
@@ -103,6 +102,7 @@
                   </select>
                 </div></td>
             </tr>
+   -->          
            </table>
         </div>
         <div class="modal-footer">

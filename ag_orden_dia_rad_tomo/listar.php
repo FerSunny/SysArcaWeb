@@ -73,7 +73,7 @@ LEFT OUTER JOIN cr_plantilla_tomo_rad_re p2 ON (p2.fk_id_factura = fa.id_factura
 WHERE fa.fk_id_sucursal ".$condicion."
   AND fa.estado_factura <> 5
   AND DATE(fa.fecha_entrega) BETWEEN DATE_SUB(CURDATE(), INTERVAL 95 DAY) AND DATE_ADD(CURDATE(), INTERVAL 95 DAY)
-   AND es.fk_id_plantilla = '6'
+   AND es.fk_id_plantilla = '8'
    AND es.`per_paquete` = 'Si'
 
 union all
@@ -128,7 +128,7 @@ LEFT OUTER JOIN kg_sucursales su ON (fa.fk_id_sucursal  =  su.id_sucursal)
 LEFT OUTER JOIN cr_plantilla_tomo_rad_re p2 ON (p2.fk_id_factura = fa.id_factura AND p2.fk_id_estudio = df.fk_id_estudio and p2.estado = 'A')
   WHERE fa.estado_factura <> 5
   AND DATE(fa.fecha_entrega) BETWEEN DATE_SUB(CURDATE(), INTERVAL 95 DAY) AND DATE_ADD(CURDATE(), INTERVAL 95 DAY)
-AND es.fk_id_plantilla = '6'
+AND es.fk_id_plantilla = '8'
 AND es.`per_paquete` = 'No'
 and fa.fk_id_sucursal ".$condicion."
 
@@ -177,12 +177,13 @@ END AS Registrado,
   p2.t_comentarios,
   p2.d_comentarios
 FROM so_factura fa
-LEFT OUTER JOIN so_detalle_factura df ON ( df.`id_factura`  =  fa.`id_factura` ),
+LEFT OUTER JOIN so_detalle_factura df ON ( df.`id_factura`  =  fa.`id_factura` )
 -- LEFT OUTER JOIN km_estudios es ON (df.`fk_id_estudio` = es.`id_estudio`)
-km_estudios es 
+
 LEFT OUTER JOIN so_clientes cl ON (fa.fk_id_cliente  = cl.id_cliente)
 LEFT OUTER JOIN kg_sucursales su ON (fa.fk_id_sucursal  =  su.id_sucursal)
 LEFT OUTER JOIN cr_plantilla_tomo_rad_re p2 ON (p2.fk_id_factura = fa.id_factura AND p2.fk_id_estudio = df.fk_id_estudio AND p2.estado = 'A'),
+km_estudios es, 
 ag_tomo ag
 WHERE fa.id_factura = ag.fk_id_factura AND ag.fk_id_sucursal ".$condicion."
 AND fa.estado_factura <> 5

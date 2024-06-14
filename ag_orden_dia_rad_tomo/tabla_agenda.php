@@ -8,7 +8,7 @@ session_start();
 <html lang="es">
 
 <head>
-	<title>Agenda de Radiologia</title>
+	<title>Agenda de Tomografia</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
     <link rel="stylesheet" href="css/estilos.css">
