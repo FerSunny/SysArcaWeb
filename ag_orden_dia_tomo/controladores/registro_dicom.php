@@ -23,7 +23,7 @@ ftp_close($connId);
 $ftpHost = '74.208.88.97';
 $ftpUsername = 'pacs';
 $ftpPassword = 'pacs';
-$ftpport = '21';
+$ftpport = '22';
 // Abrir una conexión FTP
 $connId = ftp_connect($ftpHost,$ftpport) or die("No se pudo conectar a $ftpHost");
 
