@@ -8,7 +8,7 @@ session_start();
 
 include ("../../controladores/conex.php");
 
-
+$id_usuario= $_SESSION['id_usuario'];
 
 
 
@@ -63,7 +63,9 @@ SET
   fk_id_proveedor = $proveedor,
 
   usuario = '$usuario',
-  contra = '$pass'
+  contra = '$pass',
+  fecha_actualizacion = NOW(),
+  fk_id_usuario_act = $id_usuario
 WHERE id_equipo = $codigo
 ";
 //echo "qury update:".$query;

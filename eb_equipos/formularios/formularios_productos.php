@@ -6,6 +6,16 @@
 
 	$FechaHoy=date("d/m/Y : H : i : s");
 
+	//session_start();
+
+	$sucursal = $_SESSION['fk_id_sucursal'];
+	$fk_id_perfil=$_SESSION['fk_id_perfil'];
+	if($fk_id_perfil == 1){
+		$condicion_sucursal = "> 0";
+	}else{
+		$condicion_sucursal = " = ".$sucursal;
+	}
+
 ?>
 
 
@@ -195,7 +205,7 @@
 
 										<?php 
 
-												$query = $conexion -> query("SELECT id_sucursal,desc_sucursal FROM kg_sucursales WHERE estado = 'A'");
+												$query = $conexion -> query("SELECT id_sucursal,desc_sucursal FROM kg_sucursales WHERE estado = 'A' AND id_sucursal $condicion_sucursal");
 
 												while($res = mysqli_fetch_array($query))
 
@@ -606,7 +616,7 @@
 
 										<input type="date" name="fecha_alta" id="fecha_alta" class="form-control"  required>
 
-										<label for="fecha_alta"> Fecha Recepcion	 </label>
+										<label for="fecha_alta"> Fecha Alta </label>
 
 									</div>
 
@@ -681,7 +691,7 @@
 
 										<?php 
 
-												$query = $conexion -> query("SELECT id_sucursal,desc_sucursal FROM kg_sucursales WHERE estado = 'A'");
+												$query = $conexion -> query("SELECT id_sucursal,desc_sucursal FROM kg_sucursales WHERE estado = 'A' AND id_sucursal $condicion_sucursal");
 
 												while($res = mysqli_fetch_array($query))
 
