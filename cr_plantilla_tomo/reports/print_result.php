@@ -278,7 +278,7 @@ function Header()
 
 
 
-    $this->Image('../../imagenes/logo_arca.png',15,5,140,0);
+    $this->Image('../../imagenes/logo_arca.png',10,5,50,0);
 
     $this->Image('../../imagenes/pacal.jpg',160,5,40,0);
 
@@ -374,7 +374,7 @@ function Header()
 
     $this->SetFont('Arial','',11);
 
-    $this->MultiCell(81,5,$estudio2,0,'L');
+    $this->MultiCell(81,5,utf8_decode($estudio2),0,'L');
 
  
 
@@ -426,7 +426,7 @@ function Header()
 
 
 
-    global $id_plantilla,$studio,$con,$verificado,$tamfuev,$tipfuev,$posiniv;
+    global $id_plantilla,$studio,$con,$verificado,$tamfuev,$tipfuev,$posiniv,$id_usuario;
 
 
 
@@ -471,6 +471,15 @@ function Header()
         }
 
 */
+    switch ($$id_usuario) {
+      case 'value':
+        # code...
+        break;
+      
+      default:
+        # code...
+        break;
+    }
 
     $this->ln(-2);
 
@@ -598,7 +607,7 @@ $sql="select nombre_plantilla,titulo_desc,descripcion,firma FROM cr_plantilla_to
 
         $pdf->SetFont('Arial','B',14);
 
-        $pdf->Cell(160,5,($row['titulo_desc']),0,0,'C');
+        $pdf->Cell(160,5,utf8_decode($row['titulo_desc']),0,0,'C');
 
         $pdf->ln(10);
 
@@ -616,7 +625,7 @@ $sql="select nombre_plantilla,titulo_desc,descripcion,firma FROM cr_plantilla_to
 
         $pdf->SetFont('Arial','',10);
 
-        $pdf->MultiCell(185,5,$row['descripcion'],0,'L');
+        $pdf->MultiCell(185,5,utf8_decode($row['descripcion']),0,'L');
 
         $pdf->ln(5);
 
@@ -624,7 +633,7 @@ $sql="select nombre_plantilla,titulo_desc,descripcion,firma FROM cr_plantilla_to
 
         $pdf->SetFont('Arial','B',10);
 
-        $pdf->MultiCell(170,5,($row['firma']),0,'L');
+        // $pdf->MultiCell(170,5,utf8_decode($row['firma']),0,'L');
 
 
 
