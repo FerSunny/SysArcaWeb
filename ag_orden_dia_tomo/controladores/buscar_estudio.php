@@ -5,7 +5,7 @@ include "../../controladores/conex.php";
 	$est = $_POST["val2"];
 
 	$query = "SELECT rusg.fk_id_factura, rusg.fk_id_estudio, e.desc_estudio, rusg.fk_id_plantilla, pusg.nombre_plantilla, rusg.titulo_desc, rusg.descripcion, rusg.firma
-		FROM cr_plantilla_rx_re rusg
+		FROM cr_plantilla_tomo_re rusg
 		INNER JOIN km_estudios e
 		ON e.id_estudio=rusg.fk_id_estudio
 		INNER JOIN cr_plantilla_rx pusg

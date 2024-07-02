@@ -6,7 +6,7 @@ $id_factura= $_POST['id_factura'];
 
 
 
-$query ="UPDATE cr_plantilla_rx_re 
+$query ="UPDATE cr_plantilla_tomo_re 
 SET validado = 1,
 fk_id_usuario_val = $id_usuario
 WHERE fk_id_factura = $id_factura ";

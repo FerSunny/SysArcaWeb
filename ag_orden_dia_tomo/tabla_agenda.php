@@ -91,9 +91,13 @@
 					<th>Nota RD</th>
 					<th>Registrar</th>
 					<th>Modificar</th>
+					<!--
 					<th>Imagenes</th>
+	-->
 					<th>Impr R</th>
+					<!--
 					<th>Impr I</th>
+					-->
 				</tr>
 			</thead>
 		</table>

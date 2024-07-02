@@ -16,6 +16,7 @@ $fecha_registro=date("y/m/d :H:i:s");
 $alt=0;
 $anc=0;
 $nombre='prueba';
+$estatus = 0;
 // rutina para subir el fichero a al servidor
 
 $id_insert=$numero_factura;
@@ -57,15 +58,19 @@ for ($i=0; $i < $file_count; $i++)
 					$atributos=getimagesize($archivo);
 					$alt=$atributos[0];
 					$anc=$atributos[1];
+					$estatus = 1;
 				} else {
+					$estatus = 0;
 					$nombre= "No pudo bajar el fichero";
 				}
 				
 			} else{
+				$estatus = 0;
 				$nombre= "Archivo ya existe";
 			}
 		}
 		else{
+			$estatus = 0;
 			$nombre= "Tamaño excedente (max 819,200)";
 		}
 	/*
@@ -74,8 +79,8 @@ for ($i=0; $i < $file_count; $i++)
 		 $nombre= "Tipo de fichero invalido";
 	}
 	*/
-	$query = "INSERT INTO cr_plantilla_tomo_img(fk_id_empresa,fk_id_factura,fk_id_estudio,id_imagen,nombre,ruta,fecha_registro,estado,alto,ancho,img_x_hoja)
-	VALUES ('$empresa','$numero_factura','$studio',0,'$nombre','$ruta',NOW() ,'$estado','$alt','$anc','1')";
+	$query = "INSERT INTO cr_plantilla_tomo_img(fk_id_empresa,fk_id_factura,fk_id_estudio,id_imagen,nombre,ruta,fecha_registro,estado,alto,ancho,img_x_hoja,estatus)
+	VALUES ('$empresa','$numero_factura','$studio',0,'$nombre','$ruta',NOW() ,'$estado','$alt','$anc','1',$estatus)";
 
     $resultado = mysqli_query($conexion, $query);
 }

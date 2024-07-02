@@ -33,26 +33,31 @@ $(document).ready(function(){
 							validado=row['validado'];
 							id_usuario=row['id_usuario'];
 							fk_id_medico=row['fk_id_medico'];
+							estatus=row['estatus'];
 	
-							switch (validado) {
-								case '0':
-									if( id_usuario == fk_id_medico){
+							if(estatus == 1){
+								switch (validado) {
+									case '0':
+										if( id_usuario == fk_id_medico){
+											return "<form-group style='text-align:center;'>"+
+											"<button type='button' class='eliminar btn btn-danger btn-md' style='margin: 0 auto;'><i class='fa fa-check'></i></button>"		
+											"</form-group>"						
+											break;
+										}else{
+											return "<form-group style='text-align:center;'>"+
+											"<button type='button' class='eliminar btn btn-danger btn-md' style='margin: 0 auto;' disabled ><i class='fa fa-check'></i></button>"		
+											"</form-group>"						
+											break;										
+										}
+								
+									default:
 										return "<form-group style='text-align:center;'>"+
-										"<button type='button' class='eliminar btn btn-danger btn-md' style='margin: 0 auto;'><i class='fa fa-check'></i></button>"		
+										"<button type='button' class='eliminar btn btn-success btn-md' style='margin: 0 auto;' disabled ><i class='fa fa-check'></i></button>"		
 										"</form-group>"						
 										break;
-									}else{
-										return "<form-group style='text-align:center;'>"+
-										"<button type='button' class='eliminar btn btn-danger btn-md' style='margin: 0 auto;' disabled ><i class='fa fa-check'></i></button>"		
-										"</form-group>"						
-										break;										
-									}
-							
-								default:
-									return "<form-group style='text-align:center;'>"+
-									"<button type='button' class='eliminar btn btn-success btn-md' style='margin: 0 auto;' disabled ><i class='fa fa-check'></i></button>"		
-									"</form-group>"						
-									break;
+								}
+							}else{
+								return "<button disabled type='button' class='eliminar btn btn-danger btn-md'><i class='fas fa-traffic-light'></i></button>"
 							}
 	
 	
@@ -66,18 +71,25 @@ $(document).ready(function(){
 						render:function(data,type,row){
 							var registrado;
 							nota_rad=row['nota_rad'];
-							switch(nota_rad)
-							{
-								case 'Si':
-									return "<form-group style='text-align:center;'>"+
-									"<a id='printer' target='_blank' href='../ag_orden_dia_rad/reports/print_result.php?numero_factura="+row['id_factura']+"&studio="+row['fk_id_estudio']+"' class='btn btn-dark btn-md' role='button'><i class='fas fa-file-pdf' style='color: white;'></i></a>"+
-									"</form-group>";
-									break;
-								default:
-									return "<form-group style='text-align:center;'>"+
-											"<a id='printer' target='_blank'  class='btn btn-warning btn-md' role='button'><span  class='fa fa-exclamation-triangle'></span></a>"+
-											"</form-group>";
+							estatus=row['estatus'];
+
+							if(estatus == 1){
+								switch(nota_rad)
+								{
+									case 'Si':
+										return "<form-group style='text-align:center;'>"+
+										"<a id='printer' target='_blank' href='../ag_orden_dia_rad_tomo/reports/print_result.php?numero_factura="+row['id_factura']+"&studio="+row['fk_id_estudio']+"' class='btn btn-dark btn-md' role='button'><i class='fas fa-file-pdf' style='color: white;'></i></a>"+
+										"</form-group>";
+										break;
+									default:
+										return "<form-group style='text-align:center;'>"+
+												"<a id='printer' target='_blank'  class='btn btn-warning btn-md' role='button'><span  class='fa fa-exclamation-triangle'></span></a>"+
+												"</form-group>";
+								}
+							}else{
+								return "<button disabled type='button' class='eliminar btn btn-danger btn-md'><i class='fas fa-traffic-light'></i></button>"
 							}
+							
 						},
 					},
 
@@ -89,40 +101,45 @@ $(document).ready(function(){
 							saldo=row['resta'];
 							saldo = '0.00'; // solo para que se puedan registrar sin pago.
 							registrado=row['Registrado'];
-							perfil = row['perfil'];		
-							switch(perfil)
-							{ 
-								case '11': // recepcionista no tiene acceso a registrar
-									return "<form-group style='text-align:center;'>"+
-									"<a id='printer' target='_blank'  class='btn btn-success btn-md' role='button'><i class='fas fa-minus-circle'></i></a>"+
-									"</form-group>";
-									break;									
-								default:
-									switch(saldo)
-										{
-										 	case '0.00':
-										 		switch(registrado)
-												 {
-												 	case 'No':
-														return "<form-group style='text-align:center;'>"+
-														"<a id='printer'  href='../ag_orden_dia_tomo/tabla_plantillas.php?numero_factura="+row['id_factura']+"&studio="+row['fk_id_estudio']+"' class='btn btn-success btn-md' role='button'><span class='fas fa-stethoscope' style='color: white;'></span></a>"+
-														"</form-group>";
-														break;
-													default:
-														return "<form-group style='text-align:center;'>"+
-														"<a id='printer' target='_blank'  class='btn btn-success btn-md' role='button'><i class='fas fa-thumbs-up'></i></a>"+
-														"</form-group>";
-												}
+							perfil = row['perfil'];	
+							estatus=row['estatus'];
+							
+							if(estatus == 1){
+								switch(perfil)
+								{ 
+									case '11': // recepcionista no tiene acceso a registrar
+										return "<form-group style='text-align:center;'>"+
+										"<a id='printer' target='_blank'  class='btn btn-success btn-md' role='button'><i class='fas fa-minus-circle'></i></a>"+
+										"</form-group>";
+										break;									
+									default:
+										switch(saldo)
+											{
+												case '0.00':
+													switch(registrado)
+													{
+														case 'No':
+															return "<form-group style='text-align:center;'>"+
+															"<a id='printer'  href='../ag_orden_dia_tomo/tabla_plantillas.php?numero_factura="+row['id_factura']+"&studio="+row['fk_id_estudio']+"' class='btn btn-success btn-md' role='button'><span class='fas fa-stethoscope' style='color: white;'></span></a>"+
+															"</form-group>";
+															break;
+														default:
+															return "<form-group style='text-align:center;'>"+
+															"<a id='printer' target='_blank'  class='btn btn-success btn-md' role='button'><i class='fas fa-thumbs-up'></i></a>"+
+															"</form-group>";
+													}
 
-											default:
-												return "<form-group style='text-align:center;'>"+
-												"<a id='printer' target='_blank'  class='btn btn-info btn-md' role='button'><i class='fas fa-hand-holding-usd'></i></a>"+
-												"</form-group>";
+												default:
+													return "<form-group style='text-align:center;'>"+
+													"<a id='printer' target='_blank'  class='btn btn-info btn-md' role='button'><i class='fas fa-hand-holding-usd'></i></a>"+
+													"</form-group>";
 
-											
-										}							
-							}	
-
+												
+											}							
+								}	
+							}else{
+								return "<button disabled type='button' class='eliminar btn btn-danger btn-md'><i class='fas fa-traffic-light'></i></button>"
+							}
 
 
 							},
@@ -134,29 +151,35 @@ $(document).ready(function(){
 							var registrado;
 							registrado=row['Registrado'];
 							perfil = row['perfil'];
-							switch(perfil)
-							{ 
-								case '11': // recepcionista no tiene acceso a registrar
-									return "<form-group style='text-align:center;'>"+
-									"<a id='printer' target='_blank'  class='btn btn-success btn-md' role='button'><i class='fas fa-minus-circle'></i></a>"+
-									"</form-group>";
-									break;									
-								default:
-									switch(registrado)
-									{
-										case 'Si':
-											return "<form-group style='text-align:center;'>"+
-											"<button type='button' class='editar btn btn-warning btn-md' style='margin: 0 auto;'><i class='fas fa-pen'></i></button>"
-											"</form-group>";
-											break;
-										default:
-											return  "<form-group style='text-align:center;'>"+
-													"<a id='printer' target='_blank'  class='btn btn-warning btn-md' role='button'><span  class='fa fa-exclamation-triangle'></span></a>"+
-													"</form-group>";
+							estatus=row['estatus'];
 
-										
-									}
+							if(estatus == 1){
+								switch(perfil)
+								{ 
+									case '11': // recepcionista no tiene acceso a registrar
+										return "<form-group style='text-align:center;'>"+
+										"<a id='printer' target='_blank'  class='btn btn-success btn-md' role='button'><i class='fas fa-minus-circle'></i></a>"+
+										"</form-group>";
+										break;									
+									default:
+										switch(registrado)
+										{
+											case 'Si':
+												return "<form-group style='text-align:center;'>"+
+												"<button type='button' class='editar btn btn-warning btn-md' style='margin: 0 auto;'><i class='fas fa-pen'></i></button>"
+												"</form-group>";
+												break;
+											default:
+												return  "<form-group style='text-align:center;'>"+
+														"<a id='printer' target='_blank'  class='btn btn-warning btn-md' role='button'><span  class='fa fa-exclamation-triangle'></span></a>"+
+														"</form-group>";
 
+											
+										}
+
+								}
+							}else{
+								return "<button disabled type='button' class='eliminar btn btn-danger btn-md'><i class='fas fa-traffic-light'></i></button>"
 							}
 
 						},
@@ -164,40 +187,47 @@ $(document).ready(function(){
 
 
 
-// boton de imagenes					
+// boton de imagenes
+/*					
 					{
 						render:function(data,type,row){
 							var registrado;
 							registrado=row['Registrado'];
 							imagen=row['imagen'];
 							perfil = row['perfil'];
-							switch(perfil)
-							{ 
-								case '11': // recepcionista no tiene acceso a registrar
-									return "<form-group style='text-align:center;'>"+
-									"<a id='printer' target='_blank'  class='btn btn-success btn-md' role='button'><i class='fas fa-minus-circle'></i></a>"+
-									"</form-group>";
-									break;									
-								default:
-									switch(imagen)
-									{
-										case '0':
-											return "<form-group style='text-align:center;'>"+
-													"<a id='printer' target='_blank'  class='btn btn-warning btn-md' role='button'><span  class='fa fa-exclamation-triangle'></span></a>"+
-													"</form-group>";											
-											
-											break;
-										default:
-											
-											return "<form-group style='text-align:center;'>"+
-											"<a id='printer'  href='../ag_orden_dia_tomo/tabla_imagenes.php?numero_factura="+row['id_factura']+"&studio="+row['fk_id_estudio']+"' class='btn btn-blue-grey btn-md' role='button'><span  class='fa fa-image' style='color: white;'></span></a>"+
-											"</form-group>";											
-											
-									}
+							estatus=row['estatus'];
+
+							if(estatus == 1){
+								switch(perfil)
+								{ 
+									case '11': // recepcionista no tiene acceso a registrar
+										return "<form-group style='text-align:center;'>"+
+										"<a id='printer' target='_blank'  class='btn btn-success btn-md' role='button'><i class='fas fa-minus-circle'></i></a>"+
+										"</form-group>";
+										break;									
+									default:
+										switch(imagen)
+										{
+											case '0':
+												return "<form-group style='text-align:center;'>"+
+														"<a id='printer' target='_blank'  class='btn btn-warning btn-md' role='button'><span  class='fa fa-exclamation-triangle'></span></a>"+
+														"</form-group>";											
+												
+												break;
+											default:
+												
+												return "<form-group style='text-align:center;'>"+
+												"<a id='printer'  href='../ag_orden_dia_tomo/tabla_imagenes.php?numero_factura="+row['id_factura']+"&studio="+row['fk_id_estudio']+"' class='btn btn-blue-grey btn-md' role='button'><span  class='fa fa-image' style='color: white;'></span></a>"+
+												"</form-group>";											
+												
+										}
+								}
+							}else{
+								return "<button disabled type='button' class='eliminar btn btn-danger btn-md'><i class='fas fa-traffic-light'></i></button>"
 							}
 						},
 					},
-
+*/
 
 // Boton de imprimir interpretacion
 					{
@@ -205,70 +235,84 @@ $(document).ready(function(){
 							var registrado;
 							registrado=row['Registrado'];
 							validado=row['validado'];
-							switch(registrado)
-							{
-								case 'Si':
-									if(validado == 1){
-										return "<form-group style='text-align:center;'>"+
-										"<a id='printer' target='_blank' href='reports/print_result.php?numero_factura="+row['id_factura']+"&studio="+row['fk_id_estudio']+"' class='btn btn-dark btn-md' role='button'><i class='fas fa-print' style='color: white;'></i></a>"+
-										"</form-group>";
-									}else{
-										return "<form-group style='text-align:center;'>"+
-										"<a id='printer' target='_blank'  class='btn btn-danger btn-md' role='button'><span  class='fa fa-exclamation-triangle'></span></a>"+
-										"</form-group>";
-									}
+							estatus=row['estatus'];
 
-									break;
-								default:
-									return "<form-group style='text-align:center;'>"+
-											"<a id='printer' target='_blank'  class='btn btn-warning btn-md' role='button'><span  class='fa fa-exclamation-triangle'></span></a>"+
+							if(estatus == 1){
+								switch(registrado)
+								{
+									case 'Si':
+										if(validado == 1){
+											return "<form-group style='text-align:center;'>"+
+											"<a id='printer' target='_blank' href='reports/print_result.php?numero_factura="+row['id_factura']+"&studio="+row['fk_id_estudio']+"' class='btn btn-dark btn-md' role='button'><i class='fas fa-print' style='color: white;'></i></a>"+
 											"</form-group>";
+										}else{
+											return "<form-group style='text-align:center;'>"+
+											"<a id='printer' target='_blank'  class='btn btn-danger btn-md' role='button'><span  class='fa fa-exclamation-triangle'></span></a>"+
+											"</form-group>";
+										}
+
+										break;
+									default:
+										return "<form-group style='text-align:center;'>"+
+												"<a id='printer' target='_blank'  class='btn btn-warning btn-md' role='button'><span  class='fa fa-exclamation-triangle'></span></a>"+
+												"</form-group>";
+								}
+							}else{
+								return "<button disabled type='button' class='eliminar btn btn-danger btn-md'><i class='fas fa-traffic-light'></i></button>"
 							}
 						},
 					},
 
 // Boton de imprimir imagenes
+/*
 					{
 						render:function(data,type,row){
 							var registrado;
 							registrado=row['Registrado'];
 							perfil = row['perfil'];
 							validado = row['validado'];
-							
-							switch(registrado)
-							{
-								case 'Si':
-									if(validado == 1){
-										return "<form-group style='text-align:center;'>"+
-										"<a id='printer' target='_blank' href='../ag_orden_dia_rad/reports/print_imagen.php?numero_factura="+row['id_factura']+"&studio="+row['fk_id_estudio']+"' class='btn btn-dark btn-md' role='button'><i class='fas fa-camera-retro' style='color: white;'></i></a>"+
-										"</form-group>";
-									}else{
-										return "<form-group style='text-align:center;'>"+
-										"<a id='printer' target='_blank'  class='btn btn-danger btn-md' role='button'><span  class='fa fa-exclamation-triangle'></span></a>"+
-										"</form-group>";
-									}
+							estatus=row['estatus'];
 
-									break;
-								case 'No':
-									if (perfil == 1)
-									{
-										return "<form-group style='text-align:center;'>"+
-										"<a id='printer' target='_blank' href='../ag_orden_dia_rad/reports/print_imagen.php?numero_factura="+row['id_factura']+"&studio="+row['fk_id_estudio']+"' class='btn btn-dark btn-md' role='button'><i class='fas fa-camera-retro' style='color: white;'></i></a>"+
-										"</form-group>";
-									}else
-									{
+							if(estatus == 1){
+								switch(registrado)
+								{
+									case 'Si':
+										if(validado == 1){
 											return "<form-group style='text-align:center;'>"+
-											"<a id='printer' target='_blank'  class='btn btn-warning btn-md' role='button'><span  class='fa fa-exclamation-triangle'></span></a>"+
-											"</form-group>";										
-									}
-									break;
-								default:
-									return "<form-group style='text-align:center;'>"+
-											"<a id='printer' target='_blank'  class='btn btn-warning btn-md' role='button'><span  class='fa fa-exclamation-triangle'></span></a>"+
+											"<a id='printer' target='_blank' href='../ag_orden_dia_rad/reports/print_imagen.php?numero_factura="+row['id_factura']+"&studio="+row['fk_id_estudio']+"' class='btn btn-dark btn-md' role='button'><i class='fas fa-camera-retro' style='color: white;'></i></a>"+
 											"</form-group>";
+										}else{
+											return "<form-group style='text-align:center;'>"+
+											"<a id='printer' target='_blank'  class='btn btn-danger btn-md' role='button'><span  class='fa fa-exclamation-triangle'></span></a>"+
+											"</form-group>";
+										}
+
+										break;
+									case 'No':
+										if (perfil == 1)
+										{
+											return "<form-group style='text-align:center;'>"+
+											"<a id='printer' target='_blank' href='../ag_orden_dia_rad/reports/print_imagen.php?numero_factura="+row['id_factura']+"&studio="+row['fk_id_estudio']+"' class='btn btn-dark btn-md' role='button'><i class='fas fa-camera-retro' style='color: white;'></i></a>"+
+											"</form-group>";
+										}else
+										{
+												return "<form-group style='text-align:center;'>"+
+												"<a id='printer' target='_blank'  class='btn btn-warning btn-md' role='button'><span  class='fa fa-exclamation-triangle'></span></a>"+
+												"</form-group>";										
+										}
+										break;
+									default:
+										return "<form-group style='text-align:center;'>"+
+												"<a id='printer' target='_blank'  class='btn btn-warning btn-md' role='button'><span  class='fa fa-exclamation-triangle'></span></a>"+
+												"</form-group>";
+								}
+							}else{
+								return "<button disabled type='button' class='eliminar btn btn-danger btn-md'><i class='fas fa-traffic-light'></i></button>"
 							}
 						},
 					}
+
+					*/
 				],
 				"language": idioma_espanol
 			});
@@ -291,7 +335,7 @@ $(document).ready(function(){
 				
 				var datos = jQuery.parseJSON(data);
 
-				console.log(datos) 
+				console.log('datos') 
 				$("#frm-edit label").attr("class","active")
        			$("#frm-edit #id_factura").val(datos.fk_id_factura)
                 

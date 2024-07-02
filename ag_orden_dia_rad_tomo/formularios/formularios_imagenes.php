@@ -163,7 +163,7 @@
     
 
                   
-                  <img src="" id="img_01" alt="500" width="500" >
+                  <img src="" id="img_01" alt="" width="500" >
 
                   <!--
                   <input id="fi_desc_estudio" name="fn_desc_estudio" maxkength="50" required type="text" class="form-control" >

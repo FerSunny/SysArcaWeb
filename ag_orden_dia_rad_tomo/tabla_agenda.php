@@ -5,17 +5,13 @@ session_start();
   {
 ?>
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
-	<title>Agenda de Tomografia</title>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-    <link rel="stylesheet" href="css/estilos.css">
-    
-	<link rel="stylesheet" href="../media/css/bootstrap.min.css">
-	<link rel="stylesheet" href="../media/css/dataTables.bootstrap.min.css">
-	<link rel="stylesheet" href="../media/css/estilos.css">
+	<meta charset="utf-8">
+	<title>Agenda de Tomografia (radiologo)</title>
+	
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.18/datatables.min.css"/><!-- Font Awesome -->
 	<!-- Buttons DataTables -->
 	<link rel="stylesheet" href="../media/css/buttons.bootstrap.min.css">
 	<link rel="stylesheet" href="../media/css/font-awesome.min.css">
@@ -69,8 +65,8 @@ session_start();
 								<th>Modifi</th>
 								<th>Elimin</th>
 								<th>Imprim Infor</th>
-								<th>Imagen</th>
-        <th>Imprimir Imag</th>
+								<th>Imagen DICOM</th>
+        
 								<!-- <th>Imprim Image</th> -->
 							</tr>
 						</thead>

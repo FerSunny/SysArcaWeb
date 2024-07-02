@@ -11,7 +11,7 @@
 
 
 
-  if ($fk_id_perfil==1 or $fk_id_perfil==13 or $fk_id_perfil==45) 
+  if ($fk_id_perfil==1 or $fk_id_perfil==13 or $fk_id_perfil==45 or $fk_id_perfil==38 or $fk_id_perfil==6) 
     {
       $condicion=' > 0';
     }
@@ -131,7 +131,7 @@ LEFT OUTER JOIN cr_plantilla_tomo_rad_re p2 ON (p2.fk_id_factura = fa.id_factura
 AND es.fk_id_plantilla = '8'
 AND es.`per_paquete` = 'No'
 and fa.fk_id_sucursal ".$condicion."
-
+/*
 union all
 
 SELECT 
@@ -191,6 +191,7 @@ AND DATE(fa.fecha_entrega) BETWEEN DATE_SUB(CURDATE(), INTERVAL 10 DAY) AND DATE
 AND df.`fk_id_estudio` = es.`id_estudio`
 AND es.fk_id_plantilla = '8'
 AND es.`per_paquete` = 'No'
+*/
 "
 ;
 
