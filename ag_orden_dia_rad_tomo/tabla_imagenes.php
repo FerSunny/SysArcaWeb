@@ -14,6 +14,7 @@ session_start();
 	$id_usuario= $_SESSION['id_usuario'];
 
 	// verificamos si ya esta la imagen valida
+/*
 	$sql_max="select count(*) as veces FROM cr_plantilla_tomo_img
 	where fk_id_factura=".$numero_factura." 
 	and fk_id_estudio=".$studio."
@@ -29,7 +30,7 @@ session_start();
 
 	}
 	}
-
+*/
 
 
 
@@ -56,7 +57,7 @@ session_start();
 
   <div class="col-sm-12 col-md-12 col-lg-12">
       <h1>Tabla de Imagenes DICOM
-          <button type="button" <?php if($veces == 0 ){ }else {?> disabled <?php }  ?>  class="btn btn-primary pull-right menu" data-toggle="modal" data-target="#myModals">
+          <button type="button"   class="btn btn-primary pull-right menu" data-toggle="modal" data-target="#myModals">
 			<i class="fa fa-user-plus" aria-hidden="true"></i>&nbsp;Nueva Imagen</button>
       </h1>
   </div>

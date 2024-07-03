@@ -188,7 +188,7 @@ $(document).ready(function(){
 
 
 // boton de imagenes
-/*					
+				
 					{
 						render:function(data,type,row){
 							var registrado;
@@ -227,7 +227,7 @@ $(document).ready(function(){
 							}
 						},
 					},
-*/
+
 
 // Boton de imprimir interpretacion
 					{
