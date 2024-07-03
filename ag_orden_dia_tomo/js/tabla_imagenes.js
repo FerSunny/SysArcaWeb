@@ -41,7 +41,7 @@
 					{
 						render:function(data,type,row){
 									return "<form-group style='text-align:center;'>"+
-									"<a id='printer' target='_blank' href='../ag_orden_dia_rad/reports/print_imagen_zoom.php?numero_factura="+row['fk_id_factura']+"&studio="+row['id_imagen']+"' class='btn btn-dark btn-md' role='button'><i class='fa fa-eye' style='color: red;'></i></a>"+
+									"<a id='printer' target='_blank' href='../ag_orden_dia_rad_tomo/reports/print_imagen_zoom.php?numero_factura="+row['fk_id_factura']+"&studio="+row['id_imagen']+"' class='btn btn-dark btn-md' role='button'><i class='fa fa-eye' style='color: red;'></i></a>"+
 									"</form-group>";	
 									}
 					}
@@ -61,7 +61,7 @@
 					   desc_imagen = $("#frmedit #edit1").val( data.fk_id_factura)
 					   desc_estudio = $("#frmedit #fi_desc_estudio").val( data.desc_estudio)
 						nombre = $("#frmedit #fi_nombre").val( data.nombre)
-						document.getElementById("fi_imagen").src = "../ag_orden_dia_rad/img_rx/"+data.fk_id_factura+"/"+data.nombre
+						document.getElementById("fi_imagen").src = "../ag_orden_dia_rad_tomo/img_tomo/"+data.fk_id_factura+"/"+data.nombre
 						opcion = $("#frmedit #opcion").val("modificar")
 						console.log(data)
 

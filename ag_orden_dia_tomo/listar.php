@@ -72,46 +72,6 @@
       $sucursal=' ak.fk_id_sucursal = '.$fk_id_sucursal;     
   }
 
-/*  
-  if ($fk_id_perfil==1) 
-    {
-        $agenda = ' ';
-
-        $factura =' ';
-        $id_usuario= ' ';
-
-        $recepcion='';
-        $sucursal=' fa.fk_id_sucursal > 0';
-    }
-    else
-    {
-
-      if($fk_id_perfil==11 or $fk_id_perfil==39 or $fk_id_perfil==9){
-        $agenda = ' ';
-
-        $factura =' ';
-        $id_usuario= ' ';
-
-        $recepcion='';
-
-        $sucursal=' fa.fk_id_sucursal in (7,6,4)';
-
-      }else{
-        $agenda = ',ag_rx ak';
-
-        //$fractura =' AND ak.fk_id_factura = fa.id_factura';
-        //$id_usuario= ' AND ak.fk_id_usuario = '.$_SESSION['id_usuario'];
-
-        $recepcion='  AND ak.fk_id_factura = fa.id_factura AND ak.fk_id_usuario = '.$_SESSION['id_usuario'];
-
-        $sucursal=' ak.fk_id_sucursal = '.$fk_id_sucursal;
-        
-      }
-
- 
-        //$condicion=' = '.$fk_id_sucursal; 
-    }
-    */
   $query="
   SELECT res.*,
         CASE
@@ -149,9 +109,11 @@ SELECT ' ".$fk_id_perfil."' as perfil, fa.id_factura,
   CONCAT('PQ ',es.desc_estudio) AS estudio,
   fa.resta,
   'No' as nota_rad ,
-  fa.diagnostico
+  fa.diagnostico,
+  p2.estatus
 FROM km_paquetes pq,
-     so_detalle_factura df,
+     so_detalle_factura df
+     LEFT OUTER JOIN cr_plantilla_tomo_img p2 ON (p2.fk_id_factura = df.id_factura AND p2.fk_id_estudio = df.fk_id_estudio AND p2.estado = 'A'),
      so_factura fa,
      so_clientes cl ,
      kg_sucursales su,
@@ -204,6 +166,7 @@ CASE
     'Si'
 END AS nota_rad,
   fa.diagnostico,
+  im.estatus,
   CASE
 WHEN p2.fk_id_estudio IS NULL THEN
 'No'
@@ -220,6 +183,7 @@ FROM so_factura fa
 LEFT OUTER JOIN kg_sucursales su ON (su.id_sucursal = fa.fk_id_sucursal)
 LEFT OUTER JOIN so_clientes cl ON (cl.id_cliente = fa.fk_id_cliente)
 LEFT OUTER JOIN so_detalle_factura df ON (df.id_factura = fa.id_factura)
+LEFT OUTER JOIN cr_plantilla_tomo_img im ON (im.fk_id_factura = df.id_factura AND im.fk_id_estudio = df.fk_id_estudio AND im.estado = 'A')
 LEFT OUTER JOIN cr_plantilla_tomo_re p2 ON (p2.fk_id_factura = df.id_factura AND p2.fk_id_estudio = df.fk_id_estudio)
 LEFT OUTER JOIN cr_plantilla_tomo_rad_re ra ON(df.id_factura = ra.fk_id_factura AND df.fk_id_estudio = ra.fk_id_estudio and ra.estado = 'A'),
 

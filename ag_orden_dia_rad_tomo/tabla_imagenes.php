@@ -12,20 +12,36 @@ session_start();
 	$_SESSION['numero_factura']=$numero_factura;
 
 	$id_usuario= $_SESSION['id_usuario'];
+
+	// verificamos si ya esta la imagen valida
+/*
+	$sql_max="select count(*) as veces FROM cr_plantilla_tomo_img
+	where fk_id_factura=".$numero_factura." 
+	and fk_id_estudio=".$studio."
+	and estado = 'A'"
+	;
+	// echo $sql_max;
+	$veces='0';
+	if ($result = mysqli_query($conexion, $sql_max)) {
+	while($row = $result->fetch_assoc())
+	{
+		$veces=$row['veces'];
+		echo 'veces'.$veces;
+
+	}
+	}
+*/
+
+
+
 ?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
-	<meta charset="UTF-8">
-	<title>Administracion de Imagenes</title>
-
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-<link rel="stylesheet" href="css/estilos.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-	<link rel="stylesheet" href="../media/css/bootstrap.min.css">
-	<link rel="stylesheet" href="../media/css/dataTables.bootstrap.min.css">
-	<link rel="stylesheet" href="../media/css/estilos.css">
+<meta charset="utf-8">
+	<title>Agenda de Tomografia (Imagenes)</title>
+	
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.18/datatables.min.css"/><!-- Font Awesome -->
 	<!-- Buttons DataTables -->
 	<link rel="stylesheet" href="../media/css/buttons.bootstrap.min.css">
 	<link rel="stylesheet" href="../media/css/font-awesome.min.css">
@@ -40,8 +56,9 @@ session_start();
   ?>
 
   <div class="col-sm-12 col-md-12 col-lg-12">
-      <h1>Tabla de Imagenes
-          <button type="button" class="btn btn-primary pull-right menu" data-toggle="modal" data-target="#myModals"><i class="fa fa-user-plus" aria-hidden="true"></i>&nbsp;Nueva Imagen</button>
+      <h1>Tabla de Imagenes DICOM
+          <button type="button"   class="btn btn-primary pull-right menu" data-toggle="modal" data-target="#myModals">
+			<i class="fa fa-user-plus" aria-hidden="true"></i>&nbsp;Nueva Imagen</button>
       </h1>
   </div>
 		<div class="row">

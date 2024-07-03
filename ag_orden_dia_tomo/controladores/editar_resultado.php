@@ -12,7 +12,7 @@ $firma = $_POST['firma'];
 
 
 
-$query = "UPDATE cr_plantilla_rx_re 
+$query = "UPDATE cr_plantilla_tomo_re 
 SET titulo_desc = '$titulo_desc', descripcion = '$descripcion', firma = '$firma'
 WHERE fk_id_factura = '$id_factura' and fk_id_estudio = '$estudio_id'";
 

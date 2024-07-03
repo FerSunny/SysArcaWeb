@@ -12,7 +12,7 @@
     ui.nombre,
     ui.ruta,
     CONCAT(cl.`nombre`,' ',cl.`a_paterno`,' ',cl.`a_materno`) AS paciente
-FROM cr_plantilla_rx_img ui,
+FROM cr_plantilla_tomo_img ui,
 km_estudios es,
 so_factura fa,
 so_clientes cl

@@ -13,7 +13,7 @@ $studio=$_GET['studio'];
 
 
 // Contamos la cantidad de imagenes que tiene el estudio
-$sql_max="select count(id_imagen) as num_img,max(img_x_hoja) as img_x_hoja FROM cr_plantilla_usg_img
+$sql_max="select count(id_imagen) as num_img,max(img_x_hoja) as img_x_hoja FROM cr_plantilla_tomo_img
 where estado = 'A' and fk_id_factura=".$numero_factura." and fk_id_estudio=".$studio;
 // echo $sql_max;
 $num_img='0';
@@ -59,6 +59,7 @@ WHERE fa.`id_factura` = ".$numero_factura."
   AND df.`fk_id_estudio`= dp.`fk_id_perfil`
   AND dp.`fk_id_estudio` = es.`id_estudio`
   AND dp.fk_id_estudio = ".$studio."
+
 UNION
 
     SELECT df.id_factura,
@@ -353,7 +354,7 @@ $derecha=0;
       }
 
 
-$sql_imagenes="select * FROM cr_plantilla_usg_img
+$sql_imagenes="select * FROM cr_plantilla_tomo_img
 where estado = 'A' and fk_id_factura=".$numero_factura." and fk_id_estudio=".$studio;
 //echo $sql_imagenes;
 if ($result = mysqli_query($con, $sql_imagenes)) {
@@ -364,7 +365,7 @@ if ($result = mysqli_query($con, $sql_imagenes)) {
       $v_alto=$row['alto'];
       $v_ancho=$row['ancho'];
 
-      $imagen="../img_usg/".$numero_factura."/".$row['nombre'];
+      $imagen="../img_tomo/".$numero_factura."/".$row['nombre'];
 
 // impresion por lineas, segun numero de imagenes
 

@@ -360,7 +360,7 @@
 											{
 												case 'No':
 													return "<form-group style='text-align:center;'>"+
-														"<a id='registrar' target='_blank'  class='btn btn-warning btn-md' role='button'><span  class='fa fa-hand-paper-o fa-1x'></span></a>"+
+														"<a id='registrar'  target='_blank' disabled class='btn btn-warning btn-md' role='button'><span  class='fa fa-hand-paper-o fa-1x'></span></a>"+
 														"</form-group>";
 												default:
 													return "<form-group style='text-align:center;'>"+
@@ -435,7 +435,7 @@
 */
 
 // Boton de imprimir imagenes
-
+/*
 					{
 						render:function(data,type,row){
 							var registrado;
@@ -490,6 +490,7 @@
 							}
 						}
 					}
+*/
 
 /*
 					{
