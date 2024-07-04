@@ -190,7 +190,7 @@ LEFT OUTER JOIN cr_plantilla_tomo_rad_re ra ON(df.id_factura = ra.fk_id_factura 
 km_estudios es
 ".$agenda."
 WHERE fa.estado_factura <> 5
-AND DATE(fa.fecha_factura) BETWEEN DATE_SUB(CURDATE(), INTERVAL 100 DAY) AND DATE_ADD(CURDATE(), INTERVAL 30 DAY)
+-- AND DATE(fa.fecha_factura) BETWEEN DATE_SUB(CURDATE(), INTERVAL 95 DAY) AND DATE_ADD(CURDATE(), INTERVAL 30 DAY)
 AND es.fk_id_plantilla = '8'
 and es.id_estudio = df.fk_id_estudio
 AND df.fk_id_estudio IN (SELECT DISTINCT fk_id_estudio FROM cr_plantilla_tomo WHERE estado = 'A')

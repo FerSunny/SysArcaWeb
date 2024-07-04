@@ -13,7 +13,7 @@ $studio=$_GET['studio'];
 
 
 // Contamos la cantidad de imagenes que tiene el estudio
-$sql_max="select count(id_imagen) as num_img,max(img_x_hoja) as img_x_hoja FROM cr_plantilla_usg_img
+$sql_max="select count(id_imagen) as num_img,max(img_x_hoja) as img_x_hoja FROM cr_plantilla_rx_img
 where estado = 'A' and fk_id_factura=".$numero_factura." and fk_id_estudio=".$studio;
 // echo $sql_max;
 $num_img='0';
@@ -154,11 +154,9 @@ function Header()
             $tipfuem,
             $tamfuem;
 
-    $this->Image('../imagenes/logo_arca.png',15,5,50,0);
-    $this->Image('../imagenes/logo_arca_sys_web.jpg',75,150,90,0);
-    
-    $this->Image('../imagenes/pacal.jpg',160,5,40,0);
-    $this->Image('../imagenes/codigo1.jpg',170,42,10,10);
+    $this->Image('../imagenes/logo_lab3.jpg',55,5,90,0);
+    //$this->Image('../imagenes/pacal.jpg',160,5,40,0);
+    $this->Image('../imagenes/codigo3.png',170,45,20,20);
     $this->Ln(18);
     $this->Cell(5);
     $this->SetFont('Arial','B',15);
@@ -168,7 +166,7 @@ function Header()
     //$this->Cell(185,5,'UNIDAD CENTRAL ARCA TULYEHUALCO ',0,0,'C');
     //$this->Ln(5);
     $this->SetFont('Arial','I',10);
-    $this->Cell(185,5,'Josefa Ortiz de Dominguez No. 5 San Isidro Tulyehualco, Xochimilco, CDMX',0,0,'C');
+    $this->Cell(185,5,'BLVD San Buena aventura #51 Col. La Venta, Ixtapaluca Edo de Mex Entre Jaral Capulin.',0,0,'C');
     $this->Ln(3);
     $this->Cell(185,5,'________________________________________________________________________________________________',0,0,'C');
     $this->SetTextColor(0,0,0);
@@ -179,7 +177,7 @@ function Header()
     $this->SetFont('Arial','B',11);
     $this->Cell(22,5,'PACIENTE:',0,0,'L');
     $this->SetFont('Arial','',11);
-    $this->Cell(88,5,$paciente,0,0,'L');
+    $this->Cell(88,5,utf8_decode($paciente),0,0,'L');
 
     $this->SetFont('Arial','B',11);
     $this->Cell(15,5,'DR(A):',0,0,'L');
@@ -260,34 +258,35 @@ function Header()
 
     $this->SetTextColor(26,35,126); 
     $this->SetFont('Arial','B',16);
-    $this->SetXY(65,257); 
-    $this->Write(0,'www.laboratoriosarca.com.mx');
+    $this->SetXY(45,260); 
+    $this->Write(0,'www.estudiosclinicosanbuenaventura.com.mx');
 
     $this->Image('../imagenes/whatsapp.jpg',10,262,7,0);
+    $this->Image('../imagenes/telefono.jpg',18,262.3,7,0);
     $this->SetTextColor(27,94,32); 
     $this->SetFont('Arial','B',12);
-    $this->SetXY(16,266); 
-    $this->Write(0,'55 3121 0700');
+    $this->SetXY(25,266); 
+    $this->Write(0,'5513181060 - 5562982670');
     $this->SetTextColor(0,0,0);
-
+/*
     $this->Image('../imagenes/telefono.jpg',50,262,7,0);
     $this->SetTextColor(230,81,0); 
     $this->SetFont('Arial','B',12);
     $this->SetXY(56,266); 
     $this->Write(0,'ARCATEL: 216 141 44');
     $this->SetTextColor(0,0,0);
-
-    $this->Image('../imagenes/email.jpg',105,262,7,0);
+*/
+    $this->Image('../imagenes/email.jpg',85,262,7,0);
     $this->SetTextColor(26,35,126); 
     $this->SetFont('Arial','B',11);
-    $this->SetXY(110,266); 
-    $this->Write(0,'atencion.cliente@laboratoriosarca.com.mx');
+    $this->SetXY(90,266); 
+    $this->Write(0,'atencion.cliente@estudiosclinicosanbuenaventura.com.mx');
     $this->SetTextColor(0,0,0);
 
     $this->SetTextColor(26,35,126); 
     $this->SetFont('Arial','B',10);
-    $this->SetXY(20,274); 
-    $this->Write(0,'Tulyehualco - San Gregorio - Xochimilco - Santiago - San Pablo - San Pedro - Tecomitl - Tetelco');
+    $this->SetXY(90,274); 
+    $this->Write(0,'Chalco - Ixtapaluca');
     $this->SetTextColor(0,0,0);
 
 //    }
@@ -319,8 +318,10 @@ $derecha=0;
       switch ($img_x_hoja){
         case '1':
           
-            $alto=198.9;
-            $ancho=153.85; 
+            $alto=5;
+            $ancho=5;
+            //$alto=$v_alto;
+            //$ancho=$v_ancho;
             break;
         case '2':
           
@@ -353,7 +354,7 @@ $derecha=0;
       }
 
 
-$sql_imagenes="select * FROM cr_plantilla_usg_img
+$sql_imagenes="select * FROM cr_plantilla_rx_img
 where estado = 'A' and fk_id_factura=".$numero_factura." and fk_id_estudio=".$studio;
 //echo $sql_imagenes;
 if ($result = mysqli_query($con, $sql_imagenes)) {
@@ -364,16 +365,16 @@ if ($result = mysqli_query($con, $sql_imagenes)) {
       $v_alto=$row['alto'];
       $v_ancho=$row['ancho'];
 
-      $imagen="../img_usg/".$numero_factura."/".$row['nombre'];
+      $imagen="../img_rx/".$numero_factura."/".$row['nombre'];
 
 // impresion por lineas, segun numero de imagenes
-
+$img_x_hoja=1;
         switch ($img_x_hoja){
 // 1 imagen por hoja
           case '1':
             $columna=13;
             $renglon=65;
-            $pdf->Image($imagen,$columna,$renglon,$alto,$ancho);
+            //$pdf->Image($imagen,$columna,$renglon,$alto,$ancho);
             if ($leido < $num_img){
                $pdf->AddPage();
             }            

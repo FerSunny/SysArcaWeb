@@ -94,9 +94,10 @@
 				
 					<th>Imagenes</th>
 
-					<th>Imp
-					<th>Orthanc</th>
-				
+					<th>Impr R</th>
+					<!--
+					<th>Impr I</th>
+					-->
 				</tr>
 			</thead>
 		</table>

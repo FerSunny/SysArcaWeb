@@ -188,7 +188,7 @@ $(document).ready(function(){
 
 
 // boton de imagenes
-				
+/*					
 					{
 						render:function(data,type,row){
 							var registrado;
@@ -227,7 +227,7 @@ $(document).ready(function(){
 							}
 						},
 					},
-
+*/
 
 // Boton de imprimir interpretacion
 					{
@@ -262,47 +262,6 @@ $(document).ready(function(){
 							}
 						},
 					},
-// Boton de imprimir interpretacion del radiologo
-
-//boton de editar	
-	{
-		render:function(data,type,row){
-			var registrado;
-			registrado=row['Registrado'];
-			perfil = row['perfil'];
-			estatus=row['estatus'];
-
-			if(estatus == 1){
-				switch(perfil)
-				{ 
-					case '11': // recepcionista no tiene acceso a registrar
-						return "<form-group style='text-align:center;'>"+
-						"<a id='printer' target='_blank'  class='btn btn-success btn-md' role='button'><i class='fas fa-minus-circle'></i></a>"+
-						"</form-group>";
-						break;									
-					default:
-						switch(registrado)
-						{
-							case 'Si':
-								return "<form-group style='text-align:center;'>"+
-								"<button type='button' class='visor btn btn-warning btn-md' style='margin: 0 auto;'><i class='fas fa-pen'></i></button>"
-								"</form-group>";
-								break;
-							default:
-								return  "<form-group style='text-align:center;'>"+
-										"<a id='printer' target='_blank'  class='btn btn-warning btn-md' role='button'><span  class='fa fa-exclamation-triangle'></span></a>"+
-										"</form-group>";
-
-							
-						}
-
-				}
-			}else{
-				return "<button disabled type='button' class='eliminar btn btn-danger btn-md'><i class='fas fa-traffic-light'></i></button>"
-			}
-
-		},
-	},
 
 // Boton de imprimir imagenes
 /*

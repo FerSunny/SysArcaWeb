@@ -1,31 +1,75 @@
 <?php
-session_start();
 date_default_timezone_set('America/Mexico_City');
 header('Content-Type: text/html; charset=ISO-8859-1');
 require('../../fpdf/fpdf.php');
+//include("../../controladores/conex.php");
  require_once ("../../so_factura/config/db.php");//Contiene las variables de configuracion para conectar a la base de datos
  require_once ("../../so_factura/config/conexion.php");//Contiene funcion que conecta a la base de datos
+
+global $firma_med;
 
 //se recibe los paramteros para la generación del reporte
 $numero_factura=$_GET['numero_factura'];
 $studio=$_GET['studio'];
 
-
-
-// Contamos la cantidad de imagenes que tiene el estudio
-$sql_max="select count(id_imagen) as num_img,max(img_x_hoja) as img_x_hoja FROM cr_plantilla_usg_img
-where estado = 'A' and fk_id_factura=".$numero_factura." and fk_id_estudio=".$studio;
+// actualiza las veces que se ha impreso el resultado
+$sql_max="select max(num_imp) as num_imp FROM cr_plantilla_rx_rad_re
+where fk_id_factura=".$numero_factura." and fk_id_estudio=".$studio;
 // echo $sql_max;
-$num_img='0';
+$veces='0';
 if ($result = mysqli_query($con, $sql_max)) {
   while($row = $result->fetch_assoc())
   {
-      $num_img=$row['num_img'];
-      $img_x_hoja=$row['img_x_hoja'];
+      $veces=$row['num_imp']+1;
+      //echo $veces;
+      $sql_update="UPDATE cr_plantilla_x_rad_re SET num_imp = '".$veces."'
+      where fk_id_factura=".$numero_factura." and fk_id_estudio=".$studio;
+      //echo $sql_update;
+      $execute_query_update = mysqli_query($con,$sql_update);
   }
 }
 
-//echo $num_img;
+// OBTENEMOS LOS DATOS DE LA ESTUDIO REGISTRADO
+$sql_usg="SELECT us.nombre_plantilla, us.titulo_desc, us.descripcion,  
+  us.t_otros_allazgos,
+  us.d_otros_allazgos,
+  us.t_diagnostico,
+  us.d_diagnostico,
+  us.t_comentarios,
+  us.d_comentarios,
+  us.firma_med,
+  us.ced_medico,
+  us.firma_rl,
+  us.ced_rl
+FROM cr_plantilla_rx_rad_re us 
+WHERE us.estado = 'A'
+AND fk_id_factura=".$numero_factura." and fk_id_estudio=".$studio;
+
+//echo $sql_usg;
+
+if ($result = mysqli_query($con, $sql_usg)) {
+  while($row = $result->fetch_assoc())
+  {
+      $titulo_desc=$row['titulo_desc'];
+      $descripcion=utf8_decode($row['descripcion']);
+
+      $t_otros_allazgos=utf8_decode($row['t_otros_allazgos']);
+      $d_otros_allazgos=utf8_decode($row['d_otros_allazgos']);
+
+      $t_diagnostico=utf8_decode($row['t_diagnostico']);
+      $d_diagnostico=utf8_decode($row['d_diagnostico']);
+     //$firma=$row['firma'];
+      $t_comentarios=utf8_decode($row['t_comentarios']);
+      $d_comentarios=utf8_decode($row['d_comentarios']);
+
+      $firma_med=utf8_decode($row['firma_med']);
+      $ced_medico=utf8_decode($row['ced_medico']);
+      $firma_rl=utf8_decode($row['firma_rl']);
+      $ced_rl=utf8_decode($row['ced_rl']);
+
+  }
+}
+
 
 //Obtener los datos, de la cabecera, (datos del estudio)
 $sql="
@@ -152,13 +196,21 @@ function Header()
             $metodo,
             $posinim,
             $tipfuem,
-            $tamfuem;
+            $tamfuem,
+            $descripcion,
+            $t_otros_allazgos,
+            $d_otros_allazgos,
 
-    $this->Image('../imagenes/logo_arca.png',15,5,50,0);
-    $this->Image('../imagenes/logo_arca_sys_web.jpg',75,150,90,0);
-    
-    $this->Image('../imagenes/pacal.jpg',160,5,40,0);
-    $this->Image('../imagenes/codigo1.jpg',170,42,10,10);
+            $t_diagnostico,
+            $d_diagnostico,
+     //$firma=$row['firma'];
+            $t_comentarios,
+            $d_comentarios,
+            $titulo_desc;
+
+    $this->Image('../imagenes/logo_lab3.jpg',55,5,90,0);
+    //$this->Image('../imagenes/pacal.jpg',160,5,40,0);
+    $this->Image('../imagenes/codigo3.png',170,50,30,30);
     $this->Ln(18);
     $this->Cell(5);
     $this->SetFont('Arial','B',15);
@@ -168,13 +220,13 @@ function Header()
     //$this->Cell(185,5,'UNIDAD CENTRAL ARCA TULYEHUALCO ',0,0,'C');
     //$this->Ln(5);
     $this->SetFont('Arial','I',10);
-    $this->Cell(185,5,'Josefa Ortiz de Dominguez No. 5 San Isidro Tulyehualco, Xochimilco, CDMX',0,0,'C');
+    $this->Cell(185,5,'BLVD San Buena aventura #51 Col. La Venta, Ixtapaluca Edo de Mex Entre Jaral Capulin.',0,0,'C');
     $this->Ln(3);
     $this->Cell(185,5,'________________________________________________________________________________________________',0,0,'C');
     $this->SetTextColor(0,0,0);
 
 // Primer columna de titulos
-    $this->Ln(7);
+    $this->Ln(15);
     $this->Cell(2);
     $this->SetFont('Arial','B',11);
     $this->Cell(22,5,'PACIENTE:',0,0,'L');
@@ -207,19 +259,18 @@ function Header()
     $this->MultiCell(88,5,$estudio2,0,'L');
  
     $this->SetFont('Arial','B',11);
-    $this->SetXY(122, 51); 
+    $this->SetXY(122, 59); 
     $this->Write(0,'EDAD:'); 
     $this->SetFont('Arial','',11);
-    $this->SetXY(137,51); 
+    $this->SetXY(137,59); 
     $this->Write(0,$edad);
 
 // Cuarta linea (nombre del estudio - plantilla -)
-    /*
     $this->ln(15);
     $this->Cell(5);
     $this->SetFont('Arial','B',14);
     $this->Cell(170,5,$titulo_desc,0,0,'C'); 
-    */
+   
 
     $this->Ln(15);
 
@@ -229,15 +280,58 @@ function Header()
   function Footer()
   {
 
-    global $studio,$con,$verificado,$tamfuev,$tipfuev,$posiniv;
+    global $firma_med,$ced_medico,$firma_rl,$ced_rl,$numero_factura,$studio,$con;
 
-    $this->SetY(-50); //
+// OBTENEMOS LOS DATOS DE LA ESTUDIO REGISTRADO
+$sql_usg="SELECT us.nombre_plantilla, us.titulo_desc, us.descripcion,  
+  us.t_otros_allazgos,
+  us.d_otros_allazgos,
+  us.t_diagnostico,
+  us.d_diagnostico,
+  us.t_comentarios,
+  us.d_comentarios,
+  us.firma_med,
+  us.ced_medico,
+  us.firma_rl,
+  us.ced_rl
+FROM cr_plantilla_rx_rad_re us 
+WHERE us.estado = 'A'
+AND fk_id_factura=".$numero_factura." and fk_id_estudio=".$studio;
+
+//echo $sql_usg;
+$this->SetY(-30);
+
+if ($result = mysqli_query($con, $sql_usg)) {
+  while($row = $result->fetch_assoc())
+  {
+
+      $firma_med=utf8_decode($row['firma_med']);
+      $ced_medico=utf8_decode($row['ced_medico']);
+      $firma_rl=utf8_decode($row['firma_rl']);
+      $ced_rl=utf8_decode($row['ced_rl']);
+
+
+          $this->Cell(10);
+          $this->SetFont('Arial','B',8);
+          $this->Cell(90,5,$firma_med,0,0,'L');
+          $this->Cell(50,5,$firma_rl,0,0,'L');
+          $this->ln(5);
+          $this->Cell(10);
+          $this->Cell(90,5,$ced_medico,0,0,'L');
+          $this->Cell(50,5,$ced_rl,0,0,'L');
+          $this->ln(5);
+
+  }
+}
+  $this->SetFont('Arial','B',9);
+    //$this->SetY(-30); //
     //$this->ln(10);
-    $this->Cell($posiniv);
+ 
+   // $this->Cell($posiniv);
 
-    $this->SetFont('Arial',$tipfuev,$tamfuev);
-    $this->Cell(30,5,$verificado,0,0,'L'); 
-    $this->ln(10); // aqui
+    //$this->SetFont('Arial','B','9');
+    //$this->Cell(30,5$firma_med,0,0,'L'); 
+    //$this->ln(10); // aqui
     //$this->Cell(5);
 
 /*
@@ -253,44 +347,45 @@ function Header()
           $this->ln(4);
         }
 */
-    $this->ln(10);
-    $this->Cell(1);
+    //$this->ln(-1);
+    $this->Cell(5);
     $this->SetTextColor(0,0,255);
-    $this->Cell(185,5,'_____________________________________________________________________________________',0,0,'L');
+    $this->Cell(185,5,'_______________________________________________________________________________________________________',0,0,'L');
 
     $this->SetTextColor(26,35,126); 
     $this->SetFont('Arial','B',16);
-    $this->SetXY(65,257); 
-    $this->Write(0,'www.laboratoriosarca.com.mx');
+    $this->SetXY(45,260); 
+    $this->Write(0,'www.estudiosclinicosanbuenaventura.com.mx');
 
     $this->Image('../imagenes/whatsapp.jpg',10,262,7,0);
+    $this->Image('../imagenes/telefono.jpg',18,262.3,7,0);
     $this->SetTextColor(27,94,32); 
     $this->SetFont('Arial','B',12);
-    $this->SetXY(16,266); 
-    $this->Write(0,'55 3121 0700');
+    $this->SetXY(25,266); 
+    $this->Write(0,'5513181060 - 5562982670');
     $this->SetTextColor(0,0,0);
-
+/*
     $this->Image('../imagenes/telefono.jpg',50,262,7,0);
     $this->SetTextColor(230,81,0); 
     $this->SetFont('Arial','B',12);
     $this->SetXY(56,266); 
     $this->Write(0,'ARCATEL: 216 141 44');
     $this->SetTextColor(0,0,0);
-
-    $this->Image('../imagenes/email.jpg',105,262,7,0);
+*/
+    $this->Image('../imagenes/email.jpg',85,262,7,0);
     $this->SetTextColor(26,35,126); 
     $this->SetFont('Arial','B',11);
-    $this->SetXY(110,266); 
-    $this->Write(0,'atencion.cliente@laboratoriosarca.com.mx');
+    $this->SetXY(90,266); 
+    $this->Write(0,'atencion.cliente@estudiosclinicosanbuenaventura.com.mx');
     $this->SetTextColor(0,0,0);
 
     $this->SetTextColor(26,35,126); 
     $this->SetFont('Arial','B',10);
-    $this->SetXY(20,274); 
-    $this->Write(0,'Tulyehualco - San Gregorio - Xochimilco - Santiago - San Pablo - San Pedro - Tecomitl - Tetelco');
+    $this->SetXY(90,274); 
+    $this->Write(0,'Chalco - Ixtapaluca');
     $this->SetTextColor(0,0,0);
 
-//    }
+    //}
   }
 }
 //
@@ -303,199 +398,40 @@ $pdf->SetAutoPageBreak(true,50);
 $pdf->AliasNbPages();
 $pdf->AddPage();
 
-
-// rutina para verificar el numero de imagnes y asignar
-// el tamaño de la imagen que le corresponda.
-
-/*
 $pdf->Cell(2);
 $pdf->SetFont('Arial','',9);
-*/
-$leido=1;
-$derecha=0;
-
-// Ajusta tamaño de las imagenes, segun el numero de imagenes por hoja
-
-      switch ($img_x_hoja){
-        case '1':
-          
-            $alto=198.9;
-            $ancho=153.85; 
-            break;
-        case '2':
-          
-            $alto=117;
-            $ancho=90.5;
-            break;
-       case '4':
-          
-            $alto=93.6;
-            $ancho=72.4;
-            break;
-
-       case '6':
-          
-            $alto=81.9;
-            $ancho=63.35;
-            break;
-
-        default:
-          if($v_alto>192 && $v_ancho>148){
-            $alto=85;
-            $ancho=65;
-          }else{
-            $alto=$v_alto;
-            $ancho=$v_ancho;          
-          }
-            $columna=13;
-            $renglon=53;         
-          break;
-      }
+$pdf->MultiCell(185,5,$descripcion,0,'J');
 
 
-$sql_imagenes="select * FROM cr_plantilla_usg_img
-where estado = 'A' and fk_id_factura=".$numero_factura." and fk_id_estudio=".$studio;
-//echo $sql_imagenes;
-if ($result = mysqli_query($con, $sql_imagenes)) {
-  while($row = $result->fetch_assoc())
-  {
-      $nombre=$row['nombre'];
-      $ruta=$row['ruta'];
-      $v_alto=$row['alto'];
-      $v_ancho=$row['ancho'];
-
-      $imagen="../img_usg/".$numero_factura."/".$row['nombre'];
-
-// impresion por lineas, segun numero de imagenes
-
-        switch ($img_x_hoja){
-// 1 imagen por hoja
-          case '1':
-            $columna=13;
-            $renglon=65;
-            $pdf->Image($imagen,$columna,$renglon,$alto,$ancho);
-            if ($leido < $num_img){
-               $pdf->AddPage();
-            }            
-            break;
-// 2 imagenes pro hoja           
-          case '2':
-            switch ($leido) {
-              case '1':
-                $columna=45;
-                $renglon=60;
-                $pdf->Image($imagen,$columna,$renglon,$alto,$ancho);
-                break;
-
-              case '2':
-                $columna=45;
-                $renglon=153;
-                $pdf->Image($imagen,$columna,$renglon,$alto,$ancho);
-                if ($leido < $num_img){
-                   $pdf->AddPage();
-                   $leido=0;
-                }
-                break;
-            }
-            break;
-// 4 imagenes por hoja
-          case '4':
-            switch ($leido) {
-              case '1':
-                $renglon=60;
-                $columna=13;
-                $pdf->Image($imagen,$columna,$renglon,$alto,$ancho);
-                break;
-
-              case '2':
-                $renglon=60;              
-                $columna=107;
-                $pdf->Image($imagen,$columna,$renglon,$alto,$ancho);
-                break;
-
-              case '3':
-                $renglon=140;              
-                $columna=13;
-                $pdf->Image($imagen,$columna,$renglon,$alto,$ancho);
-                break;
-
-              case '4':
-                $renglon=140;
-                $columna=107;
-                
-                $pdf->Image($imagen,$columna,$renglon,$alto,$ancho);
-                if ($leido < $num_img){
-                   $pdf->AddPage();
-                   $leido=0;
-                }
-                break;
-            }
-            break;
-// 6 imagenes por hoja
-          case '6':
-            switch ($leido) {
-              case '1':
-                $renglon=55;
-                $columna=13;
-                $pdf->Image($imagen,$columna,$renglon,$alto,$ancho);
-                break;
-
-              case '2':
-                $renglon=55;              
-                $columna=107;
-                $pdf->Image($imagen,$columna,$renglon,$alto,$ancho);
-                break;
-
-              case '3':
-                $renglon=120;              
-                $columna=13;
-                $pdf->Image($imagen,$columna,$renglon,$alto,$ancho);
-                break;
-
-              case '4':
-                $renglon=120;              
-                $columna=107;
-                $pdf->Image($imagen,$columna,$renglon,$alto,$ancho);
-                break;
-
-              case '5':
-                $renglon=185;              
-                $columna=13;
-                $pdf->Image($imagen,$columna,$renglon,$alto,$ancho);
-                break;
-
-              case '6':
-                $renglon=185;
-                $columna=107;
-                
-                $pdf->Image($imagen,$columna,$renglon,$alto,$ancho);
-                if ($leido < $num_img){
-                   $pdf->AddPage();
-                   $leido=0;
-                }
-                break;
-            }
-            break;         
-        }
-        $leido=$leido+1;
-  }
-}
-
-
-
-
-
-//$pdf->MultiCell(185,5,$descripcion,0,'L');
-
-/*
-$pdf->ln(10);
+$pdf->ln(6);
 $pdf->Cell(2);
-$pdf->SetFont('Arial','B',9);
-$pdf->MultiCell(50,5,trim($firma),0,'L');
-*/
+$pdf->SetFont('Arial','B',13);
+$pdf->MultiCell(185,5,trim($t_otros_allazgos),0,'L');
 
-//for($i=1;$i<=20;$i++)
-//    $pdf->Cell(0,10,'Imprimiendo línea número '.$i,0,1);
+$pdf->ln(2);
+$pdf->Cell(2);
+$pdf->SetFont('Arial','',9);
+$pdf->MultiCell(185,5,$d_otros_allazgos,0,'J');
+
+$pdf->ln(6);
+$pdf->Cell(2);
+$pdf->SetFont('Arial','B',13);
+$pdf->MultiCell(185,5,trim($t_diagnostico),0,'L');
+
+$pdf->ln(2);
+$pdf->Cell(2);
+$pdf->SetFont('Arial','',9);
+$pdf->MultiCell(185,5,$d_diagnostico,0,'J');
+
+$pdf->ln(6);
+$pdf->Cell(2);
+$pdf->SetFont('Arial','B',13);
+$pdf->MultiCell(185,5,trim($t_comentarios),0,'L');
+
+$pdf->ln(2);
+$pdf->Cell(2);
+$pdf->SetFont('Arial','',9);
+$pdf->MultiCell(185,5,$d_comentarios,0,'J');
 
 $pdf->Output();
 ?>
