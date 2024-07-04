@@ -285,7 +285,7 @@ $(document).ready(function(){
 						{
 							case 'Si':
 								return "<form-group style='text-align:center;'>"+
-								"<button type='button' class='visor btn btn-warning btn-md' style='margin: 0 auto;'><i class='fas fa-pen'></i></button>"
+								"<button type='button' class='visor btn btn-warning btn-md' style='margin: 0 auto;'><i class='fas fa-laptop-medical'></i></button>"
 								"</form-group>";
 								break;
 							default:
@@ -361,6 +361,7 @@ $(document).ready(function(){
 	//		mostrar("#dt_agenda tbody", table)
             editar("#dt_agenda tbody", table)
 			eliminar("#dt_agenda tbody", table)
+			visor("#dt_agenda tbody", table)
 
 }
 
@@ -391,37 +392,33 @@ $(document).ready(function(){
 
 			});
 		}
+		$("#frm-edit").on('submit', function (e) 
+			{
+			e.preventDefault()
 
-
-
-
-$("#frm-edit").on('submit', function (e) 
-    {
-      e.preventDefault()
-
-        $.ajax({
-            type: "POST",                 
-            url: "controladores/editar_resultado.php",                    
-            data: $("#frm-edit").serialize(),
-            beforeSend: function(){
-            },
-            success: function(data)            
-            {
-              if(data==1)
-              {
-                var table = $('#dt_agenda').DataTable(); // accede de nuevo a la DataTable.
-                table.ajax.reload(); // Recarga el  DataTable
-                Swal.fire("Agregados correctamente")
-                console.log(data)
-              }
-              else
-              {
-                Swal.fire('Error en MySQL, Error numero:  '+ data)
-                console.log(data)
-              }
-            }
-          });          
-    });
+				$.ajax({
+					type: "POST",                 
+					url: "controladores/editar_resultado.php",                    
+					data: $("#frm-edit").serialize(),
+					beforeSend: function(){
+					},
+					success: function(data)            
+					{
+					if(data==1)
+					{
+						var table = $('#dt_agenda').DataTable(); // accede de nuevo a la DataTable.
+						table.ajax.reload(); // Recarga el  DataTable
+						Swal.fire("Agregados correctamente")
+						console.log(data)
+					}
+					else
+					{
+						Swal.fire('Error en MySQL, Error numero:  '+ data)
+						console.log(data)
+					}
+					}
+				});          
+		});
 
 
 	var eliminar= function(tbody, table) {
@@ -518,6 +515,71 @@ $("#frm-edit").on('submit', function (e)
 	
 	}
 
+// rutina para abrir el url del visore de ficheros DICOM
+
+	var visor = function(tbody, table){
+		$(tbody).on
+		("click", "button.visor", function()
+			{
+
+
+
+
+
+				var data = table.row( $(this).parents("tr") ).data();
+				//$("#resultado_usg").modal("show")
+				var fac = data.fk_id_factura
+				window.open("http://www.laboratoriosarca.store:8042");
+				//$.post('controladores/visor.php',{'val':data.id_factura,'val2': data.fk_id_estudio}, function(data, status){
+					/*
+					var datos = jQuery.parseJSON(data);
+
+					console.log('datos') 
+					$("#frm-edit label").attr("class","active")
+					$("#frm-edit #id_factura").val(datos.fk_id_factura)
+					
+					$("#frm-edit #estudio_id").val(datos.fk_id_estudio)
+					
+					$("#frm-edit #desc_estudio").val(datos.desc_estudio)
+					$("#frm-edit #nombre_plantilla").val(datos.nombre_plantilla)
+					$("#frm-edit #titulo_desc").val(datos.titulo_desc)
+					$("#frm-edit #descripcion").val(datos.descripcion)
+					$("#frm-edit #firma").val(datos.firma)
+				*/
+				//})
+				
+			}
+		);
+	}
+/*
+	$("#frm-edit").on('submit', function (e) 
+		{
+		e.preventDefault()
+
+			$.ajax({
+				type: "POST",                 
+				url: "controladores/visor.php",                    
+				data: $("#frm-edit").serialize(),
+				beforeSend: function(){
+				},
+				success: function(data)            
+				{
+				if(data==1)
+				{
+					var table = $('#dt_agenda').DataTable(); // accede de nuevo a la DataTable.
+					table.ajax.reload(); // Recarga el  DataTable
+					Swal.fire("Agregados correctamente")
+					console.log(data)
+				}
+				else
+				{
+					Swal.fire('Error en MySQL, Error numero:  '+ data)
+					console.log(data)
+				}
+				}
+			});          
+	});	
+*/
 
 		var idioma_espanol = {
 		    "sProcessing":     "Procesando...",

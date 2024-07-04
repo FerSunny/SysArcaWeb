@@ -42,9 +42,9 @@ session_start();
 
   <div class="col-sm-12 col-md-12 col-lg-12">
       <h1>Tabla de Imagenes
-         <!--
+    
           <button type="button" class="btn btn-primary pull-right menu" data-toggle="modal" data-target="#myModals"><i class="fa fa-user-plus" aria-hidden="true"></i>&nbsp;Nueva Imagen</button>
-         -->
+   
       </h1>
   </div>
 		<div class="row">
@@ -63,7 +63,9 @@ session_start();
 								<th>Imagen</th>
 								<th>Ruta</th>
 								<th>Ver</th>
-        <th>Zoom</th>
+
+								<th>Borrar</th>
+
 							</tr>
 						</thead>
 					</table>

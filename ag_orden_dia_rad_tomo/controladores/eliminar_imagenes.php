@@ -18,7 +18,7 @@ if($row = mysqli_fetch_array($resultado))
   {
   if($row['estado'] == $activo)
     {
-       $imagen="../img_tomo/".$row['fk_id_factura']."/".$row['nombre'];
+       $imagen="../../img/tomo/".$row['fk_id_factura']."/".$row['nombre'];
 
         if (!unlink($imagen))
           {

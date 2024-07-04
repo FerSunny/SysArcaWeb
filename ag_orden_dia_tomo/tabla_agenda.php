@@ -65,12 +65,22 @@
 		        <label class="font-weight-normal lead"><?php echo $_SESSION['desc_perfil']?></label>
 		      </div>
 		    </div>
+
 			<div class="col-md-6">
 		      <div class="form-group">
 		        <label class="font-weight-bold lead">En turno:</label>
 		        <label class="font-weight-normal lead"><?php echo $_SESSION['nombre_completo']?></label>
+				<button type="button" class="btn btn-primary pull-right menu" data-toggle="modal" data-target="#myModals">
+				<i class="fa fa-user-plus" aria-hidden="true"></i>&nbsp;Nueva Imagen</button> 
 		      </div>
 		    </div>
+
+			<div class="col-md-6">
+				<button type="button" class="btn btn-primary pull-right menu" data-toggle="modal" data-target="#myModals">
+					<i class="fa fa-user-plus" aria-hidden="true"></i>&nbsp;Nueva Imagen</button>
+		    </div>
+
+
 		</div>
 	</div>
 

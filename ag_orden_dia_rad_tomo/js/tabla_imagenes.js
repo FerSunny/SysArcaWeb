@@ -43,7 +43,7 @@
 					   desc_imagen = $("#frmedit #edit1").val( data.fk_id_factura)
 					   desc_estudio = $("#frmedit #fi_desc_estudio").val( data.desc_estudio)
 						nombre = $("#frmedit #fi_nombre").val( data.nombre)
-						document.getElementById("img_01").src = "img_tomo/"+data.fk_id_factura+"/"+data.nombre
+						document.getElementById("img_01").src = "../img/tomo/"+data.fk_id_factura+"/"+data.nombre
 						opcion = $("#frmedit #opcion").val("modificar")
 						console.log(data)
 

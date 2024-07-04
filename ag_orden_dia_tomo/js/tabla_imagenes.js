@@ -37,7 +37,8 @@
 
 
 					},
-					
+					{"defaultContent":"<button type='button' class='eliminar btn btn-danger' data-toggle='modal' data-target='#modalEliminar' ><i class='fa fa-trash-o'></i></button>"}
+					/*
 					{
 						render:function(data,type,row){
 									return "<form-group style='text-align:center;'>"+
@@ -45,7 +46,7 @@
 									"</form-group>";	
 									}
 					}
-
+					*/
 				],
 				"language": idioma_espanol
 			});
@@ -61,7 +62,7 @@
 					   desc_imagen = $("#frmedit #edit1").val( data.fk_id_factura)
 					   desc_estudio = $("#frmedit #fi_desc_estudio").val( data.desc_estudio)
 						nombre = $("#frmedit #fi_nombre").val( data.nombre)
-						document.getElementById("fi_imagen").src = "../ag_orden_dia_rad_tomo/img_tomo/"+data.fk_id_factura+"/"+data.nombre
+						document.getElementById("fi_imagen").src = "../img/tomo/"+data.fk_id_factura+"/"+data.nombre
 						opcion = $("#frmedit #opcion").val("modificar")
 						console.log(data)
 
@@ -69,15 +70,15 @@
 		}
 
 // eliminndo la comision
-		var obtener_id_eliminar = function(tbody, table){
-			$(tbody).on("click", "button.eliminar", function(){
-				var data = table.row( $(this).parents("tr") ).data();
-				var id_imagen = $("#frmEliminarzona #idimagen").val( data.id_imagen);
-				 desc_nombre =$("#frmEliminarzona #zona").val(data.nombre);
-				opcion = $("#frmEliminarzona #opcion").val("eliminar");
-				console.log(data);
-			});
-		}
+var obtener_id_eliminar = function(tbody, table){
+	$(tbody).on("click", "button.eliminar", function(){
+		var data = table.row( $(this).parents("tr") ).data();
+		var id_imagen = $("#frmEliminarzona #idimagen").val( data.id_imagen);
+		 desc_nombre =$("#frmEliminarzona #zona").val(data.nombre);
+		opcion = $("#frmEliminarzona #opcion").val("eliminar");
+		console.log(data);
+	});
+}
 
 		var idioma_espanol = {
 		    "sProcessing":     "Procesando...",

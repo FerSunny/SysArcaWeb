@@ -6,7 +6,7 @@
 
   $nombre='0';
 
-  $sql="SELECT  ui.id_imagen,ui.nombre FROM cr_plantilla_rx_img ui
+  $sql="SELECT  ui.id_imagen,ui.nombre FROM cr_plantilla_tomo_img ui
         WHERE ui.fk_id_factura = ".$numero_factura."
         AND ui.fk_id_estudio =".$studio;
 //echo $sql;
@@ -18,7 +18,7 @@
     }
   }
 
-  $imagen='img_rx/'.$numero_factura.'/'.$nombre;
+  $imagen='../../ag_orden_dia_rad_tomo/img_tomo/'.$numero_factura.'/'.$nombre;
 
 ?>
 <link rel="stylesheet" href="../css/estilos.css">
