@@ -10,7 +10,7 @@
   $id_usuario=$_SESSION['id_usuario'];
 
 
-  if ($fk_id_perfil==1 or $fk_id_perfil==13 or $fk_id_perfil==45 or $fk_id_perfil==39 or $fk_id_perfil==9 ) 
+  if ($fk_id_perfil==1 or $fk_id_perfil==13 or $fk_id_perfil==45 ) 
     {
       $condicion=' > 0';
     }

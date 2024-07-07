@@ -199,12 +199,12 @@ function Header()
     $this->SetFont('Arial','B',11);
     $this->Cell(22,5,'PACIENTE:',0,0,'L');
     $this->SetFont('Arial','',11);
-    $this->Cell(88,5,utf8_decode($paciente),0,0,'L');
+    $this->Cell(88,5,$paciente,0,0,'L');
 
     $this->SetFont('Arial','B',11);
     $this->Cell(15,5,'DR(A):',0,0,'L');
     $this->SetFont('Arial','',11);
-    $this->Cell(70,5,utf8_decode($medico),0,0,'L');
+    $this->Cell(70,5,$medico,0,0,'L');
 // Segunda linea
     $this->ln(5);
     $this->Cell(2);
@@ -224,7 +224,7 @@ function Header()
     $this->SetFont('Arial','B',11);
     $this->Cell(22,5,'ESTUDIO:',0,0,'L');
     $this->SetFont('Arial','',11);
-    $this->MultiCell(88,5,utf8_decode($estudio2),0,'L');
+    $this->MultiCell(88,5,$estudio2,0,'L');
  
     $this->SetFont('Arial','B',11);
     $this->SetXY(122, 59); 
@@ -237,7 +237,7 @@ function Header()
     $this->ln(10);
     $this->Cell(5);
     $this->SetFont('Arial','B',14);
-    $this->Cell(170,5,utf8_decode($titulo_desc),0,0,'C'); 
+    $this->Cell(170,5,$titulo_desc,0,0,'C'); 
    
 
     $this->Ln(15);
@@ -278,32 +278,17 @@ function Header()
           case 54:
               $this->Image('../imagenes/dr_agustin.jpg',77,215,42,0);
               break;
-          case 74:
-              $this->Image('../imagenes/firma_dr_saulo_rosas.jpg',77,225,42,0);
-              break;
-          case 93:
-              $this->Image('../imagenes/firma1_dra_yoalli.jpg',77,215,42,0);
-              break;
           case 183:
               $this->Image('../imagenes/firma_Dr_Zarate_v2.png',77,215,42,0);
               break;    
           case 60:
-              $this->Image('../imagenes/firma_Dr_calderon.png',77,219,42,0);
+              $this->Image('../imagenes/firma_Dr_calderon.png',77,215,42,0);
               break;  
           case 277:
-              $this->Image('../imagenes/firma_dr_luis_alberto_escobar_v2.png',77,230,40,0);
+              $this->Image('../imagenes/firma_dr_luis_alberto_escobar_v2.png',77,215,42,0);
               break; 
           case 325:
-              $this->Image('../imagenes/firma_Dra_Tania_v2.png',77,215,42,0);
-              break;
-          case 263:
-              $this->Image('../imagenes/firma_dra_analilia_valdez.png',77,225,42,0);
-              break;
-          case 242:
-              $this->Image('../imagenes/firma_dr_pablo_alberto.png',77,221,42,0);
-              break;
-          case 347:
-              $this->Image('../imagenes/firma_dr_arellano.png',77,221,42,0);
+              $this->Image('../imagenes/firma_Dra_Tania_v1.png',77,215,42,0);
               break;
         }
 
