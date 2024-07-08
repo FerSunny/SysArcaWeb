@@ -262,6 +262,43 @@ function Header()
     //$this->Cell($posiniv);
     // se acomo para que mostrara la firma segun el medico.
     //echo 'usuario='.$id_usuario;
+
+    switch ($id_usuario){
+      case 54:
+          $this->Image('../imagenes/dr_agustin.jpg',77,215,42,0);
+          break;
+      case 74:
+          $this->Image('../imagenes/firma_dr_saulo_rosas.jpg',77,225,42,0);
+          break;
+      case 93:
+          $this->Image('../imagenes/firma1_dra_yoalli.jpg',77,215,42,0);
+          break;
+      case 183:
+          $this->Image('../imagenes/firma_Dr_Zarate_v2.png',77,215,42,0);
+          break;    
+      case 60:
+          $this->Image('../imagenes/firma_Dr_calderon.png',77,219,42,0);
+          break;  
+      case 277:
+          $this->Image('../imagenes/firma_dr_luis_alberto_escobar_v2.png',77,230,40,0);
+          break; 
+      case 325:
+          $this->Image('../imagenes/firma_Dra_Tania_v2.png',77,215,42,0);
+          break;
+      case 263:
+          $this->Image('../imagenes/firma_dra_analilia_valdez.png',77,225,42,0);
+          break;
+      case 242:
+          $this->Image('../imagenes/firma_dr_pablo_alberto.png',77,221,42,0);
+          break;
+      case 347:
+          $this->Image('../imagenes/firma_dr_arellano.png',77,221,42,0);
+          break;
+    }
+
+
+
+/*
     if($id_usuario == 74 or $id_usuario == 62)
     {
         $this->Image('../imagenes/dr_saulo_byn.jpg',15,213,40,0);  
@@ -276,7 +313,7 @@ function Header()
         }
       }
     }
-    
+    */
     //$this->ln(4);
     $this->Cell(5);
     $this->MultiCell(90,5,utf8_decode(trim(($firma))),0,'L');

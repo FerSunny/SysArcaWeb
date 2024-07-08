@@ -60,11 +60,42 @@
 
 					{"data" : "fecha_pro_rev"},
 
+					//{"defaultContent": "<button type='button' class='editar btn btn-warning btn-md'><i class='fas fa-edit'></i></button>"},
+					// boton de modificar
+					{
+						render:function(data,type,row){
+							var id_usuario = row['id_usuario']
+
+							if(id_usuario == 1 || id_usuario == 2 || id_usuario == 114)
+								{
+									return "<button type='button' class='editar btn btn-success btn-md'><i class='fas fa-edit'></i></button>"
+								}else
+								{
+									return "<button disabled type='button' class='editar btn btn-danger btn-md'><i class='fas fa-stop'></i> </button>"
+								}
+
+						}
+									
+					},
+
+					//{"defaultContent":"<button type='button' class='eliminar btn btn-danger btn-md'><i class='fas fa-trash-alt'></i></button>"},
+					{
+						render:function(data,type,row){
+							var id_usuario = row['id_usuario']
+
+							if(id_usuario == 1 || id_usuario == 2 || id_usuario == 114)
+								{
+									return "<button type='button' class='eliminar btn btn-success btn-md'><i class='fas fa-trash-alt'></i></button>"
+								}else
+								{
+									return "<button disabled type='button' class='eliminar btn btn-danger btn-md'><i class='fas fa-stop'></i> </button>"
+								}
+
+						}
+									
+					},
 
 
-					{"defaultContent": "<button type='button' class='editar btn btn-warning btn-md'><i class='fas fa-edit'></i></button>"},
-
-					{"defaultContent":"<button type='button' class='eliminar btn btn-danger btn-md'><i class='fas fa-trash-alt'></i></button>"},
 					{
 						render:function(data,type,row){
 

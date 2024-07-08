@@ -103,7 +103,7 @@ VALUES (1,
         '$extension',
         '$ruta',
         NOW(),
-        'C',
+        'O',
         'A');
 ";
 

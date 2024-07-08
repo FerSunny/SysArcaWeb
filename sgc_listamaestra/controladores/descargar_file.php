@@ -12,10 +12,13 @@
     $tipo=$_GET['tipo'];
     $ver=$_GET['ver'];
 
+    //$nombre_ok = str_replace(".".$tipo, "", $nombre);
+
     $fichero_download = $ruta.$nombre;
     //die('fichero_download'.$fichero_download);
     if (file_exists($fichero_download)) {
  //die('tipo:'.$tipo);   
+ 
         header('Content-Description: File Transfer');
         header('Content-Type: application/pdf');
      
@@ -28,12 +31,14 @@
  
         header('Content-Length:'.filesize($fichero_download));
         readfile($fichero_download);
-
+        
+        /*
         if($tipo == 'pdf'){
             $estatus = 'C';
         }else{
+            */
             $estatus = 'D';
-        }
+        //}
 
         $stm_update1=
         "
@@ -49,8 +54,9 @@
         //echo $stm_update1;
         $res_update1 = mysqli_query($conexion, $stm_update1);  
         if ($res_update1) {
-            //die('location');
-                header("location: ../tabla_ficheros.php?id_doc=$fk_id_doc&num_version=$ver&desc_doc=$desc_doc");
+            //die('recargue');
+                //header("location: ../tabla_ficheros.php?id_doc=$fk_id_doc&num_version=$ver&desc_doc=$desc_doc");
+                echo "<script>location.href='../tabla_ficheros.php?id_doc=$id_doc&num_version=$num_version&desc_doc=$desc_doc'</script>";
         }else {
                 echo "error en la ejecucion de la consulta. <br />";
                     die('Error de Conexión: ' . $res_update1);
@@ -65,7 +71,7 @@
 
           //readfile($fichero_download);  
     }else{
-        die('El fichero a descargar no existe, verificar su area de sistemas');
+        die('El fichero'.$fichero_download.' a descargar no existe, verificar su area de sistemas');
     }
 
     //

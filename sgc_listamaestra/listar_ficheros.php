@@ -3,17 +3,18 @@
 	include ("../controladores/conex.php");
     session_start();
     $id_doc= $_SESSION['id_doc'];
+    $id_usuario=$_SESSION['id_usuario']; 
  
   $query = "
-  SELECT 
+  SELECT ".$id_usuario." as id_usuario,
   lf.*,
   CASE
-  WHEN lf.estatus = 'C' THEN
-  'Carga Inicial'
+  WHEN lf.estatus = 'O' THEN
+  'Disponible'
   WHEN lf.estatus = 'D' THEN
   'Descargado'
   WHEN lf.estatus = 'A' THEN
-  'Actulizado , misma version'
+  'Obsoleto'
   WHEN lf.estatus = 'E' THEN
   'Version Desactualizada'
   END estado,

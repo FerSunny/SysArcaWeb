@@ -217,7 +217,7 @@
 						<div class="col">
 							<div class="md-form mt-0">
 								<div class="md-form">
-									<input type="number"  name="revision" id="revision" class="form-control"  step="1" required>
+									<input type="number"  name="revision" id="revision" class="form-control"  step="0.01" required>
 									<label for="revision"># Revision</label>
 								</div>
 							</div>
@@ -227,7 +227,7 @@
 						<div class="col">
 							<div class="md-form mt-0">
 								<div class="md-form">
-									<input type="number" name="version" id="version" class="form-control" step="1" required>
+									<input type="number" name="version" id="version" class="form-control" step="0.01" required>
 									<label for="version"># Version</label>
 								</div>
 							</div>
@@ -514,7 +514,7 @@
 						<div class="col">
 							<div class="md-form mt-0">
 								<div class="md-form">
-									<input type="number"  name="revision" id="revision" class="form-control"  step="1" required>
+									<input type="number"  name="revision" id="revision" class="form-control"  step="0.01" required>
 									<label for="revision"># Revision</label>
 								</div>
 							</div>
@@ -525,7 +525,7 @@
 						<div class="col">
 							<div class="md-form mt-0">
 								<div class="md-form">
-									<input type="number" name="version" id="version" class="form-control" step="1" required>
+									<input type="number" name="version" id="version" class="form-control" step="0.01" required>
 									<label for="version"># Version</label>
 								</div>
 							</div>
