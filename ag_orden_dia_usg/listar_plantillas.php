@@ -31,8 +31,9 @@
     FROM cr_plantilla_usg us
     LEFT OUTER JOIN km_estudios es  ON (es.id_estudio = ".$studio.")
     WHERE us.estado = 'A'
-    AND us.fk_id_estudio = ".$studio." 
-    OR us.fk_id_estudio = 99999
+    AND (us.fk_id_estudio = ".$studio." AND us.fk_id_medico = ".$id_usuario.")
+    OR (us.fk_id_estudio = 99999  AND us.fk_id_medico = 54)
+    -- AND (us.fk_id_estudio = ".$studio." OR us.fk_id_estudio = 99999)
     -- AND us.fk_id_medico = ".$id_usuario;
 
 // echo $query;

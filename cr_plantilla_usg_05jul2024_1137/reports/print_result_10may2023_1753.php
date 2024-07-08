@@ -1,16 +1,18 @@
 <?php
 date_default_timezone_set('America/Mexico_City');
-header('Content-Type: text/html; charset=ISO-8859-1');
+//header('Content-Type: text/html; charset=ISO-8859-1');
+header("Content-Type: text/html;charset=utf-8");
 require('../../fpdf/fpdf.php');
  require_once ("../../so_factura/config/db.php");//Contiene las variables de configuracion para conectar a la base de datos
  require_once ("../../so_factura/config/conexion.php");//Contiene funcion que conecta a la base de datos
 
 //se recibe los paramteros para la generación del reporte
-$numero_factura=$_GET['numero_factura'];
+$id_plantilla=$_GET['numero_factura'];
 $studio=$_GET['studio'];
 
+/*
 // actualiza las veces que se ha impreso el resultado
-$sql_max="select max(num_imp) as num_imp FROM cr_plantilla_usg_re
+$sql_max="select max(num_imp) as num_imp FROM cr_plantilla_4_re
 where fk_id_factura=".$numero_factura." and fk_id_estudio=".$studio;
 // echo $sql_max;
 $veces='0';
@@ -19,32 +21,13 @@ if ($result = mysqli_query($con, $sql_max)) {
   {
       $veces=$row['num_imp']+1;
       //echo $veces;
-      $sql_update="UPDATE cr_plantilla_usg_re SET num_imp = '".$veces."'
+      $sql_update="UPDATE cr_plantilla_4_re SET num_imp = '".$veces."'
       where fk_id_factura=".$numero_factura." and fk_id_estudio=".$studio;
       //echo $sql_update;
       $execute_query_update = mysqli_query($con,$sql_update);
   }
 }
-
-// OBTENEMOS LOS DATOS DE LA ESTUDIO REGISTRADO
-$sql_usg="SELECT us.nombre_plantilla, us.titulo_desc, us.descripcion, us.firma,us.fk_id_medico 
-FROM cr_plantilla_usg_re us 
-WHERE us.estado = 'A'
-AND fk_id_factura=".$numero_factura." and fk_id_estudio=".$studio;
-
-//echo $sql_usg;
-
-if ($result = mysqli_query($con, $sql_usg)) {
-  while($row = $result->fetch_assoc())
-  {
-      $titulo_desc=$row['titulo_desc'];
-      $descripcion=$row['descripcion'];
-      $firma=$row['firma'];
-      $fk_id_medico=$row['fk_id_medico'];
-
-  }
-}
-
+*/
 
 //Obtener los datos, de la cabecera, (datos del estudio)
 $sql="
@@ -53,12 +36,7 @@ SELECT fa.id_factura,
   SUBSTR(es.desc_estudio,33,100) AS estudio1,
   es.desc_estudio AS estudio2,
   CONCAT(cl.nombre,' ',cl.a_paterno,' ',cl.a_materno) AS paciente,
-  CASE
-    WHEN LENGTH(fa.vmedico) > 0 THEN
-      trim(fa.vmedico)
-    ELSE
-      CONCAT(me.nombre,' ',me.a_paterno,' ',me.a_materno) 
-  END AS medico,
+  CONCAT(me.nombre,' ',me.a_paterno,' ',me.a_materno) AS medico,
   DATE(fa.`fecha_factura`) AS fecha,
   CASE WHEN cl.anios > 0 THEN 
     CONCAT(cl.anios,' Años') 
@@ -73,7 +51,7 @@ FROM so_factura fa
      so_detalle_factura df, 
      km_perfil_detalle dp,
      km_estudios es
-WHERE fa.`id_factura` = ".$numero_factura."
+WHERE fa.`id_factura` = ".$id_plantilla."
   AND fa.`id_factura` = df.`id_factura`
   AND df.`fk_id_estudio`= dp.`fk_id_perfil`
   AND dp.`fk_id_estudio` = es.`id_estudio`
@@ -85,12 +63,7 @@ UNION
        SUBSTR(es.desc_estudio,33,100) AS estudio1, 
        es.desc_estudio AS estudio2,
        CONCAT(cl.nombre,' ',cl.a_paterno,' ',cl.a_materno) AS paciente,
-      CASE
-        WHEN LENGTH(fa.vmedico) > 0 THEN
-          trim(fa.vmedico)
-        ELSE
-          CONCAT(me.nombre,' ',me.a_paterno,' ',me.a_materno) 
-      END AS medico,
+    CONCAT(me.nombre,' ',me.a_paterno,' ',me.a_materno) AS medico,
     date(fa.`fecha_factura`) AS fecha,
     CASE WHEN cl.anios > 0 THEN 
         CONCAT(cl.anios,' Años') 
@@ -107,19 +80,14 @@ FROM km_paquetes pq
      LEFT OUTER JOIN so_medicos me ON (me.id_medico = fa.fk_id_medico) 
 WHERE  pq.id_paquete = df.fk_id_estudio
    AND df.id_factura = fa.id_factura
-   AND df.id_factura = ".$numero_factura." AND pq.fk_id_estudio = ".$studio."
+   AND df.id_factura = ".$id_plantilla." AND pq.fk_id_estudio = ".$studio."
     UNION
     SELECT  df.id_factura,
     substr(es.desc_estudio,1,32) AS estudio,
     substr(es.desc_estudio,33,100) AS estudio1,
     es.desc_estudio AS estudio2,
     CONCAT(cl.nombre,' ',cl.a_paterno,' ',cl.a_materno) AS paciente,
-      CASE
-        WHEN LENGTH(fa.vmedico) > 0 THEN
-          trim(fa.vmedico)
-        ELSE
-          CONCAT(me.nombre,' ',me.a_paterno,' ',me.a_materno) 
-      END AS medico,
+    CONCAT(me.nombre,' ',me.a_paterno,' ',me.a_materno) AS medico,
     date(fa.fecha_factura) AS fecha,
     CASE
         WHEN cl.anios > 0 THEN 
@@ -134,7 +102,7 @@ WHERE  pq.id_paquete = df.fk_id_estudio
   LEFT OUTER JOIN km_estudios es ON (es.id_estudio = df.fk_id_estudio)
   LEFT OUTER JOIN so_clientes cl ON (cl.id_cliente = fa.fk_id_cliente)
   LEFT OUTER JOIN so_medicos me ON (me.id_medico = fa.fk_id_medico)
-  WHERE df.id_factura = ".$numero_factura." AND df.fk_id_estudio=".$studio;
+  WHERE df.id_factura = ".$id_plantilla." AND df.fk_id_estudio=".$studio;
  //echo $sql;
 
   $paciente='0';
@@ -152,9 +120,6 @@ WHERE  pq.id_paquete = df.fk_id_estudio
         }
     }
 
-
-
-
 class PDF extends FPDF
 {
 // Cabecera de página
@@ -163,7 +128,7 @@ function Header()
 
     global $paciente,
             $medico,
-            $numero_factura,
+            $id_plantilla,
             $fecha,
             $estudio2,
             $studio,
@@ -171,14 +136,11 @@ function Header()
             $metodo,
             $posinim,
             $tipfuem,
-            $tamfuem,
-            $titulo_desc;
+            $tamfuem;
 
-    $this->Image('../imagenes/logo_arca.png',15,5,50,0);
-    $this->Image('../imagenes/logo_arca_sys_web.jpg',75,150,90,0);
-
-    $this->Image('../imagenes/pacal.jpg',160,5,40,0);
-    $this->Image('../imagenes/codigo1.jpg',170,50,30,30);
+    $this->Image('../../imagenes/logo_arca.png',15,5,140,0);
+    $this->Image('../../imagenes/pacal.jpg',160,5,40,0);
+    //$this->Image('../imagenes/firma.gif',153,225,40,0);
     $this->Ln(18);
     $this->Cell(5);
     $this->SetFont('Arial','B',15);
@@ -194,24 +156,24 @@ function Header()
     $this->SetTextColor(0,0,0);
 
 // Primer columna de titulos
-    $this->Ln(15);
-    $this->Cell(2);
+    $this->Ln(10);
+    $this->Cell(9);
     $this->SetFont('Arial','B',11);
     $this->Cell(22,5,'PACIENTE:',0,0,'L');
     $this->SetFont('Arial','',11);
-    $this->Cell(88,5,utf8_decode($paciente),0,0,'L');
+    $this->Cell(81,5,$paciente,0,0,'L');
 
     $this->SetFont('Arial','B',11);
     $this->Cell(15,5,'DR(A):',0,0,'L');
     $this->SetFont('Arial','',11);
-    $this->Cell(70,5,utf8_decode($medico),0,0,'L');
+    $this->Cell(70,5,$medico,0,0,'L');
 // Segunda linea
     $this->ln(5);
-    $this->Cell(2);
+    $this->Cell(9);
     $this->SetFont('Arial','B',11);
     $this->Cell(22,5,'FOLIO:',0,0,'L');
     $this->SetFont('Arial','',11);
-    $this->Cell(88,5,$numero_factura,0,0,'L');
+    $this->Cell(81,5,$id_plantilla,0,0,'L');
 
     $this->SetFont('Arial','B',11);
     $this->Cell(15,5,'FECHA:',0,0,'L');
@@ -220,27 +182,29 @@ function Header()
 
 // Tercer linea
     $this->ln(5);
-    $this->Cell(2);
+    $this->Cell(9);
     $this->SetFont('Arial','B',11);
     $this->Cell(22,5,'ESTUDIO:',0,0,'L');
     $this->SetFont('Arial','',11);
-    $this->MultiCell(88,5,utf8_decode($estudio2),0,'L');
+    $this->MultiCell(81,5,$estudio2,0,'L');
  
     $this->SetFont('Arial','B',11);
-    $this->SetXY(122, 59); 
+    $this->SetXY(122, 54); 
     $this->Write(0,'EDAD:'); 
     $this->SetFont('Arial','',11);
-    $this->SetXY(137,59); 
+    $this->SetXY(137,54); 
     $this->Write(0,$edad);
 
-// Cuarta linea (nombre del estudio - plantilla -)
+// Cuarta linea
+
+
     $this->ln(10);
+/*    
     $this->Cell(5);
     $this->SetFont('Arial','B',14);
-    $this->Cell(170,5,utf8_decode($titulo_desc),0,0,'C'); 
-   
-
-    $this->Ln(15);
+    $this->Cell(170,5,$estudio2,0,0,'C');
+*/
+    $this->Ln();
 
 }
 
@@ -248,87 +212,54 @@ function Header()
   function Footer()
   {
 
-    global $studio,$con,$verificado,$tamfuev,$tipfuev,$posiniv,$fk_id_medico;
+    global $id_plantilla,$studio,$con,$verificado,$tamfuev,$tipfuev,$posiniv;
 
-    $this->SetY(-50); //
+    $this->SetY(-40); //
     //$this->ln(10);
     $this->Cell($posiniv);
 
-
-
-
-    $this->SetFont('Arial',$tipfuev,$tamfuev);
+    $this->SetFont('Arial','',10);
     $this->Cell(30,5,$verificado,0,0,'L'); 
     $this->ln(10); // aqui
     //$this->Cell(5);
-
-    $sql="SELECT p2.concepto,posini,tipfue,tamfue FROM cr_plantilla_1 p2 WHERE p2.fk_id_estudio =".$studio." AND p2.estado = 'A' AND p2.tipo = 'F' order by orden";
+/*
+    $sql="SELECT p2.firma FROM cr_plantilla_usg_rx p2 WHERE p2.id_plantilla =".$id_plantilla." AND p2.estado = 'A'";
     if ($result = mysqli_query($con, $sql)) {
       while($row = $result->fetch_assoc())
         {
-          $this->Cell(($row['posini']-=6));
-         // $firma=$row['concepto'];
-      //    $this->Image('../imagenes/firma.gif',153,225,40,0);
-          $this->SetFont('Arial','',$row['tamfue']);
-      //    $this->Cell(170,5,$firma,0,0,'L');
+          $this->Cell(9);
+          $firma=$row['firma'];
+          //$this->Image('../../imagenes/firma.gif',153,225,40,0);
+          $this->SetFont('Arial','B',10);
+          $this->MultiCell(170,5,utf8_decode($firma),0,'L');
           $this->ln(4);
         }
-
-        switch ($fk_id_medico){
-          case 54:
-              $this->Image('../imagenes/dr_agustin.jpg',77,215,42,0);
-              break;
-          case 74:
-              $this->Image('../imagenes/firma_dr_saulo_rosas.jpg',77,225,42,0);
-              break;
-          case 93:
-              $this->Image('../imagenes/firma1_dra_yoalli.jpg',77,215,42,0);
-              break;
-          case 183:
-              $this->Image('../imagenes/firma_Dr_Zarate_v2.png',77,215,42,0);
-              break;    
-          case 60:
-              $this->Image('../imagenes/firma_Dr_calderon.png',77,219,42,0);
-              break;  
-          case 277:
-              $this->Image('../imagenes/firma_dr_luis_alberto_escobar_v2.png',77,230,40,0);
-              break; 
-          case 325:
-              $this->Image('../imagenes/firma_Dra_Tania_v2.png',77,215,42,0);
-              break;
-          case 263:
-              $this->Image('../imagenes/firma_dra_analilia_valdez.png',77,225,42,0);
-              break;
-          case 242:
-              $this->Image('../imagenes/firma_dr_pablo_alberto.png',77,221,42,0);
-              break;
-        }
-
-    $this->ln(10);
-    $this->Cell(5);
+*/
+    $this->ln(-2);
+    $this->Cell(1);
     $this->SetTextColor(0,0,255);
-    $this->Cell(185,5,'_______________________________________________________________________________________________________',0,0,'L');
+    $this->Cell(185,5,'_____________________________________________________________________________________________',0,0,'L');
 
     $this->SetTextColor(26,35,126); 
     $this->SetFont('Arial','B',16);
     $this->SetXY(65,257); 
     $this->Write(0,'www.laboratoriosarca.com.mx');
 
-    $this->Image('../imagenes/whatsapp.jpg',10,262,7,0);
+    $this->Image('../../imagenes/whatsapp.jpg',10,262,7,0);
     $this->SetTextColor(27,94,32); 
     $this->SetFont('Arial','B',12);
     $this->SetXY(16,266); 
     $this->Write(0,'55 3121 0700');
     $this->SetTextColor(0,0,0);
 
-    $this->Image('../imagenes/telefono.jpg',50,262,7,0);
+    $this->Image('../../imagenes/telefono.jpg',50,262,7,0);
     $this->SetTextColor(230,81,0); 
     $this->SetFont('Arial','B',12);
     $this->SetXY(56,266); 
     $this->Write(0,'ARCATEL: 216 141 44');
     $this->SetTextColor(0,0,0);
 
-    $this->Image('../imagenes/email.jpg',105,262,7,0);
+    $this->Image('../../imagenes/email.jpg',105,262,7,0);
     $this->SetTextColor(26,35,126); 
     $this->SetFont('Arial','B',11);
     $this->SetXY(110,266); 
@@ -341,7 +272,7 @@ function Header()
     $this->Write(0,'Tulyehualco - San Gregorio - Xochimilco - Santiago - San Pablo - San Pedro - Tecomitl - Tetelco');
     $this->SetTextColor(0,0,0);
 
-    }
+    //}
   }
 }
 //
@@ -354,18 +285,36 @@ $pdf->SetAutoPageBreak(true,50);
 $pdf->AliasNbPages();
 $pdf->AddPage();
 
-$pdf->Cell(2);
-$pdf->SetFont('Arial','',8);
-$pdf->MultiCell(185,5,utf8_decode($descripcion),0,'J');
+$hay_obs='';
+$observaciones='';
+$nle='0';
 
-$pdf->ln(1);
-$pdf->Cell(2);
-$pdf->SetFont('Arial','B',8);
-//$pdf->MultiCell(55,5,trim(utf8_decode($firma)),0,'L');
+$sql="select nombre_plantilla,titulo_desc,descripcion,firma FROM cr_plantilla_usg
+  where id_plantilla=".$id_plantilla." and fk_id_estudio=".$studio;
 
+  if ($result = mysqli_query($con, $sql)) {
+    while($row = $result->fetch_assoc())
+      {
 
-//for($i=1;$i<=20;$i++)
-//    $pdf->Cell(0,10,'Imprimiendo línea número '.$i,0,1);
+        $pdf->Cell(9);
+        $pdf->SetFont('Arial','B',14);
+        $pdf->Cell(160,5,($row['titulo_desc']),0,0,'C');
+        $pdf->ln(10);
+/*
+        $pdf->Cell(1);
+        $pdf->SetFont('Arial','B',13);
+        $pdf->Cell(160,5,utf8_decode(($row['titulo_desc'])),0,0,'L');
+*/
+        $pdf->ln(3);
+        $pdf->SetFont('Arial','',9);
+        $pdf->MultiCell(185,5,utf8_decode($row['descripcion']),0,'J');
+        $pdf->ln(5);
+
+        $pdf->SetFont('Arial','B',10);
+        $pdf->MultiCell(170,5,trim($row['firma']),0,'L');
+
+       }
+      }
 
 $pdf->Output();
 ?>
