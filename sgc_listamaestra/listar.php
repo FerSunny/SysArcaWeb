@@ -1,11 +1,11 @@
 <?php
 
 	include ("../controladores/conex.php");
-
-  
+    session_start();
+    $id_usuario=$_SESSION['id_usuario']; 
  
   $query = "
-  SELECT
+  SELECT ".$id_usuario." as id_usuario,   
   lm.*,
   CONCAT(ti.`cve_tipo`,'-',mo.`cve_modulo`,'-',LPAD(lm.`consecutivo`,2,'0')) AS clave,
   gr.`desc_grupo`,

@@ -72,7 +72,7 @@
 
 
 
-<!--Editar imagenes-->
+<!--actualiza versiones-->
 <form id="frmedit" class="form-horizontal" action="controladores/actualizar_ficheros.php" method="POST" enctype="multipart/form-data">
   <div class="row">
     <div id="cuadro1" class="col-sm-12 col-md-12 col-lg-12 ocultar">
@@ -155,6 +155,38 @@
     </div>
   </div>
 </form>
+
+<!-- Modal Eliminar-->
+<form id="frmEliminarzona" action="controladores/eliminar_imagenes.php" method="POST">
+      <div class="modal fade" id="modalEliminar" tabindex="-1" role="dialog" aria-labelledby="modalEliminarLabel">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="modalEliminarLabel">Eliminar Imagenes</h4>
+            </div>
+            <div class="modal-body">
+              
+                ¿Está seguro de eliminar la imagen?<strong data-name=""></strong>
+                    <input type="hidden" id="idimagen" name="idimagen" value="">
+                    <input type="hidden" id="opcion" name="opcion" value="eliminar">
+                    <div class="form-group">
+                      <div class="col-sm-8">
+                        <input id="zona" name="zona" type="text" class="form-control" maxlength="8" >
+                      </div>
+                    </div>
+            </div>
+            <div class="modal-footer">
+              <button type="submit" class="btn btn-success" id="btniniciar"  >Aceptar</button>
+            <button type="submit" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+            </div>
+           
+          </div>
+        </div>
+      </div>
+      <!-- Modal -->
+</form>
+
 
 
 

@@ -37,17 +37,17 @@
 					{
 						render:function(data,type,row){
 							var estatus = row['estatus']
-							if(estatus == "D" || estatus == "E"){
+							if(estatus == "O" ){
 								//console.log('entro a D')
-								return "<button disabled type='button' class='editar btn btn-danger btn-md'><i class='fa fa-ban'></i> </button>"	
-							}
-							else{
-								//console.log('No entro a D')
 								return "<form-group style='text-align:center;'>"+
 									"<a id='printer' target='_blank' href='../sgc_listamaestra/controladores/descargar_file.php?fk_id_doc="+row['fk_id_doc']+"&id_imagen="+row['id_imagen']+"&ruta="+row['ruta']+"&nombre="+row['nombre']+"&tipo="+row['tipo']+"&ver="+row['ver']+"' class='btn btn-success btn-md' role='button'><i class='fa fa-download'></i></a>"+
 									"</form-group>";	
 									//target='_blank'
 									table.ajax.reload();
+							}
+							else{
+								//console.log('No entro a D')
+								return "<button disabled type='button' class='editar btn btn-danger btn-md'><i class='fa fa-ban'></i> </button>"	
 								}
 						}
 									
@@ -56,26 +56,45 @@
 					{
 						render:function(data,type,row){
 							var estatus = row['estatus']
+							var id_usuario = row['id_usuario']
 
-							if(estatus == 'D'){
-								return "<form-group style='text-align:center;'>"+
-											"<button type='button' class='editar btn btn-success btn-md' role='button' data-toggle='modal' data-target='#modalEditar'><i class='fa fa-upload'></i></button>"
-											"</form-group>";
+							if(id_usuario == 1 || id_usuario == 2 || id_usuario == 114 ){
+								if(estatus == 'D'){
+									return "<form-group style='text-align:center;'>"+
+												"<button type='button' class='editar btn btn-success btn-md' role='button' data-toggle='modal' data-target='#modalEditar'><i class='fa fa-upload'></i></button>"
+												"</form-group>";
+								}else{
+									return "<form-group style='text-align:center;'>"+
+												"<button type='button' disabled class='editar btn btn-danger btn-md' data-toggle='modal' data-target='#modalEditar'><i class='fa fa-ban'></i></button>"
+												"</form-group>";
+								}
+
 							}else{
-								return "<form-group style='text-align:center;'>"+
-											"<button type='button' disabled class='editar btn btn-danger btn-md' data-toggle='modal' data-target='#modalEditar'><i class='fa fa-ban'></i></button>"
-											"</form-group>";
-							}
+								return "<button disabled type='button' class='editar btn btn-danger btn-md'><i class='fa fa-ban'></i> </button>"	
+							}	
 							
 						}
 					},	
-
+// Boton para eliminar
 					{
 						render:function(data,type,row){
+							var estatus = row['estatus']
+							var id_usuario = row['id_usuario']
+
+							if(id_usuario == 1 || id_usuario == 2 || id_usuario == 114 ){
+								if(estatus == 'O'){
 									return "<form-group style='text-align:center;'>"+
-									"<a id='printer' target='_blank' href='../ag_orden_dia_rad/reports/print_imagen_zoom.php?numero_factura="+row['fk_id_factura']+"&studio="+row['id_imagen']+"' class='btn btn-dark btn-md' role='button'><i class='fa fa-eye' style='color: red;'></i></a>"+
+												"<button type='button' class='eliminar btn btn-success btn-md' role='button' data-toggle='modal' data-target='#modalEliminar'><i class='fa fa-trash-alt'></i></button>"
+												"</form-group>";
+								}else{
+									return "<form-group style='text-align:center;'>"+
+									"<button type='button' disabled class='eliminar btn btn-danger btn-md' data-toggle='modal' data-target='#modalEliminar'><i class='fa fa-trash-alt'></i></button>"
 									"</form-group>";	
-									}
+								}
+							}else{
+								return "<button disabled type='button' class='eliminar btn btn-danger btn-md'><i class='fa fa-ban'></i> </button>"
+							}
+						}
 					}
 
 				],
@@ -101,15 +120,15 @@
 		}
 
 // eliminndo la comision
-		var obtener_id_eliminar = function(tbody, table){
-			$(tbody).on("click", "button.eliminar", function(){
-				var data = table.row( $(this).parents("tr") ).data();
-				var id_imagen = $("#frmEliminarzona #idimagen").val( data.id_imagen);
-				 desc_nombre =$("#frmEliminarzona #zona").val(data.nombre);
-				opcion = $("#frmEliminarzona #opcion").val("eliminar");
-				console.log(data);
-			});
-		}
+var obtener_id_eliminar = function(tbody, table){
+	$(tbody).on("click", "button.eliminar", function(){
+		var data = table.row( $(this).parents("tr") ).data();
+		var id_imagen = $("#frmEliminarzona #idimagen").val( data.id_imagen);
+		 desc_nombre =$("#frmEliminarzona #zona").val(data.nombre);
+		opcion = $("#frmEliminarzona #opcion").val("eliminar");
+		console.log(data);
+	});
+}
 
 		var idioma_espanol = {
 		    "sProcessing":     "Procesando...",

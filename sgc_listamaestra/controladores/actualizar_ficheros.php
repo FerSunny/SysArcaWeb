@@ -9,15 +9,142 @@ $id_doc= $_SESSION['id_doc'];
 $num_version= $_SESSION['num_version'];
 $desc_doc = $_SESSION['desc_doc'];
 */
-$nuevaversion  = $_POST['nuevaversion'];
-$id_imagen  = $_POST['id_imagen'];
-$porcentaje  = $_POST['porcentaje'];
-$version  = $_POST['version'];
-$id_doc  = $_POST['id_doc'];
+$nuevaversion_p  = $_POST['nuevaversion'];
+$id_imagen_p  = $_POST['id_imagen'];
+$porcentaje_p  = $_POST['porcentaje'];
+$version_p  = $_POST['version'];
+$id_doc_p  = $_POST['id_doc'];
+
+$id_doc= $_SESSION['id_doc'];
+$num_version= $_SESSION['num_version'];
+$desc_doc = $_SESSION['desc_doc'];
 
 //die('id_doc'.$id_doc);
 
-if($nuevaversion == 'N'){
+if($nuevaversion_p == 'N'){
+	$stm_update=
+	"
+	update sgc_lista_ficheros
+	set estatus = 'O'
+	where id_imagen = $id_imagen_p
+	";
+	$res_update = mysqli_query($conexion, $stm_update);
+	if ($res_update){
+		//die('update ok'.$id_doc.$num_version.$desc_doc);
+		echo "<script>location.href='../tabla_ficheros.php?id_doc=$id_doc&num_version=$num_version&desc_doc=$desc_doc'</script>";
+		//echo "<script>location.href='../tabla_imagenes.php?numero_factura=$numero_factura&studio=$studio'</script>";
+	}else{
+		die('Nueva version, error --> res_update'.$res_update);
+	}
+}else{
+	// colocamos como obseleto el documento actual
+	$stm_update_1=
+	"
+	update sgc_lista_ficheros
+	set estatus = 'A'
+	where id_imagen = $id_imagen_p
+	";
+	$res_update_1 = mysqli_query($conexion, $stm_update_1);
+	if ($res_update_1){
+		//calculamos la version
+		if($porcentaje_p <25){
+			$nueva_version = $version_p + .1;
+		}else{
+			$nueva_version = $version_p + 1;
+		}
+		//cargamos nuevo fichero (nueva version)
+		// rutina para subir los ficheros //  
+		$se_subio=0;
+		$id_insert=$id_doc;
+		$ruta = '../ficheros/'.$id_insert.'/';
+
+		$files_post = $_FILES['fn_archivo'];
+
+		$files = array();
+		$file_count = count($files_post['name']);
+		$file_keys = array_keys($files_post);
+
+		$permitidos = array("image/gif","image/png","image/jpeg","image/jpg","text/x-comma-separated-values", "text/comma-separated-values", "application/octet-stream", 
+		"application/vnd.ms-excel", "application/x-csv", "text/x-csv", "text/csv", "application/csv", "application/excel",
+		"application/vnd.msexcel", "text/plain");
+		$limite_kb = 4000;
+		for ($i=0; $i < $file_count; $i++) 
+		{ 
+			if($files_post["size"][$i] <= $limite_kb * 1024)
+			{
+				$archivo = $ruta.$files_post["name"][$i];
+				$nombre=$files_post["name"][$i];
+				$tipo=$files_post["type"][$i];
+				$extension = strtolower(pathinfo($files_post["name"][$i], PATHINFO_EXTENSION));
+				if(!file_exists($ruta)){
+					mkdir($ruta);
+				}
+				if(!file_exists($archivo)){
+					$resultado = @move_uploaded_file($files_post["tmp_name"][$i], $archivo);
+					if($resultado){
+						$atributos=getimagesize($archivo);
+						//rename ($ruta.$archivo $ruta);
+						$se_subio=1;
+					} else {
+							$nombre= "No pudo subir el fichero";
+					}
+				} else{
+					// rutina para subir los ficheros duplicados
+					$nombre= "Archivo ya existe";
+				}
+			}else{
+				$nombre= "Tamaño excedente (max 819,200)";
+			}
+
+		}
+
+		// guardamos el nuevo fichero
+		$stm_insert_0 = "
+		INSERT INTO sgc_lista_ficheros
+				(fk_id_empresa,
+				 id_imagen,
+				 fk_id_doc,
+				 fk_id_usuario,
+				 fecha_publicacion,
+				 ver,
+				 revision,
+				 nombre,
+				 tipo,
+				 ruta,
+				 fecha_registro,
+				 estatus,
+				 estado)
+		VALUES (1,
+				0,
+				'$id_doc',
+				'$id_usuario',
+				NOW(),
+				$nueva_version,
+				0,
+				'$nombre',
+				'$extension',
+				'$ruta',
+				NOW(),
+				'O',
+				'A');
+		";
+		$resultado_0 = mysqli_query($conexion, $stm_insert_0);
+		if ($resultado) {
+			echo "<script>location.href='../tabla_ficheros.php?id_doc=$id_doc&num_version=$num_version&desc_doc=$desc_doc'</script>";
+			//echo "<script>location.href='../tabla_imagenes.php?numero_factura=$numero_factura&studio=$studio'</script>"
+		}else{
+			die('Error -->  $stm_insert_0'.$stm_insert_0);
+		}
+	}else{
+		die('Version existente, error --> res_update'.$stm_update_1);
+	}
+}
+/*
+
+
+
+
+
 	// obtenemos el movimiento para copiarlo al histoico antes de sobre escvribirlo
 	$stm_select ="
 	SELECT * FROM sgc_lista_ficheros
@@ -202,6 +329,7 @@ for ($i=0; $i < $file_count; $i++)
 }
 
 }
-header("location: ../tabla_ficheros.php?id_doc=$fk_id_doc&num_version=$$ver&desc_doc=$nombre");
+*/
+//header("location: ../tabla_ficheros.php?id_doc=$fk_id_doc&num_version=$$ver&desc_doc=$nombre");
 
 ?>

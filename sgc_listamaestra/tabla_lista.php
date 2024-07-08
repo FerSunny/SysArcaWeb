@@ -1,8 +1,8 @@
 <?php
   session_start();
   if (isset($_SESSION['nombre']) && $_SESSION['ingreso']=='YES')
-  
   {
+   $id_usuario=$_SESSION['id_usuario']; 
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -41,8 +41,8 @@
   ?>
 
   <div class="container" style="margin-top: 30px;">
-    <h1 style="text-align: center;">Tabla de Documentos  <!-- CAMBIO Se cambia el titulo de la tabla -->
-      <button type="button" class="btn btn-primary pull-right menu" data-toggle="modal" data-target="#myModals"><i class="fa fa-book" aria-hidden="true"></i>&nbsp;Nuevo Documento</button> <!-- CAMBIO Se cambia el boton de altas -->
+    <h1 style="text-align: center;">Lista Maestra  <!-- CAMBIO Se cambia el titulo de la tabla -->
+      <button type="button" <?php if($id_usuario == 1 or $id_usuario == 2 or $id_usuario == 114){ }else {?> disabled <?php }  ?> class="btn btn-primary pull-right menu" data-toggle="modal" data-target="#myModals"><i class="fa fa-book" aria-hidden="true"></i>&nbsp;Crear Documento</button> <!-- CAMBIO Se cambia el boton de altas -->
     </h1>
   </div>
   
