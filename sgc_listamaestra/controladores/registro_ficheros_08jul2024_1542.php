@@ -90,8 +90,6 @@ for ($i=0; $i < $file_count; $i++)
              tipo,
              ruta,
              fecha_registro,
-			 fk_id_usuario_estatus,
-			 fecha_status,
              estatus,
              estado)
 VALUES (1,
@@ -105,8 +103,6 @@ VALUES (1,
         '$extension',
         '$ruta',
         NOW(),
-		'$id_usuario',
-		NOW(),
         'O',
         'A');
 ";
