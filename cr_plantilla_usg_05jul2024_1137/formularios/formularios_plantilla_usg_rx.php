@@ -71,7 +71,7 @@
                 <td class="renglon_valor" class="form-control">
                   <select name="fn_estudio" id="fi_estudio" style="width:350px">
                     <?php
-                      $sql="SELECT * FROM km_estudios where estatus = 'A' AND fk_id_plantilla = 7 order by desc_estudio";
+                      $sql="SELECT * FROM km_estudios where estatus = 'A' order by desc_estudio";
                       $rec=mysqli_query($conexion,$sql);
                       while ($row=mysqli_fetch_array($rec))
                         {
@@ -203,7 +203,7 @@
                 <td class="renglon_valor" class="form-control">
                   <select name="fn_estudio" id="fi_estudio" style="width:350px">
                     <?php
-                      $sql="SELECT * FROM km_estudios where estatus = 'A' AND fk_id_plantilla = 7 order by desc_estudio";
+                      $sql="SELECT * FROM km_estudios where estatus = 'A' order by desc_estudio";
                       $rec=mysqli_query($conexion,$sql);
                       while ($row=mysqli_fetch_array($rec))
                         {

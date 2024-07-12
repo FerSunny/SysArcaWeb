@@ -99,17 +99,24 @@ $(document).ready(function(){
 						render:function(data,type,row){
 							var registrado;
 							registrado=row['Registrado'];
+							validado=row['validado'];
 							switch(registrado)
 							{
-								case 'Si':
-									return "<form-group style='text-align:center;'>"+
-									"<button type='button' class='editar btn btn-warning btn-md' style='margin: 0 auto;'><i class='fas fa-pen'></i></button>"
-									"</form-group>";
-									break;
-								default:
-									return  "<form-group style='text-align:center;'>"+
-											"<a id='printer' target='_blank'  class='btn btn-warning btn-md' role='button'><span  class='fa fa-exclamation-triangle'></span></a>"+
+									case 'Si':
+										if( validado == 0){
+											return "<form-group style='text-align:center;'>"+
+											"<button type='button' class='editar btn btn-warning btn-md' style='margin: 0 auto;'><i class='fas fa-pen'></i></button>"
 											"</form-group>";
+											break;
+										}else{
+											return "<form-group style='text-align:center;'>"+
+											"<button disabled type='button' class='editar btn btn-warning btn-md' style='margin: 0 auto;'><i class='fas fa-pen'></i></button>"
+											"</form-group>";
+										}
+									default:
+										return  "<form-group style='text-align:center;'>"+
+												"<a id='printer' target='_blank'  class='btn btn-warning btn-md' role='button'><span  class='fa fa-exclamation-triangle'></span></a>"+
+												"</form-group>";
 
 								
 							}

@@ -2,7 +2,7 @@
 
   session_start();
 	include ("../controladores/conex.php");
-  $id_usuario= $_SESSION['id_usuario'];
+  
   //header("Content-Type: text/html;charset=utf-8");	
 
   $query = "SELECT 
@@ -22,7 +22,6 @@ FROM cr_plantilla_usg p1
 LEFT OUTER JOIN km_estudios es ON (es.id_estudio = p1.fk_id_estudio)
 LEFT OUTER JOIN se_usuarios us ON (us.id_usuario = p1.fk_id_medico)
 WHERE p1.estado = 'A'
-AND p1.fk_id_medico = $id_usuario
 ORDER BY us.nombre,us.a_paterno,us.a_materno,p1.fk_id_estudio,p1.nombre_plantilla";
 
 
