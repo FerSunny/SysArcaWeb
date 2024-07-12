@@ -1,63 +1,48 @@
 
 
 		$(document).on("ready", function(){
-
 			listar();
-
 			$("#frmedit  #codigo").focus();
-
-		$.fn.dataTable.ext.errMode = 'none';
-
+			$.fn.dataTable.ext.errMode = 'none';
 		});
-
-
 
 // listar datos en la tabla de perfiles
 
 		var listar = function(){
-
 				$("#cuadro1").slideDown("slow");
-
 			var table = $("#dt_productos").DataTable({
-
 				"destroy":true,
-
 				"sRowSelect": "multi",
-
 				"ajax":{
-
 					"method":"POST",
-
-					"url": "listar.php"
-
+					"url": "listar_plan.php"
 				},
 
 				"columns":[
-
+					{"data" : "fk_id_mejora"},
 					{"data" : "id_mejora"},
-
-					{"data" : "desc_area"},
-
-					{"data" : "situacion"},
-
-					{"data" : "origen"},
-
+					{"data" : "fecha_inicio"},
+					{"data" : "fecha_fin"},
+					{"data" : "acciones"},
+					{"data" : "Responsable"},
+					{"data" : "evidencia"},
+					{"data" : "fecha_evidencia"},
 					{
 						render: function( data, type, row, meta )
 						{
-							if(row['estatus'] == 'C')
+							if(row['fk_id_estatus'] == 'C')
 							{
 								return '<span class="badge badge-danger">Creada</span>'
 							}else
-							if(row['estatus'] == 'R')
+							if(row['fk_id_estatus'] == 'R')
 							{
 								return '<span class="badge badge-warning">Rechazada</span>'
 							}else
-							if(row['estatus'] == 'A')
+							if(row['fk_id_estatus'] == 'A')
 							{
 								return '<span class="badge badge-success">Aceptada</span>'
 							}else
-							if(row['estatus'] == 'T')
+							if(row['fk_id_estatus'] == 'T')
 							{
 								return '<span class="badge badge-info">Terminada</span>'
 							}else
@@ -67,22 +52,6 @@
 
 						}
 					}, 
-
-					//{"defaultContent": "<button type='button' class='sigue btn btn-warning btn-md'><i class='fas fa-check'></i></button>"},
-					// mantenimiento correctivo
-					{
-						render:function(data,type,row){
-
-								return "<form-group style='text-align:center;'>"+
-								"<a id='printer' target='_blank' href='./tabla_plan.php?id_mejora="+row['id_mejora']+"&situacion="+row['situacion']+"&desc_area="+row['desc_area']+"' class='btn btn-info btn-md' role='button'><i class='fa fa-cogs' ></i></a>"+
-								"</form-group>";
-
-									
-
-						},
-					},
-
-					{"defaultContent": "<button type='button' disabled class='evalua btn btn-warning btn-md'><i class='fas fa-check'></i></button>"},
 
 					{"defaultContent": "<button type='button' class='editar btn btn-warning btn-md'><i class='fas fa-edit'></i></button>"},
 

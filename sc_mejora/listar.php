@@ -4,7 +4,6 @@
 
 	include ("../controladores/conex.php");
 
-
   $query = "
   SELECT 
   m.id_mejora,
@@ -16,7 +15,7 @@
   WHEN m.estatus = 'A' THEN
   'Aceptada'
   WHEN m.estatus = 'T' THEN
-  'Creada'
+  'Terminada'
   END AS desc_estatus,
   m.estatus,
   m.situacion,
@@ -28,10 +27,17 @@
   m.cual,
   m.fk_id_usuario,
   m.fecha_registro,
-  a.desc_area
-FROM sc_mejora_pro m
-LEFT OUTER JOIN km_areas a ON (a.`id_area` = m.`fk_id_area`)
-WHERE m.`estado` = 'A'
+  a.desc_area,
+  CASE
+  WHEN mp.id_plan IS NULL THEN
+  0
+  ELSE
+  1
+  END AS tiene_plan
+  FROM sc_mejora_pro m
+  LEFT OUTER JOIN km_areas a ON (a.`id_area` = m.`fk_id_area`)
+  LEFT OUTER JOIN sc_mejora_plan mp ON (mp.fk_id_mejora = m.id_mejora)
+  WHERE m.`estado` = 'A'
   ";
 
 	$resultado = mysqli_query($conexion, $query);

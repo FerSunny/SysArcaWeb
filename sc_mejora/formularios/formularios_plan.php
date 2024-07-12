@@ -22,7 +22,7 @@
 
 						<h2 style="color:blue;text-align:center" class="modal-title">
 
-								Nuevo Propuesta
+								Nuevo Elemento
 
 						</h2>
 
@@ -41,147 +41,100 @@
 					</div>
 
 					<div class="row">
+						<!-- fecha inicio -->
 						<div class="col">
 							<div class="md-form mt-0">
 								<div class="md-form">
-									<textarea name="situacion" id="situacion" class="form-control" rows="1" required > </textarea> 
-									<label for="producto"> Situacion Inicial </label>
+									<input type="date" name="finicio" id="finicio" class="form-control"  required> 
+									<label for="finicio"> Fecha Inicio </label>
 								</div>
 							</div>
 						</div>
+						<!-- fecha fin -->
 						<div class="col">
 							<div class="md-form mt-0">
 								<div class="md-form">
-									<textarea name="origen" id="origen" class="form-control" rows="1" required> </textarea>
-									<label for="desc_p">Origen </label>
+									<input type="date" name="ffin" id="ffin" class="form-control"  required>
+									<label for="ffin">Fecha Fin </label>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- Acciones -->	
+					<div class="row">
+						<div class="col">
+							<div class="md-form mt-0">
+								<div class="md-form">
+									<textarea name="acciones" id="acciones" class="form-control" rows="3" >Especifique las acciones a seguir </textarea> 
+									<label for="acciones"> Acciones </label>
 								</div>
 							</div>
 						</div>
 					</div>
 
+
 					<div class="row">
-						<div class="col">
-							<div class="md-form mt-0">
-								<label for="">Area</label>
-							</div>
-						</div>
-
-
-
-
-
 						<div class="col-9">
-
+						Usuario responsable
 							<div class="md-form mt-0">
-
-								<select class="form-control form-control-sm" name="area" 
-
-								id="area" required>
-
-									<option value="" class="z-depth-5">Seleccione</option>
-
-										<?php 
-
-												$query = $conexion -> query("SELECT id_area,desc_area FROM km_areas WHERE estado = 'A'");
-
-												while($res = mysqli_fetch_array($query))
-
-												{
-
-														echo "<option value =".$res['id_area'].">
-
-																".$res['desc_area']."
-
-																</option>";
-
-												}
-
-										?>
-
-								</select>
-
-							</div>
-
-						</div>
-
-						
-
-					</div>
-
-
-					<div class="row">
-						<div class="col">
-							<div class="md-form mt-0">
-								<div class="md-form">
-									<textarea name="causas" id="causas" class="form-control" rows="3" >Que sucede?, Que comentarios ha recibido al respecto?, Que se puede mejorar? </textarea> 
-									<label for="producto"> Deteccion de las principales causas de la situacion </label>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<div class="row">
-						<div class="col">
-							<div class="md-form mt-0">
-								<div class="md-form">
-									<textarea name="objetivo" id="objetivo" class="form-control" rows="3" >Cual es el proposito del plan de mejora?, Que espera del plan de mejora? </textarea> 
-									<label for="producto"> Formulacion del objetivo </label>
-								</div>
-							</div>
-						</div>
-					</div>
-
-
-					<div class="row">
-
-						<div class="col-9">
-						¿Se requiere modificar o generar algún documento?
-							<div class="md-form mt-0">
-
 								<select class="form-control form-control-sm" name="doc" 
-
 								id="doc" required>
-
 									<option value="" class="z-depth-5">Seleccione</option>
-
 										<?php 
-
-												$query = $conexion -> query("SELECT id_boleana,desc_boleana FROM kg_si_no WHERE estado = 'A'");
-
+												$query = $conexion -> query("SELECT id_usuario,CONCAT(nombre,' ',a_paterno,' ',a_materno) AS responsable FROM se_usuarios WHERE activo = 'A'");
 												while($res = mysqli_fetch_array($query))
-
 												{
-
-														echo "<option value =".$res['id_boleana'].">
-
-																".$res['desc_boleana']."
-
+														echo "<option value =".$res['id_usuario'].">
+																".$res['responsable']."
 																</option>";
-
 												}
-
 										?>
-
 								</select>
-
 							</div>
-
 						</div>
-
-						
-
 					</div>
 
 					<div class="row">
 						<div class="col">
 							<div class="md-form mt-0">
 								<div class="md-form">
-									<textarea name="cual" id="cual" class="form-control" rows="3" >Mencione el nombre del documento </textarea> 
-									<label for="producto"> Cual? </label>
+									<input type="date" name="fevidencia" id="fevidencia" class="form-control"  required>
+									<label for="producto"> Fecha Evidencia </label>
 								</div>
 							</div>
 						</div>
+
+						<div class="col">
+							<div class="md-form mt-0">
+								<div class="md-form">
+									<textarea name="observaciones" id="observaciones" class="form-control" rows="3" >Especifique las observaciones a considerar </textarea> 
+									<label for="producto"> Observaciones </label>
+								</div>
+							</div>
+						</div>
+						
 					</div>
+
+					<div class="row">
+						<div class="col-9">
+						Estatus
+							<div class="md-form mt-0">
+								<select class="form-control form-control-sm" name="estatus" id="estatus" required>
+									<option value="" class="z-depth-5">Seleccione</option>
+										<?php 
+												$query = $conexion -> query("SELECT id_estatus,desc_estatus FROM sc_mejora_estatus WHERE estado = 'A' AND tipo = 'P' ");
+												while($res = mysqli_fetch_array($query))
+												{
+														echo "<option value =".$res['id_estatus'].">
+																".$res['desc_estatus']."
+																</option>";
+												}
+										?>
+								</select>
+							</div>
+						</div>
+					</div>
+
 
 
 

@@ -3,11 +3,11 @@
   session_start();
 
   if (isset($_SESSION['nombre']) && $_SESSION['ingreso']=='YES')
-
-  
-
   {
-
+    $id_mejora=$_GET['id_mejora'];
+    $situacion=$_GET['situacion'];
+    $desc_area=$_GET['desc_area'];
+    $_SESSION['id_mejora']=$id_mejora;
 ?>
 
 <!DOCTYPE html>
@@ -74,7 +74,7 @@
 
     include("../includes/barra.php");
 
-    include("formularios/formularios_productos.php"); // CAMBIO programa de la forma
+    include("formularios/formularios_plan.php"); // CAMBIO programa de la forma
 
   ?>
 
@@ -82,11 +82,10 @@
 
   <div class="container" style="margin-top: 30px;">
 
-    <h1 style="text-align: center;">Tabla de mejoras  <!-- CAMBIO Se cambia el titulo de la tabla -->
-
-      <button type="button" class="btn btn-primary pull-right menu" data-toggle="modal" data-target="#myModals"><i class="fa fa-user-plus" aria-hidden="true"></i>&nbsp;Nueva propuesta</button> <!-- CAMBIO Se cambia el boton de altas -->
-
+    <h1 style="text-align: center;">Plan <!-- CAMBIO Se cambia el titulo de la tabla -->
+      <button type="button" class="btn btn-primary pull-right menu" data-toggle="modal" data-target="#myModals"><i class="fa fa-user-plus" aria-hidden="true"></i>&nbsp;Nuevo Elemento</button> <!-- CAMBIO Se cambia el boton de altas -->
     </h1>
+    <h3 style="text-align: center;">Situacion:  <?php echo $desc_area.'-'.$situacion ?> </h3>
 
   </div>
 
@@ -114,19 +113,19 @@
 
             <!-- CAMBIO Se cambian las columnas segun las columnas a mostrar -->
 
-            <th>Id </th>
+            <th>Id Mejora</th>
+            <th>Id Plan</th>
+            <th>Fecha Inicio</th>
 
-            <th>Area</th>
+            <th>Fecha Final</th>
 
-            <th>Situacion Inicial</th>
+            <th>Acciones</th>
 
-            <th>Origen</th>
+            <th>Responsable</th>
 
-            <th>estatus</th>
-
-            <th>Planificacion y Seguimiento</th> 
-            <th>Evaluacion de la eficacia</th>
-
+            <th>Evidencia</th> 
+            <th>fecha Evidencia</th>
+            <th>Estado</th>
             <th>Editar</th>
 
             <th>Eliminar</th>
@@ -167,7 +166,7 @@
 
   <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.18/datatables.min.js"></script>
 
-  <script language="javascript" src="js/tabla_productos.js"></script>
+  <script language="javascript" src="js/tabla_plan.js"></script>
 
 </body>
 
