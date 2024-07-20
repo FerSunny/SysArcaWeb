@@ -379,7 +379,7 @@ ORDER BY desc_localidad";
                 <div class="md-form">
                   <textarea  name="fn_descripcion" id="fi_descripcion" class="md-textarea form-control" rows="25"> 
                   </textarea>
-                  <label for="form7">Descripci&oacute;n</label>
+                  <label for="form7">Deescripci&oacute;n</label>
                 </div>
 
 
@@ -398,9 +398,12 @@ ORDER BY desc_localidad";
 
     </div>
   </div> 
+
+<script src="../ckeditor5/ckeditor5.js"></script>
+  <script>
+    CKEDITOR.replace('fn_descripcion');
+</script>
 </form>
-
-
 
 
  <!-- Modal Eliminar-->
