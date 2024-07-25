@@ -154,11 +154,13 @@ if($length <> 10){
                     (id,
                     fecha_hora,
                     estatus,
+                    fk_id_factura,
                     telefono,
                     fk_id_usuario)
         VALUES (0,
                 NOW(),
                 '$estatus',
+                $id_factura,
                 '$telefono',
                 '$usuario')
       ";

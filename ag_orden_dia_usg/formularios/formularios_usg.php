@@ -382,7 +382,14 @@ ORDER BY desc_localidad";
                   <label for="form7">Deescripci&oacute;n</label>
                 </div>
 
-
+                <script type="importmap">
+                  {
+                    "imports": {
+                      "ckeditor5": "https://cdn.ckeditor.com/ckeditor5/42.0.1/ckeditor5.js",
+                      "ckeditor5/": "https://cdn.ckeditor.com/ckeditor5/42.0.1/"
+                    }
+                  }
+                </script>
 
 
             
@@ -399,10 +406,8 @@ ORDER BY desc_localidad";
     </div>
   </div> 
 
-<script src="../ckeditor5/ckeditor5.js"></script>
-  <script>
-    CKEDITOR.replace('fn_descripcion');
-</script>
+  <link rel="stylesheet" href="https://cdn.ckeditor.com/ckeditor5/42.0.1/ckeditor5.css">
+
 </form>
 
 
