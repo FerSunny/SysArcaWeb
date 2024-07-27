@@ -6,6 +6,7 @@
 ?>
 <head>
 	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+  <script src="../ckeditor/ckeditor.js"></script>
 </head>
 
 
@@ -96,6 +97,9 @@
                   <td class="renglon_valor" class="form-control">
                       <textarea name="fn_descripcion" id="fi_descripcion" rows="14" cols="125" wrap="soft" placeholder="Descripcion del estudio">
                       </textarea>
+                      <script>
+                          CKEDITOR.replace('fn_descripcion');
+                      </script>
                   </td> 
               </tr>
 
@@ -133,10 +137,10 @@
 </form>
 
 
-
 <!--Editar usuario-->
 <!-- SCRIPT PARA ACTUALIZAR -->
 <form id="frmedit" class="form-horizontal" action="controladores/actualizar.php" method="POST">
+<script src="../ckeditor/ckeditor.js"></script>
   <div class="row">
     <!-- REVISAR -->
     <div id="cuadro1" class="col-sm-12 col-md-12 col-lg-12 ocultar">
@@ -153,6 +157,7 @@
 
             <!-- INICIA EL BODY -->
             <div style="color:#000000;background:#EFFBF5" class="modal-body">
+            <script src="../ckeditor/ckeditor.js"></script>
              <input type="hidden" id="idvalor" name="idvalor" value="0">
              <input type="hidden" id="opcion" name="opcion" value="modificar">
              <table border="0" align="center" BGCOLOR=#F5FBEF style="border-bottom:1px solid #819FF7">
@@ -228,6 +233,9 @@
                   <td class="renglon_valor" class="form-control">
                       <textarea name="fn_descripcion" id="fi_descripcion" rows="14" cols="125" wrap="soft" dirname="idea-dir">
                       </textarea>
+                      <script>
+                          CKEDITOR.replace('fn_descripcion');
+                      </script>
                   </td> 
               </tr>
 <!-- firma-->
