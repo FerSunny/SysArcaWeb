@@ -379,10 +379,17 @@ ORDER BY desc_localidad";
                 <div class="md-form">
                   <textarea  name="fn_descripcion" id="fi_descripcion" class="md-textarea form-control" rows="25"> 
                   </textarea>
-                  <label for="form7">Descripci&oacute;n</label>
+                  <label for="form7">Deescripci&oacute;n</label>
                 </div>
 
-
+                <script type="importmap">
+                  {
+                    "imports": {
+                      "ckeditor5": "https://cdn.ckeditor.com/ckeditor5/42.0.1/ckeditor5.js",
+                      "ckeditor5/": "https://cdn.ckeditor.com/ckeditor5/42.0.1/"
+                    }
+                  }
+                </script>
 
 
             
@@ -398,9 +405,10 @@ ORDER BY desc_localidad";
 
     </div>
   </div> 
+
+  <link rel="stylesheet" href="https://cdn.ckeditor.com/ckeditor5/42.0.1/ckeditor5.css">
+
 </form>
-
-
 
 
  <!-- Modal Eliminar-->

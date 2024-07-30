@@ -40,7 +40,7 @@
           <div class="md-form">
             <!--Material textarea-->
               <textarea id="descripcion" name="descripcion" class="md-textarea form-control" rows="20" required=""></textarea>
-              <label for="codigo">Descripci&oacute;n</label>
+              <label for="codigo">Deescripci&oacute;n</label>
           </div>  
 
           <div class="md-form">
@@ -62,4 +62,8 @@
     </div>
   </div> 
   </form>  
+  <script src="../../ckeditor/ckeditor.js"></script>
+  <script>
+    CKEDITOR.replace('descripcion');
+  </script>
 

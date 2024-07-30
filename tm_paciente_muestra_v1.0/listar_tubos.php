@@ -32,7 +32,7 @@ LEFT OUTER JOIN tm_tomas t ON (t.`fk_id_factura` = a.`fk_id_factura` AND t.fk_id
 LEFT OUTER JOIN km_estudios es ON (es.`id_estudio` = a.`fk_id_estudio`)
 -- LEFT OUTER JOIN km_muestras m on (m.id_muestra = mu.fk_id_muestra)
 WHERE a.`fk_id_factura` = $id_factura
-AND a.fecha = DATE(CURDATE() )
+AND a.fecha = DATE(CURDATE()-1 )
 ) a
 WHERE a.aplico in ('N')
 
