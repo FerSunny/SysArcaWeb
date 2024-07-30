@@ -56,7 +56,7 @@ if ($nr == 0) {
     $conexion->close();
 }else{
 */
-  $query ="UPDATE tm_agenda SET cubiculo = '$cubiculo' , fk_id_sucursal = $sucursal, fecha = '$fecha_usg', hora='$hora'
+  $query ="UPDATE tm_agenda SET cubiculo = '$cubiculo' , fk_id_sucursal = $sucursal, fecha = '$fecha_usg', hora='$hora', tipo='R'
   WHERE fk_id_factura = $fk_id_factura 
   and fk_id_estudio = $id_estudio 
   and control = $control

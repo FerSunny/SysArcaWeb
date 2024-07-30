@@ -17,6 +17,7 @@
 				},
 				"columns":[
 					{"data" : "id_factura"},
+					{"data" : "tipo"},
 					{"data" : "fecha_factura"},
 					{"data" : "fecha_entrega"},
 					{"data" : "sucursal"},

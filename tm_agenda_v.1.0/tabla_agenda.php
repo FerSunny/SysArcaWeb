@@ -65,6 +65,7 @@ Fecha: 18dic2020
           <tr>
             <!-- CAMBIO Se cambian las columnas segun las columnas a mostrar -->
           <th>Folio</th>
+          <th>Tipo</th>
           <th>Solicitada</th>
           <th>Entrega</th>
           <th>Sucursal</th>

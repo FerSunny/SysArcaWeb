@@ -33,7 +33,13 @@ session_start();
     es.`iniciales` AS estudio,
     em.`control`,
     CONCAT(em.`control`,'-',em.`desc_muestra`) AS desc_muestra,
-    ag.*
+    ag.*,
+    CASE
+    WHEN ag.tipo = 'N' THEN
+    'Normal'
+    WHEN ag.tipo = 'R' THEN
+    'Repogramada'
+    END AS tipo
     
   FROM 	tm_agenda ag,
     so_factura fa,
@@ -43,6 +49,7 @@ session_start();
     vw_estudios_muestras_deta em
     
   WHERE ag.`fecha` = CURDATE()
+  -- WHERE ag.`fecha` >= '2024-04-28' -- para extrAer datos de prueba
   AND ag.`fk_id_factura` = fa.`id_factura`
   AND fa.`fk_id_sucursal` = su.`id_sucursal`
   AND fa.`fk_id_cliente` = cl.`id_cliente`
@@ -54,7 +61,7 @@ session_start();
       AND tm.`control` = em.`control`
       AND tm.aplico = 'S'
       )
-  AND fa.fk_id_sucursal ".$condicion;
+ AND fa.fk_id_sucursal > 0 -- ".$condicion;
 
 
 	$resultado = mysqli_query($conexion, $query1);
