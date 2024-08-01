@@ -11,17 +11,19 @@
 
 
 
-  if ($fk_id_perfil==1 or $fk_id_perfil==13 or $fk_id_perfil==33 or $fk_id_perfil==45 or $fk_id_perfil==46 or $fk_id_perfil==51) 
+  if ($fk_id_perfil==1 or $fk_id_perfil==13 or $fk_id_perfil==33 or $fk_id_perfil==45 or $fk_id_perfil==46 or $fk_id_perfil==51 or $fk_id_perfil==9) 
     {
       $condicion=' > 0';
     }
     else
     {
-      if($fk_id_perfil==9 or $fk_id_perfil==4 ){
+      $condicion=' = '.$fk_id_sucursal; 
+      /*if($fk_id_perfil==9 or $fk_id_perfil==4 ){
         $condicion=" IN (SELECT ru.fk_id_sucursal FROM cr_plantilla_ruta ru WHERE fk_id_medico = ".$id_usuario.")";
       }else{
         $condicion=' = '.$fk_id_sucursal; 
       }
+        */
     }
   $query="
 SELECT 

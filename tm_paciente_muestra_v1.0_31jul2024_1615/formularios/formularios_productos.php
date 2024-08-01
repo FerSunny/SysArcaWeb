@@ -283,29 +283,6 @@
 						<div class="row">
 							<div class="col">
 								<div class="md-form mt-0">
-									<label for="">Califique su toma</label>
-								</div>
-							</div>
-							<div class="col-9">
-								<div class="md-form mt-0">
-									<select class="form-control form-control-sm" name="id_califique" id="id_califique" readonly="">
-										<option value="" class="z-depth-5">Seleccione</option>
-											<?php 
-													$query = $conexion -> query("SELECT id_califica,desc_califica FROM kg_califica_toma WHERE estado = 'A'");
-													while($res = mysqli_fetch_array($query))
-													{
-															echo "<option value =".$res['id_califica'].">
-																	".$res['desc_califica']."
-																	</option>";
-													}
-											?>
-									</select>
-								</div>
-							</div>
-						</div>						
-						<div class="row">
-							<div class="col">
-								<div class="md-form mt-0">
 									<div class="md-form">
 										<input type="text" name="diagnostico" id="diagnostico" class="form-control" required>
 										<label for="costo">Diagnostico</label>

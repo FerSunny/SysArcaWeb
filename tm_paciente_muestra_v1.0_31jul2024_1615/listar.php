@@ -48,8 +48,7 @@ session_start();
     so_sexo se,
     km_estudios es
   WHERE ag.fk_id_sucursal $condicion
-  -- AND ag.fecha = DATE(CURDATE() )
-  AND ag.fecha >= '2024-06-01'
+  AND ag.fecha = DATE(CURDATE()-1 )
   AND ag.`fk_id_factura` = fa.`id_factura`
   AND fa.`fk_id_cliente` = cl.id_cliente
   AND cl.`fk_id_sexo` = se.id_sexo

@@ -124,7 +124,7 @@ var editar = function(tbody, table) {
 
 
 				$("#frmedit  label").attr('class','active')
-				$("#frmedit  #factura").val(data.id_factura)
+				$("#frmedit  #fa").val(data.id_factura)
 				$("#frmedit  #dc").val(data.id_cliente)
 				$("#frmedit  #pro").val(data.id_cliente)
 				$("#frmedit  #codigo").val(data.id_cliente)
@@ -134,11 +134,6 @@ var editar = function(tbody, table) {
 				$("#frmedit  #edad").val(data.edad)
 				$("#frmedit  #id_sexo").val(data.id_sexo)
 				$("#frmedit  #diagnostico").val(data.diagnostico)
-				$("#frmedit  #clinicos").val(data.datos_clinicos)
-				$("#frmedit  #medicamentos").val(data.medicamentos)
-				$("#frmedit  #telefono").val(data.telefono_fijo)
-				$("#frmedit  #email").val(data.mail)
-				$("#frmedit  #email").val(data.mail)
 			 
 		});
 }

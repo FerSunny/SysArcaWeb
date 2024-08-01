@@ -1,71 +1,86 @@
 
 		$(document).on("ready", function(){
 			listar();
+			//alert("hola")
 			$("#frmedit  #codigo").focus();
 		$.fn.dataTable.ext.errMode = 'none';
+
 		});
 
 // listar datos en la tabla de perfiles
 		var listar = function(){
+			var factura=$("#factura").val()
+			var studio=$("#studio").val()
+			//alert(factura)
+			//alert(studio)
 				$("#cuadro1").slideDown("slow");
 			var table = $("#dt_productos").DataTable({
 				"destroy":true,
 				"sRowSelect": "multi",
 				"ajax":{
 					"method":"POST",
-					"url": "listar.php"
+					"url": "listar_tubos.php?factura="+factura+"&studio="+studio
 				},
 				"columns":[
-					{"data" : "id_factura"},
-
-					{"data" : "fecha"},
-					{"data" : "hora"},
-					
-					{"data" : "nombre"},
-					{"data" : "a_paterno"},
-					{"data" : "a_materno"},
-					{"data" : "edad"},
-					{"data" : "desc_sexo"},
-					{"data" : "diagnostico"},
-					{"data" : "numest"},
-					{"data" : "nummue"},
-					{"data" : "muetom"},
+					{"data" : "studio"},
+					{"data" : "desc_estudio"},
+					{"data" : "desc_muestra"},
+					// {"data" : "tomadas"},
+					// {"data" : "pendientes"},
 					//{"defaultContent": "<button type='button' class='editar btn btn-warning btn-md'><i class='fas fa-edit'></i></button>"},
+					//{"defaultContent":"<button type='button' target='_blank'href='../se_modulos/tabla_modulos.php' class='btn btn-danger btn-md'><i class='fas fa-crutch'></i></button>"}
 					{
 						render:function(data,type,row){
-							var v_hora_toma;
-							v_hora_toma=row['hora_toma'];
-							if(v_hora_toma== null){
-								return "<button type='button' class='editar btn btn-warning btn-md'><i class='fas fa-edit'></i></button>"
-							}else{
-								return "<button type='button' class='editar btn btn-warning btn-md disabled'><i class='fas fa-edit'></i></button>"
-							}
-							},
+							var v_pendientes;
+							v_aplico=row['aplico'];
 
-					},	
+							if (v_aplico == 'N' ){
+
+									return "<button type='button' class='registrar btn btn-warning btn-md'> <i class='fas fa-thumbs-up'></i></button>"
+
+							}else{
+								return "<button type='button' class='registrar btn btn-warning btn-md' disabled> <i class='fas fa-thumbs-up'></i></button>"
+							}
+
+						},
+
+					},
 					{
 						render:function(data,type,row){
-							var v_hora_toma;
-							v_hora_toma=row['hora_toma'];
-							if(v_hora_toma== null){				
-								return "<form-group style='text-align:center;'>"+
-								//"<a id='muestras' target='_blank' href='./tabla_tubos.php?numero_factura="+row['id_factura']+"&studio="+row['id_estudio']+"' class='btn btn-warning btn-md' role='button'><span  class='fa fa-crutch'></span></a>"+
-								"<a id='muestras' target='_blank' href='./tabla_tubos.php?numero_factura="+row['id_factura']+"' class='btn btn-warning btn-md' role='button'><span  class='fa fa-crutch'></span></a>"+
-								"</form-group>";
+							var v_pendientes;
+
+							v_aplico=row['aplico'];
+
+							if (v_aplico == 'S'){
+
+								return "<button type='button' class='no_registrar btn btn-warning btn-md'> <i class='fas fa-thumbs-down'></i></button>"
+
 							}else{
-								return "<form-group style='text-align:center;'>"+
-								"<a id='muestras' target='_blank' href='./tabla_tubos.php?numero_factura="+row['id_factura']+"&studio="+row['id_estudio']+"' class='btn btn-warning btn-md disabled' role='button'><span  class='fa fa-crutch'></span></a>"+
-								"</form-group>";								
+								return "<button type='button' class='no_registrar btn btn-warning btn-md' disabled> <i class='fas fa-thumbs-down'></i></button>"
 							}
-							},
+						},
+					},
+					{
+						render:function(data,type,row){
+							var v_aplico;
+							v_aplico=row['aplico'];
+							if (v_aplico == 'N'){
+								return "<button type='button' class='no_registrar btn btn-danger btn-md' > <i class='fa fa-adjust'></i></button>"
+							}else{
+								return "<button type='button' class='cancelar btn btn-danger btn-md' disabled > <i class='fa fa-adjust'></i></button>"
+							}			
+						},
 					}			
 				],
 				"language": idioma_espanol
 			});
+			
 			agregar("#dt_productos tbody", table)
 			editar("#dt_productos tbody", table)
 			eliminar("#dt_productos tbody", table)
-				
+			registrar("#dt_productos tbody", table)
+			no_registrar("#dt_productos tbody", table)	
+			cancelar("#dt_productos tbody", table)
 }
 var agregar= function(tbody, table) {
 		$(tbody).on("click", "button.agregar", function() 
@@ -77,6 +92,79 @@ var agregar= function(tbody, table) {
 
 		});
 }
+var registrar= function(tbody, table) {
+		$(tbody).on("click", "button.registrar", function() 
+		{
+				var data = table.row($(this).parents("tr")).data();
+				var parametros={
+					"id_factura":data.id_factura,
+					"id_estudio":data.studio,
+					"id_muestra":data.id_muestra,
+					"control":data.control
+				}
+			$.ajax({
+					type: "POST",                 
+					url: "controladores/agregar_muestra.php",                    
+					data:parametros,
+					beforeSend: function(){
+					},
+					success: function(data)            
+						{
+							if(data==1)
+							{
+								var table = $('#dt_productos').DataTable(); // accede de nuevo a la DataTable.
+								table.ajax.reload(); // Recarga el  DataTable
+								swal('datos agregados correctamente')
+								console.log(data)
+							}
+							else
+							{
+								swal('Error en MySQL, Error numero:  '+ data)
+								console.log(data)
+							}
+						}
+					});
+
+		});
+}
+
+/* boton de no registrar loa muestra */
+var no_registrar= function(tbody, table) {
+		$(tbody).on("click", "button.no_registrar", function() 
+		{
+				var data = table.row($(this).parents("tr")).data();
+				var parametros={
+					"id_factura":data.id_factura,
+					"id_estudio":data.studio,
+					"id_muestra":data.id_muestra,
+					"control":data.control
+				}
+			$.ajax({
+					type: "POST",                 
+					url: "controladores/no_agregar_muestra.php",                    
+					data:parametros,
+					beforeSend: function(){
+					},
+					success: function(data)            
+						{
+							if(data==1)
+							{
+								var table = $('#dt_productos').DataTable(); // accede de nuevo a la DataTable.
+								table.ajax.reload(); // Recarga el  DataTable
+								swal('datos agregados correctamente')
+								console.log(data)
+							}
+							else
+							{
+								swal('Error en MySQL, Error numero:  '+ data)
+								console.log(data)
+							}
+						}
+					});
+
+		});
+}
+
 
 /* Agregamos una nueva clasificacion  para q no se recargue la pagina */
 $("#form_productos").on('submit', function (e) 
@@ -124,7 +212,6 @@ var editar = function(tbody, table) {
 
 
 				$("#frmedit  label").attr('class','active')
-				$("#frmedit  #factura").val(data.id_factura)
 				$("#frmedit  #dc").val(data.id_cliente)
 				$("#frmedit  #pro").val(data.id_cliente)
 				$("#frmedit  #codigo").val(data.id_cliente)
@@ -133,12 +220,6 @@ var editar = function(tbody, table) {
 				$("#frmedit  #a_materno").val(data.a_materno)
 				$("#frmedit  #edad").val(data.edad)
 				$("#frmedit  #id_sexo").val(data.id_sexo)
-				$("#frmedit  #diagnostico").val(data.diagnostico)
-				$("#frmedit  #clinicos").val(data.datos_clinicos)
-				$("#frmedit  #medicamentos").val(data.medicamentos)
-				$("#frmedit  #telefono").val(data.telefono_fijo)
-				$("#frmedit  #email").val(data.mail)
-				$("#frmedit  #email").val(data.mail)
 			 
 		});
 }
@@ -147,27 +228,27 @@ $("#frmedit").on('submit', function (e)
 	{
 			e.preventDefault()
 			$.ajax({
-					type: "POST",                 
-					url: "controladores/editar.php",                    
-					data: $("#frmedit").serialize(),
-					beforeSend: function(){
-					},
-					success: function(data)            
-						{
-							if( data== 1 )
-							{
-								var table = $('#dt_productos').DataTable(); // accede de nuevo a la DataTable.
-								table.ajax.reload(); // Recarga el  DataTable
-								swal('datos agregados correctamente')
-								console.log(data)
-							}
-							else
-							{
-								swal('Error en MySQL, Error numero:  '+data)
-								console.log(data)
-							}
-						}
-					});          
+			type: "POST",                 
+			url: "controladores/editar.php",                    
+			data: $("#frmedit").serialize(),
+			beforeSend: function(){
+			},
+			success: function(data)            
+				{
+					if( data== 1 )
+					{
+						var table = $('#dt_productos').DataTable(); // accede de nuevo a la DataTable.
+						table.ajax.reload(); // Recarga el  DataTable
+						swal('datos agregados correctamente')
+						console.log(data)
+					}
+					else
+					{
+						swal('Error en MySQL, Error numero:  '+data)
+						console.log(data)
+					}
+				}
+			});          
 	});
 
 
@@ -219,6 +300,43 @@ var eliminar= function(tbody, table) {
 				
 		});
 	}
+
+var cancelar= function(tbody, table) {
+		$(tbody).on("click", "button.cancelar", function() 
+		{
+				var data = table.row($(this).parents("tr")).data();
+				var parametros={
+					"id_factura":data.id_factura,
+					"id_estudio":data.studio,
+					"id_muestra":data.id_muestra,
+					"control":data.control
+				}
+			$.ajax({
+					type: "POST",                 
+					url: "controladores/cancelar.php",                    
+					data:parametros,
+					beforeSend: function(){
+					},
+					success: function(data)            
+						{
+							if(data==1)
+							{
+								var table = $('#dt_productos').DataTable(); // accede de nuevo a la DataTable.
+								table.ajax.reload(); // Recarga el  DataTable
+								swal('datos agregados correctamente')
+								console.log(data)
+							}
+							else
+							{
+								swal('Error en MySQL, Error numero:  '+ data)
+								console.log(data)
+							}
+						}
+					});
+
+		});
+}
+
 
 
 function calcular(val)

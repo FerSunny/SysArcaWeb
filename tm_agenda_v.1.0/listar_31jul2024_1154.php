@@ -47,13 +47,15 @@ session_start();
     so_clientes cl,
     km_estudios es ,
     vw_estudios_muestras_deta em
-  WHERE ag.`fecha` = CURDATE()
-  -- WHERE ag.`fecha` >= '2024-06-01'
+    
+  -- WHERE ag.`fecha` = CURDATE()
+  WHERE ag.fecha => '2024-01-01'
   AND ag.`fk_id_factura` = fa.`id_factura`
   AND fa.`fk_id_sucursal` = su.`id_sucursal`
   AND fa.`fk_id_cliente` = cl.`id_cliente`
   AND ag.`fk_id_estudio` = es.`id_estudio`
   AND (ag.`fk_id_estudio` = em.`id_estudio` AND ag.`control` = em.`control`)
+  /*
   AND NOT EXISTS (SELECT NULL FROM tm_tomas tm 
       WHERE tm.`fk_id_factura` = ag.`fk_id_factura`
       AND tm.`fk_id_estudio`= ag.`fk_id_estudio`	

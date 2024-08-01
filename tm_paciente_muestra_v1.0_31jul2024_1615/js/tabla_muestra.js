@@ -138,7 +138,6 @@ var editar = function(tbody, table) {
 				$("#frmedit  #medicamentos").val(data.medicamentos)
 				$("#frmedit  #telefono").val(data.telefono_fijo)
 				$("#frmedit  #email").val(data.mail)
-				$("#frmedit  #email").val(data.mail)
 			 
 		});
 }
