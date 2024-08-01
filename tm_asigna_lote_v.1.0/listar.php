@@ -45,7 +45,7 @@ AND tm.`fk_id_estudio` = es.`id_estudio`
 AND tm.`fk_id_muestra` = mu.`id_muestra`
 AND fa.fk_id_sucursal = su.id_sucursal
 AND tm.aplico = 'S'
---  AND tm.lote is null
+AND tm.lote is null
 and tm.fk_id_sucursal = ".$fk_id_sucursal."
 order by tm.id_toma, tm.fk_id_factura
   ";

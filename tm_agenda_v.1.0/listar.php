@@ -47,8 +47,8 @@ session_start();
     so_clientes cl,
     km_estudios es ,
     vw_estudios_muestras_deta em
-  WHERE ag.`fecha` = CURDATE()
-  -- WHERE ag.`fecha` >= '2024-06-01'
+  -- WHERE ag.`fecha` = CURDATE()
+  WHERE ag.`fecha` >= '2024-04-01'
   AND ag.`fk_id_factura` = fa.`id_factura`
   AND fa.`fk_id_sucursal` = su.`id_sucursal`
   AND fa.`fk_id_cliente` = cl.`id_cliente`
