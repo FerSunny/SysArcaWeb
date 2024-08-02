@@ -22,6 +22,7 @@ $medicamentos = $_POST['medicamentos'];
 
 $telefono = $_POST['telefono'];
 $email = $_POST['email'];
+$id_califique = $_POST['id_califique'];
 
 
 $query = "UPDATE so_clientes
@@ -50,7 +51,8 @@ if ($result) {
 $query_fa = "UPDATE so_factura
 SET diagnostico = '$diagnostico',
     datos_clinicos = '$clinicos',
-    medicamentos = '$medicamentos'
+    medicamentos = '$medicamentos',
+    fk_id_califica = $id_califique
 WHERE id_factura = '$id_factura'";
 
 //echo 'so_factura:'.$query_fa;
