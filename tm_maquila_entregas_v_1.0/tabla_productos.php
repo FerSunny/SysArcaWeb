@@ -58,10 +58,12 @@
         <thead>
           <tr>
             <!-- CAMBIO Se cambian las columnas segun las columnas a mostrar -->
+            <th>Id </th>
             <th>Sucursal </th>
             <th>Lote</th>
             <th>OT</th>
             <th>Estudio</th>
+            <th>Fecha Toma</th>
             <th>Muestra</th>
             <th>Medio</th>
             <th>Equipo</th>

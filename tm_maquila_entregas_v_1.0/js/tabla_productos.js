@@ -34,6 +34,7 @@
 
 				"columns":[
 
+					{"data" : "id_toma"},
 					{"data" : "desc_corta"},
 
 					{"data" : "lote"},
@@ -41,6 +42,8 @@
 					{"data" : "fk_id_factura"},
 
 					{"data" : "desc_estudio"},
+
+					{"data" : "fecha_toma"},
 
 					{"data" : "desc_muestra"},
 
@@ -162,7 +165,7 @@ function focus_btn()
 
 }
 
-
+//  asignamaos medio y equipo
 
 var editar = function(tbody, table) {
 

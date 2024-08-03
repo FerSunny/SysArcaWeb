@@ -30,8 +30,8 @@ SELECT
   t.`fk_id_medio`,
   me.`desc_medio`,
   t.`fk_id_equipo`,
-  eq.`descripcion`
-  
+  eq.`descripcion`,
+  t.fecha_toma
 FROM
   tm_tomas t 
   LEFT OUTER JOIN tm_lote_detalle ld ON (ld.lote = t.lote)
@@ -40,7 +40,8 @@ FROM
   left outer join km_medios me on (me.`id_medio` = t.`fk_id_medio`)
   left outer join eb_equipos eq on (eq.`id_equipo` = t.`fk_id_equipo`),
   kg_sucursales s 
-WHERE DATE(t.fecha_toma) = CURDATE() 
+  -- WHERE DATE(t.fecha_toma) >= CURDATE() -5
+  WHERE DATE(t.fecha_toma) = '2022-10-01'
   AND t.fk_id_sucursal = s.id_sucursal 
   AND t.lote is not null 
   AND t.fk_id_sucursal $condicion
