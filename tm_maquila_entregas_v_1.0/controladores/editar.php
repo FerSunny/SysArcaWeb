@@ -26,8 +26,8 @@ $equipo = $_POST['equipo'];
 $query = "UPDATE tm_tomas
 SET
  fk_id_medio = '$medio',
- fk_id_equipo = '$equipo'
-
+ fk_id_equipo = '$equipo',
+ aceptado_ia = 1
 WHERE id_toma = '$codigo'";
 
 

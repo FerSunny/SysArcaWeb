@@ -400,7 +400,7 @@
 
 							<h2 style="color:blue;text-align:center" class="modal-title" id="modalEliminarLabel">
 
-									Detalle del lote
+									Detalle del Envio
 
 							</h2>
 
@@ -421,8 +421,9 @@
 						<div class="md-form">
 
 							<input type="text" readonly name="codigo" id="codigo" class="form-control" required>
-							<input type="text" readonly name="lote" id="lote" class="form-control" required>					
-							<label for="codigo">Código/Lote</label>
+							<input type="text" readonly name="fecha_toma" id="fecha_toma" class="form-control" required>
+							<input type="text" readonly name="equipo" id="equipo" class="form-control" required>					
+							<label for="codigo">Mochila</label>
 
 						</div>
 
@@ -459,9 +460,23 @@
 								</div>
 
 							</div>
+							<div class="col">
 
+								<div class="md-form mt-0">
+
+									<div class="md-form">
+
+										<input type="decimal" name="temperatura" id="temperatura" class="form-control" value="0" step="0.01" required>
+
+										<label for="temperatura">Temperatura</label>
+
+									</div>
+
+								</div>
+
+							</div>
 						</div>
-
+<!--
 						<div class="row">
 
 							<div class="col">
@@ -480,6 +495,8 @@
 
 							</div>
 
+
+
 							<div class="col">
 
 								<div class="md-form mt-0">
@@ -496,7 +513,7 @@
 
 							</div>
 
-
+											
 							<div class="col">
 
 								<div class="md-form mt-0">
@@ -515,8 +532,8 @@
 
 
 						</div>
-
-
+											-->
+<!--
 						<div class="row">
 
 							<div class="col">
@@ -585,7 +602,8 @@
 							</div>
 						</div>
 
-
+											-->
+<!--
 						<div class="row">
 
 							<div class="col">
@@ -653,8 +671,9 @@
 
 							</div>
 						</div>
+											-->
 
-
+<!--											
 						<div class="row">
 
 							<div class="col">
@@ -722,7 +741,8 @@
 
 							</div>
 						</div>
-
+											-->
+<!--
 						<div class="row">
 
 							<div class="col">
@@ -790,7 +810,7 @@
 
 							</div>
 						</div>
-
+											
 						<div class="row">
 
 							<div class="col">
@@ -808,6 +828,41 @@
 								</div>
 
 							</div>
+
+
+						</div>
+
+-->
+
+						<div class="row">
+						<div class="col">
+							<div class="md-form mt-0">
+								<label for="">Termometro</label>
+							</div>
+						</div>
+
+						<div class="col-9">
+							<div class="md-form mt-0">
+								<select class="form-control form-control-sm" name="termometro" 
+								id="termometro" required>
+									<option value="" class="z-depth-5">Seleccione</option>
+										<?php 
+												$query = $conexion -> query("SELECT
+																			e.id_equipo,
+																			e.`descripcion`
+																			FROM eb_equipos e
+																			WHERE e.`descripcion` LIKE 'TERMO%' AND e.estado = 'A' order by 2");
+												while($res = mysqli_fetch_array($query))
+												{
+														echo "<option value =".$res['id_equipo'].">
+																".$res['descripcion']."
+																</option>";
+												}
+										?>
+								</select>
+							</div>
+						</div>
+
 
 
 						</div>

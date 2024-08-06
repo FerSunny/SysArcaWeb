@@ -36,12 +36,13 @@
 
 					{"data" : "desc_corta"},
 
-					{"data" : "lote"},
+					{"data" : "descripcion"},
 
-					{"data" : "muestras"},
+					{"data" : "cantidad_medios"},
+					
+					{"data" : "cantidad"},
 
-
-					{"defaultContent": "<button type='button' class='editar btn btn-warning btn-md'><i class='fas fa-edit'></i></button>"},
+					{"defaultContent": "<button type='button' class='editar btn btn-success btn-md'><i class='fa fa-thermometer-full'></i></button>"},
 
 					//{"defaultContent":"<button type='button' class='eliminar btn btn-danger btn-md'><i class='fas fa-trash-alt'></i></button>"}
 
@@ -52,11 +53,11 @@
 							if(v_id_lote == null){				
 								return "<form-group style='text-align:center;'>"+
 								//"<a id='muestras' target='_blank' href='./tabla_tubos.php?numero_factura="+row['id_factura']+"&studio="+row['id_estudio']+"' class='btn btn-warning btn-md' role='button'><span  class='fa fa-crutch'></span></a>"+
-								"<a id='muestras' target='_blank' href='./reports/print_result.php?lote="+row['lote']+"' class='btn btn-warning btn-md' role='button'><span disabled class='fa fa-print'></span></a>"+
+								"<a id='muestras' target='_blank' href='./reports/print_result.php?fk_id_equipo="+row['fk_id_equipo']+"' class='btn btn-warning btn-md' role='button'><span disabled class='fa fa-print'></span></a>"+
 								"</form-group>";
 							}else{
 								return "<form-group style='text-align:center;'>"+
-								"<a id='muestras' target='_blank' href='./reports/print_result.php?lote="+row['lote']+"' class='btn btn-warning btn-md' role='button'><span class='fa fa-print'></span></a>"+
+								"<a id='muestras' target='_blank' href='./reports/print_result.php?fk_id_equipo="+row['fk_id_equipo']+"' class='btn btn-warning btn-md' role='button'><span class='fa fa-print'></span></a>"+
 								"</form-group>";								
 							}
 							},
@@ -192,47 +193,17 @@ var editar = function(tbody, table) {
 
 				$("#frmedit  label").attr('class','active')
 
-				$("#frmedit  #dc").val(data.id_lote)
+				$("#frmedit  #dc").val(data.fk_id_equipo)
 
-				$("#frmedit  #pro").val(data.id_lote)
+				$("#frmedit  #pro").val(data.fk_id_equipo)
 
-				$("#frmedit  #codigo").val(data.lote)
+				$("#frmedit  #codigo").val(data.fk_id_equipo)
 
-				$("#frmedit  #lote").val(data.id_lote)
+				$("#frmedit  #lote").val(data.fk_id_equipo)
 
-				$("#frmedit  #hora_llegada").val(data.hora_llegada)
-
-				$("#frmedit  #hora_salida").val(data.hora_salida)
-
-				$("#frmedit  #tem_ref").val(data.tem_ref)
-
-				$("#frmedit  #tem_amb").val(data.tem_amb)
-
-				$("#frmedit  #tem_con").val(data.tem_con)
-
-				$("#frmedit  #t_d").val(data.t_d)
-
-				$("#frmedit  #t_r").val(data.t_r)
-
-				$("#frmedit  #t_m").val(data.t_m)
-
-				$("#frmedit  #t_a").val(data.t_a)
-
-				$("#frmedit  #t_sec_sue").val(data.t_sec_sue)
-				$("#frmedit  #t_sec_pla").val(data.t_sec_pla)
-				$("#frmedit  #fro_san").val(data.fro_san)
-				$("#frmedit  #fro_eod").val(data.fro_eod)
-				$("#frmedit  #fro_cul").val(data.fro_cul)
-				$("#frmedit  #fro_cult").val(data.fro_cult)
-				$("#frmedit  #ego_uro").val(data.ego_uro)
-				$("#frmedit  #heces").val(data.heces)
-				$("#frmedit  #bx_o_fco_esteril").val(data.bx_o_fco_esteril)
-				$("#frmedit  #ecg_traz").val(data.ecg_traz)
-				$("#frmedit  #pap").val(data.pap)
-				$("#frmedit  #med_stu").val(data.med_stu)
-				$("#frmedit  #med_liq").val(data.med_liq)
-
-			 
+				$("#frmedit  #equipo").val(data.descripcion)		
+				
+				$("#frmedit  #fecha_toma").val(data.fecha_toma)
 
 		});
 
