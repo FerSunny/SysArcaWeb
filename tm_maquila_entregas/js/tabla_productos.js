@@ -49,16 +49,14 @@
 					{
 						render:function(data,type,row){
 							var v_hora_toma;
-							v_id_lote=row['id_lote'];
-							if(v_id_lote == null){				
+							aceptado_ia=row['aceptado_ia'];
+							if(aceptado_ia == 2){				
 								return "<form-group style='text-align:center;'>"+
 								//"<a id='muestras' target='_blank' href='./tabla_tubos.php?numero_factura="+row['id_factura']+"&studio="+row['id_estudio']+"' class='btn btn-warning btn-md' role='button'><span  class='fa fa-crutch'></span></a>"+
-								"<a id='muestras' target='_blank' href='./reports/print_result.php?fk_id_equipo="+row['fk_id_equipo']+"' class='btn btn-warning btn-md' role='button'><span disabled class='fa fa-print'></span></a>"+
+								"<a id='muestras' target='_blank' href='./reports/print_result.php?fk_id_equipo="+row['fk_id_equipo']+"&fecha_toma="+row['fecha_toma']+"' class='btn btn-success btn-md' role='button'><span class='fa fa-print'></span></a>"+
 								"</form-group>";
 							}else{
-								return "<form-group style='text-align:center;'>"+
-								"<a id='muestras' target='_blank' href='./reports/print_result.php?fk_id_equipo="+row['fk_id_equipo']+"' class='btn btn-warning btn-md' role='button'><span class='fa fa-print'></span></a>"+
-								"</form-group>";								
+								return "<button disabled type='button' class='editar btn btn-danger btn-md'><i class='fa fa-print'></i> </button>"								
 							}
 							},
 					}

@@ -20,7 +20,8 @@ $id_plantilla=1;
 
 $studio=1;
 $id_usuario=$_SESSION['nombre'];
-$lote=$_GET['lote'];
+$fk_id_equipo=$_GET['fk_id_equipo'];
+$fecha_toma=$_GET['fecha_toma'];
 
 
 $query = "SELECT
@@ -227,94 +228,55 @@ $pdf->AddPage();
 
 
 
-$hay_obs='';
+$equipo_ant='';
 
-$observaciones='';
-
-$nle='0';
-
-
-
-$sql="select * FROM tm_lote_detalle
-  where lote= '$lote'";
+$sql="
+  SELECT 
+  s.desc_corta,
+  t.`fk_id_equipo`,
+  e.descripcion,
+  m.`desc_medio`,
+  DATE(t.fecha_toma) AS fecha_toma,
+  t.aceptado_ia,
+  t.`fecha_llego`,
+  t.`fecha_salio`,
+  temperatura,
+  q.`descripcion` AS termometro,
+  COUNT(*) muestras
+  FROM 
+  tm_tomas t
+  LEFT OUTER JOIN eb_equipos e ON (e.id_equipo = t.fk_id_equipo)
+  LEFT OUTER JOIN km_medios m ON (m.`id_medio` = t.`fk_id_medio`)
+  LEFT OUTER JOIN kg_sucursales s ON (s.id_sucursal = t.`fk_id_sucursal`)
+  LEFT OUTER JOIN eb_equipos q ON (q.`id_equipo` = t.`fk_id_termometro`)
+  WHERE DATE(t.fecha_toma) >= '$fecha_toma'
+  AND t.fk_id_equipo = $fk_id_equipo
+  AND aceptado_ia IN (2)
+  GROUP BY 1,2,3,4,5,6,7,8,9,10
+  ORDER BY s.desc_corta,m.desc_medio
+  ";
 //echo $sql;
 
+  $pdf->SetFont('Arial','',10);
 
   if ($result = mysqli_query($con, $sql)) {
 
     while($row = $result->fetch_assoc())
 
       {
+        if ($row['descripcion'] =! $equipo_ant)
+        {
+          $pdf->ln(3);
+          $pdf->Cell(1);
+          $pdf->Cell(50,5,'Equipo: '.$row['descripcion'],0,0,'L');
+          $equipo_ant = $row['descripcion'];
+        }
 
-
-        $pdf->ln(5);
-        $pdf->Cell(3);
-
-        $pdf->SetFont('Arial','',10);
-        $pdf->Cell(50,5,'Lote: '.$row['lote'],0,0,'L');
         $pdf->ln(10);
-        $pdf->Cell(3);
-        $pdf->Cell(50,5,'Hora LLegada Mensajero: '.$row['hora_llegada'],0,0,'L');
-        $pdf->ln(6);
-        $pdf->Cell(3);
-        $pdf->Cell(50,5,'Hora Salida Mensajero: '.$row['hora_salida'],0,0,'L');
-        $pdf->ln(10);
-        $pdf->Cell(3);
-        $pdf->Cell(50,5,'Temperatura Referencia: '.$row['tem_ref'],0,0,'L');
-        $pdf->ln(6);
-        $pdf->Cell(3);
-        $pdf->Cell(50,5,'Temperatura Ambiente: '.$row['tem_amb'],0,0,'L');
-        $pdf->ln(6);
-        $pdf->Cell(3);
-        $pdf->Cell(50,5,'Temperatura Refrigeracion: '.$row['tem_ref'],0,0,'L');
-        $pdf->ln(10);
-        $pdf->Cell(3);
-        $pdf->Cell(50,5,'Tubos Dorados: '.$row['t_d'],0,0,'L');
-        $pdf->ln(6);
-        $pdf->Cell(3);
-        $pdf->Cell(50,5,'Tubos Rojo: '.$row['t_r'],0,0,'L');
-        $pdf->ln(6);
-        $pdf->Cell(3);
-        $pdf->Cell(50,5,'Tubos Morado: '.$row['t_m'],0,0,'L');
-        $pdf->ln(6);
-        $pdf->Cell(3);
-        $pdf->Cell(50,5,'Tubos Azul: '.$row['t_a'],0,0,'L');
-        $pdf->ln(6);
-        $pdf->Cell(3);
-        $pdf->Cell(50,5,'Tubos secundario con suero: '.$row['t_sec_sue'],0,0,'L');
-        $pdf->ln(6);
-        $pdf->Cell(3);
-        $pdf->Cell(50,5,'Tubos secundario con plasma: '.$row['t_sec_pla'],0,0,'L');
-        $pdf->ln(6);
-        $pdf->Cell(3);
-        $pdf->Cell(50,5,'Frotis Sanguineo: '.$row['fro_san'],0,0,'L');
-        $pdf->ln(6);
-        $pdf->Cell(3);
-        $pdf->Cell(50,5,'Frotis para eosinofilos: '.$row['fro_eod'],0,0,'L');
-        $pdf->ln(6);
-        $pdf->Cell(3);
-        $pdf->Cell(50,5,'Frotis para cultivos: '.$row['fro_cul'],0,0,'L');
-        $pdf->ln(6);
-        $pdf->Cell(3);
-        $pdf->Cell(50,5,'Frasco con muestra de orina u otro liquido: '.$row['ego_uro'],0,0,'L');
-        $pdf->ln(6);
-        $pdf->Cell(3);
-        $pdf->Cell(50,5,'Heces: '.$row['heces'],0,0,'L');
-        $pdf->ln(6);
-        $pdf->Cell(3);
-        $pdf->Cell(50,5,'Biopsia: '.$row['bx_o_fco_esteril'],0,0,'L');
-        $pdf->ln(6);
-        $pdf->Cell(3);
-        $pdf->Cell(50,5,'Trazo de electrocardiograma: '.$row['ecg_traz'],0,0,'L');
-        $pdf->ln(6);
-        $pdf->Cell(3);
-        $pdf->Cell(50,5,'Papanicolao: '.$row['pap'],0,0,'L');
-        $pdf->ln(6);
-        $pdf->Cell(3);
-        $pdf->Cell(50,5,'Medio de transporte stuart: '.$row['med_stu'],0,0,'L');
-        $pdf->ln(6);
-        $pdf->Cell(3);
-        $pdf->Cell(50,5,'Medio de transporte liquido (vidrio): '.$row['med_liq'],0,0,'L');
+        $pdf->Cell(1);
+        $pdf->Cell(50,5,$row['desc_medio'],0,0,'L');
+        $pdf->Cell(50,5,$row['muestras'],0,0,'L');
+ 
 /*
 
         $pdf->Cell(1);
