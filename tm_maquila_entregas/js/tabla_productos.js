@@ -36,6 +36,8 @@
 
 					{"data" : "desc_corta"},
 
+					{"data" : "fecha_toma"},
+
 					{"data" : "descripcion"},
 
 					{"data" : "cantidad_medios"},
@@ -53,7 +55,7 @@
 							if(aceptado_ia == 2){				
 								return "<form-group style='text-align:center;'>"+
 								//"<a id='muestras' target='_blank' href='./tabla_tubos.php?numero_factura="+row['id_factura']+"&studio="+row['id_estudio']+"' class='btn btn-warning btn-md' role='button'><span  class='fa fa-crutch'></span></a>"+
-								"<a id='muestras' target='_blank' href='./reports/print_result.php?fk_id_equipo="+row['fk_id_equipo']+"&fecha_toma="+row['fecha_toma']+"' class='btn btn-success btn-md' role='button'><span class='fa fa-print'></span></a>"+
+								"<a id='muestras' target='_blank' href='./reports/print_result.php?fecha_toma="+row['fecha_toma']+"&fk_id_sucursal="+row['fk_id_sucursal']+"' class='btn btn-success btn-md' role='button'><span class='fa fa-print'></span></a>"+
 								"</form-group>";
 							}else{
 								return "<button disabled type='button' class='editar btn btn-danger btn-md'><i class='fa fa-print'></i> </button>"								

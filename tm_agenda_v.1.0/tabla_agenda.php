@@ -47,7 +47,7 @@ Fecha: 18dic2020
   ?>
 
   <div class="container" style="margin-top: 30px;">
-    <h1 style="text-align: center;">Agendar toma de muestra
+    <h1 style="text-align: center;">Re-Agendar tomas de muestra
     </h1>
     <h5 style="text-align: center;">Version 2.0.0
     </h5>

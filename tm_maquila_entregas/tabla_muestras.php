@@ -87,6 +87,7 @@
       <button type="button" class="btn btn-primary pull-right menu" data-toggle="modal" data-target="#myModals"><i class="fa fa-user-plus" aria-hidden="true"></i>&nbsp;Nuevo Producto</button> 
 -->
     </h1>
+    <h3 style="text-align: center;">*** El reporte de envio se hara por dia ***</h3>
 
   </div>
 
@@ -115,6 +116,8 @@
             <!-- CAMBIO Se cambian las columnas segun las columnas a mostrar -->
 
             <th>Sucursal </th>
+
+            <th>Fecha</th>
 
             <th>Equipo</th>
 

@@ -20,7 +20,7 @@ $id_plantilla=1;
 
 $studio=1;
 $id_usuario=$_SESSION['nombre'];
-$fk_id_equipo=$_GET['fk_id_equipo'];
+$fk_id_sucursal=$_GET['fk_id_sucursal'];
 $fecha_toma=$_GET['fecha_toma'];
 
 
@@ -227,7 +227,7 @@ $pdf->AliasNbPages();
 $pdf->AddPage();
 
 
-
+$total_m =0;
 $equipo_ant='';
 
 $sql="
@@ -250,10 +250,10 @@ $sql="
   LEFT OUTER JOIN kg_sucursales s ON (s.id_sucursal = t.`fk_id_sucursal`)
   LEFT OUTER JOIN eb_equipos q ON (q.`id_equipo` = t.`fk_id_termometro`)
   WHERE DATE(t.fecha_toma) >= '$fecha_toma'
-  AND t.fk_id_equipo = $fk_id_equipo
+  AND t.fk_id_sucursal = $fk_id_sucursal
   AND aceptado_ia IN (2)
   GROUP BY 1,2,3,4,5,6,7,8,9,10
-  ORDER BY s.desc_corta,m.desc_medio
+  ORDER BY e.descripcion,m.desc_medio
   ";
 //echo $sql;
 
@@ -264,19 +264,26 @@ $sql="
     while($row = $result->fetch_assoc())
 
       {
-        if ($row['descripcion'] =! $equipo_ant)
+        if ($row['descripcion'] <> $equipo_ant)
         {
-          $pdf->ln(3);
-          $pdf->Cell(1);
-          $pdf->Cell(50,5,'Equipo: '.$row['descripcion'],0,0,'L');
+          $pdf->ln(7);
+          //$pdf->Cell(1);
+          $pdf->Cell(50,5,'Equipo: '.utf8_decode($row['descripcion']),0,0,'L');
+          $pdf->ln(5);
+          $pdf->Cell(50,5,'Temperatura: '.utf8_decode($row['temperatura']).utf8_decode(' °C'),0,0,'L');
+          $pdf->Cell(50,5,'Hora LLegada: '.utf8_decode($row['fecha_llego']),0,0,'L');
+          $pdf->Cell(50,5,'Hora Salio: '.utf8_decode($row['fecha_salio']),0,0,'L');
           $equipo_ant = $row['descripcion'];
         }
 
-        $pdf->ln(10);
-        $pdf->Cell(1);
+        $pdf->ln(5);
+        //$pdf->Cell(1);
         $pdf->Cell(50,5,$row['desc_medio'],0,0,'L');
         $pdf->Cell(50,5,$row['muestras'],0,0,'L');
- 
+        $total_m=$total_m+$row['muestras'];
+
+         // $pdf->Cell(50,5,'Total: '.$total_m,0,0,'L');
+
 /*
 
         $pdf->Cell(1);
