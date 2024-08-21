@@ -96,7 +96,7 @@ function Header()
     $this->SetFont('Arial','',9);
     $this->Cell(30,5,'Horario',0,0,'L');
     $this->Cell(30,5,'Paciente',0,0,'C');
-    $this->Cell(15);
+    $this->Cell(20);
     $this->Cell(40,5,'Tel. Fijo    Tel. Movil',0,0,'C');
     $this->Cell(40,5,'Estudio',0,0,'C');
     $this->Ln(5);
@@ -189,7 +189,7 @@ LEFT OUTER JOIN so_clientes c ON (c.`id_cliente` = a.`fk_id_paciente`)
 LEFT OUTER JOIN km_areas d ON (d.`id_area` = a.`fk_id_area`)
 LEFT OUTER JOIN km_estudios e ON (e.`id_estudio` = a.`fk_id_estudio`)
 WHERE a.estado = 'A'
-AND a.`fecha` >= '$fecha'
+AND a.`fecha` = '$fecha'
 AND a.`fk_id_sucursal` = $fk_id_sucursal
 AND a.`fk_id_area` = $fk_id_area
 order by 5
@@ -201,7 +201,7 @@ order by 5
 
              // $pdf->SetFont('Arial', 'B', 14);
               $pdf->Cell(30,5,utf8_decode($row['hora'].' - '.$row['hora_termino']),0,0,'L');
-              $pdf->Cell(50,5,utf8_decode($row['paciente']),0,0,'L');   
+              $pdf->Cell(60,5,utf8_decode($row['paciente']),0,0,'L');   
               $pdf->Cell(23,5,utf8_decode($row['telefono_fijo']),0,0,'L');  
               $pdf->Cell(23,5,utf8_decode($row['telefono_movil']),0,0,'L');  
               $pdf->Cell(40,5,utf8_decode($row['iniciales']),0,0,'L');  
