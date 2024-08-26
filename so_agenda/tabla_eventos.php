@@ -65,6 +65,7 @@
         <thead>
           <tr>
             <!-- CAMBIO Se cambian las columnas segun las columnas a mostrar -->
+            <th>Reservo</th>
             <th>Id </th>
             <th>Sucursal</th>
             <th>Area</th>
