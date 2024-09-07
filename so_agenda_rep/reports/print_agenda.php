@@ -96,9 +96,10 @@ function Header()
     $this->SetFont('Arial','',9);
     $this->Cell(30,5,'Horario',0,0,'L');
     $this->Cell(30,5,'Paciente',0,0,'C');
-    $this->Cell(15);
+    $this->Cell(20);
     $this->Cell(40,5,'Tel. Fijo    Tel. Movil',0,0,'C');
     $this->Cell(40,5,'Estudio',0,0,'C');
+    $this->Cell(40,5,'Reservo',0,0,'C');
     $this->Ln(5);
 
 }
@@ -182,14 +183,16 @@ CONCAT(c.`nombre`,' ',c.`a_paterno`,' ',c.`a_materno`) AS paciente,
 d.`desc_area`,
 e.`iniciales`,
 c.telefono_fijo,
-c.telefono_movil
+c.telefono_movil,
+concat(us.`nombre`,' ',us.`a_paterno`) reservo
 FROM so_agenda a
 LEFT OUTER JOIN kg_sucursales b ON (b.`id_sucursal` = a.`fk_id_sucursal`)
 LEFT OUTER JOIN so_clientes c ON (c.`id_cliente` = a.`fk_id_paciente`)
 LEFT OUTER JOIN km_areas d ON (d.`id_area` = a.`fk_id_area`)
 LEFT OUTER JOIN km_estudios e ON (e.`id_estudio` = a.`fk_id_estudio`)
+left outer join se_usuarios us on (us.`id_usuario` = a.`fk_id_usuario`)
 WHERE a.estado = 'A'
-AND a.`fecha` >= '$fecha'
+AND a.`fecha` = '$fecha'
 AND a.`fk_id_sucursal` = $fk_id_sucursal
 AND a.`fk_id_area` = $fk_id_area
 order by 5
@@ -201,10 +204,17 @@ order by 5
 
              // $pdf->SetFont('Arial', 'B', 14);
               $pdf->Cell(30,5,utf8_decode($row['hora'].' - '.$row['hora_termino']),0,0,'L');
-              $pdf->Cell(50,5,utf8_decode($row['paciente']),0,0,'L');   
+             // echo 'tamano:'.strlen(trim($row['paciente']));
+              if (strlen(trim($row['paciente'])) == 0){
+                $pdf->Cell(60,5,utf8_decode($row['observaciones']),0,0,'L'); 
+              }else{
+                $pdf->Cell(60,5,utf8_decode($row['paciente']),0,0,'L'); 
+              }
+                 
               $pdf->Cell(23,5,utf8_decode($row['telefono_fijo']),0,0,'L');  
               $pdf->Cell(23,5,utf8_decode($row['telefono_movil']),0,0,'L');  
               $pdf->Cell(40,5,utf8_decode($row['iniciales']),0,0,'L');  
+              $pdf->Cell(40,5,utf8_decode($row['reservo']),0,0,'L'); 
               $pdf->ln(5);
 
 

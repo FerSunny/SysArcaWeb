@@ -110,7 +110,7 @@
 
 												$query = $conexion -> query("SELECT id_equipo,descripcion FROM eb_equipos 
 																			WHERE estado = 'A'
-																			AND SUBSTR(descripcion,1,5) = 'HIGRO'");
+																			AND descripcion LIKE '%HIGROME%'");
 
 												while($res = mysqli_fetch_array($query))
 
@@ -295,7 +295,7 @@
 
 												$query = $conexion -> query("SELECT id_equipo,descripcion FROM eb_equipos 
 																			WHERE estado = 'A'
-																			AND SUBSTR(descripcion,1,5) = 'HIGRO'");
+																			AND descripcion LIKE '%HIGROME%'");
 
 												while($res = mysqli_fetch_array($query))
 

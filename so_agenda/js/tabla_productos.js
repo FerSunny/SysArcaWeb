@@ -33,6 +33,8 @@
 
 				"columns":[
 
+					{"data" : "reservo"},
+					
 					{"data" : "id_evento"},
 
 					{"data" : "desc_corta"},

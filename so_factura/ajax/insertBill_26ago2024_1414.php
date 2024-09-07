@@ -5,9 +5,6 @@ date_default_timezone_set('America/Chihuahua');
 require_once ("../config/db.php");//Contiene las variables de configuracion para conectar a la base de datos
 require_once ("../config/conexion.php");//Contiene funcion que conecta a la base de datos
 
-include_once('./includes/class.phpmailer.php');
-include_once('./includes/class.smtp.php');
-
 $data=json_decode($_POST['datas'],true);
 
 $sTableInsert = "so_factura";
@@ -216,126 +213,6 @@ $id_factura_new = $prefolio.substr("000{$ultimo_dia}", -$str_nota);
         (1,'$last_id','$last_id','$studio_id','$estudio_cantidad','$estudio_precio_venta')";
         //echo $sql;
         $query_new_insert = mysqli_query($con,$sql);
-// *** Codigo para verificar si el estudio tiene plantilla      ***
-// *** JPM 26ago2024                                            *** 
-// *** Se elabora para el modulo de administracion de muestras  ***
-
-//  obtenemos la informacion del estudio y vreerificamos si tiene plantilla
-        $existe_p = 0;
-        $sql_estudio="SELECT es.`fk_id_plantilla` FROM km_estudios es WHERE es.`estatus` = 'A' AND es.id_estudio = $studio_id"
-        if ($res_estudio = mysqli_query($con, $sql_estudio)) {
-          while($row_estudio = $res_estudio->fetch_assoc())
-          {
-              $existe_p = 0;
-              $fk_id_plantilla=$row_estudio['fk_id_plantilla'];
-              switch ($fk_id_plantilla) {
-                case '1':
-                  $q_p1 = mysqli_query($con,"SELECT id_valor FROM cr_plantilla_1 WHERE estado = 'A' AND fk_id_estudio = $studio_id");
-                  $r_p1 = mysqli_fetch_array($q_p1);
-                  $nr = mysqli_num_rows($q_p1); 
-                  if($nr == 1){           
-                      $existe_p = 1; // existe
-                  }else{
-                      $existe_p = 0; // mo existe
-                  }
-                  break;
-                case '2':
-                  $q_p2 = mysqli_query($con,"SELECT id_valor FROM cr_plantilla_2 WHERE estado = 'A' AND fk_id_estudio = $studio_id");
-                  $r_p2 = mysqli_fetch_array($q_p2);
-                  $nr = mysqli_num_rows($q_p2); 
-                  if($nr == 1){           
-                      $existe_p = 1; // existe
-                  }else{
-                      $existe_p = 0; // mo existe
-                  }
-                    break;                
-                default:
-                  # code...
-                  break;
-              }
-          }
-        }
-
-        //Datos del destinatario
-        //Paciente
-        $usuario = 'Daniela M. Olivares M.';
-        $e_paciente = 'daniela.olivares@medisyslabs.com.mx';
-        //Medico
-        $medico = $medico;
-        $e_medico = $e_medico;
-        //Estudio
-        $estudio = $desc_estudio;
-        //Asunto
-        $subject = utf8_decode('Resultado de estudios');
-        //Mensaje
-        $mensage = utf8_decode('Resultados del estudio: '.$estudio.' del paciente: '.$paciente); 
-        //echo 'datos -->'.$estudio.$mensage;
-        //Este bloque es importante
-        $mail = new PHPMailer();
-        try{
-        $mail->IsSMTP();
-        $mail->SMTPAuth = true;
-        $mail->SMTPSecure = "ssl";
-        $mail->Host = "smtp.ionos.mx";   //"laboratoriosarca.com.mx";
-        $mail->Port = 587;
-        
-        
-        //Nuestra cuenta
-        $mail->Username ='atencion.clientes@laboratoriosarca.mx';
-        $mail->Password = 'Arca_2021'; //Su password
-         
-        //Agregar destinatario
-        //Recipients
-        
-        //De
-        $mail->setFrom('atencion.clientes@laboratoriosarca.mx', 'Laboratorios Arca');
-        
-        
-        //Para
-        if($enviar == 1)
-        {
-          $mail->addAddress($e_medico,$medico);
-        }else
-        if($enviar == 2)
-        {
-          $mail->addAddress($e_paciente,$paciente);
-        }else
-        {
-          $mail->addAddress($e_paciente,$paciente);
-        }
-        
-        $mail->addCC('marisol.briceno@laboratoriosarca.mx','Copia Resultado enviado');
-        
-        //Para adjuntar archivo
-        $mail->AddAttachment("../emails/".$fac."_".$studio.".pdf");
-        $mail->isHTML(true);                                  // Set email format to HTML
-        $mail->Subject = $subject;
-        $mail->Body    ='<h4>'.$mensage.'</h4>';
-        $mail->AltBody = $mensage;
-        
-        //$mail->MsgHTML("Prueba de mensaje para ARCA");
-        //echo 'mail -->'.'../emails/'.$fac.'_'.$studio.'.pdf';
-        $mail->Send();
-        
-        $mail->SMTPOptions = array(
-        'ssl' => array(
-            'verify_peer' => false,
-            'verify_peer_name' => true,
-            'allow_self_signed' => true
-        ));
-        echo 1;
-        } catch (Exception $e) {
-            echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
-        }
-
-
-
-        if ($existe == 0){
-
-
-        }
-
-
       }
 
       
