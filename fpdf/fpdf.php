@@ -1043,15 +1043,15 @@ protected function _dochecks()
 		$this->Error('mbstring overloading must be disabled');
 	// Ensure runtime magic quotes are disabled
 
-
+	/*
 	if(version_compare(PHP_VERSION, '7.4.0', '<') && get_magic_quotes_runtime()) {
 		@set_magic_quotes_runtime(0);
 	}
+		*/
 
-	/*
 	if(get_magic_quotes_runtime())
 		@set_magic_quotes_runtime(0);
-		*/
+
 }
 
 protected function _checkoutput()
