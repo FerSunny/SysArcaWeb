@@ -49,7 +49,7 @@
 							var registrado;
 					
 							return "<form-group style='text-align:center;'>"+
-							"<a id='printer'  href='../vm_agenda_duplica/tabla_dias.php?mesagendanum="+row['mesagendanum']+"&anioagenda="+row['anioagenda']+"&id_usuario="+row['id_usuario']+"' target=“_blank” class='btn btn-blue-grey btn-md' role='button'><span  class='fa fa-image' style='color: white;'></span></a>"+
+							"<a id='printer'  href='./tabla_dias.php?mesagendanum="+row['mesagendanum']+"&anioagenda="+row['anioagenda']+"&id_usuario="+row['id_usuario']+"' target=“_blank” class='btn btn-blue-grey btn-md' role='button'><span  class='fa fa-image' style='color: white;'></span></a>"+
 							"</form-group>";											
 											
 						}

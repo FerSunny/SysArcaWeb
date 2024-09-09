@@ -8,27 +8,9 @@
 
 ?>
 
-	<style type="text/css">
-		ul {
-			list-style-type: none;
-			width: 300px;
-			height: auto;
-			position: absolute;
-			margin-top: 10px;
-			margin-left: 10px;
-		}
 
-		li {
-			background-color: #EEEEEE;
-			border-top: 1px solid #9e9e9e;
-			padding: 5px;
-			width: 100%;
-			float: left;
-			cursor: pointer;
-		}
-	</style>
 
-<form id="form_productos" action="" method="post" autocomplete="off">
+<form id="form_productos" action="" method="post">
 
 	<div class="modal fade" id="myModals" role="dialog">
 
@@ -40,7 +22,7 @@
 
 						<h2 style="color:blue;text-align:center" class="modal-title">
 
-								Nueva Queja
+								Nuevo Producto
 
 						</h2>
 
@@ -52,7 +34,7 @@
 
 					<div class="md-form">
 
-						<input type="number" name="codigo" id="codigo" class="form-control"  maxlength="15" required readonly>
+						<input type="number" name="codigo" id="codigo" class="form-control"  maxlength="15" required>
 
 						<label for="codigo">Código</label>
 
@@ -65,22 +47,10 @@
 							<div class="md-form mt-0">
 
 								<div class="md-form">
-									Tipo
-									<select class="form-control form-control-sm" name="q_o_s" 
-										id="q_o_s" required>
-										<option value="" class="z-depth-5">Seleccione</option>
-											<?php 
-													$query = $conexion -> query("SELECT id_q_i,desc_q_i FROM kg_queja_incon WHERE estado = 'A'");
-													while($res = mysqli_fetch_array($query))
-													{
-															echo "<option value =".$res['id_q_i'].">
-																	".$res['desc_q_i']."
-																	</option>";
-													}
-											?>
-									</select>
 
-									
+									<input type="text" name="producto" id="producto" class="form-control" maxlength="100" required>
+
+									<label for="producto"> Descripción corta </label>
 
 								</div>
 
@@ -94,9 +64,9 @@
 
 								<div class="md-form">
 
-									<input type="date" name="fecha_queja" id="fecha_queja" class="form-control" maxlength="100">
+									<input type="text" name="desc_p" id="desc_p" class="form-control" maxlength="100">
 
-									<label for="desc_p">Fecha Queja </label>
+									<label for="desc_p">Descripción larga </label>
 
 								</div>
 
@@ -107,157 +77,109 @@
 					</div>
 
 					<div class="row">
-
 						<div class="col">
-
 							<div class="md-form mt-0">
-
 								<div class="md-form">
-								Origen
-								<select class="form-control form-control-sm" name="origen" 
-										id="origen" required>
-										<option value="" class="z-depth-5">Seleccione</option>
-											<?php 
-													$query = $conexion -> query("SELECT id_origen,desc_origen FROM kg_origen_queja WHERE estado = 'A'");
-													while($res = mysqli_fetch_array($query))
-													{
-															echo "<option value =".$res['id_origen'].">
-																	".$res['desc_origen']."
-																	</option>";
-													}
-											?>
-									</select>
-
+									<input type="number"  name="costo" id="costo" class="form-control" min="1" maxlength="5" step="0.01" onkeyup="calcular(1)" required>
+									<label for="costo">Costo</label>
 								</div>
-
 							</div>
-
 						</div>
-
 						<div class="col">
-
 							<div class="md-form mt-0">
-
 								<div class="md-form">
-									Clasificacion
-									<select class="form-control form-control-sm" name="tipo" 
-										id="tipo" required>
-										<option value="" class="z-depth-5">Seleccione</option>
-											<?php 
-													$query = $conexion -> query("SELECT id_tipo,desc_tipo FROM kg_tipo_queja WHERE estado = 'A'");
-													while($res = mysqli_fetch_array($query))
-													{
-															echo "<option value =".$res['id_tipo'].">
-																	".$res['desc_tipo']."
-																	</option>";
-													}
-											?>
-									</select>
-
+									<input type="number" name="utilidad" id="utilidad" class="form-control" min="1" maxlength="5" value="1"  step="0.01" onkeyup="calcular(1)" required>
+									<label for="utilidad">Utilidad</label>
 								</div>
-
 							</div>
-
 						</div>
-
+						<div class="col">
+							<div class="md-form mt-0">
+								<div class="md-form">
+									<input type="number" name="c_total" id="c_total" class="form-control" step="0.01" readonly>
+									<label for="c_total" id="lbl_total">Precio</label>
+								</div>
+							</div>
+						</div>
 					</div>
 
+
 					<div class="row">
-
 						<div class="col">
-
 							<div class="md-form mt-0">
-
-								<label for="">Medico</label>
-
+								<label for="">Almacen</label>
 							</div>
-
 						</div>
-
-
-
-<!--   MEDICO  -->
-
 						<div class="col-9">
-
 							<div class="md-form mt-0">
-
-								<select class="form-control form-control-sm" name="medico" id="medico" required>
-
+								<select class="form-control form-control-sm" name="almacen" 
+								id="almacen" required>
 									<option value="" class="z-depth-5">Seleccione</option>
-
 										<?php 
-
-												$query = $conexion -> query("SELECT id_medico, concat(nombre,'',a_paterno,' ',a_materno) as nombre FROM so_medicos WHERE estado = 'X' limit 100");
-
+												$query = $conexion -> query("SELECT id_almacen,desc_almacen FROM eb_almacenes WHERE estado = 'A'");
 												while($res = mysqli_fetch_array($query))
-
 												{
-
-														echo "<option value =".$res['id_medico'].">
-
-																".$res['nombre']."
-
+														echo "<option value =".$res['id_almacen'].">
+																".$res['desc_almacen']."
 																</option>";
-
 												}
-
 										?>
-
 								</select>
-
 							</div>
-
 						</div>
-
-						
-
 					</div>
 
+
 					<div class="row">
-
 						<div class="col">
-
 							<div class="md-form mt-0">
-
-								<label for="">Paciente:</label>
-
+								<div class="md-form">
+									<input type="text"  name="pasillo" id="pasillo" class="form-control"  required>
+									<label for="pasillo">Pasillo</label>
+								</div>
 							</div>
-
 						</div>
-
-						<div class="col-9">
-
+						<div class="col">
 							<div class="md-form mt-0">
+								<div class="md-form">
+									<input type="text" name="anaquel" id="anaquel" class="form-control" required>
+									<label for="Anaquel">Anaquel</label>
+								</div>
+							</div>
+						</div>
+						<div class="col">
+							<div class="md-form mt-0">
+								<div class="md-form">
+									<input type="text" name="nivel" id="nivel" class="form-control" >
+									<label for="Nivel" id="Nivel">Nivel</label>
+								</div>
+							</div>
+						</div>
+					</div>					
 
-								<select class="form-control form-control-sm" name="paciente" id="paciente" required>
-
+					<div class="row">
+						<div class="col">
+							<div class="md-form mt-0">
+								<label for="">Departamento</label>
+							</div>
+						</div>
+						<div class="col-9">
+							<div class="md-form mt-0">
+								<select class="form-control form-control-sm" name="depto" 
+								id="depto" required>
 									<option value="" class="z-depth-5">Seleccione</option>
-
 										<?php 
-
-												$query = $conexion -> query("SELECT id_cliente,concat(nombre,'',a_paterno,' ',a_materno) as nombre FROM so_clientes WHERE activo = 'X' limit 100");
-
+												$query = $conexion -> query("SELECT id_departamento,desc_departamento FROM eb_departamento WHERE estado = 'A'");
 												while($res = mysqli_fetch_array($query))
-
 												{
-
-														echo "<option value =".$res['id_cliente'].">
-
-																".$res['nombre']."
-
+														echo "<option value =".$res['id_departamento'].">
+																".$res['desc_departamento']."
 																</option>";
-
 												}
-
 										?>
-
 								</select>
-
 							</div>
-
 						</div>
-
 					</div>
 
 					<div class="row">
@@ -266,7 +188,7 @@
 
 							<div class="md-form mt-0">
 
-								<label for="">Empleado</label>
+								<label for="">Proveedor</label>
 
 							</div>
 
@@ -276,21 +198,21 @@
 
 							<div class="md-form mt-0">
 
-								<select class="form-control form-control-sm" name="empleado" id="empleado" required>
+								<select class="form-control form-control-sm" name="proveedor" id="proveedor" required>
 
 									<option value="" class="z-depth-5">Seleccione</option>
 
 										<?php 
 
-												$query = $conexion -> query("SELECT id_usuario, CONCAT(nombre,'',a_paterno,' ',a_materno) AS nombre  FROM se_usuarios c WHERE activo = 'A'");
+												$query = $conexion -> query("SELECT id_proveedor,razon_social FROM eb_proveedores WHERE estado = 'A'");
 
 												while($res = mysqli_fetch_array($query))
 
 												{
 
-														echo "<option value =".$res['id_usuario'].">
+														echo "<option value =".$res['id_proveedor'].">
 
-																".$res['nombre']."
+																".$res['razon_social']."
 
 																</option>";
 
@@ -312,7 +234,7 @@
 
 							<div class="md-form mt-0">
 
-								<label for="">Orden</label>
+								<label for="">Categoría</label>
 
 							</div>
 
@@ -322,23 +244,21 @@
 
 							<div class="md-form mt-0">
 
-								<select class="form-control form-control-sm" name="orden" id="orden" required>
+								<select class="form-control form-control-sm" name="cat" id="cat" required>
 
 									<option value="" class="z-depth-5">Seleccione</option>
 
 										<?php 
 
-												$query = $conexion -> query("SELECT fa.`id_factura`, CONCAT(fa.`id_factura`,' - ',cl.nombre,'',cl.a_paterno,' ',cl.a_materno) AS nombre FROM so_factura fa, so_clientes cl
-													WHERE fa.`fecha_factura` BETWEEN DATE_SUB(CURDATE(), INTERVAL 30 DAY) AND CURDATE()
-													AND fa.`fk_id_cliente` = 0");
+												$query = $conexion -> query("SELECT id_categoria,categoria FROM eb_categoria WHERE estado = 'A'");
 
 												while($res = mysqli_fetch_array($query))
 
 												{
 
-														echo "<option value =".$res['id_factura'].">
+														echo "<option value =".$res['id_categoria'].">
 
-																".$res['nombre']."
+																".$res['categoria']."
 
 																</option>";
 
@@ -354,14 +274,13 @@
 
 					</div>
 
-<!-- Sucursal  -->
 					<div class="row">
 
 						<div class="col">
 
 							<div class="md-form mt-0">
 
-								<label for="">Sucursal</label>
+								<label for="">Unidad de medida</label>
 
 							</div>
 
@@ -371,22 +290,21 @@
 
 							<div class="md-form mt-0">
 
-								<select class="form-control form-control-sm" name="sucursal" id="sucursal" required>
+								<select class="form-control form-control-sm" name="uni_med" id="uni_med" required>
 
 									<option value="" class="z-depth-5">Seleccione</option>
 
 										<?php 
 
-												$query = $conexion -> query("SELECT id_sucursal, desc_sucursal FROM kg_sucursales 
-													WHERE estado = 'A' ");
+												$query = $conexion -> query("SELECT id_unidad, unidad_medida FROM eb_unidad_medida WHERE estado = 'A'");
 
 												while($res = mysqli_fetch_array($query))
 
 												{
 
-														echo "<option value =".$res['id_sucursal'].">
+														echo "<option value =".$res['id_unidad'].">
 
-																".$res['desc_sucursal']."
+																".$res['unidad_medida']."
 
 																</option>";
 
@@ -401,7 +319,6 @@
 						</div>
 
 					</div>
-
 
 					<br>
 
@@ -413,29 +330,9 @@
 
 								<div class="md-form">
 
-									<textarea class="form-control" id="inconformidad" name="inconformidad"rows="1"required ></textarea>
+									<input type="date" name="caducidad" id="caducidad" class="form-control" maxlength="100" required>
 
-									<label for="descripcion">Describa detalladamente la inconformidad</label>
-
-								</div>
-
-							</div>
-
-						</div>
-
-					</div>
-
-					<div class="row">
-
-						<div class="col">
-
-							<div class="md-form mt-0">
-
-								<div class="md-form">
-
-									<textarea class="form-control" id="observaciones" name="observaciones"rows="1"required ></textarea>
-
-									<label for="observaciones">Observaciones</label>
+									<label for="producto">Caducidad del producto</label>
 
 								</div>
 
@@ -444,7 +341,6 @@
 						</div>
 
 					</div>
-
 
 				</div>
 
@@ -464,11 +360,11 @@
 
 </form>
 
-<script src="js/peticiones.js"></script>
 
 
 
-<!-- Editar SOLO APLICA CON EL SISTEMA DE ASIGNACION DE AGENDA -->
+
+<!-- Editar -->
 
 
 
@@ -486,7 +382,7 @@
 
 							<h2 style="color:blue;text-align:center" class="modal-title" id="modalEliminarLabel">
 
-									Duplicar Dia
+									Duplicar dia
 
 							</h2>
 
@@ -512,115 +408,96 @@
 
 						</div>
 
-
-<!-- Aqui -->
-
+						<div class="row">
 <!-- ANIO  -->
-					<div class="row">
-						<div class="col">
+							<div class="col">
 
-							<div class="md-form mt-0">
+								<div class="md-form mt-0">
 
-								<div class="md-form">
+									<div class="md-form">
 
-									<input type="text" name="anio" id="anio" class="form-control" maxlength="100" readonly>
+										<input type="text" name="anio" id="anio" class="form-control" readonly>
 
-									<label for="desc_p">Ano Agenda </label>
+										<label for="anio">Anio Agenda</label>
+
+									</div>
 
 								</div>
 
 							</div>
-
-						</div>
-
-					</div>
 <!-- MES  -->
-					<div class="row">
+							<div class="col">
 
-						<div class="col">
+								<div class="md-form mt-0">
 
-							<div class="md-form mt-0">
+									<div class="md-form">
 
-								<div class="md-form">
+										<input type="text" name="mes" id="mes" class="form-control" readonly>
 
-									<input type="text" name="mes" id="mes" class="form-control" maxlength="100" readonly>
+										<label for="mes">Mes Agenda</label>
 
-									<label for="mes">Mes Agenda </label>
+									</div>
 
 								</div>
 
 							</div>
 
 						</div>
-
-					</div>
 <!-- DIA  -->
-					<div class="row">
+						<div class="row">
 
-						<div class="col">
+							<div class="col">
 
-							<div class="md-form mt-0">
+								<div class="md-form mt-0">
 
-								<div class="md-form">
+									<div class="md-form">
 
-									<input type="text" name="dia" id="dia" class="form-control" maxlength="100" readonly>
+										<input type="text" name="dia" id="dia" class="form-control" readonly>
 
-									<label for="mes">Dia Agenda </label>
+										<label for="dia">Dia Agenda</label>
+
+									</div>
 
 								</div>
 
 							</div>
-
-						</div>
-
-					</div>
-
 <!-- Medicos  -->
-					<div class="row">
+							<div class="col">
 
-						<div class="col">
+								<div class="md-form mt-0">
 
-							<div class="md-form mt-0">
+									<div class="md-form">
 
-								<div class="md-form">
+										<input type="text" name="medicos" id="medicos" class="form-control"  readonly>
 
-									<input type="text" name="medicos" id="medicos" class="form-control" maxlength="100" readonly>
+										<label for="medico">Medico</label>
 
-									<label for="mes">Medicos </label>
+									</div>
 
 								</div>
 
 							</div>
-
-						</div>
-
-					</div>
-
-
 <!-- FECHA  -->
-					<div class="row">
+							<div class="col">
 
-						<div class="col">
+								<div class="md-form mt-0">
 
-							<div class="md-form mt-0">
+									<div class="md-form">
 
-								<div class="md-form">
+										<input type="date" name="fecha" id="fecha" class="form-control"  required>
 
-									<input type="date" name="fecha" id="fecha" class="form-control" maxlength="100" >
+										<label for="fecha" >Fecha Destino</label>
 
-									<label for="mes">Fecha destino </label>
+									</div>
 
 								</div>
 
 							</div>
 
 						</div>
-
-					</div>
-					NOTA: De haber medicos en este dia, estos seran eliminados y colocados los medicos asignados.
+						NOTA: De haber medicos en este dia, estos seran eliminados y colocados los medicos asignados.
 
 <!-- FIN -->
-
 					</div>
 
 					<div class="modal-footer">
