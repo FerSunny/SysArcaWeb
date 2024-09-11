@@ -111,7 +111,6 @@ function deleteRow(){
 					{"data" : "fecha_registro"},
                     {"data" : "num_imp"},
                     {"data" : "fecha_impresion"},
-					//Capturar boton
 					{
 						render:function(data,type,row)
 						{
@@ -119,7 +118,7 @@ function deleteRow(){
 							var estudio = row['fk_id_estudio']
 							var perfil=row['perfil']
 
-							if(perfil == 1 || perfil == 11 || perfil == 13 || perfil == 33 || perfil == 45 || perfil == 43 || perfil == 25 || perfil == 50)
+							if(perfil == 1 || perfil == 11 || perfil == 13 || perfil == 33 || perfil == 45 || perfil == 43 )
 							{
 								if(plantilla == 'P1')
 								{
@@ -152,14 +151,13 @@ function deleteRow(){
 							}
 						},
 					},
-					//Boton Modificar
 					{
 						render:function(data,type,row){
 				            var perfil;
 							var perfil=row['perfil']
 							var plantilla = row['num_plnatilla']
 							var estudio = row['fk_id_estudio']
-							if(perfil==1 || perfil== 33 || perfil== 45 || perfil== 43 )
+							if(perfil==1 || perfil== 33 || perfil== 45 || perfil== 43)
 							{
 								if(plantilla == 'P1')
 								{
@@ -192,12 +190,11 @@ function deleteRow(){
 							}
 							},
 					},
-					//Boton eliminar
 					{
 						render:function(data,type,row){
 							var perfil=row['perfil']
 							var plantilla = row['num_plnatilla']
-							if(perfil==1 || perfil== 33 || perfil== 45 || perfil== 43 )
+							if(perfil==1 || perfil== 33 || perfil== 45 || perfil== 43)
 							{
 								if(plantilla == 'P1')
 								{
@@ -220,7 +217,6 @@ function deleteRow(){
 							}
 							},
 					},
-					//Boton Imprimir
 					{
 						render:function(data,type,row)
 						{
@@ -229,7 +225,7 @@ function deleteRow(){
 							var perfil=row['perfil']
 							if(resta == 0)
 							{
-								if(perfil == 1 || perfil == 11 || perfil == 13 || perfil == 33 || perfil== 45 || perfil== 43 || perfil == 25 || perfil == 50)
+								if(perfil == 1 || perfil == 11 || perfil == 13 || perfil == 33 || perfil== 45 || perfil== 43)
 								{
 									if(plantilla == 'P1')
 									{
@@ -259,7 +255,7 @@ function deleteRow(){
 							
 						},
 					},
-					//Boton email medico
+					//{"defaultContent":""}
 					{
 						render:function(data,type,row)
 						{
@@ -267,7 +263,7 @@ function deleteRow(){
 							var resta = row['resta']
 							var perfil=row['perfil']
 
-							if(perfil == 1 || perfil == 11 || perfil== 45 || perfil== 43 || perfil == 25 || perfil == 50)
+							if(perfil == 1 || perfil == 11 || perfil== 45 || perfil== 43)
 							{
 								if(email_medico == 1)
 								{
@@ -289,7 +285,6 @@ function deleteRow(){
 							
 						}
 					},
-					//Bopton email paciente
 					{
 						render:function(data,type,row)
 						{
@@ -297,7 +292,7 @@ function deleteRow(){
 							var resta = row['resta']
 							var perfil=row['perfil']
 
-							if(perfil == 1 || perfil == 11 || perfil== 45 || perfil== 43 || perfil == 25 || perfil == 50)
+							if(perfil == 1 || perfil == 11 || perfil== 45 || perfil== 43)
 							{
 								if(email_paciente == 1)
 								{

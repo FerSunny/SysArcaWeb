@@ -1,13 +1,18 @@
 <?php
-/* Modificacion realizada por JPM-28mayo2020, para incluir las observaciones */
+
+// **** Modificacion echa en vbase al o requerido 
+// **** or el ticket  no. 404 de ARCA, solicitado Por mariela enriquez
+// **** cambios realizados pr JPM 13dic2021
+// **** linea 409-425
+
 //Zona Horaria
 date_default_timezone_set('America/Mexico_City');
 
 //Libreria PF
-require('../../../fpdf/fpdf.php');
+require('../../fpdf/fpdf.php');
 
 //Conexion a la base de datos
-require_once ("../../../controladores/conex.php");
+require_once ("../../controladores/conex.php");
 
 
 //Recibimos valores
@@ -15,6 +20,9 @@ $numero_factura=$_GET['numero_factura'];
 $studio=$_GET['studio'];
 $fecha = date("Y-m-d H:i:s");
 $veces='0';
+
+//echo 'repiorte';
+
 //Obtenemos el numero de impreisones maximo
 $stmt = $conexion->prepare("SELECT max(num_imp) as id_max FROM cr_plantilla_1_re WHERE fk_id_factura = ? and fk_id_estudio = ?");
     $stmt->bind_param("ii", $numero_factura, $studio);
@@ -43,7 +51,7 @@ date(fa.fecha_factura),
 CONCAT(cl.nombre,' ',cl.a_paterno,' ',cl.a_materno) paciente,
 cl.anios,
 CASE 
-WHEN fa.vmedico <> '' THEN fa.vmedico
+WHEN LENGTH(fa.vmedico) > 0 THEN fa.vmedico
 ELSE CONCAT(med.nombre,' ',med.a_paterno,' ',med.a_materno)
 END medico
 FROM so_factura fa
@@ -130,7 +138,7 @@ WHERE fa.id_factura = ?");
       $this->Image('../imagenes/pacal.jpg',160,5,40,0);
       $this->Image('../imagenes/codigo1.jpg',170,50,30,30);
 
-      $this->Image('../../../imagenes/logo_arca_sys_web.jpg',70,150,70,0);
+     // $this->Image('../../../imagenes/logo_arca_sys_web.jpg',70,150,70,0);
       $this->Ln(18);
       $this->Cell(5);
       $this->SetFont('Arial','B',15);
@@ -242,13 +250,13 @@ WHERE fa.id_factura = ?");
     $this->SetFont('Arial',$tipfuev,$tamfuev);
     $this->Cell(30,5,$verificado,0,0,'L'); 
     $this->ln(10); // aqui
-    //$this->Cell(5);
+
 
     $stmt = $conexion->prepare("SELECT p2.concepto,posini,tipfue,tamfue FROM cr_plantilla_1 p2 WHERE p2.fk_id_estudio = ? AND p2.estado = 'A' AND p2.tipo = 'F' order by orden");
     $stmt->bind_param('i',$studio);
     $stmt->execute();
     $stmt->bind_result($concepto,$posini,$tipfue,$tamfue);
-        //$stmt->close();
+
 
     $this->Image('../imagenes/firma.gif',153,230,40,0);
     $this->SetFont('Arial','',$tamfue);
@@ -319,8 +327,8 @@ $this->ln(-2);
 }
 
 $pdf = new PDF('P','mm','Letter');
-//$pdf->SetMargins(0,0,0);
-$pdf->SetAutoPageBreak(true,40); //50
+
+$pdf->SetAutoPageBreak(true,50);
 
 $pdf->AliasNbPages();
 $pdf->AddPage();
@@ -350,72 +358,48 @@ $blanco=' ';
         $pdf->Cell(9);
         $pdf->SetFont('Arial',$tipfue,$tamfue);
         $pdf->Cell(80,5,utf8_decode($valor.' '.$uniadad_medida),0,0,'L');
-        //AYUNO
-        //INGESTA DE GLUCOSA   75.0 gramos
+
         $pdf->ln(4);
 
 
-      }
-      if ($studio == 235) 
-      {
-        $pdf->ln(-20);
-        $pdf->Cell(9);
-        $pdf->SetX(-70);
-        $pdf->SetFont('Arial',$tipfue,$tamfue);
-        $pdf->Cell(26,5,utf8_decode('AYUNO'),0,0,$justifica);
-        $pdf->ln(4);
-        $pdf->Cell(9);
-        $pdf->SetX(-40);
-        $pdf->SetFont('Arial',$tipfue,$tamfue);
-        $pdf->Cell(26,5,utf8_decode('INGESTA DE GLUCOSA   75.0 gramos'),0,0,$justifica);
-      }else
-      {
-        $pdf->ln(-28);
-        $pdf->Cell(9);
-        $pdf->SetX(-70);
-        $pdf->SetFont('Arial',$tipfue,$tamfue);
-        $pdf->Cell(26,5,utf8_decode('AYUNO'),0,0,$justifica);
-        $pdf->ln(4);
-        $pdf->Cell(9);
-        $pdf->SetX(-40);
-        $pdf->SetFont('Arial',$tipfue,$tamfue);
-        $pdf->Cell(26,5,utf8_decode('INGESTA DE GLUCOSA   75.0 gramos'),0,0,$justifica);
       }
 
  
-    $pdf->Image('../../../pdf_graficas/'.$numero_factura.'_'.$studio.'.png',20,130,160,0);
+   $pdf->Image('../../pdf_graficas/'.$numero_factura.'_'.$studio.'.png',20,127,160,0);
 
-    $pdf->SetX(230);
-    $pdf->SetY(210);
-    //
+
+
+   $pdf->ln(87);
     $stmt = $conexion->prepare("SELECT tipo,concepto,posini,tamfue FROM cr_plantilla_1 WHERE fk_id_estudio = ? AND tipo = 'T'");
     $stmt->bind_param('i',$studio);
     $stmt->execute();
     $stmt->bind_result($tipo,$concepto,$posini,$tamfue);
-    $pdf->Cell(9);
+    //$pdf->Cell(1);
 
     while($stmt->fetch())
     {
-        $pdf->Cell(12);
-      $eventos = array($concepto);
-      $res=$eventos[0];
+
+      $eventos = trim($concepto);
+
       $pdf->SetFont('Arial','',$tamfue);
-      $pdf->SetX(22);
-      $pdf->Cell(150,5,utf8_decode($res),0,'L');
+
+      $pdf->MultiCell(180,5,utf8_decode($eventos),0,'J');
+
+    }
+
+    if(strlen($observaciones)>0){
       $pdf->ln(4);
-      //$pdf->MultiCell(150,5,utf8_decode('a'),0,'L');
+      $pdf->Cell(5);
+      $pdf->SetTextColor(191, 54, 12);
+      $pdf->SetFont('Arial','B',12);
+      $pdf->Cell(26,5,utf8_decode('OBSERVACIONES:'),0,0,'L');
+      $pdf->SetTextColor(0,0,0);
+      $pdf->SetFont('Arial','',10);
+      $pdf->ln(5);
+      $pdf->Cell(5);
+      $pdf->MultiCell(150,5,utf8_decode($observaciones),0,'L');
     }
 
-/* Modificacion realizada por JPM-28mayo2020, para incluir las observaciones */
-/* Solicitado por Marisol Briseño de ARCA */
-
-    if (strlen($observaciones)>0)
-    {
-      $pdf->ln(2);
-      $pdf->Cell(12);
-      $pdf->SetFont('Arial','B',8);
-      $pdf->MultiCell(140,5,'OBSERVACION: '.utf8_decode($observaciones),0,'L');      
-    }
 
 
     $stmt->close();

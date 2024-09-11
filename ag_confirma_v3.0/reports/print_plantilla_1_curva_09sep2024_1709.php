@@ -392,19 +392,19 @@ $blanco=' ';
       }
 */
  
-   $pdf->Image('../../pdf_graficas/'.$numero_factura.'_'.$studio.'.png',20,127,160,0);
+   $pdf->Image('../../pdf_graficas/'.$numero_factura.'_'.$studio.'.png',20,130,160,0);
 
  //   $pdf->SetX(230);
 //    $pdf->SetY(210);
     //
    // $pdf->Cell(1);
 
-   $pdf->ln(87);
+   $pdf->ln(85);
     $stmt = $conexion->prepare("SELECT tipo,concepto,posini,tamfue FROM cr_plantilla_1 WHERE fk_id_estudio = ? AND tipo = 'T'");
     $stmt->bind_param('i',$studio);
     $stmt->execute();
     $stmt->bind_result($tipo,$concepto,$posini,$tamfue);
-    //$pdf->Cell(1);
+    $pdf->Cell(9);
 
     while($stmt->fetch())
     {
@@ -413,8 +413,7 @@ $blanco=' ';
 
       $pdf->SetFont('Arial','',$tamfue);
       //$pdf->SetX(22);
-      //$pdf->MultiCell(50,3,utf8_decode($eventos),0,'L');
-      $pdf->MultiCell(180,5,utf8_decode($eventos),0,'J');
+      $pdf->Cell(50,3,utf8_decode($eventos),0,'L');
      // $pdf->ln(-4);
       //$pdf->MultiCell(150,5,utf8_decode('a'),0,'L');
     }
