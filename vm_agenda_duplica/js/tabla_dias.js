@@ -15,7 +15,7 @@
 // listar datos en la tabla de perfiles
 
 		var listar = function(){
-
+			console.log('paso')
 				$("#cuadro1").slideDown("slow");
 
 			var table = $("#dt_productos").DataTable({
@@ -160,7 +160,7 @@ function focus_btn()
 
 
 var editar = function(tbody, table) {
-	console.log(" editar")
+	console.log(" editar rutina")
 		$(tbody).on("click", "button.editar", function() 
 
 		{

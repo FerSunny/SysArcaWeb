@@ -26,9 +26,9 @@
   <meta http-equiv="Content-Type" content="text/html; charset=gb18030">
 
   <title>Dias</title> <!-- CAMBIO  Titulo de la forma -->
-
+<!--
   <link rel="icon" type="image/png" href="../imagenes/ico/capital.png" />
-
+  -->
     <meta charset="utf-8">
 
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
