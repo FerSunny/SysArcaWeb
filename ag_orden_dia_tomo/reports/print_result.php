@@ -1,7 +1,7 @@
 <?php
 
 //session_start();
-
+//echo 'entro';
 date_default_timezone_set('America/Mexico_City');
 //header('Content-Type: text/html; charset=ISO-8859-1');
 require('../../fpdf/fpdf.php');
@@ -11,9 +11,9 @@ require('../../fpdf/fpdf.php');
 //se recibe los paramteros para la generación del reporte
 //$id_usuario=$_SESSION['id_usuario'];
 //echo 'usuario='.$id_usuario;
-$numero_factura=$_GET['numero_factura'];
-$studio=$_GET['studio'];
-
+$numero_factura='15092401037'; // $_GET['numero_factura'];
+$studio='2903'; //$_GET['studio'];
+//echo 'llego';
 // actualiza las veces que se ha impreso el resultado
 $sql_max="select max(num_imp) as num_imp FROM cr_plantilla_tomo_re
 where fk_id_factura=".$numero_factura." and fk_id_estudio=".$studio;
@@ -268,7 +268,7 @@ function Header()
           $this->Image('../imagenes/dr_agustin.jpg',77,215,42,0);
           break;
       case 74:
-          $this->Image('../imagenes/firma_dr_saulo_rosas.jpg',77,225,42,0);
+          $this->Image('../imagenes/firma_dr_saulo_rosas.jpg',77,216,42,0);
           break;
       case 93:
           $this->Image('../imagenes/firma1_dra_yoalli.jpg',77,215,42,0);
