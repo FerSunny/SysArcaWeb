@@ -169,11 +169,11 @@ include("../../includes/barra.php");
                                 if($concepto=='Volumen Corpuscular Medio (VCM)' OR $concepto=='Conc Media de Hemoglobina (CMH)' OR $concepto=='Conc Media de Hemoglobina Corpuscular (CMHC)')
                                 {
                              ?>
-                            <input class="form-control" type="text" required name="fn_resultado<?php echo $i?>" id="fi_resultado" maxlength="20" size="20" placeholder="Escriba el valor" readonly/>
+                            <input class="form-control" type="text" required name="fn_resultado<?php echo $i?>" id="fi_resultado" maxlength="22" size="22" placeholder="Escriba el valor" readonly/>
                             <?php
                                 }else
                                 {?>
-                                <input class="form-control" type="text" required name="fn_resultado<?php echo $i?>" id="fi_resultado" maxlength="20" size="20" placeholder="Escriba el valor"/>
+                                <input class="form-control" type="text" required name="fn_resultado<?php echo $i?>" id="fi_resultado" maxlength="26" size="26" placeholder="Escriba el valor"/>
                             <?php
                                 }
                             ?>

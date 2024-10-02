@@ -34,16 +34,23 @@
 
             <tr>
               <td>  <label for="" class="col-sm-6 control-label">Tipo de Servicio:</label></td>
-              <td>  <div class="form-group">
+              <td>  
+                <div class="form-group">
 
-                  <select class="col-sm-6 selectpicker" name="servicio" id="servicio">
-                    <option value="A">Administrativo</option>
-                    <option value="L">Laboratorio</option>
-                    <option value="G">Gabinete</option>
-                    <option value="I">Imagenologia</option>
-                    <option value="R">Recepcion</option>
+                  <select name="servicio"id="servicio">
+                    <?php
+                      $sql="SELECT * FROM km_tipo_servicio where estado = 'A'";
+                      $rec=mysqli_query($conexion,$sql);
+                      while ($row=mysqli_fetch_array($rec))
+                        {
+                          echo "<option value='".$row['id_tipo_servicio']."' >";
+                          echo $row['desc_tipo_servicio'];
+                          echo "</option>";
+                        }
+                      ?>
                   </select>
-                </div></td>
+                </div>
+              </td>
             </tr>
 
 
@@ -96,14 +103,19 @@
                     </div>
 
                     <div class="form-group">
-                      <label for="estado" class="col-sm-2 control-label">tipo servicio:</label>
-                      <select class="col-sm-3 selectpicker" name="servicio" id="servicio">
-                    <option value="A">Administrativo</option>
-                    <option value="L">Laboratorio</option>
-                    <option value="G">Gabinete</option>
-                    <option value="I">Imagenologia</option>
-                    <option value="R">Recepcion</option>
-                      </select>
+                        <label for="estado" class="col-sm-2 control-label">tipo servicio:</label>
+                        <select name="servicio" id="servicio">
+                          <?php
+                            $sql="SELECT * FROM km_tipo_servicio where estado = 'A'";
+                            $rec=mysqli_query($conexion,$sql);
+                            while ($row=mysqli_fetch_array($rec))
+                              {
+                                echo "<option value='".$row['id_tipo_servicio']."' >";
+                                echo $row['desc_tipo_servicio'];
+                                echo "</option>";
+                              }
+                            ?>
+                        </select>
                     </div>
            
 

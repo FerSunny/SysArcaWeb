@@ -119,7 +119,7 @@ function deleteRow(){
 							var estudio = row['fk_id_estudio']
 							var perfil=row['perfil']
 
-							if(perfil == 1 || perfil == 11 || perfil == 13 || perfil == 33 || perfil == 45 || perfil == 43 || perfil == 25 || perfil == 50)
+							if(perfil == 1 || perfil == 11 || perfil == 13 || perfil == 32 || perfil == 33 || perfil == 45 || perfil == 43 || perfil == 25 || perfil == 50)
 							{
 								if(plantilla == 'P1')
 								{
@@ -229,7 +229,7 @@ function deleteRow(){
 							var perfil=row['perfil']
 							if(resta == 0)
 							{
-								if(perfil == 1 || perfil == 11 || perfil == 13 || perfil == 33 || perfil== 45 || perfil== 43 || perfil == 25 || perfil == 50)
+								if(perfil == 1 || perfil == 11 || perfil == 13 || perfil == 32 || perfil == 33 || perfil== 45 || perfil== 43 || perfil == 25 || perfil == 50)
 								{
 									if(plantilla == 'P1')
 									{

@@ -545,7 +545,7 @@ CASE
               break;
         }
 */
-        if($studio=='274' or $studio =='467' or $studio =='215' or $studio=='963' or $studio=='988' or $studio=='1029' or $studio=='1097' or $studio =='435' or $studio=='1201' or $studio=='434' or $studio=='431' or $studio=='1717' or $studio=='1781' or $studio=='1694' or $studio=='2432' or $studio=='2577' or $studio=='186' or $studio=='402'){
+        if($studio=='274' or $studio =='467' or $studio =='215' or $studio=='963' or $studio=='988' or $studio=='1029' or $studio=='1097' or $studio =='435' or $studio=='1201' or $studio=='434' or $studio=='431' or $studio=='1717' or $studio=='1781' or $studio=='1694' or $studio=='2432' or $studio=='2577' or $studio=='186' or $studio=='402' or $studio=='2949'){
           $justifica='C';
         }else{
           $justifica='R';
@@ -594,9 +594,9 @@ CASE
                   $pdf->Cell(26,5,'(   )',0,0,$justifica);
                 }else{
                   if( ($studio =='215' && ($row['valor_solo']=='X' or $row['valor_solo']=='x')) or ($studio =='1694' && ($row['valor_solo']=='X' or $row['valor_solo']=='x')) ){
-                    $pdf->Cell(26,5,'('.utf8_decode($row['valor_solo']).')',0,0,$justifica);
+                    $pdf->Cell(27,5,'('.utf8_decode($row['valor_solo']).')',0,0,$justifica);
                   }else{
-                    $pdf->Cell(26,5,utf8_decode($row['valor_solo']),0,0,$justifica);
+                    $pdf->Cell(27,5,utf8_decode($row['valor_solo']),0,0,$justifica);
                   } 
                 }
               }

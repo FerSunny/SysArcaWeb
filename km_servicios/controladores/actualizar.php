@@ -9,7 +9,7 @@ $servicio=$_POST["servicio"];
 $query = " UPDATE  km_servicios SET fk_id_empresa='1', desc_servicio='$fn_servicio', 
 desc_abreviada='$fn_abreviada',
 estado='$fn_estado' ,
-tipo_servicio = '$servicio'
+fk_id_tipo_servicio = '$servicio'
 where id_servicio='$idservicio'";
 
 $resultado = mysqli_query($conexion, $query);

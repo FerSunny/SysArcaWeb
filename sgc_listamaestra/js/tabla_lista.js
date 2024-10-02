@@ -66,7 +66,7 @@
 						render:function(data,type,row){
 							var id_usuario = row['id_usuario']
 
-							if(id_usuario == 1 || id_usuario == 2 || id_usuario == 114)
+							if(id_usuario == 1 || id_usuario == 2 || id_usuario == 114 || id_usuario == 30)
 								{
 									return "<button type='button' class='editar btn btn-success btn-md'><i class='fas fa-edit'></i></button>"
 								}else
@@ -83,7 +83,7 @@
 						render:function(data,type,row){
 							var id_usuario = row['id_usuario']
 
-							if(id_usuario == 1 || id_usuario == 2 || id_usuario == 114)
+							if(id_usuario == 1 || id_usuario == 2 || id_usuario == 114 || id_usuario == 30)
 								{
 									return "<button type='button' class='eliminar btn btn-success btn-md'><i class='fas fa-trash-alt'></i></button>"
 								}else

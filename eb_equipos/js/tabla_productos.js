@@ -34,7 +34,6 @@
 
 				"columns":[
 
-					{"data" : "desc_corta"},
 					{"data" : "id_equipo"},
 
 					{"data" : "numero_serie"},
@@ -50,129 +49,72 @@
 					{"data" : "razon_social"},
 
 
-					//{"defaultContent": "<button type='button' class='editar btn btn-warning btn-md'><i class='fas fa-edit'></i></button>"},
-					{
-	                    render: function(data,type,row)
-	                    {
-	                        var fk_id_perfil = row['fk_id_perfil']
+					{"defaultContent": "<button type='button' class='editar btn btn-warning btn-md'><i class='fas fa-edit'></i></button>"},
 
-	                        if(fk_id_perfil == '1')
-	                        {
-	                            return "<button type='button' class='editar btn btn-warning btn-md'><i class='fas fa-edit'></i></button>"
-	                        }else
-	                        {
-	                            return "<button disabled type='button' class='editar btn btn-warning btn-md'><i class='fas fa-edit'></i> </button>"
-	                        }
-
-	                    }
-	                },
-
-					//{"defaultContent":"<button type='button' class='eliminar btn btn-danger btn-md'><i class='fas fa-trash-alt'></i></button>"},
-					{
-	                    render: function(data,type,row)
-	                    {
-	                        var fk_id_perfil = row['fk_id_perfil']
-
-	                        if(fk_id_perfil == '1')
-	                        {
-	                            return "<button type='button' class='eliminar btn btn-danger btn-md'><i class='fas fa-trash-alt'></i></button>"
-	                        }else
-	                        {
-	                            return "<button disabled type='button' class='eliminar btn btn-danger btn-md'><i class='fas fa-trash-alt'></i></button>"
-	                        }
-
-	                    }
-	                },
-
+					{"defaultContent":"<button type='button' class='eliminar btn btn-danger btn-md'><i class='fas fa-trash-alt'></i></button>"},
 					// mantenimiento correctivo
 					{
 						render:function(data,type,row){
-							var fk_id_perfil = row['fk_id_perfil']
+							var registrado;
 
-							if(fk_id_perfil == 1){
-								return "<form-group style='text-align:center;'>"+
-								"<a id='printer' disabled target='_blank' href='../eb_equipos/tabla_equipo_cor.php?id_equipo="+row['id_equipo']+"' class='btn btn-info btn-md' role='button'><i class='fa fa-cogs' ></i></a>"+
-								"</form-group>";
-							}else{
-								return "<button disabled type='button' class='eliminar btn btn-info btn-md'><i class='fa fa-cogs'></i></button>"
-							}
-									
+									return "<form-group style='text-align:center;'>"+
+									"<a id='printer' disabled target='_blank' href='../eb_equipos/tabla_equipo_cor.php?id_equipo="+row['id_equipo']+"' class='btn btn-info btn-md' role='button'><i class='fa fa-cogs' ></i></a>"+
+									"</form-group>";
 
 						},
 					},
 					// calendario mnto preventivo
 					{
 						render:function(data,type,row){
-							var fk_id_perfil = row['fk_id_perfil']
+							var registrado;
 
-							if(fk_id_perfil == 1){
-								return "<form-group style='text-align:center;'>"+
-								"<a id='printer' target='_blank' href='../eb_equipos/tabla_equipo_cal.php?id_equipo="+row['id_equipo']+"' class='btn btn-light btn-md' role='button'><i class='fa fa-calendar' ></i></a>"+
-								"</form-group>";
-							}else{
-								return "<button disabled type='button' class='eliminar btn btn-light btn-md'><i class='fa fa-calendar'></i></button>"
-							}
+									return "<form-group style='text-align:center;'>"+
+									"<a id='printer' target='_blank' href='../eb_equipos/tabla_equipo_cal.php?id_equipo="+row['id_equipo']+"' class='btn btn-light btn-md' role='button'><i class='fa fa-calendar' ></i></a>"+
+									"</form-group>";
 
 						},
 					},
 					//Documentos PDF
 					{
 						render:function(data,type,row){
-							var fk_id_perfil = row['fk_id_perfil']
+							var registrado;
 
-							if(fk_id_perfil == 1){
-
-								return "<form-group style='text-align:center;'>"+
-								"<a id='printer'  href='../eb_equipos/tabla_imagenes.php?id_equipo="+row['id_equipo']+"' class='btn btn-success btn-md' role='button'><span  class='fa fa-image'></span></a>"+
-								"</form-group>";
-							}else{
-								return "<button disabled type='button' class='eliminar btn btn-success btn-md'><i class='fa fa-image'></i></button>"
-							}
+							return "<form-group style='text-align:center;'>"+
+							"<a id='printer'  href='../eb_equipos/tabla_imagenes.php?id_equipo="+row['id_equipo']+"' class='btn btn-success' role='button'><span  class='fa fa-image'></span></a>"+
+							"</form-group>";
 
 						},
 					},
 					//Calibracion
 					{
 						render:function(data,type,row){
-							var fk_id_perfil = row['fk_id_perfil']
+							var registrado;
 
-							if(fk_id_perfil == 1){
-								return "<form-group style='text-align:center;'>"+
-								"<a id='printer' target='_blank' href='reports/tikets.php?codigo="+row['codigo']+"' class='btn btn-primary btn-md' role='button'><i class='fa fa-stethoscope' ></i></a>"+
-								"</form-group>";
-							}else{
-								return "<button disabled type='button' class='eliminar btn btn-primary btn-md'><i class='fa fa-stethoscope'></i></button>"
-							}
+									return "<form-group style='text-align:center;'>"+
+									"<a id='printer' target='_blank' href='reports/tikets.php?codigo="+row['codigo']+"' class='btn btn-primary btn-md' role='button'><i class='fa fa-stethoscope' ></i></a>"+
+									"</form-group>";
 
 						},
 					},
 					//Check - list
 					{
 						render:function(data,type,row){
-							var fk_id_perfil = row['fk_id_perfil']
+							var registrado;
 
-							if(fk_id_perfil == 1 || fk_id_perfil == 52){
-								return "<form-group style='text-align:center;'>"+
-								"<a id='printer' target='_blank' href='reports/tikets.php?codigo="+row['codigo']+"' class='btn btn-secondary btn-md' role='button'><i class='fa fa-list' ></i></a>"+
-								"</form-group>";
-							}else{
-								return "<button disabled type='button' class='eliminar btn btn-secondary btn-md'><i class='fa fa-list'></i></button>"
-							}
+									return "<form-group style='text-align:center;'>"+
+									"<a id='printer' target='_blank' href='reports/tikets.php?codigo="+row['codigo']+"' class='btn btn-secondary btn-md' role='button'><i class='fa fa-list' ></i></a>"+
+									"</form-group>";
 
 						},
 					},
 					//Codigo de barras
 					{
 						render:function(data,type,row){
-							var fk_id_perfil = row['fk_id_perfil']
+							var registrado;
 
-							if(fk_id_perfil == 1){
-								return "<form-group style='text-align:center;'>"+
-								"<a id='printer' target='_blank' href='reports/tikets.php?codigo="+row['codigo']+"' class='btn btn-warning btn-md' role='button'><i class='fa fa-barcode' ></i></a>"+
-								"</form-group>";
-							}else{
-								return "<button disabled type='button' class='eliminar btn btn-warning btn-md'><i class='fa fa-barcode'></i></button>"
-							}
+									return "<form-group style='text-align:center;'>"+
+									"<a id='printer' target='_blank' href='reports/tikets.php?codigo="+row['codigo']+"&id_equipo="+row['id_equipo']+"' class='btn btn-warning btn-md' role='button'><i class='fa fa-barcode' ></i></a>"+
+									"</form-group>";
 
 						},
 					}

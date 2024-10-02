@@ -40,7 +40,7 @@
 				var id_servicio = $("#frmedit #idservicio ").val( data.id_servicio),
 					   desc_servicio= $("#frmedit #fi_servcio").val( data.desc_servicio),
 					   desc_abreviada= $("#frmedit #fi_abreviada").val( data.desc_abreviada),
-					   tipo_servicio= $("#frmedit #servicio").val( data.tipo_servicio),
+					   tipo_servicio= $("#frmedit #servicio").val( data.fk_id_tipo_servicio),
 						estado = $("#frmedit #fi_estado").val( data.estado),
 						opcion = $("#frmedit #opcion").val("modificar");
 						console.log(data);

@@ -8,9 +8,9 @@ $fn_estado = $_POST['fn_estado']; // estado
 $servicio = $_POST['servicio']; // estado
 
 
-$query = "INSERT INTO km_servicios(fk_id_empresa,desc_servicio,desc_abreviada,tipo_servicio,estado) 
+$query = "INSERT INTO km_servicios(fk_id_empresa,desc_servicio,desc_abreviada,fk_id_tipo_servicio,estado) 
 VALUES ('$empresa','$fn_servicio','$fn_abreviada','$servicio','$fn_estado')";
-
+//echo $query;
 $resultado = mysqli_query($conexion, $query);
 
 if ($resultado) {

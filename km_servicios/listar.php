@@ -4,27 +4,17 @@
 
 	$query = "
         SELECT
-          `id_servicio`,
-          `desc_servicio`,
-          `desc_abreviada`,
-          `tipo_servicio`,
-          CASE
-            WHEN tipo_servicio = 'A' THEN
-                'Administrativo'
-            WHEN tipo_servicio = 'L' THEN
-                'Laboratorio'
-            WHEN tipo_servicio = 'G' THEN 
-                'Gabinete'
-            WHEN tipo_servicio = 'I' THEN 
-                'Imagenologia'
-            WHEN tipo_servicio = 'R' THEN 
-                'Recepcion'
-            ELSE
-                'No asignado'
-          END AS servicio,
-          `estado`
-        FROM `km_servicios`
-        WHERE estado = 'A'
+          se.`id_servicio`,
+          se.`desc_servicio`,
+          se.`desc_abreviada`,
+          se.`fk_id_tipo_servicio`,
+          
+	    ts.`desc_tipo_servicio` as servicio,
+          
+          se.`estado`
+        FROM `km_servicios` se
+        left outer join km_tipo_servicio ts on (ts.id_tipo_servicio = se.fk_id_tipo_servicio)
+        WHERE se.estado = 'A'
     ";
 	$resultado = mysqli_query($conexion, $query);
 

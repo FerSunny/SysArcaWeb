@@ -8,11 +8,12 @@ require('../../fpdf/fpdf.php');
 include './barcode/barcode.php';
 //se recibe los paramteros para la generación del reporte
 $id_medico=$_GET['codigo'];
+$id_equipo = $_GET['id_equipo'];
 //$studio=$_GET['studio'];
 
 //new barCodeGenrator($numero_factura,1,'../reports/codes/'.$numero_factura.'.gif', 160, 50, true);
 
-barcode('codes/'.$id_medico.'.png',$id_medico, 20, 'horizontal', 'code128', true);
+barcode('codes/'.$id_equipo.'.png',$id_equipo, 20, 'horizontal', 'code128', true);
 /*
 //Obtener los datos, de la cabecera, (datos del estudio)
 $entro=0;
@@ -84,7 +85,8 @@ class PDF extends FPDF
 //
 // Creación del objeto de la clase heredada
 //
-$pdf = new PDF('L','mm','ticket');
+//$pdf = new PDF('L','mm','ticket');
+$pdf = new PDF('L','mm',array(100,60));
 //$pdf = new PDF('L','mm',array(80,60));
 $pdf->SetMargins(0,0,0);
 $pdf->SetAutoPageBreak(true,20);
@@ -98,9 +100,13 @@ $pdf->AddPage();
     $pdf->Cell(5);
     $pdf->ln(0);
     $pdf->SetFont('Arial','B',18);
-    $pdf->Image('../reports/codes/'.$id_medico.'.png',5,15,110,50);
+    $pdf->Image('../reports/codes/'.$id_equipo.'.png',1,27,100,40);
     $pdf->SetFont('Arial','',8);
     $pdf->Cell(1,5,'FOR-EQU-02',0,0,'L');
+    $pdf->ln(16); 
+    $pdf->Cell(4);
+    $pdf->SetFont('Arial','',22);
+    $pdf->Cell(1,5,$id_medico,0,0,'L');
     $pdf->ln(1); 
     
 
