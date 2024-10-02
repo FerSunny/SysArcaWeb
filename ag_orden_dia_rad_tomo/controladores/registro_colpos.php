@@ -22,6 +22,7 @@ $fn_id_factura = $_POST['fn_id_factura'];
 $fn_fk_id_estudio = $_POST['fn_fk_id_estudio'];
 
 // se obtiene la firma
+/*
 $sql_firma="
 SELECT * FROM cr_plantilla_tomo p4
 WHERE p4.`fk_id_estudio` = ".$fn_fk_id_estudio."
@@ -50,7 +51,12 @@ if ($result = mysqli_query($conexion, $sql_firma)) {
       $cuenta=$cuenta+1;
   }
 }
-
+*/
+$fme='';
+$cpm='';
+$frl='';
+$cpr='';
+$dumy='';
 
 $query = "INSERT INTO cr_plantilla_tomo_rad_re
             (fk_id_empresa,
@@ -79,7 +85,7 @@ $query = "INSERT INTO cr_plantilla_tomo_rad_re
              num_imp)
  VALUES ('$empresa','$id_usuario','14','$fn_id_factura',now(),'n/a','$fn_fk_id_estudio','$fn_titulo_desc','$fn_descripcion','$fn_t_allazgos','$fn_d_allazgos','$fn_t_diagnostico','$fn_d_disgnostico','$fn_t_comenta','$fn_d_comenta','$fme','$cpm','$frl','$cpr','A','0')";
 
-//echo $query;
+echo $query;
 
 $resultado = mysqli_query($conexion, $query);
 
