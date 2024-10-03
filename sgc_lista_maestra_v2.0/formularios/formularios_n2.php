@@ -1,9 +1,9 @@
 <?php 
 
 	include("../controladores/conex.php");
-
+	//session_start();
 	date_default_timezone_set('America/Mexico_City');
-
+	$id_numeral_1=$_SESSION['id_numeral_1'];
 	$FechaHoy=date("d/m/Y : H : i : s");
 
 ?>
@@ -22,7 +22,7 @@
 
 						<h2 style="color:blue;text-align:center" class="modal-title">
 
-								Nuevo Numeral
+								Nuevo Sub Numeral
 						</h2>
 
 						<button type="button" class="close" data-dismiss="modal">&times;</button>
@@ -33,9 +33,9 @@
 
 					<div class="md-form">
 
-						<input type="number" name="codigo" id="codigo" class="form-control"  maxlength="15" required>
+						<input type="number" name="codigo" id="codigo" class="form-control"  maxlength="5" size= "5" step="0.01" required>
 
-						<label for="codigo">Numeral</label>
+						<label for="codigo">Codigo</label>
 
 					</div>
 
@@ -47,7 +47,7 @@
 
 								<div class="md-form">
 
-									<input type="text" name="desc_numeral_1" id="desc_numeral_1" class="form-control" maxlength="100" required>
+									<input type="text" name="desc_numeral_2" id="desc_numeral_2" class="form-control" maxlength="100" required>
 
 									<label for="producto"> Descripción </label>
 
@@ -142,7 +142,7 @@
 
 									<div class="md-form">
 
-										<input type="text" name="desc_numeral_1" id="desc_numeral_1" class="form-control" required>
+										<input type="text" name="desc_numeral_2" id="desc_numeral_2" class="form-control" required>
 
 										<label for="producto">Desacripción</label>
 

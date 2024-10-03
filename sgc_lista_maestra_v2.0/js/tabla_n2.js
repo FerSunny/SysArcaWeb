@@ -28,15 +28,17 @@
 
 					"method":"POST",
 
-					"url": "listar.php"
+					"url": "listar_n2.php"
 
 				},
 
 				"columns":[
 
-					{"data" : "id_numeral_1"},
+					{"data" : "fk_id_numeral_1"},
 
-					{"data" : "desc_numeral_1"},
+					{"data" : "id_numeral_2"},
+
+					{"data" : "desc_numeral_2"},
 
 					//{"defaultContent": "<button type='button' class='editar btn btn-warning btn-md'><i class='fas fa-edit'></i></button>"},
 					{
@@ -77,7 +79,7 @@
 
 							
 							return "<form-group style='text-align:center;'>"+
-							"<a id='printer' target='_blank'  href='./tabla_numeral_2.php?id_numeral_1="+row['id_numeral_1']+"&desc_numeral_1="+row['desc_numeral_1']+"' class='btn btn-success btn-md'  role='button'><span class='fas fa-file' style='color: white;'></span></a>"+
+							"<a id='printer' target='_blank'  href='./tabla_ficheros.php?id_numeral_1="+row['id_numeral_1']+"&desc_numeral_1="+row['desc_numeral_1']+"' class='btn btn-success btn-md'  role='button'><span class='fas fa-file' style='color: white;'></span></a>"+
 							"</form-group>";
 
 										
@@ -136,7 +138,7 @@ $("#form_productos").on('submit', function (e)
 
 					type: "POST",                 
 
-					url: "controladores/agregar.php",                    
+					url: "controladores/agregar_n2.php",                    
 
 					data: $("#form_productos").serialize(),
 
@@ -216,13 +218,13 @@ var editar = function(tbody, table) {
 
 				$("#frmedit  label").attr('class','active')
 
-				$("#frmedit  #dc").val(data.id_numeral_1)
+				$("#frmedit  #dc").val(data.id_numeral_2)
 
-				$("#frmedit  #pro").val(data.id_numeral_1)
+				$("#frmedit  #pro").val(data.id_numeral_2)
 
-				$("#frmedit  #codigo").val(data.id_numeral_1)
+				$("#frmedit  #codigo").val(data.id_numeral_2)
 
-				$("#frmedit  #desc_numeral_1").val(data.desc_numeral_1)			 
+				$("#frmedit  #desc_numeral_2").val(data.desc_numeral_2)			 
 
 		});
 
@@ -240,7 +242,7 @@ $("#frmedit").on('submit', function (e)
 
 					type: "POST",                 
 
-					url: "controladores/editar.php",                    
+					url: "controladores/editar_n2.php",                    
 
 					data: $("#frmedit").serialize(),
 
@@ -328,7 +330,8 @@ var eliminar= function(tbody, table) {
 
 				if (result.value) {
 
-					 $.post("./controladores/eliminar.php", {'id_producto' : data.id_numeral_1}  , function(data,status)
+					 $.post("./controladores/eliminar_n2.php",   {'id_producto' : data.id_numeral_2,'fk_id_numeral_1':data.fk_id_numeral_1}  , function(data,status)
+					// $.post("./validar/validar_plantilla_1.php", {'factura' : factura, 'estudio' : estudio} ,function(data, status){
 
 					{
 
