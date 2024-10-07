@@ -1,19 +1,17 @@
 <?php
   session_start();
   if (isset($_SESSION['nombre']) && $_SESSION['ingreso']=='YES')
-  {  
-    $id_usuario=$_SESSION['id_usuario']; 
-    $id_numeral_1=$_GET['id_numeral_1'];
-    $desc_numeral_1=$_GET['desc_numeral_1'];
-
-    $_SESSION['id_numeral_1']=$id_numeral_1;
+  {
+   $id_usuario=$_SESSION['id_usuario']; 
+   $id_numeral_1=$_GET['id_numeral_1'];
+   $desc_numeral_1=$_GET['desc_numeral_1'];
 
 ?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=gb18030">
-  <title>LM SUb</title> <!-- CAMBIO  Titulo de la forma -->
+  <title>Lista Maestra</title> <!-- CAMBIO  Titulo de la forma -->
   <link rel="icon" type="image/png" href="../imagenes/ico/capital.png" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -42,14 +40,16 @@
   <?php
     include("../includes/barra.php");
     include("formularios/formularios_n2.php"); // CAMBIO programa de la forma
+   // include("formularios/formularios_imagenes.php");
   ?>
 
   <div class="container" style="margin-top: 30px;">
     <h1 style="text-align: center;">Sub Numeral  <!-- CAMBIO Se cambia el titulo de la tabla -->
-      <button type="button" class="btn btn-primary pull-right menu" data-toggle="modal" data-target="#myModals"><i class="fa fa-user-plus" aria-hidden="true"></i>&nbsp;Nuevo Sub Nuneral</button> <!-- CAMBIO Se cambia el boton de altas -->
+      <button type="button" <?php if($id_usuario == 1 or $id_usuario == 2 or $id_usuario == 114  or $id_usuario == 30){ }else {?> disabled <?php }  ?> class="btn btn-primary pull-right menu" data-toggle="modal" data-target="#myModals"><i class="fa fa-book" aria-hidden="true"></i>&nbsp;Crear Numeral</button> <!-- CAMBIO Se cambia el boton de altas -->
     </h1>
     <h3>Turno: <?php echo '('.$id_numeral_1.') '.$desc_numeral_1?>
   </div>
+  
 
   <div id="cuadro1" class="col-sm-12 col-md-12 col-lg-12"> <!-- REVISAR -->
     <div class="col-sm-offset-2 col-sm-8">
@@ -62,13 +62,23 @@
         <thead>
           <tr>
             <!-- CAMBIO Se cambian las columnas segun las columnas a mostrar -->
-
-            <th>Numeral</th>
-            <th>Sub Numeral</th>
-            <th>Descripcion</th>
+            <th>Id </th>
+            <th>Tipo </th>
+            <th>Grupo</th>
+            <th>Clave</th>
+            <th>Documento</th>
+            <th># Copias Elec</th>
+            <th>Ubicacion Elec</th>
+            <th># Copias Fisico</th>
+            <th>Ubicacion Fisico</th>
+            <th># Revision</th>
+            <th># Version</th>
+            <th>Fecha Emision</th>
+            <th>Fecha Prox. Revision</th>
             <th>Editar</th>
             <th>Eliminar</th>
             <th>Ficheros</th>
+
           </tr>
         </thead>
       </table>
@@ -87,7 +97,7 @@
   
   <!-- DataTable 1.10.19 14/03/2019-->
   <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.18/datatables.min.js"></script>
-  <script language="javascript" src="js/tabla_n2.js"></script>
+  <script language="javascript" src="js/tabla_lista.js"></script>
 </body>
 </html>
 <?php

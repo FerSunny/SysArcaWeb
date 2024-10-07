@@ -2,18 +2,21 @@
   session_start();
   if (isset($_SESSION['nombre']) && $_SESSION['ingreso']=='YES')
   {  
-    $id_usuario=$_SESSION['id_usuario']; 
-    $id_numeral_1=$_GET['id_numeral_1'];
-    $desc_numeral_1=$_GET['desc_numeral_1'];
+  $id_doc=$_GET['id_doc'];
+  $num_version=$_GET['num_version'];
+  $desc_doc=$_GET['desc_doc'];
 
-    $_SESSION['id_numeral_1']=$id_numeral_1;
+  $_SESSION['id_doc']=$id_doc;
+	$_SESSION['num_version']=$num_version;
+  $_SESSION['desc_doc']=$desc_doc;
 
+  $id_usuario=$_SESSION['id_usuario']; 
 ?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=gb18030">
-  <title>LM SUb</title> <!-- CAMBIO  Titulo de la forma -->
+  <title>Documentos</title> <!-- CAMBIO  Titulo de la forma -->
   <link rel="icon" type="image/png" href="../imagenes/ico/capital.png" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -41,15 +44,20 @@
 <body background="../imagenes/logo_arca_sys_web.jpg">
   <?php
     include("../includes/barra.php");
-    include("formularios/formularios_n2.php"); // CAMBIO programa de la forma
+    include("formularios/formularios_ficheros.php"); // CAMBIO programa de la forma
+   // include("formularios/formularios_imagenes.php");
   ?>
 
   <div class="container" style="margin-top: 30px;">
-    <h1 style="text-align: center;">Sub Numeral  <!-- CAMBIO Se cambia el titulo de la tabla -->
-      <button type="button" class="btn btn-primary pull-right menu" data-toggle="modal" data-target="#myModals"><i class="fa fa-user-plus" aria-hidden="true"></i>&nbsp;Nuevo Sub Nuneral</button> <!-- CAMBIO Se cambia el boton de altas -->
+    <h1 style="text-align: center;">Control de versiones  <!-- CAMBIO Se cambia el titulo de la tabla -->
+      <button type="button" <?php if($id_usuario == 1 or $id_usuario == 2 or $id_usuario == 114 or $id_usuario == 30){ }else {?> disabled <?php } ?> class="btn btn-primary pull-right menu" data-toggle="modal" data-target="#myModals"><i class="fa fa-book" aria-hidden="true"></i>&nbsp;Nuevo documento</button> <!-- CAMBIO Se cambia el boton de altas -->
+      <h2>Ficheros para el documento: <br>
+          <?php
+            echo  '<b>('.$desc_doc.') '
+          ?>
     </h1>
-    <h3>Turno: <?php echo '('.$id_numeral_1.') '.$desc_numeral_1?>
   </div>
+  
 
   <div id="cuadro1" class="col-sm-12 col-md-12 col-lg-12"> <!-- REVISAR -->
     <div class="col-sm-offset-2 col-sm-8">
@@ -58,17 +66,29 @@
       </h3>
     </div>
     <div class="container table-responsive">
-      <table id="dt_productos" class="table table-bordered table-hover" cellspacing="1" width="100%">
+      <table id="dt_imagenes" class="table table-bordered table-hover" cellspacing="1" width="100%">
         <thead>
           <tr>
             <!-- CAMBIO Se cambian las columnas segun las columnas a mostrar -->
-
-            <th>Numeral</th>
-            <th>Sub Numeral</th>
-            <th>Descripcion</th>
-            <th>Editar</th>
+            <th>Id Doc</th>
+            <th>Id fichero</th>
+            <th>Usuario Publico Inicial</th>
+            <th>Fecha Publico Inicial</th>
+            <th>Nombre </th>
+            <th>ruta</th>
+            <th>Tipo</th>
+            <th>Version</th>
+            <th>Revision</th>
+            <th>Estatus</th>
+            <th>Usuario estatus</th>
+            <th>Fecha estatus</th>
+            <th>Descargar</th>
+            <th>Actualizar version</th>
             <th>Eliminar</th>
-            <th>Ficheros</th>
+            <!--
+            <th>Ver</th>
+            <th>Descargarlo</th>
+-->
           </tr>
         </thead>
       </table>
@@ -87,7 +107,7 @@
   
   <!-- DataTable 1.10.19 14/03/2019-->
   <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.18/datatables.min.js"></script>
-  <script language="javascript" src="js/tabla_n2.js"></script>
+  <script language="javascript" src="js/tabla_ficheros.js"></script>
 </body>
 </html>
 <?php
