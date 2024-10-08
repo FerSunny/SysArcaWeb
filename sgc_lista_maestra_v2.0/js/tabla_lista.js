@@ -101,7 +101,7 @@
 
 							
 							return "<form-group style='text-align:center;'>"+
-							"<a id='printer' target='_blank'  href='./tabla_ficheros.php?id_doc="+row['id_doc']+"&num_version="+row['num_version']+"&desc_doc="+row['desc_doc']+"&fk_id_numeral_1="+row['fk_id_numeral_1']+"&fk_id_numeral_2="+row['fk_id_numeral_2']+"' class='btn btn-success btn-md'  role='button'><span class='fas fa-file' style='color: white;'></span></a>"+
+							"<a id='printer' target='_blank'  href='./tabla_ficheros.php?id_doc="+row['id_doc']+"&num_version="+row['num_version']+"&desc_doc="+row['desc_doc']+"' class='btn btn-success btn-md'  role='button'><span class='fas fa-file' style='color: white;'></span></a>"+
 							"</form-group>";
 
 										
@@ -160,7 +160,7 @@ $("#form_productos").on('submit', function (e)
 
 					type: "POST",                 
 
-					url: "controladores/agregar_lista.php",                    
+					url: "controladores/agregar_ficheros.php",                    
 
 					data: $("#form_productos").serialize(),
 
@@ -289,7 +289,7 @@ $("#frmedit").on('submit', function (e)
 
 					type: "POST",                 
 
-					url: "controladores/editar_lista.php",                    
+					url: "controladores/editar_ficheros.php",                    
 
 					data: $("#frmedit").serialize(),
 
@@ -377,7 +377,7 @@ var eliminar= function(tbody, table) {
 
 				if (result.value) {
 
-					 $.post("./controladores/eliminar_lista.php", {'id_doc' : data.id_doc}  , function(data,status)
+					 $.post("./controladores/eliminar.php", {'id_doc' : data.id_doc}  , function(data,status)
 
 					{
 
