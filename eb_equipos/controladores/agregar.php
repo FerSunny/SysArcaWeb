@@ -7,7 +7,7 @@ session_start();
 include ("../../controladores/conex.php");
 
 $sucursal = $_SESSION['fk_id_sucursal'];
-$id_usuario= $_SESSION['id_usuario'];
+
 
 
 
@@ -89,8 +89,7 @@ INSERT INTO eb_equipos
              fecha_rece,
              fecha_marcha,
              fecha_expira_g,
-             fk_id_proveedor,
-             fk_id_usuario)
+             fk_id_proveedor)
 VALUES (1,
         0,
         '$serie',
@@ -112,8 +111,7 @@ VALUES (1,
         '$fecha_alta',
         '$fecha_marcha',
         '$fecha_expira_g',
-        $proveedor,
-        $id_usuario);
+        $proveedor);
 ";
 
 
