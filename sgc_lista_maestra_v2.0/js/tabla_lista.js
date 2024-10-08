@@ -28,19 +28,40 @@
 
 					"method":"POST",
 
-					"url": "listar_n2.php"
+					"url": "listar_principal.php"
 
 				},
 
 				"columns":[
 
-					{"data" : "fk_id_numeral_1"},
+					{"data" : "id_doc"},
 
-					{"data" : "id_numeral_2"},
+					{"data" : "desc_tipo_docu"},
 
-					{"data" : "desc_numeral_2"},
+					{"data" : "desc_grupo"},
+
+					{"data" : "clave"},
+
+					{"data" : "desc_doc"},
+
+					{"data" : "ele_numcopias"},
+
+					{"data" : "ele_ubica"},
+
+					{"data" : "imp_numcopias"},
+
+					{"data" : "imp_ubica"},
+
+					{"data" : "num_revision"},
+
+					{"data" : "num_version"},
+
+					{"data" : "fecha_emision"},
+
+					{"data" : "fecha_pro_rev"},
 
 					//{"defaultContent": "<button type='button' class='editar btn btn-warning btn-md'><i class='fas fa-edit'></i></button>"},
+					// boton de modificar
 					{
 						render:function(data,type,row){
 							var id_usuario = row['id_usuario']
@@ -57,7 +78,7 @@
 									
 					},
 
-					//{"defaultContent":"<button type='button' class='eliminar btn btn-danger btn-md'><i class='fas fa-trash-alt'></i></button>"}
+					//{"defaultContent":"<button type='button' class='eliminar btn btn-danger btn-md'><i class='fas fa-trash-alt'></i></button>"},
 					{
 						render:function(data,type,row){
 							var id_usuario = row['id_usuario']
@@ -74,12 +95,13 @@
 									
 					},
 
+
 					{
 						render:function(data,type,row){
 
 							
 							return "<form-group style='text-align:center;'>"+
-							"<a id='printer' target='_blank'  href='./tabla_lista.php?id_numeral_1="+row['fk_id_numeral_1']+"&id_numeral_2="+row['id_numeral_2']+"&desc_numeral_1="+row['desc_numeral_1']+"&desc_numeral_2="+row['desc_numeral_2']+"' class='btn btn-success btn-md'  role='button'><span class='fas fa-file' style='color: white;'></span></a>"+
+							"<a id='printer' target='_blank'  href='./tabla_ficheros.php?id_doc="+row['id_doc']+"&num_version="+row['num_version']+"&desc_doc="+row['desc_doc']+"&fk_id_numeral_1="+row['fk_id_numeral_1']+"&fk_id_numeral_2="+row['fk_id_numeral_2']+"' class='btn btn-success btn-md'  role='button'><span class='fas fa-file' style='color: white;'></span></a>"+
 							"</form-group>";
 
 										
@@ -100,7 +122,7 @@
 
 			eliminar("#dt_productos tbody", table)
 
-				
+			subir("#dt_productos tbody", table)	
 
 }
 
@@ -112,9 +134,9 @@ var agregar= function(tbody, table) {
 
 				var data = table.row($(this).parents("tr")).data();
 
-				$("#form_productos  #dc").val(data.fk_id_cliente)
+				$("#form_productos  #dc").val(data.id_doc)
 
-				$("#form_productos  #pro").val(data.id_producto)
+				$("#form_productos  #pro").val(data.id_doc)
 
 				$("#form_productos").modal("show")
 
@@ -138,7 +160,7 @@ $("#form_productos").on('submit', function (e)
 
 					type: "POST",                 
 
-					url: "controladores/agregar_n2.php",                    
+					url: "controladores/agregar_lista.php",                    
 
 					data: $("#form_productos").serialize(),
 
@@ -218,13 +240,38 @@ var editar = function(tbody, table) {
 
 				$("#frmedit  label").attr('class','active')
 
-				$("#frmedit  #dc").val(data.id_numeral_2)
+				$("#frmedit  #dc").val(data.id_doc)
 
-				$("#frmedit  #pro").val(data.id_numeral_2)
+				//$("#frmedit  #dc").val(data.desc_tipo_docu)
 
-				$("#frmedit  #codigo").val(data.id_numeral_2)
+				$("#frmedit  #pro").val(data.id_doc)
 
-				$("#frmedit  #desc_numeral_2").val(data.desc_numeral_2)			 
+				$("#frmedit  #codigo").val(data.id_doc)
+
+				$("#frmedit  #grupo").val(data.fk_id_grupo)
+
+				$("#frmedit  #tipo").val(data.fk_id_tipo)
+
+				$("#frmedit  #modulo").val(data.fk_id_modulo)
+
+				$("#frmedit  #consecutivo").val(data.consecutivo)
+
+				$("#frmedit  #descripcion").val(data.desc_doc)
+
+				$("#frmedit  #encopias").val(data.ele_numcopias)
+
+				$("#frmedit  #eubicacion").val(data.ele_ubica)
+
+				$("#frmedit  #fncopias").val(data.imp_numcopias)
+
+				$("#frmedit  #fubicacion").val(data.imp_ubica)
+
+				$("#frmedit  #revision").val(data.num_revision)
+				$("#frmedit  #version").val(data.num_version)
+				$("#frmedit  #femision").val(data.fecha_emision)
+				$("#frmedit  #frevision").val(data.fecha_pro_rev)
+				$("#frmedit  #lista").val(data.fk_id_docu)
+			 
 
 		});
 
@@ -242,7 +289,7 @@ $("#frmedit").on('submit', function (e)
 
 					type: "POST",                 
 
-					url: "controladores/editar_n2.php",                    
+					url: "controladores/editar_lista.php",                    
 
 					data: $("#frmedit").serialize(),
 
@@ -330,8 +377,7 @@ var eliminar= function(tbody, table) {
 
 				if (result.value) {
 
-					 $.post("./controladores/eliminar_n2.php",   {'id_producto' : data.id_numeral_2,'fk_id_numeral_1':data.fk_id_numeral_1}  , function(data,status)
-					// $.post("./validar/validar_plantilla_1.php", {'factura' : factura, 'estudio' : estudio} ,function(data, status){
+					 $.post("./controladores/eliminar_lista.php", {'id_doc' : data.id_doc}  , function(data,status)
 
 					{
 

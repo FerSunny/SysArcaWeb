@@ -5,6 +5,7 @@
     $id_usuario=$_SESSION['id_usuario']; 
     $id_numeral_1=$_GET['id_numeral_1'];
     $desc_numeral_1=$_GET['desc_numeral_1'];
+    
 
     $_SESSION['id_numeral_1']=$id_numeral_1;
 
@@ -48,7 +49,7 @@
     <h1 style="text-align: center;">Sub Numeral  <!-- CAMBIO Se cambia el titulo de la tabla -->
       <button type="button" class="btn btn-primary pull-right menu" data-toggle="modal" data-target="#myModals"><i class="fa fa-user-plus" aria-hidden="true"></i>&nbsp;Nuevo Sub Nuneral</button> <!-- CAMBIO Se cambia el boton de altas -->
     </h1>
-    <h3>Turno: <?php echo '('.$id_numeral_1.') '.$desc_numeral_1?>
+    <h3>Numeral: <?php echo '('.$id_numeral_1.') '.$desc_numeral_1?>
   </div>
 
   <div id="cuadro1" class="col-sm-12 col-md-12 col-lg-12"> <!-- REVISAR -->
