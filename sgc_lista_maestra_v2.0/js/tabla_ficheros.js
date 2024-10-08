@@ -37,13 +37,20 @@
 					{
 						render:function(data,type,row){
 							var estatus = row['estatus']
+							var tipo = row['tipo']
+							var id_usuario = row['id_usuario']
 							if(estatus == "O" ){
-								//console.log('entro a D')
-								return "<form-group style='text-align:center;'>"+
-									"<a id='printer' target='_blank' href='../sgc_listamaestra/controladores/descargar_file.php?fk_id_doc="+row['fk_id_doc']+"&id_imagen="+row['id_imagen']+"&ruta="+row['ruta']+"&nombre="+row['nombre']+"&tipo="+row['tipo']+"&ver="+row['ver']+"' class='btn btn-success btn-md' role='button'><i class='fa fa-download'></i></a>"+
-									"</form-group>";	
-									//target='_blank'
-									table.ajax.reload();
+								if(tipo == 'pdf' ){
+									return "<form-group style='text-align:center;'>"+
+										"<a id='printer' target='_blank' href='../sgc_lista_maestra_v2.0/controladores/descargar_file_pdf.php?fk_id_doc="+row['fk_id_doc']+"&id_imagen="+row['id_imagen']+"&ruta="+row['ruta']+"&nombre="+row['nombre']+"&tipo="+row['tipo']+"&ver="+row['ver']+"' class='btn btn-success btn-md' role='button'><i class='fa fa-download'></i></a>"+
+										"</form-group>";	
+								}else{
+									if(id_usuario == 1 || id_usuario == 2 || id_usuario == 30 || id_usuario == 114 || id_usuario == 200 ){
+										return "<form-group style='text-align:center;'>"+
+										"<a id='printer' target='_blank' href='../sgc_lista_maestra_v2.0/controladores/descargar_file.php?fk_id_doc="+row['fk_id_doc']+"&id_imagen="+row['id_imagen']+"&ruta="+row['ruta']+"&nombre="+row['nombre']+"&tipo="+row['tipo']+"&ver="+row['ver']+"' class='btn btn-success btn-md' role='button'><i class='fa fa-download'></i></a>"+
+										"</form-group>";									
+									}
+								}
 							}
 							else{
 								//console.log('No entro a D')
@@ -58,7 +65,7 @@
 							var estatus = row['estatus']
 							var id_usuario = row['id_usuario']
 
-							if(id_usuario == 1 || id_usuario == 2 || id_usuario == 114 ){
+							if(id_usuario == 1 || id_usuario == 2 || id_usuario == 30 || id_usuario == 114 || id_usuario == 200 ){
 								if(estatus == 'D'){
 									return "<form-group style='text-align:center;'>"+
 												"<button type='button' class='editar btn btn-success btn-md' role='button' data-toggle='modal' data-target='#modalEditar'><i class='fa fa-upload'></i></button>"
@@ -81,7 +88,7 @@
 							var estatus = row['estatus']
 							var id_usuario = row['id_usuario']
 
-							if(id_usuario == 1 || id_usuario == 2 || id_usuario == 114 ){
+							if(id_usuario == 1 || id_usuario == 2 || id_usuario == 114 || id_usuario == 30 || id_usuario == 200  ){
 								if(estatus == 'O'){
 									return "<form-group style='text-align:center;'>"+
 												"<button type='button' class='eliminar btn btn-success btn-md' role='button' data-toggle='modal' data-target='#modalEliminar'><i class='fa fa-trash-alt'></i></button>"

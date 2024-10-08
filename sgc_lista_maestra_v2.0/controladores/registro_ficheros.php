@@ -8,6 +8,9 @@ $id_doc= $_SESSION['id_doc'];
 $num_version= $_SESSION['num_version'];
 $desc_doc = $_SESSION['desc_doc'];
 
+$id_numeral_1=$_SESSION['id_numeral_1']; 
+$id_numeral_2=$_SESSION['id_numeral_2']; 
+
 //$estado = $_POST['fn_estado']; //estado
 //$img_x_hoja = $_POST['fn_img_x_hoja'];
 //$nombre='pendiente';
@@ -81,6 +84,8 @@ for ($i=0; $i < $file_count; $i++)
 	INSERT INTO sgc_lista_ficheros
             (fk_id_empresa,
              id_imagen,
+			 fk_id_numeral_1,
+			 fk_id_numeral_2,
              fk_id_doc,
              fk_id_usuario,
              fecha_publicacion,
@@ -96,6 +101,8 @@ for ($i=0; $i < $file_count; $i++)
              estado)
 VALUES (1,
         0,
+		$id_numeral_1,
+		$id_numeral_2,
         '$id_doc',
         '$id_usuario',
         NOW(),
@@ -115,7 +122,7 @@ VALUES (1,
 }
 
 	if ($resultado) {
-			header("location: ../tabla_ficheros.php?id_doc=$id_doc&num_version=$num_version&desc_doc=$desc_doc");
+			header("location: ../tabla_ficheros.php?id_doc=$id_doc&num_version=$num_version&desc_doc=$desc_doc&fk_id_numeral_1=$id_numeral_1&fk_id_numeral_2=$id_numeral_2");
 			//echo "<script>location.href='../tabla_usuarios.php'</script>";
 		}
 		else {

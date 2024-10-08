@@ -35,7 +35,7 @@ if($row = mysqli_fetch_array($resultado))
       $resultado1 = mysqli_query($conexion, $query1);
       if ($resultado1) 
         {
-          echo "<script>location.href='../tabla_ficheros.php?id_doc=$id_doc&num_version=$num_version&desc_doc=$desc_doc'</script>";
+          echo "<script>location.href='../tabla_ficheros.php?id_doc=$id_doc&num_version=$num_version&desc_doc=$desc_doc&fk_id_numeral_1=$id_numeral_1&fk_id_numeral_2=$id_numeral_2'</script>";
         }
         else 
         {

@@ -1,4 +1,6 @@
 <?php
+   require_once ("../so_factura/config/db.php");//Contiene las variables de configuracion para conectar a la base de datos
+   require_once ("../so_factura/config/conexion.php");//Contiene funcion que conecta a la base de datos  
   session_start();
   if (isset($_SESSION['nombre']) && $_SESSION['ingreso']=='YES')
   {  
@@ -6,11 +8,44 @@
   $num_version=$_GET['num_version'];
   $desc_doc=$_GET['desc_doc'];
 
+  $id_numeral_1=$_GET['fk_id_numeral_1'];
+  $id_numeral_2=$_GET['fk_id_numeral_2'];
+
   $_SESSION['id_doc']=$id_doc;
 	$_SESSION['num_version']=$num_version;
   $_SESSION['desc_doc']=$desc_doc;
 
-  $id_usuario=$_SESSION['id_usuario']; 
+  $_SESSION['id_numeral_1']=$id_numeral_1;
+  $_SESSION['id_numeral_2']=$id_numeral_2;
+
+  $_SESSION['desc_doc']=$desc_doc;
+
+  //$fk_id_numeral_1=$_SESSION['fk_id_numeral_1']; 
+  //$fk_id_numeral_2=$_SESSION['fk_id_numeral_2']; 
+
+  // obenemos las descripcionees de los numerales
+  $sql_des="
+  SELECT
+  a.`desc_numeral_1`,
+  b.`desc_numeral_2`
+  FROM 
+  sgc_indice_uno a,
+  sgc_indice_dos b
+  WHERE a.`id_numeral_1` = $id_numeral_1
+  AND b.`fk_id_numeral_1` = a.`id_numeral_1`
+  AND b.`id_numeral_2`  = $id_numeral_2
+  AND a.`estado` = 'A'
+  AND b.`estado` = 'A'
+  ";
+  //echo $sql_des;
+  if ($result = mysqli_query($con, $sql_des)) {
+    while($row = $result->fetch_assoc())
+    {
+        $desc_numeral_1=$row['desc_numeral_1'];
+        $desc_numeral_2=$row['desc_numeral_2'];
+    }
+  }
+
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -50,10 +85,17 @@
 
   <div class="container" style="margin-top: 30px;">
     <h1 style="text-align: center;">Control de versiones  <!-- CAMBIO Se cambia el titulo de la tabla -->
-      <button type="button" <?php if($id_usuario == 1 or $id_usuario == 2 or $id_usuario == 114 or $id_usuario == 30){ }else {?> disabled <?php } ?> class="btn btn-primary pull-right menu" data-toggle="modal" data-target="#myModals"><i class="fa fa-book" aria-hidden="true"></i>&nbsp;Nuevo documento</button> <!-- CAMBIO Se cambia el boton de altas -->
+      <button type="button" <?php if($id_usuario > 0 ){ }else {?> disabled <?php } ?> class="btn btn-primary pull-right menu" data-toggle="modal" data-target="#myModals"><i class="fa fa-book" aria-hidden="true"></i>&nbsp;Nueva Version</button> <!-- CAMBIO Se cambia el boton de altas -->
       <h2>Ficheros para el documento: <br>
           <?php
-            echo  '<b>('.$desc_doc.') '
+            echo  '<b>';
+            echo '('.$id_numeral_1.') '.$desc_numeral_1;
+            echo  '<br>';
+            echo '('.$id_numeral_2.') '.$desc_numeral_2;
+            echo  '<br>';
+            echo '('.$desc_doc.') ';
+            
+
           ?>
     </h1>
   </div>

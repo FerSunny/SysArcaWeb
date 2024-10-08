@@ -55,7 +55,7 @@
 
   <div class="container" style="margin-top: 30px;">
     <h1 style="text-align: center;">Lista Maestra  <!-- CAMBIO Se cambia el titulo de la tabla -->
-      <button type="button" <?php if($id_usuario == 1 or $id_usuario == 2 or $id_usuario == 114  or $id_usuario == 30){ }else {?> disabled <?php }  ?> class="btn btn-primary pull-right menu" data-toggle="modal" data-target="#myModals"><i class="fa fa-book" aria-hidden="true"></i>&nbsp;Crear Documento</button> <!-- CAMBIO Se cambia el boton de altas -->
+      <button type="button" <?php if($id_usuario == 1 or $id_usuario == 2 or $id_usuario == 114  or $id_usuario == 30 or $id_usuario == 200){ }else {?> disabled <?php }  ?> class="btn btn-primary pull-right menu" data-toggle="modal" data-target="#myModals"><i class="fa fa-book" aria-hidden="true"></i>&nbsp;Crear Documento</button> <!-- CAMBIO Se cambia el boton de altas -->
     </h1>
     <h2>Ficheros para el documento: <br>
           <?php

@@ -31,7 +31,7 @@ if($nuevaversion_p == 'N'){
 	$res_update = mysqli_query($conexion, $stm_update);
 	if ($res_update){
 		//die('update ok'.$id_doc.$num_version.$desc_doc);
-		echo "<script>location.href='../tabla_ficheros.php?id_doc=$id_doc&num_version=$num_version&desc_doc=$desc_doc'</script>";
+		echo "<script>location.href='../tabla_ficheros.php?id_doc=$id_doc&num_version=$num_version&desc_doc=$desc_doc&fk_id_numeral_1=$id_numeral_1&fk_id_numeral_2=$id_numeral_2'</script>";
 		//echo "<script>location.href='../tabla_imagenes.php?numero_factura=$numero_factura&studio=$studio'</script>";
 	}else{
 		die('Nueva version, error --> res_update'.$res_update);
@@ -130,7 +130,7 @@ if($nuevaversion_p == 'N'){
 		";
 		$resultado_0 = mysqli_query($conexion, $stm_insert_0);
 		if ($resultado) {
-			echo "<script>location.href='../tabla_ficheros.php?id_doc=$id_doc&num_version=$num_version&desc_doc=$desc_doc'</script>";
+			echo "<script>location.href='../tabla_ficheros.php?id_doc=$id_doc&num_version=$num_version&desc_doc=$desc_doc&fk_id_numeral_1=$id_numeral_1&fk_id_numeral_2=$id_numeral_2'</script>";
 			//echo "<script>location.href='../tabla_imagenes.php?numero_factura=$numero_factura&studio=$studio'</script>"
 		}else{
 			die('Error -->  $stm_insert_0'.$stm_insert_0);

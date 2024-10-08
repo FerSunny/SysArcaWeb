@@ -5,8 +5,8 @@
     $id_doc= $_SESSION['id_doc'];
     $id_usuario=$_SESSION['id_usuario']; 
 
-    $id_numeral_1=$_SESSION['fk_id_numeral_1']; 
-    $id_numeral_2=$_SESSION['fk_id_numeral_2']; 
+    $id_numeral_1=$_SESSION['id_numeral_1']; 
+    $id_numeral_2=$_SESSION['id_numeral_2']; 
  
   $query = "
   SELECT ".$id_usuario." as id_usuario,
