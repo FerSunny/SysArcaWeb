@@ -262,8 +262,6 @@ function Header()
     //$this->Cell($posiniv);
     // se acomo para que mostrara la firma segun el medico.
     //echo 'usuario='.$id_usuario;
-	  
-	  
     if($id_usuario == 74 or $id_usuario == 62)
     {
         $this->Image('../imagenes/dr_saulo_byn.jpg',15,213,40,0);  
