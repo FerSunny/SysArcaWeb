@@ -3,14 +3,15 @@
 
 
 	include ("../controladores/conex.php");
-  session_start();
 
-  $sucursal =$_SESSION['fk_id_sucursal'];
-  $fk_id_perfil=$_SESSION['fk_id_perfil'];
+
+
+  
+
+ 
 
   $query = "
   SELECT 
-  $fk_id_perfil as fk_id_perfil,
   te.fk_id_empresa,
   te.id_equipo,
  te.numero_serie,
@@ -43,8 +44,7 @@
  CONCAT(te.`clave_id`,'-',se.`desc_abreviada`,'-',ar.`clave`,'-',su.`desc_corta`,'-',te.`conse`) codigo,
  usuario,
  contra,
- pr.`razon_social`,
- su.`desc_corta`
+ pr.`razon_social`
 FROM 
 eb_equipos te,
 km_servicios se,
@@ -53,7 +53,6 @@ km_gpo_conta gc,
 eb_proveedores pr,
 kg_sucursales su
 WHERE te.`estado` = 'A'
-AND te.fk_id_sucursal = $sucursal
 AND te.`fk_id_servicio` = se.`id_servicio`
 AND te.`fk_id_area` = ar.`id_area`
 AND te.`fk_id_gpo_conta` = gc.`id_gpo_conta`

@@ -84,7 +84,7 @@
 
     <h1 style="text-align: center;">Tabla de Equipos  <!-- CAMBIO Se cambia el titulo de la tabla -->
 
-      <button type="button" <?php if($fk_id_perfil == 1 or $fk_id_perfil == 43){ }else {?> disabled <?php }  ?>  class="btn btn-primary pull-right menu" data-toggle="modal" data-target="#myModals"><i class="fa fa-user-plus" aria-hidden="true"></i>&nbsp;Nuevo Equipo</button> <!-- CAMBIO Se cambia el boton de altas -->
+      <button type="button" class="btn btn-primary pull-right menu" data-toggle="modal" data-target="#myModals"><i class="fa fa-user-plus" aria-hidden="true"></i>&nbsp;Nuevo Equipo</button> <!-- CAMBIO Se cambia el boton de altas -->
 
     </h1>
 
@@ -113,8 +113,7 @@
           <tr>
 
             <!-- CAMBIO Se cambian las columnas segun las columnas a mostrar -->
-            <th>Sucursal</th>
-            
+
             <th>Id </th>
 
             <th>No. Serie </th>
