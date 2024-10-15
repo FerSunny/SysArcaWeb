@@ -263,7 +263,30 @@ function Header()
     // se acomo para que mostrara la firma segun el medico.
     //echo 'usuario='.$id_usuario;
 	  
-	  
+    switch ($id_usuario) {
+      case '62':
+        $this->Image('../imagenes/dr_saulo_byn.jpg',15,213,40,0);  
+        break;
+      case '74':
+        $this->Image('../imagenes/dr_saulo_byn.jpg',15,213,40,0);  
+        break;
+      case '54':
+        $this->Image('../imagenes/dr_agustin.jpg',15,210,40,0);
+        break;      
+      case '267':
+        $this->Image('../imagenes/dra_ivonne.jpg',15,210,40,0);     
+        break; 
+      case '267':
+        $this->Image('../imagenes/dra_ivonne.jpg',15,210,40,0);     
+        break;
+      case '377':
+        $this->Image('../imagenes/firma_dr._luis_ceron_vaca.jpg',15,210,40,0);     
+        break;
+      default:
+        # code...
+        break;
+    }
+	  /*
     if($id_usuario == 74 or $id_usuario == 62)
     {
         $this->Image('../imagenes/dr_saulo_byn.jpg',15,213,40,0);  
@@ -278,7 +301,7 @@ function Header()
         }
       }
     }
-    
+    */
     //$this->ln(4);
     $this->Cell(5);
     $this->MultiCell(90,5,utf8_decode(trim(($firma))),0,'L');

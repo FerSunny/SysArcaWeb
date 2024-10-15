@@ -76,7 +76,7 @@ VALUES (1,
         'A');
 ";
 
-
+//echo $query;
 
 $result = $conexion -> query($query);
 
