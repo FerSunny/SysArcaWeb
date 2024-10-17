@@ -1,10 +1,18 @@
 <?php
 
-
+  session_start();
 
 	include ("../controladores/conex.php");
+  $fk_id_perfil=$_SESSION['fk_id_perfil'];
+  $fk_id_sucursal=$_SESSION['fk_id_sucursal'];
 
+  if ($fk_id_perfil==1 or $fk_id_perfil == 41 or $fk_id_perfil == 45) 
+  {
 
+    $sucursal=' te.fk_id_sucursal > 0';
+  }else{
+    $sucursal=' te.fk_id_sucursal  = '.$fk_id_sucursal;
+  }
 
   
 
@@ -44,7 +52,8 @@
  CONCAT(te.`clave_id`,'-',se.`desc_abreviada`,'-',ar.`clave`,'-',su.`desc_corta`,'-',te.`conse`) codigo,
  usuario,
  contra,
- pr.`razon_social`
+ pr.`razon_social`,
+ su.`desc_corta`
 FROM 
 eb_equipos te,
 km_servicios se,
@@ -58,6 +67,7 @@ AND te.`fk_id_area` = ar.`id_area`
 AND te.`fk_id_gpo_conta` = gc.`id_gpo_conta`
 AND te.`fk_id_proveedor` = pr.`id_proveedor`
 AND te.`fk_id_sucursal` = su.`id_sucursal`
+AND  $sucursal
   ";
 
 //echo $query;

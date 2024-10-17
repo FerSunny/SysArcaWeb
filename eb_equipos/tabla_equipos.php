@@ -113,7 +113,9 @@
           <tr>
 
             <!-- CAMBIO Se cambian las columnas segun las columnas a mostrar -->
-
+            <th>Sucursal </th>
+            <th>Servicio </th>
+            <th>Area </th>
             <th>Id </th>
 
             <th>No. Serie </th>

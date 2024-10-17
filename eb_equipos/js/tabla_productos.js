@@ -34,6 +34,12 @@
 
 				"columns":[
 
+					{"data" : "desc_corta"},
+					
+					{"data" : "desc_servicio"},
+
+					{"data" : "desc_area"},
+
 					{"data" : "id_equipo"},
 
 					{"data" : "numero_serie"},
