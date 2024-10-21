@@ -11,7 +11,7 @@ $pdf->Cell(40,10,'¡Hola, Mundo!');
 $pdf->ln(10);
 $pdf->SetFont('Arial','',9);
 $sql="select nombre_plantilla,titulo_desc,descripcion,firma FROM cr_plantilla_usg
-  where id_plantilla=588 and fk_id_estudio=978";
+  where id_plantilla=557 and fk_id_estudio=978";
 
 if ($result = mysqli_query($con, $sql)) {
 while($row = $result->fetch_assoc())

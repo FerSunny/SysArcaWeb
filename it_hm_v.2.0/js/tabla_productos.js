@@ -34,97 +34,29 @@
 
 				"columns":[
 
-					{"data" : "desc_corta"},
-					
-					{"data" : "desc_servicio"},
+					{"data" : "sample_no"},
 
-					{"data" : "desc_area"},
+					{"data" : "date_v"},
 
-					{"data" : "id_equipo"},
+					{"data" : "wbctotales"},
 
-					{"data" : "numero_serie"},
+					{"data" : "rbctotales"},
 
-					{"data" : "codigo"},
+					{"data" : "hgb"},
 
-					{"data" : "marca"},
+					{"data" : "hct"},
 
-					{"data" : "modelo"},
+					{"data" : "mcv"},
 
-					{"data" : "descripcion"},
+					{"data" : "mchpg"},
 
-					{"data" : "razon_social"},
+					{"data" : "mchcgdl"},
 
+					{"data" : "plt"},
 
 					{"defaultContent": "<button type='button' class='editar btn btn-warning btn-md'><i class='fas fa-edit'></i></button>"},
 
-					{"defaultContent":"<button type='button' class='eliminar btn btn-danger btn-md'><i class='fas fa-trash-alt'></i></button>"},
-					// mantenimiento correctivo
-					{
-						render:function(data,type,row){
-							var registrado;
-
-									return "<form-group style='text-align:center;'>"+
-									"<a id='printer' disabled target='_blank' href='../eb_equipos/tabla_equipo_cor.php?id_equipo="+row['id_equipo']+"' class='btn btn-info btn-md' role='button'><i class='fa fa-cogs' ></i></a>"+
-									"</form-group>";
-
-						},
-					},
-					// calendario mnto preventivo
-					{
-						render:function(data,type,row){
-							var registrado;
-
-									return "<form-group style='text-align:center;'>"+
-									"<a id='printer' target='_blank' href='../eb_equipos/tabla_equipo_cal.php?id_equipo="+row['id_equipo']+"' class='btn btn-light btn-md' role='button'><i class='fa fa-calendar' ></i></a>"+
-									"</form-group>";
-
-						},
-					},
-					//Documentos PDF
-					{
-						render:function(data,type,row){
-							var registrado;
-
-							return "<form-group style='text-align:center;'>"+
-							"<a id='printer'  href='../eb_equipos/tabla_imagenes.php?id_equipo="+row['id_equipo']+"' class='btn btn-success' role='button'><span  class='fa fa-image'></span></a>"+
-							"</form-group>";
-
-						},
-					},
-					//Calibracion
-					{
-						render:function(data,type,row){
-							var registrado;
-
-									return "<form-group style='text-align:center;'>"+
-									"<a id='printer' target='_blank' href='reports/tikets.php?codigo="+row['codigo']+"' class='btn btn-primary btn-md' role='button'><i class='fa fa-stethoscope' ></i></a>"+
-									"</form-group>";
-
-						},
-					},
-					//Check - list
-					{
-						render:function(data,type,row){
-							var registrado;
-
-									return "<form-group style='text-align:center;'>"+
-									"<a id='printer' target='_blank' href='reports/tikets.php?codigo="+row['codigo']+"' class='btn btn-secondary btn-md' role='button'><i class='fa fa-list' ></i></a>"+
-									"</form-group>";
-
-						},
-					},
-					//Codigo de barras
-					{
-						render:function(data,type,row){
-							var registrado;
-
-									return "<form-group style='text-align:center;'>"+
-									"<a id='printer' target='_blank' href='reports/tikets.php?codigo="+row['codigo']+"&id_equipo="+row['id_equipo']+"' class='btn btn-warning btn-md' role='button'><i class='fa fa-barcode' ></i></a>"+
-									"</form-group>";
-
-						},
-					}
-
+					{"defaultContent":"<button type='button' class='eliminar btn btn-danger btn-md'><i class='fas fa-trash-alt'></i></button>"}
 
 				],
 
@@ -252,36 +184,39 @@ var editar = function(tbody, table) {
 
 
 
+
+
 				$("#frmedit  label").attr('class','active')
 
-				$("#frmedit  #dc").val(data.id_equipo)
-				$("#frmedit  #pro").val(data.id_equipo)
-				$("#frmedit  #codigo").val(data.id_equipo)
+				$("#frmedit  #dc").val(data.fk_id_cliente)
 
-				$("#frmedit  #descripcion").val(data.descripcion)
+				$("#frmedit  #pro").val(data.id_producto)
 
-				//$("#frmedit  #vminimo").val(data.valor_minimo)
-				//$("#frmedit  #vmaximo").val(data.valor_maximo)
-				$("#frmedit  #serie").val(data.numero_serie)
-				$("#frmedit  #marca").val(data.marca)
+				$("#frmedit  #codigo").val(data.cod_producto)
 
-				$("#frmedit  #modelo").val(data.modelo)
-				$("#frmedit  #fecha_alta").val(data.fecha_rece)
+				$("#frmedit  #producto").val(data.producto)
 
-				$("#frmedit  #fecha_marcha").val(data.fecha_marcha)
-				$("#frmedit  #fecha_expira_g").val(data.fecha_expira_g)					
+				$("#frmedit  #desc_p").val(data.desc_producto)
 
-				$("#frmedit  #sucursal").val(data.fk_id_sucursal)
-				$("#frmedit  #servicio").val(data.fk_id_servicio)
-				$("#frmedit  #area").val(data.fk_id_area)
-				$("#frmedit  #gpo_conta").val(data.fk_id_gpo_conta)	
+				$("#frmedit  #costo").val(data.costo_producto)
+
+				$("#frmedit  #utilidad").val(data.utilidad)
+
+				$("#frmedit  #c_total").val(data.costo_total)
+
+				$("#frmedit  #depto").val(data.departamento)
+
 				$("#frmedit  #proveedor").val(data.fk_id_proveedor)
 
+				$("#frmedit  #cat").val(data.fk_id_categoria)
 
-				$("#frmedit  #conse").val(data.conse)																								
+				$("#frmedit  #uni_med_mod").val(data.fk_unidad_medida)
 
-				$("#frmedit  #usuario").val(data.usuario)
-				$("#frmedit  #pass").val(data.contra)
+				$("#frmedit  #caducidad").val(data.caducidad)
+				$("#frmedit  #almacen").val(data.fk_id_almacen)
+				$("#frmedit  #pasillo").val(data.pasillo)
+				$("#frmedit  #nivel").val(data.nivel)
+			 
 
 		});
 
@@ -387,7 +322,7 @@ var eliminar= function(tbody, table) {
 
 				if (result.value) {
 
-					 $.post("./controladores/eliminar.php", {'id_equipo' : data.id_equipo}  , function(data,status)
+					 $.post("./controladores/eliminar.php", {'id_producto' : data.id_producto}  , function(data,status)
 
 					{
 
