@@ -5,7 +5,7 @@ $edit1=$_POST["edit1"];
 $edit2=$_POST["edit2"];
 
 
-$query = " UPDATE  km_indicaciones_nvo SET fk_empresa='1', desc_indicaciones='$edit1', activo='$edit2' where id_indicaciones='$id_us'";
+$query = " UPDATE  km_indicaciones SET fk_empresa='1', desc_indicaciones='$edit1', activo='$edit2' where id_indicaciones='$id_us'";
 
 $resultado = mysqli_query($conexion, $query);
 

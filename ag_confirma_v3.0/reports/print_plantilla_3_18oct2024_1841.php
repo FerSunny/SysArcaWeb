@@ -1,16 +1,17 @@
 <?php
+
 // Version modificada por javier pradel
 // Fecha: 06.febrero.2019
 // Version 3.0
 // Descripcion: Justificar los textos decodificados
 date_default_timezone_set('America/Mexico_City');
 header('Content-Type: text/html; charset=ISO-8859-1');
-require('../../../fpdf/fpdf.php');
+require('../../fpdf/fpdf.php');
 // version 3.0
 //require('../../WriteHTML/WriteHTML.php');
 // end
- require_once ("../../../so_factura/config/db.php");//Contiene las variables de configuracion para conectar a la base de datos
- require_once ("../../../so_factura/config/conexion.php");//Contiene funcion que conecta a la base de datos
+ require_once ("../../so_factura/config/db.php");//Contiene las variables de configuracion para conectar a la base de datos
+ require_once ("../../so_factura/config/conexion.php");//Contiene funcion que conecta a la base de datos
 
 //se recibe los paramteros para la generación del reporte
 $numero_factura=$_GET['numero_factura'];
@@ -110,7 +111,7 @@ WHERE  pq.id_paquete = df.fk_id_estudio
     }
 
 // Obtenemos el metodo
-
+mysqli_query($con, "SET CHARACTER SET utf8");
 $sql="SELECT p2.tipo,p2.concepto,posini,tipfue,tamfue FROM cr_plantilla_cvo p2 WHERE p2.fk_id_estudio =".$studio." AND p2.estado = 'A' AND p2.tipo in ('M','R')";
 if ($result = mysqli_query($con, $sql)) {
   while($row = $result->fetch_assoc())
@@ -153,9 +154,11 @@ function Header()
 
     $this->Image('../imagenes/logo_arca.png',10,5,70,0);
     $this->Image('../imagenes/pacal.jpg',160,5,40,0);
-    $this->Image('../../../utl_tickets/codigo_ok.jpg',170,50,30,30);
+    $this->Image('../../utl_tickets/codigo_ok.jpg',170,50,30,30);
     //$this->Image('../imagenes/firma.gif',153,225,40,0);
-    $this->Image('../../../imagenes/logo_arca_sys_web.jpg',70,150,70,0);
+
+    $this->Image('../../imagenes/logo_arca_sys_web.jpg',70,150,70,0);
+
     $this->Ln(18);
     $this->Cell(5);
     $this->SetFont('Arial','B',15);
@@ -272,7 +275,7 @@ function Header()
         {
           $this->Cell(($row['posini']-=6));
           $firma=$row['concepto'];
-          $this->Image('../imagenes/firma.gif',153,225,40,0);
+          $this->Image('../imagenes/firma.gif',160,225,40,0);
           $this->SetFont('Arial','',$row['tamfue']);
           $this->Cell(170,5,utf8_decode($firma),0,0,'L');
           $this->ln(4);
@@ -372,7 +375,7 @@ $sql="(select valor,tipo,orden,concepto,observaciones,tamfue,posini,tipfue FROM 
           $tipfue=$row['tipfue'];
         }
 
-        if($row['tipo']=='P' && strlen($row['valor'])==0 and ($studio=='231' or $studio=='234' or $studio=='275' or $studio=='276' or $studio=='278' or $studio=='720' or $studio=='876' or $studio=='909' or $studio=='721' or $studio=='214' or  $studio=='923' or $studio=='941' or $studio=='947' or $studio=='948' or $studio=='949' or $studio=='950' or $studio=='960' or $studio=='961' or $studio=='1014' or $studio=='1015' or $studio=='1016' or $studio=='1017' or $studio=='1018' or $studio=='1019' or $studio=='1020' or $studio=='1021' or $studio=='1022' or $studio=='1023' or $studio=='1024' or $studio=='1025' or $studio=='1202' or $studio=='1225' or $studio=='1705' or $studio=='1953' or $studio=='2457' or $studio=='2433' or $studio=='2601' or $studio=='2614' or $studio=='2852' or $studio=='1168')){
+        if($row['tipo']=='P' && strlen($row['valor'])==0 and ($studio=='231' or $studio=='234' or $studio=='275' or $studio=='276' or $studio=='278' or $studio=='720' or $studio=='876' or $studio=='909' or $studio=='721' or $studio=='214' or  $studio=='923' or $studio=='941' or $studio=='947' or $studio=='948' or $studio=='949' or $studio=='950' or $studio=='960' or $studio=='961' or $studio=='1014' or $studio=='1015' or $studio=='1016' or $studio=='1017' or $studio=='1018' or $studio=='1019' or $studio=='1020' or $studio=='1021' or $studio=='1022' or $studio=='1023' or $studio=='1024' or $studio=='1025'   or $studio=='1202' or $studio=='1225' or $studio=='1705' or $studio=='1953' or $studio=='2457' or $studio=='2433' or $studio=='2614' or $studio=='2601' or $studio=='2689' or $studio=='923')){
             $nle+=1;
             $nle-=1;
         }else{
@@ -385,7 +388,7 @@ $sql="(select valor,tipo,orden,concepto,observaciones,tamfue,posini,tipfue FROM 
           //$pdf->Cell(50,5,utf8_decode($row['concepto']),0,0,'L');
         //}
         //Bibliografia alineada a la derec. para estos dos estudios 
-        if ($row['tipo']=='T' and ($studio=='1016' or $studio == '275' or $studio == '961' or $studio == '1202' or $studio == '1953' or $studio == '2433' or $studio == '2601' or $studio == '2852')){
+        if ($row['tipo']=='T' and ($studio=='1016' or $studio == '275' or $studio == '961' or $studio == '1202' or $studio == '1953' or $studio == '2433' or $studio == '2601')){
           /// La ultima letra si mueve la bibliografia izq o dere
           $pdf->Cell(170,5,utf8_decode($row['concepto']),0,0,'R');
         }else{
@@ -403,7 +406,7 @@ $sql="(select valor,tipo,orden,concepto,observaciones,tamfue,posini,tipfue FROM 
         if($row['concepto']=='OBSERVACION MICROSCOPICA:' or $row['concepto']=='CITOLOGIA:'){
           $pdf->MultiCell(120,5,utf8_decode(trim($row['valor'])),0,'L');
         }else{
-          if($studio=='275' or $studio=='961' or $studio=='1016' or $studio=='1202'  or $studio=='1953' or $studio=='2433' or $studio=='2601' or $studio=='2852'){
+          if($studio=='275' or $studio=='961' or $studio=='1016' or $studio=='1202' or $studio=='1953' or $studio=='2433' or $studio=='2601'){
             switch($row['concepto']){
                 case "CUENTA BACTERIANA:": 
                     $cb='';
@@ -482,28 +485,29 @@ No es necesaria la realización de pruebas de susceptibilidad a los antimicrobia
             } 
             // $pdf->MultiCell(120,5,trim($row['valor']),0,'L');
           }else{
-			  if($studio == 214 and $row['concepto']=='CARACTERISTICAS DE LA MUESTRA:'){
-				  $pdf->MultiCell(120,5,utf8_decode($row['valor']),0,'C');
-			  }else{
-				  if(($studio == 214 or $studio == 923) and $row['concepto']=='DESARROLLO:'){
-					  $pdf->MultiCell(120,5,utf8_decode($row['valor']),0,'L');
-				  }else{
-						if($studio == 139 or $studio == 140 or $studio == 141){
-							$pdf->MultiCell(120,5,utf8_decode($row['valor']),0,'L');
-						}else{ // se incluyo esta modificacion, el valor a la izq y empezar en la linea 25
-							if($studio == 183 or $studio == 1683 or $studio == 2342 or $studio == 1682 or $studio == 1714 or $studio == 183 or $studio == 881){
-							  $pdf->Cell(25);
-							  $pdf->Cell(50,5,utf8_decode($row['valor']),0,0,'L');
-							}else{
-							  $pdf->Cell(50,5,utf8_decode($row['valor']),0,0,'C');
-							}
-
-							}
-					}
-			  	}
+				if($studio == 214 and $row['concepto']=='CARACTERISTICAS DE LA MUESTRA:'){
+					$pdf->MultiCell(120,5,utf8_decode($row['valor']),0,'C');
+				}else{
+					if(($studio == 214 or $studio == 923) and $row['concepto']=='DESARROLLO:'){
+						$pdf->MultiCell(120,5,utf8_decode($row['valor']),0,'L');
+					}else{			  
 			  
-            
-          }
+						  if($studio == 139 or $studio == 140 or $studio == 141){
+							  $pdf->MultiCell(120,5,utf8_decode($row['valor']),0,'L');
+						  }else{
+							  if($studio == 183 or $studio == 1683 or $studio == 2342 or $studio == 1682 or $studio == 1714 or $studio == 183 or $studio == 881){
+								  $pdf->Cell(25);
+								  $pdf->Cell(50,5,utf8_decode($row['valor']),0,0,'L');
+							  }else{
+								  $pdf->Cell(50,5,utf8_decode($row['valor']),0,0,'C');
+							  }
+						  }
+						}
+				}
+		  }
+			
+			
+			
         }   
         $pdf->ln(4);
        }
@@ -516,7 +520,7 @@ No es necesaria la realización de pruebas de susceptibilidad a los antimicrobia
           $pdf->ln(4);
           $pdf->Cell(9);
           $pdf->SetFont('Arial','',8);
-          $pdf->MultiCell(180,5,$observaciones,0,'J');
+          $pdf->MultiCell(180,5,utf8_decode($observaciones),0,'J');
       }  
   }
 

@@ -372,7 +372,7 @@ $sql="(select valor,tipo,orden,concepto,observaciones,tamfue,posini,tipfue FROM 
           $tipfue=$row['tipfue'];
         }
 
-        if($row['tipo']=='P' && strlen($row['valor'])==0 and ($studio=='231' or $studio=='234' or $studio=='275' or $studio=='276' or $studio=='278' or $studio=='720' or $studio=='876' or $studio=='909' or $studio=='721' or $studio=='214' or  $studio=='923' or $studio=='941' or $studio=='947' or $studio=='948' or $studio=='949' or $studio=='950' or $studio=='960' or $studio=='961' or $studio=='1014' or $studio=='1015' or $studio=='1016' or $studio=='1017' or $studio=='1018' or $studio=='1019' or $studio=='1020' or $studio=='1021' or $studio=='1022' or $studio=='1023' or $studio=='1024' or $studio=='1025' or $studio=='1202' or $studio=='1225' or $studio=='1705' or $studio=='1953' or $studio=='2457' or $studio=='2433' or $studio=='2601' or $studio=='2614' or $studio=='2852' or $studio=='1168')){
+        if($row['tipo']=='P' && strlen($row['valor'])==0 and ($studio=='231' or $studio=='234' or $studio=='275' or $studio=='276' or $studio=='278' or $studio=='720' or $studio=='876' or $studio=='909' or $studio=='721' or $studio=='214' or  $studio=='923' or $studio=='941' or $studio=='947' or $studio=='948' or $studio=='949' or $studio=='950' or $studio=='960' or $studio=='961' or $studio=='1014' or $studio=='1015' or $studio=='1016' or $studio=='1017' or $studio=='1018' or $studio=='1019' or $studio=='1020' or $studio=='1021' or $studio=='1022' or $studio=='1023' or $studio=='1024' or $studio=='1025' or $studio=='1202' or $studio=='1225' or $studio=='1705' or $studio=='1953' or $studio=='2457' or $studio=='2433' or $studio=='2601' or $studio=='2614')){
             $nle+=1;
             $nle-=1;
         }else{
@@ -385,7 +385,7 @@ $sql="(select valor,tipo,orden,concepto,observaciones,tamfue,posini,tipfue FROM 
           //$pdf->Cell(50,5,utf8_decode($row['concepto']),0,0,'L');
         //}
         //Bibliografia alineada a la derec. para estos dos estudios 
-        if ($row['tipo']=='T' and ($studio=='1016' or $studio == '275' or $studio == '961' or $studio == '1202' or $studio == '1953' or $studio == '2433' or $studio == '2601' or $studio == '2852')){
+        if ($row['tipo']=='T' and ($studio=='1016' or $studio == '275' or $studio == '961' or $studio == '1202' or $studio == '1953' or $studio == '2433' or $studio == '2601')){
           /// La ultima letra si mueve la bibliografia izq o dere
           $pdf->Cell(170,5,utf8_decode($row['concepto']),0,0,'R');
         }else{
@@ -403,7 +403,7 @@ $sql="(select valor,tipo,orden,concepto,observaciones,tamfue,posini,tipfue FROM 
         if($row['concepto']=='OBSERVACION MICROSCOPICA:' or $row['concepto']=='CITOLOGIA:'){
           $pdf->MultiCell(120,5,utf8_decode(trim($row['valor'])),0,'L');
         }else{
-          if($studio=='275' or $studio=='961' or $studio=='1016' or $studio=='1202'  or $studio=='1953' or $studio=='2433' or $studio=='2601' or $studio=='2852'){
+          if($studio=='275' or $studio=='961' or $studio=='1016' or $studio=='1202'  or $studio=='1953' or $studio=='2433' or $studio=='2601'){
             switch($row['concepto']){
                 case "CUENTA BACTERIANA:": 
                     $cb='';

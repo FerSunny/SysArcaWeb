@@ -6,7 +6,7 @@ $activo="A";
 $suspendido="S";
 $baja="B";
 echo $usuario;
-$query="SELECT  activo FROM km_indicaciones_nvo WHERE id_indicaciones='$usuario'";
+$query="SELECT  activo FROM km_indicaciones WHERE id_indicaciones='$usuario'";
 $resultado = mysqli_query($conexion, $query);
 
 if($row = mysqli_fetch_array($resultado)){
