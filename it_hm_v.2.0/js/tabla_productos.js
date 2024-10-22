@@ -54,6 +54,36 @@
 
 					{"data" : "plt"},
 
+					{"data" : "rdwsd"},
+
+					{"data" : "rdwcv"},
+
+					{"data" : "mpv"},
+
+					{"data" : "neutabs"},
+
+					{"data" : "lymphabs"},
+
+					{"data" : "monoabs"},
+
+					{"data" : "eoabs"},
+
+					{"data" : "basoabs"},
+
+					{"data" : "neutporc"},
+
+					{"data" : "lymphporc"},
+
+					{"data" : "monoporc"},
+
+					{"data" : "eoporc"},
+
+					{"data" : "basoporc"},
+
+					//{"data" : "igabs"},
+
+					//{"data" : "igporc"},
+
 					{"defaultContent": "<button type='button' class='editar btn btn-warning btn-md'><i class='fas fa-edit'></i></button>"},
 
 					{"defaultContent":"<button type='button' class='eliminar btn btn-danger btn-md'><i class='fas fa-trash-alt'></i></button>"}

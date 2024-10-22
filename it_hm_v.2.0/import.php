@@ -34,7 +34,22 @@ if(!empty($_FILES['file']['name']) && in_array($_FILES['file']['type'],$file_mim
 															mcv='".$emp_record[100]."',
 															mchpg='".$emp_record[102]."',
 															mchcgdl='".$emp_record[104]."',
-															plt='".$emp_record[106]."' WHERE sample_no = '".$emp_record[6]."'";
+															plt='".$emp_record[106]."',
+															rdwsd='".$emp_record[108]."',
+															rdwcv='".$emp_record[110]."',
+															mpv='".$emp_record[114]."',
+															neutabs='".$emp_record[124]."',
+															lymphabs='".$emp_record[126]."',
+															monoabs='".$emp_record[128]."',
+															eoabs='".$emp_record[130]."',
+															basoabs='".$emp_record[132]."',
+															neutporc='".$emp_record[134]."',
+															lymphporc='".$emp_record[136]."',
+															monoporc='".$emp_record[138]."',
+															eoporc='".$emp_record[140]."',
+															basoporc='".$emp_record[142]."',
+															igabs='".$emp_record[144]."',
+															igporc='".$emp_record[146]."' WHERE sample_no = '".$emp_record[6]."'";
 				mysqli_query($conn, $sql_update) or die("database error:". mysqli_error($conn));
 			} else{
 				$mysql_insert = "INSERT INTO hm_recepcion_nx_550 (  nickname,
@@ -46,6 +61,7 @@ if(!empty($_FILES['file']['name']) && in_array($_FILES['file']['type'],$file_mim
 																	sample_no,
 																	
 																	reception_date,
+
 																	wbctotales,
 																	rbctotales,
 																	hgb,
@@ -53,7 +69,22 @@ if(!empty($_FILES['file']['name']) && in_array($_FILES['file']['type'],$file_mim
 																	mcv,
 																	mchpg,
 																	mchcgdl,
-																	plt)
+																	plt,
+																	rdwsd,
+																	rdwcv,
+																	mpv,
+																	neutabs,
+																	lymphabs,
+																	monoabs,
+																	eoabs,
+																	basoabs,
+																	neutporc,
+																	lymphporc,
+																	monoporc,
+																	eoporc,
+																	basoporc,
+																	igabs,
+																	igporc)
 															VALUES(	'".$emp_record[0]."',
 																	'".$emp_record[1]."',
 																	'".$emp_record[2]."', 
@@ -61,6 +92,8 @@ if(!empty($_FILES['file']['name']) && in_array($_FILES['file']['type'],$file_mim
 																	'".$emp_record[4]."', 
 																	'".$emp_record[5]."',
 																	'".$emp_record[6]."', 
+
+																	'".$emp_record[7]."', 
 
 																	'".$emp_record[92]."', 
 																	'".$emp_record[94]."', 
@@ -70,7 +103,21 @@ if(!empty($_FILES['file']['name']) && in_array($_FILES['file']['type'],$file_mim
 																	'".$emp_record[102]."', 
 																	'".$emp_record[104]."',  
 																	'".$emp_record[106]."', 
-																	'".$emp_record[108]."')";
+																	'".$emp_record[108]."', 
+																	'".$emp_record[110]."', 
+																	'".$emp_record[114]."', 
+																	'".$emp_record[124]."',
+																	'".$emp_record[126]."',
+																	'".$emp_record[128]."',
+																	'".$emp_record[130]."',
+																	'".$emp_record[132]."',
+																	'".$emp_record[134]."',
+																	'".$emp_record[136]."',
+																	'".$emp_record[138]."',
+																	'".$emp_record[140]."',
+																	'".$emp_record[142]."',
+																	'".$emp_record[144]."',
+																	'".$emp_record[146]."')";
 				mysqli_query($conn, $mysql_insert) or die("database error:". mysqli_error($conn));
 			}
 		}

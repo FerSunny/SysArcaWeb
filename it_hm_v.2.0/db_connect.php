@@ -1,8 +1,8 @@
 <?php
 /* Database connection start */
 $servername = "localhost";
-$username = "root";
-$password = "";
+$username = "labora41_root";
+$password = "ArcaRoot_2017";
 $dbname = "labora41_bd_arca";
 $conn = mysqli_connect($servername, $username, $password, $dbname);
 if (mysqli_connect_errno()) {

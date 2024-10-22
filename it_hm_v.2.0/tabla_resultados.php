@@ -63,9 +63,26 @@
             <th>HGB(g/dL)</th>
             <th>HCT(%)</th>
             <th>MCV(fL)</th>
-            <th>HMCH(pg)</th>
+            <th>MCH(pg)</th>
             <th>MCHC(g/dL)</th>
             <th>PLT(10^3/uL)</th>
+            <th>RDW-SD(fL)</th>
+            <th>RDW-CV(%)</th>
+            <th>MPV(fL)</th>
+            <th>NEUT#(10^3/uL)</th>
+            <th>LYMPH#(10^3/uL)</th>
+            <th>MONO#(10^3/uL)</th>
+            <th>EO#(10^3/uL)</th>
+            <th>BASO#(10^3/uL)</th>
+            <th>NEUT%(%)</th>
+            <th>LYMPH%(%)</th>
+            <th>MONO%(%)</th>
+            <th>EO%(%)</th>
+            <th>BASO%(%)</th>
+             <!--
+            <th>IG#(10^3/uL)</th>
+            <th>IG%(%)</th>
+            -->
             <th>Editar</th>
             <th>Eliminar</th>
           </tr>
