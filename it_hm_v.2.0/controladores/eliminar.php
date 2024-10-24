@@ -4,7 +4,7 @@
 include ("../../controladores/conex.php");
 $id_producto= $_POST['id_producto'];
 
-$query ="UPDATE eb_productos SET estado = 'S' WHERE id_producto = $id_producto ";
+$query ="UPDATE hm_recepcion_nx_550 SET estado = 'S' WHERE id = $id_producto ";
 $result = $conexion -> query($query);
 
 if ($result) {

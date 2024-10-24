@@ -39,6 +39,7 @@
         igabs,
         igporc
         FROM hm_recepcion_nx_550
+        WHERE ESTADO = 'A'
   ";
 
 
