@@ -298,24 +298,144 @@ class PDF extends FPDF
               $pas; //,
               // $num_factura;
 
-    $this->Image('../imagenes/logo_arca.png',5,5,33,15);
-    $this->Image('../../imagenes/logo_arca_sys_web.jpg',80,110,73,55);
+    $this->Image('../imagenes/logo_arca.png',1,1,28,15);
+    $this->Image('../../imagenes/logo_arca_sys_web.jpg',80,50,53,35);
 
-    
 
-    $this->Ln(-5);
+
+    $this->Ln(5);
     $this->SetTextColor(0,64,255);
-    $this->Cell(28);
-    $this->SetFont('Arial','',8);
-    $this->Cell(5,5,utf8_decode($nombre_con.' SUC. '.$desc_sucursal),0,0,'L');
-    $this->Cell(88);
-    $this->Cell(5,5,utf8_decode('PACIENTE: '),0,0,'L');
+    //$this->Cell(1);
+    $this->setxy(0,15);
+    $this->SetFont('Arial','',7);
+    $this->Cell(5,5,utf8_decode($nombre_con),0,0,'L');
+    $this->Ln(3);
+    $this->Cell(-10);
+    $this->SetTextColor(0,0,204);
+    $this->Cell(5,5,utf8_decode('SUC. '.$desc_sucursal),0,0,'L');
+    $this->Ln(4);
+    $this->Cell(-10);
+    $this->MultiCell(28,3,trim(utf8_decode($direccion1)),0,'J');
+    $this->Ln(1);
+    $this->Cell(-10);
+    $this->MultiCell(28,3,trim(utf8_decode($direccion2)),0,'J');
+    $this->Ln(0);
+    $this->Cell(-10);
+    $this->Cell(5,5,utf8_decode('RFC: '.$rfc),0,0,'L');
+    $this->Ln(5);
+    $this->Cell(-10);
+    $this->Cell(5,5,utf8_decode('Sucursales'),0,0,'L');
     $this->Cell(42);
-    $this->Cell(15,5,$pas,0,0,'R');
-    //$this->Cell(65);
-    //$this->Cell(5,5,utf8_decode('F-03/0'),0,0,'L');
+    $this->Ln(4);
+    $this->Cell(-10);
+    $this->Cell(5,5,utf8_decode('TLAHUAC'),0,0,'L');
 
+    $this->Ln(4);
+    $this->Cell(-10);
+    $this->Cell(5,5,utf8_decode('SAN GREGORIO'),0,0,'L');
+    
+    $this->Ln(4);
+    $this->Cell(-10);
+    $this->Cell(5,5,utf8_decode('XOCHIMILCO'),0,0,'L');
+        
+    $this->Ln(4);
+    $this->Cell(-10);
+    $this->Cell(5,5,utf8_decode('DIVISION NORTE'),0,0,'L');
+            
+    $this->Ln(4);
+    $this->Cell(-10);
+    $this->Cell(5,5,utf8_decode('SANTIAGO'),0,0,'L');
+                
+    $this->Ln(4);
+    $this->Cell(-10);
+    $this->Cell(5,5,utf8_decode('SAN PABLO'),0,0,'L');
+                    
+    $this->Ln(4);
+    $this->Cell(-10);
+    $this->Cell(5,5,utf8_decode('SAN PEDRO'),0,0,'L');
+                    
+    $this->Ln(4);
+    $this->Cell(-10);
+    $this->Cell(5,5,utf8_decode('MILPA ALTA'),0,0,'L');
+                      
+    $this->Ln(4);
+    $this->Cell(-10);
+    $this->Cell(5,5,utf8_decode('TECOMITL'),0,0,'L');
+                      
+    $this->Ln(4);
+    $this->Cell(-10);
+    $this->Cell(5,5,utf8_decode('TETELCO'),0,0,'L');
+   // $this->Cell(15,5,$pas,0,0,'R');
+    $this->Line(30, 1, 30, 90);
 
+    $this->setxy(30 ,1);
+    $this->Cell(5,5,utf8_decode('Paciente: '.$id_cliente.'-'.$paciente.', Edad: '.$edad.', '.$sexo.', Tel.: '.$telefono.' rfc:'.$rfc_p.', PSW:  '.$pas),0,0,'L');
+    $this->Ln(4);
+    $this->Cell(20);
+    $this->Cell(5,5,utf8_decode($direccion),0,0,'L');
+
+    $this->Ln(4);
+    $this->Cell(20);
+    $this->SetFont('Arial','B',7);
+    $this->SetTextColor(255,255,255);
+    $this->SetFillColor(0, 0, 204);
+    $this->Cell(184,4,utf8_decode('Horarios Atencion:  Dia Habil '.$horario_habil.'   Dia Festivo: '.$horario_festivo.'    Sabados: '.$horario_sabado.'    Domingo: '.$horario_domingo),0,0,'C',true);
+
+    if($sexo_medico == 1){
+        $sm='Dra. ';
+    }else{
+        $sm='Dr. ';
+    };
+    $this->SetFont('Arial','',7);
+    $this->SetTextColor(0,102,255);
+    $this->Ln(4);
+    $this->Cell(20);
+    $this->Cell(5,5,utf8_decode('Solicitio: '.$sm.$medico),0,0,'L');
+    $this->Cell(75);
+    $this->Cell(5,5,utf8_decode('Fecha Expedicion: '.$fecha_factura),0,0,'L');
+    $this->Cell(50);
+    $this->Cell(3,5,utf8_decode('Fecha Entrega: '.$fecha_entrega),0,0,'L');
+    $this->Ln(1);
+    $this->Cell(20);
+    $this->Cell(3,5,'_____________________________________________________________________________________________________________________________________',0,0,'L');    
+    
+    
+    $this->Ln(3);
+    $this->Cell(20);
+    $this->SetFont('Arial','B',8);
+    $this->Cell(5,5,utf8_decode('FOLIO: '.$folio),0,0,'L');
+    $this->Cell(20);
+    $this->Cell(117,5,utf8_decode('ORDEN DE ESTUDIO'),0,0,'C');
+    //$this->SetFont('Arial','',9);
+    $this->Cell(5);
+    $this->Cell(5,5,utf8_decode('OT: '.$numero_factura),0,0,'L');
+
+    $this->SetTextColor(0,102,51);
+    $this->Ln(4);
+    $this->Cell(20);
+    $this->SetFont('Arial','B',7);
+    $this->Cell(5,4,utf8_decode('DX: '.$diagnostico),0,0,'L');
+    if($urgente == 1){
+        $this->Cell(136);
+        $this->SetTextColor(255,0,0);
+        $this->Cell(5,4,utf8_decode('Urgente'),0,0,'L');
+        $this->SetTextColor(51,0,0);
+    }
+    $this->Ln(3);
+    $this->Cell(20);
+    $this->SetFont('Arial','B',7);
+    $this->Cell(5,4,utf8_decode('Datos Clinicos: '.$datos_clinicos),0,0,'L');
+    if($pendiente == 1){
+        $this->Cell(136);
+        $this->SetTextColor(0,204,0);
+        $this->Cell(5,4,utf8_decode('Pendiente'),0,0,'L');
+        $this->SetTextColor(51,0,0);
+    }
+    $this->Ln(1);
+    $this->Cell(20);
+    $this->Cell(3,5,'_____________________________________________________________________________________________________________________________________',0,0,'L');    
+    
+    /*
 
 
 
@@ -408,8 +528,8 @@ class PDF extends FPDF
         $this->Cell(5,4,utf8_decode('Pendiente'),0,0,'L');
         $this->SetTextColor(51,0,0);
     }
-
-    $this->Ln(10);
+*/
+    $this->Ln(4);
 
   }
 
@@ -427,16 +547,16 @@ class PDF extends FPDF
             $imp_total,
             $desc_corta;
 
-    $this->SetY(-57);
+    $this->SetY(-55);
 
 // lineas de importes
     $iva = 0.16;
     $resta_iva = ($imp_total*$iva);
     $subtotal = number_format(($imp_total-$resta_iva),2);
 //echo 'subtotal:'.$subtotal;
-    $this->SetFont('Arial','B',9);
+    $this->SetFont('Arial','B',7);
 
-    $this->Cell(167);
+    $this->Cell(165);
     $this->Cell(18,5,'Sub Total',0,0,'L');
     $this->Cell(1);
     $this->Cell(15,5,'$'.$subtotal,0,0,'R');
@@ -448,7 +568,7 @@ class PDF extends FPDF
 
 
 
-    $this->Cell(167);
+    $this->Cell(165);
     $this->Cell(18,5,'Iva',0,0,'L');
     $this->Cell(1);
     $this->Cell(15,5,'$'.number_format($resta_iva,2),0,0,'R');
@@ -460,7 +580,7 @@ class PDF extends FPDF
     
 
 
-    $this->Cell(167);
+    $this->Cell(165);
     $this->Cell(18,5,'Total',0,0,'L');
     $this->Cell(1);
     $this->Cell(15,5,'$'.number_format($imp_total,2),0,0,'R');
@@ -475,7 +595,7 @@ class PDF extends FPDF
     //$this->SetFont('Arial','',8);
     $this->Cell(50,5,$desc_corta.'/'.$iniciales,0,0,'L');
 
-    $this->Cell(87);
+    $this->Cell(85);
     $this->Cell(18,5,'A cuenta',0,0,'L');
     $this->Cell(1);
     $this->Cell(15,7,'$'.number_format($a_cuenta,2),0,0,'R');
@@ -483,11 +603,11 @@ class PDF extends FPDF
 
     $this->ln(5);
 
-    //$this->SetFont('Arial','',8);
+    $this->SetFont('Arial','',7);
     $this->Cell(3);
     $this->Cell(27,5,'CANTIDAD EN LETRA: '. $letras = NumeroALetras::convertir($imp_total, 'pesos', 'centavos') ,0,0,'L');
     //$this->SetFont('Arial','',8);
-    $this->Cell(137);
+    $this->Cell(135);
    // $this->Cell(18,5,'Resta',0,0,'L');
    // $this->Cell(1);
     if($resta == 0){
@@ -505,21 +625,21 @@ class PDF extends FPDF
     
     
     if($resta == 0){
-        $this->Image('../imagenes/sello_pagado2.jpg',140,185,50,25);  
+        $this->Image('../imagenes/sello_pagado2.jpg',130,80,20,5);  
     }
     
 
 // lineas de leyenda
 
     $this->Ln(5);
-    $this->Cell(1);
+    $this->Cell(-5);
     $this->SetTextColor(120,0,0);
     $this->SetFont('Arial','I',7);
-    $this->MultiCell(200,3,utf8_decode('Es indispensable traer este comprobante para la entrega de sus estudios después de 30 días el laboratorio no se hace responsable de los estudios no recogidos después de 7 días de la fecha de expedición; el laboratorio no se hace responsable por toma o entrega de muestras pendientes.  (Excepto COLPOSCOPIAS máximo 30 días)'),0,'J');
+    $this->MultiCell(190,3,utf8_decode('Es indispensable traer este comprobante para la entrega de sus estudios después de 30 días el laboratorio no se hace responsable de los estudios no recogidos después de 7 días de la fecha de expedición; el laboratorio no se hace responsable por toma o entrega de muestras pendientes.  (Excepto COLPOSCOPIAS máximo 30 días)'),0,'J');
 
 
     $this->Ln(1);
-    $this->Cell(1);
+    $this->Cell(-5);
     $this->SetTextColor(0,102,255);
     $this->SetFont('Arial','I',7);
     /*
@@ -529,7 +649,7 @@ class PDF extends FPDF
     $this->Ln(-3);
     $this->Cell(3);
     $this->SetTextColor(0,0,0);
-    $this->SetFont('Arial','I',9);
+    $this->SetFont('Arial','I',7);
     $this->Cell(70,5,'_____________________________________________________________________________________________________________',0,0,'L');
     $this->Ln(5);
     $this->Cell(3);
@@ -564,7 +684,8 @@ class PDF extends FPDF
 //
 // Creación del objeto de la clase heredada
 //
-$pdf = new PDF('P','mm','Letter');
+//$pdf = new PDF('P','mm','Letter'); array(100,150)
+$pdf = new PDF('L','mm','A5');
 //$pdf->SetMargins(0,0,0);
 $pdf->SetAutoPageBreak(true,45);
 
@@ -595,26 +716,29 @@ $sql="select cantidad,
     LEFT OUTER JOIN km_metodos me ON (me.id_metodo = km_estudios.`fk_id_metodo`)
     WHERE id_factura=".$numero_factura;
   if ($result = mysqli_query($con, $sql)) {
-    $pdf->Cell(7);
-    $pdf->SetFont('Arial','',10);
+    $pdf->Cell(20);
+    $pdf->SetFont('Arial','',8);
     $pdf->Cell(13,5,"Cantidad",0,0,'R');
     $pdf->Cell(15);
     $pdf->Cell(13,5,"Descripcion",0,0,'R');
-    $pdf->Cell(110);
+    $pdf->Cell(87);
     $pdf->Cell(13,5,"Costo unitario",0,0,'R');
     $pdf->Cell(7);
     $pdf->Cell(13,5,"Importe",0,0,'R');
-    $pdf->ln(7);
+    $pdf->ln(1);
+    $pdf->Cell(19);
+    $pdf->Cell(70,5,'_____________________________________________________________________________________________________________________',0,0,'L');
+    $pdf->ln(4);
     while($row = $result->fetch_assoc())
       {
              // $this->ln(5);
-              $pdf->Cell(7);
-              $pdf->SetFont('Arial','',10);
+              $pdf->Cell(20);
+              $pdf->SetFont('Arial','',8);
               $pdf->Cell(13,5,$row['cantidad'],0,0,'R');
-              $pdf->Cell(13,5,$row['fk_id_estudio'],0,0,'R');
+              $pdf->Cell(10,5,$row['fk_id_estudio'],0,0,'R');
               $pdf->Cell(1);
               $pdf->Cell(70,5,utf8_decode($row['desc_estudio']),0,0,'L');
-              $pdf->Cell(40);
+              $pdf->Cell(20);
               $pdf->Cell(24,5,'$'.number_format($row['precio_venta'],2),0,0,'R');
               $pdf->Cell(24,5,'$'.number_format($row['precio_venta'],2),0,0,'R');
               // se activa nuevamente el metodo para cada estudio. 27abr20223 JPM para cubrir
@@ -630,7 +754,7 @@ $sql="select cantidad,
                 $pdf->Cell(70,5,'Metodo: '.utf8_decode($row['desc_metodo']),0,0,'L');
               }
               
-              $pdf->SetFont('Arial','',10);
+              $pdf->SetFont('Arial','',7);
 // verificamos si el estudio es paquete, para desglosarlo.
               $v_paquete = $row['fk_id_estudio'];
               if($row['per_paquete'] == 'Si'){
@@ -665,14 +789,15 @@ $sql="select cantidad,
 
               if (strlen($row['desc_indicaciones'])>0){
                 $pdf->ln(4);
-                $pdf->SetFont('Arial','',9);
+                $pdf->SetFont('Arial','',8);
                 $pdf->Cell(30);
-                $pdf->Cell(190,5,'Indicaciones: '.utf8_decode($row['desc_indicaciones']),0,0,'L');
+                //$pdf->Cell(190,5,'Indicaciones: '.utf8_decode($row['desc_indicaciones']),0,0,'L');
+                $pdf->MultiCell(165,3,'Indicaciones: '.trim(utf8_decode($row['desc_indicaciones'])),0,'J');
               }
               if (strlen($row['descuento'])>0){
-                $pdf->ln(4);
-                $pdf->SetFont('Arial','',9);
-                $pdf->Cell(18);
+                $pdf->ln(2);
+                $pdf->SetFont('Arial','',8);
+                $pdf->Cell(20);
                 $pdf->Cell(190,5,$row['descuento'],0,0,'L');
               }
 
@@ -802,10 +927,10 @@ $sql="select cantidad,
                                         break;
                                 }
                                 if ($dia_ok=='1'){
-                                    $pdf->ln(5);
+                                    $pdf->ln(0);
                                     $pdf->SetTextColor(120,0,0);
-                                    $pdf->SetFont('Arial','B', 9);
-                                    $pdf->Cell(18);
+                                    $pdf->SetFont('Arial','B', 7);
+                                    $pdf->Cell(30);
                                     $pdf->Cell(170,5,$rowp['promocion'],0,0,'L');
                                     $pdf->SetTextColor(0,0,0);
                                 }
@@ -818,9 +943,9 @@ $sql="select cantidad,
               $pdf->ln(6);
         }
 
-    $pdf->ln(10);
-    $pdf->SetFont('Arial','I',10);
-    $pdf->Cell(30); 
+    $pdf->ln(5);
+    $pdf->SetFont('Arial','I',7);
+    $pdf->Cell(35); 
     $pdf->Cell(70,5,'- Un estudio confiable, garantiza un excelente diagnostico -',0,0,'C');
     //$pdf->ln(-10);
 
