@@ -40,6 +40,7 @@
 
 					{"data" : "desc_numeral_2"},
 
+					// Boton de editar
 					//{"defaultContent": "<button type='button' class='editar btn btn-warning btn-md'><i class='fas fa-edit'></i></button>"},
 					{
 						render:function(data,type,row){
@@ -56,7 +57,7 @@
 						}
 									
 					},
-
+					// Boton de eliminar 
 					//{"defaultContent":"<button type='button' class='eliminar btn btn-danger btn-md'><i class='fas fa-trash-alt'></i></button>"}
 					{
 						render:function(data,type,row){
@@ -73,7 +74,7 @@
 						}
 									
 					},
-
+					//subir ficheros
 					{
 						render:function(data,type,row){
 

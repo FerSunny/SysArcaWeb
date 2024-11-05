@@ -60,6 +60,10 @@
 
 					{"data" : "uro"},
 
+					{"data" : "leyenda"},
+
+					{"data" : "bibliografia"},
+
 					{"defaultContent": "<button type='button' class='editar btn btn-warning btn-md'><i class='fas fa-edit'></i></button>"},
 
 					{"defaultContent":"<button type='button' class='eliminar btn btn-danger btn-md'><i class='fas fa-trash-alt'></i></button>"}
@@ -223,6 +227,7 @@ var editar = function(tbody, table) {
 				$("#frmedit  #h8").val(data.h8)
 				$("#frmedit  #alinity").val(data.alinity)
 				$("#frmedit  #uro").val(data.uro)
+				$("#frmedit  #leyenda").val(data.leyenda)
 				$("#frmedit  #bibliografia").val(data.bibliografia)
 			 
 

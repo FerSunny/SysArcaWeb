@@ -40,22 +40,11 @@
 							var tipo = row['tipo']
 							var id_usuario = row['id_usuario']
 							var fk_id_numeral_2 = row['fk_id_numeral_2']
-
 							if(estatus == "O" ){
 								if(tipo == 'pdf' ){
-									if(fk_id_numeral_2 == 6.20     ){
-										if(id_usuario == 1 || id_usuario == 2 || id_usuario == 30 || id_usuario == 114 || id_usuario == 200 || id_usuario == 19){
-											return "<form-group style='text-align:center;'>"+
-												"<a id='printer'disabled target='_blank' href='../sgc_lista_maestra_v2.0/controladores/descargar_file_pdf.php?fk_id_doc="+row['fk_id_doc']+"&id_imagen="+row['id_imagen']+"&ruta="+row['ruta']+"&nombre="+row['nombre']+"&tipo="+row['tipo']+"&ver="+row['ver']+"' class='btn btn-success btn-md' role='button'><i class='fa fa-download'></i></a>"+
-												"</form-group>";										
-										}else{
-											return "<button disabled type='button' class='editar btn btn-danger btn-md'><i class='fa fa-ban'></i> </button>"
-										}
-									}else{
-										return "<form-group style='text-align:center;'>"+
-											"<a id='printer' target='_blank' href='../sgc_lista_maestra_v2.0/controladores/descargar_file_pdf.php?fk_id_doc="+row['fk_id_doc']+"&id_imagen="+row['id_imagen']+"&ruta="+row['ruta']+"&nombre="+row['nombre']+"&tipo="+row['tipo']+"&ver="+row['ver']+"' class='btn btn-success btn-md' role='button'><i class='fa fa-download'></i></a>"+
-											"</form-group>";										
-									}	
+									return "<form-group style='text-align:center;'>"+
+										"<a id='printer' target='_blank' href='../sgc_lista_maestra_v2.0/controladores/descargar_file_pdf.php?fk_id_doc="+row['fk_id_doc']+"&id_imagen="+row['id_imagen']+"&ruta="+row['ruta']+"&nombre="+row['nombre']+"&tipo="+row['tipo']+"&ver="+row['ver']+"' class='btn btn-success btn-md' role='button'><i class='fa fa-download'></i></a>"+
+										"</form-group>";	
 								}else{
 									if(id_usuario == 1 || id_usuario == 2 || id_usuario == 30 || id_usuario == 114 || id_usuario == 200 ){
 										return "<form-group style='text-align:center;'>"+
