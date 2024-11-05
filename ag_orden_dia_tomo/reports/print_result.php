@@ -11,8 +11,8 @@ require('../../fpdf/fpdf.php');
 //se recibe los paramteros para la generación del reporte
 //$id_usuario=$_SESSION['id_usuario'];
 //echo 'usuario='.$id_usuario;
-$numero_factura='15092401037'; // $_GET['numero_factura'];
-$studio='2903'; //$_GET['studio'];
+$numero_factura= $_GET['numero_factura'];
+$studio= $_GET['studio'];
 //echo 'llego';
 // actualiza las veces que se ha impreso el resultado
 $sql_max="select max(num_imp) as num_imp FROM cr_plantilla_tomo_re

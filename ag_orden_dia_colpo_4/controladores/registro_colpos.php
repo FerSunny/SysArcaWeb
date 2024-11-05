@@ -78,7 +78,7 @@ $query = "INSERT INTO cr_plantilla_colpo_re
              num_imp)
  VALUES ('$empresa','$id_usuario','14','$fn_id_factura',now(),'n/a','$fn_fk_id_estudio','$fn_titulo_desc','$fn_descripcion','$fn_t_allazgos','$fn_d_allazgos','$fn_t_diagnostico','$fn_d_disgnostico','$fn_t_comenta','$fn_d_comenta','$fme','$cpm','$frl','$cpr','A','0')";
 
-//echo $query;
+echo $query;
 
 $resultado = mysqli_query($conexion, $query);
 
