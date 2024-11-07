@@ -6,10 +6,17 @@ date_default_timezone_set('America/Mexico_City');
 
 $fn_numero_factura=$_POST["fn_numero_factura"];
 $fn_nota=$_POST["fn_nota"];
+$fn_fecha_factura=$_POST["fn_fecha_factura"];
 
 
 
-$query = "UPDATE  so_factura SET numero_factura='$fn_numero_factura' WHERE  id_factura='$fn_nota'";
+$query = "
+UPDATE  so_factura 
+SET 
+numero_factura='$fn_numero_factura',
+fecha_factura_sat = '$fn_fecha_factura'
+WHERE  id_factura='$fn_nota'
+";
 
 //echo $query;
 

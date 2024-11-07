@@ -68,6 +68,13 @@
                    </td>
               </tr>
 
+              <tr>
+                  <td class="renglon_titulo">Fecha de Facturacion:</td>
+                  <td class="renglon_valor" class="form-control">
+                      <input type="date" required name="fn_fecha_factura" id="fi_fecha_factura" maxlength="35" size="35" placeholder="Nombre"/>
+                   </td>
+              </tr>
+
              
                 
              </table>   
