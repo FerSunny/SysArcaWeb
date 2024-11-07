@@ -84,7 +84,8 @@ if(!empty($_FILES['file']['name']) && in_array($_FILES['file']['type'],$file_mim
 																	eoporc,
 																	basoporc,
 																	igabs,
-																	igporc)
+																	igporc,
+																	estado)
 															VALUES(	'".$emp_record[0]."',
 																	'".$emp_record[1]."',
 																	'".$emp_record[2]."', 
@@ -117,7 +118,8 @@ if(!empty($_FILES['file']['name']) && in_array($_FILES['file']['type'],$file_mim
 																	'".$emp_record[140]."',
 																	'".$emp_record[142]."',
 																	'".$emp_record[144]."',
-																	'".$emp_record[146]."')";
+																	'".$emp_record[146]."',
+																	'A')";
 				mysqli_query($conn, $mysql_insert) or die("database error:". mysqli_error($conn));
 			}
 		}

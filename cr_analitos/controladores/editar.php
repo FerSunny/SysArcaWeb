@@ -37,6 +37,7 @@ $xn_550 = $_POST['xn_550'];
 $h8=$_POST['h8'];
 $alinity=$_POST['alinity'];
 $uro=$_POST['uro'];
+$leyenda=$_POST['leyenda'];
 $bibliografia=$_POST['bibliografia'];
 
 
@@ -56,6 +57,7 @@ SET
     h8   = '$h8',
     alinity   = '$alinity',
     uro   = '$uro',
+    leyenda   = '$leyenda',
     bibliografia   = '$bibliografia'
 WHERE   id_analito   = '$codigo'
 ";

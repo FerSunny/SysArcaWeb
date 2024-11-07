@@ -69,6 +69,8 @@
             <th>h8</th>
             <th>alinity</th>
             <th>Uro</th>
+            <th>Leyenda</th>
+            <th>Bibliografia</th>
             <th>Editar</th>
             <th>Eliminar</th>
           </tr>

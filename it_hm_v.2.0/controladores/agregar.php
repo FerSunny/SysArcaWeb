@@ -9,55 +9,102 @@ include ("../../controladores/conex.php");
 $sucursal = $_SESSION['fk_id_sucursal'];
 
 
-
-
-
 $codigo  = $_POST['codigo'];
 
-$producto = $_POST['producto'];
+$wbctotales =$_POST['wbctotales'];
+$rbctotales = $_POST['rbctotales']; 
+$hgb = $_POST['hgb'];
+$hct = $_POST['hct']; 
+$mcv = $_POST['mcv']; 
+$mchpg = $_POST['mchpg']; 
+$mchcgdl = $_POST['mchcgdl'];
+$plt = $_POST['plt'];
+$rdwsd = $_POST['rdwsd'];
+$rdwcv=$_POST['rdwcv'];
+$mpv=$_POST['mpv'];
+$neutabs=$_POST['neutabs'];
+$lymphabs=$_POST['lymphabs'];
+$monoabs=$_POST['monoabs'];
+$eoabs=$_POST['eoabs'];
+$basoabs=$_POST['basoabs'];
+$neutporc=$_POST['neutporc'];
+$lymphporc=$_POST['lymphporc'];
+$monoporc=$_POST['monoporc'];
+$eoporc=$_POST['eoporc'];
+$basoporc=$_POST['basoporc'];
+$date_v=$_POST['date_v'];
 
-$desc_p = $_POST['desc_p']; 
-
-$costo = $_POST['costo']; 
-
-$utilidad = $_POST['utilidad']; 
-
-$c_total = $_POST['c_total']; 
-
-$depto = $_POST['depto']; 
-
-$proveedor = $_POST['proveedor'];
-
-$cat = $_POST['cat'];
-
-$caducidad = $_POST['caducidad'];
-
-$unidad_medida=$_POST['uni_med'];
-$almacen=$_POST['almacen'];
-$pasillo=$_POST['pasillo'];
-$nivel=$_POST['nivel'];
-$anaquel=$_POST['anaquel'];
-
-
-
-
-
-
-$query ="INSERT INTO eb_productos
-
-            (fk_id_empresa,fk_id_sucursal,cod_producto,producto,desc_producto,costo_producto,utilidad,costo_total,departamento,fk_id_proveedor,fk_id_categoria,fk_unidad_medida,caducidad,fecha_registro,fk_id_almacen,pasillo,anaquel,nivel)
-
-VALUES (1,$sucursal,'$codigo','$producto','$desc_p','$costo','$utilidad','$c_total','$depto','$proveedor','$cat','$unidad_medida','$caducidad', Now(),$almacen,'$pasillo','$anaquel','$nivel' )";
-
-
-
+$query ="
+INSERT INTO hm_recepcion_nx_550
+            (id,
+             nickname,
+             instrument_id,
+             date_v,
+             time_v,
+             adapter,
+             position_v,
+             sample_no,
+             reception_date,
+             wbctotales,
+             rbctotales,
+             hgb,
+             hct,
+             mcv,
+             mchpg,
+             mchcgdl,
+             plt,
+             rdwsd,
+             rdwcv,
+             mpv,
+             neutabs,
+             lymphabs,
+             monoabs,
+             eoabs,
+             basoabs,
+             neutporc,
+             lymphporc,
+             monoporc,
+             eoporc,
+             basoporc,
+             estado)
+VALUES (0,
+        'XN-L',
+        'XN-550-24918',
+        '$date_v',
+        '0',
+        '0',
+        '0',
+        '$codigo',
+        '0',
+        '$wbctotales',
+        '$rbctotales',
+        '$hgb',
+        '$hct',
+        '$mcv',
+        '$mchpg',
+        '$mchcgdl',
+        '$plt',
+        '$rdwsd',
+        '$rdwcv',
+        '$mpv',
+        '$neutabs',
+        '$lymphabs',
+        '$monoabs',
+        '$eoabs',
+        '$basoabs',
+        '$neutporc',
+        '$lymphporc',
+        '$monoporc',
+        '$eoporc',
+        '$basoporc',
+        'A'
+)";
+//echo $query;
 $result = $conexion -> query($query);
 
 if ($result) {
 
     echo 1;
-
-   
 
 }else{
 

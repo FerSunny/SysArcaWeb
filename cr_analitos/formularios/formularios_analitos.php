@@ -107,7 +107,7 @@
 						<div class="col">
 							<div class="md-form mt-0">
 								<div class="md-form">
-									<input type="number"  name="edad_inicial" id="edad_inicial" class="form-control" min="1" maxlength="5" step="0.01" required>
+									<input type="number"  name="edad_inicial" id="edad_inicial" class="form-control"  step="0.01" required>
 									<label for="costo">Edad Inical</label>
 								</div>
 							</div>
@@ -115,7 +115,7 @@
 						<div class="col">
 							<div class="md-form mt-0">
 								<div class="md-form">
-									<input type="number" name="edad_final" id="edad_final" class="form-control" min="1" maxlength="5"  step="0.01"  required>
+									<input type="number" name="edad_final" id="edad_final" class="form-control"  step="0.01"  required>
 									<label for="utilidad">Edad Final</label>
 								</div>
 							</div>
@@ -227,8 +227,24 @@
 						</div>
 					</div>	
 					<br>
+					<div class="row">
+						<div class="col">
+							<div class="md-form mt-0">
+								<div class="md-form">
+									<input type="text"  name="leyenda" id="leyenda" class="form-control"  required>
+									<label for="leyenda">Leyenda</label>
+								</div>
+							</div>
+						</div>
+					</div>	
+					<br>
 				</div>
 
+				
+				
+				
+				
+				
 				<div class="modal-footer">
 
 						<button type="submit" class="btn btn-success" id="btniniciar">Ingresar</button>
@@ -380,7 +396,7 @@
 
 									<div class="md-form">
 
-										<input type="number" name="edad_final" id="edad_final" class="form-control" value="0" step="0.01" onkeyup="calcular(2)" required>
+										<input type="number" name="edad_final" id="edad_final" class="form-control" value="0" step="0.01" required>
 
 										<label for="utilidad">Edad Final</label>
 
@@ -509,7 +525,16 @@
 						</div>
 					</div>	
 
-
+					<div class="row">
+						<div class="col">
+							<div class="md-form mt-0">
+								<div class="md-form">
+									<input type="text" name="leyenda" id="leyenda" class="form-control" required>
+									<label for="Leyenda">Leyenda</label>
+								</div>
+							</div>
+						</div>
+					</div>	
 
 
 					</div>

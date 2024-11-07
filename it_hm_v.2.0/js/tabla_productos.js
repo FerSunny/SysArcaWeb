@@ -138,7 +138,8 @@ $("#form_productos").on('submit', function (e)
 
 					type: "POST",                 
 
-					url: "controladores/agregar.php",                    
+					url: "controladores/agregar.php",   
+
 
 					data: $("#form_productos").serialize(),
 
@@ -218,34 +219,42 @@ var editar = function(tbody, table) {
 
 				$("#frmedit  label").attr('class','active')
 
-				$("#frmedit  #dc").val(data.fk_id_cliente)
+				$("#frmedit  #dc").val(data.sample_no)
 
-				$("#frmedit  #pro").val(data.id_producto)
+				$("#frmedit  #pro").val(data.sample_no)
 
-				$("#frmedit  #codigo").val(data.cod_producto)
+				$("#frmedit  #codigo").val(data.sample_no)
 
-				$("#frmedit  #producto").val(data.producto)
+				$("#frmedit  #wbctotales").val(data.wbctotales)
 
-				$("#frmedit  #desc_p").val(data.desc_producto)
+				$("#frmedit  #rbctotales").val(data.rbctotales)
 
-				$("#frmedit  #costo").val(data.costo_producto)
+				$("#frmedit  #hgb").val(data.hgb)
 
-				$("#frmedit  #utilidad").val(data.utilidad)
+				$("#frmedit  #hct").val(data.hct)
 
-				$("#frmedit  #c_total").val(data.costo_total)
+				$("#frmedit  #mcv").val(data.mcv)
 
-				$("#frmedit  #depto").val(data.departamento)
+				$("#frmedit  #mchpg").val(data.mchpg)
 
-				$("#frmedit  #proveedor").val(data.fk_id_proveedor)
+				$("#frmedit  #mchcgdl").val(data.mchcgdl)
 
-				$("#frmedit  #cat").val(data.fk_id_categoria)
+				$("#frmedit  #plt").val(data.plt)
 
-				$("#frmedit  #uni_med_mod").val(data.fk_unidad_medida)
+				$("#frmedit  #rdwsd").val(data.rdwsd)
 
-				$("#frmedit  #caducidad").val(data.caducidad)
-				$("#frmedit  #almacen").val(data.fk_id_almacen)
-				$("#frmedit  #pasillo").val(data.pasillo)
-				$("#frmedit  #nivel").val(data.nivel)
+				$("#frmedit  #rdwcv").val(data.rdwcv)
+				$("#frmedit  #mpv").val(data.mpv)
+				$("#frmedit  #neutabs").val(data.neutabs)
+				$("#frmedit  #lymphabs").val(data.lymphabs)
+				$("#frmedit  #monoabs").val(data.monoabs)
+				$("#frmedit  #eoabs").val(data.eoabs)
+				$("#frmedit  #basoabs").val(data.basoabs)
+				$("#frmedit  #neutporc").val(data.neutporc)
+				$("#frmedit  #lymphporc").val(data.lymphporc)
+				$("#frmedit  #monoporc").val(data.monoporc)
+				$("#frmedit  #eoporc").val(data.eoporc)
+				$("#frmedit  #basoporc").val(data.basoporc)
 			 
 
 		});
@@ -352,7 +361,7 @@ var eliminar= function(tbody, table) {
 
 				if (result.value) {
 
-					 $.post("./controladores/eliminar.php", {'id_producto' : data.id_producto}  , function(data,status)
+					 $.post("./controladores/eliminar.php", {'id_producto' : data.id}  , function(data,status)
 
 					{
 

@@ -37,6 +37,8 @@ $alinity=$_POST['alinity'];
 $uro=$_POST['uro'];
 $bibliografia=$_POST['bibliografia'];
 
+$leyenda=$_POST['leyenda'];
+
 
 $query ="
 INSERT INTO  cr_analitos 
@@ -56,6 +58,7 @@ INSERT INTO  cr_analitos
               alinity ,
               uro ,
               bibliografia ,
+              leyenda,
               estado )
 VALUES (1,
         0,
@@ -73,10 +76,11 @@ VALUES (1,
         '$alinity',
         '$uro',
         '$bibliografia',
+        '$leyenda',
         'A');
 ";
 
-//echo $query;
+
 
 $result = $conexion -> query($query);
 
