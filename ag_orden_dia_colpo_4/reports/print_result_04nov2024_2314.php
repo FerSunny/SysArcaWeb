@@ -199,7 +199,7 @@ function Header()
             $tamfuem,
             $titulo_desc;
 
-    $this->Image('../imagenes/logo_arca.png',15,5,50,0);
+    $this->Image('../imagenes/logo_arca.png',15,5,140,0);
     $this->Image('../imagenes/pacal.jpg',160,5,40,0);
     $this->Image('../imagenes/codigo1.jpg',170,50,30,30);
     $this->Ln(18);

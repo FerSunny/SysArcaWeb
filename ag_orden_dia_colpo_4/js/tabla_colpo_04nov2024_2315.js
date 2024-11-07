@@ -43,7 +43,6 @@
 											switch(registrado)
 											{
 												case 'No':
-													//console.log('entro'.registrado)
 													return "<button type='button' class='registrar btn btn-primary' data-toggle='modal' data-target='#myModals'>.<i class='fa fa-file-o'></i></button>"
 													break;
 												default:
@@ -57,28 +56,26 @@
 											"</form-group>";
 									}
 									break;
-								case '39':
-									//console.log('39'.perfil)
-									switch(saldo)
-									{
-										case '0.00':
-											switch(registrado)
-											{
-												case 'No':
-													console.log('entro'+registrado)
-													return "<button type='button' class='registrar btn btn-primary' data-toggle='modal' data-target='#myModals'>.<i class='fa fa-file-o'></i></button>"
-													break;
-												default:
-													return "<form-group style='text-align:center;'>"+
-														"<a id='registrar' target='_blank'  class='btn btn-warning btn-md' role='button'><span  class='fa fa-stop'></span></a>"+
-														"</form-group>";
-											}
-										default:
-											return "<form-group style='text-align:center;'>"+
-											"<a id='printer' target='_blank'  class='btn btn-info' role='button'><span  class='fa fa-usd'></span></a>"+
-											"</form-group>";
-									}
-									break;
+									case '39':
+										switch(saldo)
+										{
+											case '0.00':
+												switch(registrado)
+												{
+													case 'No':
+														return "<button type='button' class='registrar btn btn-primary' data-toggle='modal' data-target='#myModals'>.<i class='fa fa-file-o'></i></button>"
+														break;
+													default:
+														return "<form-group style='text-align:center;'>"+
+															"<a id='registrar' target='_blank'  class='btn btn-warning btn-md' role='button'><span  class='fa fa-stop'></span></a>"+
+															"</form-group>";
+												}
+											default:
+												return "<form-group style='text-align:center;'>"+
+												"<a id='printer' target='_blank'  class='btn btn-info' role='button'><span  class='fa fa-usd'></span></a>"+
+												"</form-group>";
+										}
+										break;
 								case '14':
 									switch(saldo)
 									{
@@ -152,12 +149,11 @@
 												switch(registrado)
 												{
 													case 'No':
-														return "<form-group style='text-align:center;'>"+
-															"<a id='registrar' target='_blank'  class='btn btn-warning btn-md' role='button'><span  class='fa fa-hand-paper-o fa-1x'></span></a>"+
-															"</form-group>";
+														return "<button type='button' class='registrar btn btn-primary' data-toggle='modal' data-target='#myModals'>.<i class='fa fa-file-o'></i></button>"
+														break;
 													default:
 														return "<form-group style='text-align:center;'>"+
-															"<button type='button' class='editar btn btn-primary' data-toggle='modal' data-target='#modalEditar'>.<i class='fa fa-pencil-square-o'></i></button>"+
+															"<a id='registrar' target='_blank'  class='btn btn-warning btn-md' role='button'><span  class='fa fa-stop'></span></a>"+
 															"</form-group>";
 												}
 											default:
@@ -235,26 +231,26 @@
 											"</form-group>";
 									}
 									break;
-								case '39':
+									case '39':
 										switch(saldo)
 										{
 											case '0.00':
 												switch(registrado)
 												{
 													case 'No':
-														return "<form-group style='text-align:center;'>"+
-															"<a id='registrar' target='_blank'  class='btn btn-warning btn-md' role='button'><span  class='fa fa-hand-paper-o fa-1x'></span></a>"+
-															"</form-group>";
+														return "<button type='button' class='registrar btn btn-primary' data-toggle='modal' data-target='#myModals'>.<i class='fa fa-file-o'></i></button>"
+														break;
 													default:
 														return "<form-group style='text-align:center;'>"+
-															"<button type='button' class='eliminar btn btn-danger' data-toggle='modal' data-target='#modalEliminar' ><i class='fa fa-trash-o'></i></button>"+
+															"<a id='registrar' target='_blank'  class='btn btn-warning btn-md' role='button'><span  class='fa fa-stop'></span></a>"+
 															"</form-group>";
 												}
 											default:
 												return "<form-group style='text-align:center;'>"+
 												"<a id='printer' target='_blank'  class='btn btn-info' role='button'><span  class='fa fa-usd'></span></a>"+
 												"</form-group>";
-										}								
+										}
+										break;
 								case '14':
 									switch(saldo)
 									{
@@ -329,28 +325,26 @@
 											"</form-group>";
 									}
 									break;
-								case '39':
-									switch(saldo)
-									{
-										case '0.00':
-											switch(registrado)
-											{
-												case 'No':
-													return "<form-group style='text-align:center;'>"+
-														"<a id='registrar' target='_blank'  class='btn btn-warning btn-md' role='button'><span  class='fa fa-hand-paper-o fa-1x'></span></a>"+
-														"</form-group>";
-												default:
-													return "<form-group style='text-align:center;'>"+
-													"<a id='printer' target='_blank' href='./reports/print_result.php?numero_factura="+row['id_factura']+"&studio="+row['fk_id_estudio']+"' class='btn btn-warning btn-md' role='button'><span  class='fa fa-print'></span></a>"+
-													"</form-group>";
-													break;
-											}
-										default:
-											return "<form-group style='text-align:center;'>"+
-											"<a id='printer' target='_blank'  class='btn btn-info' role='button'><span  class='fa fa-usd'></span></a>"+
-											"</form-group>";
-									}
-									break;
+									case '39':
+										switch(saldo)
+										{
+											case '0.00':
+												switch(registrado)
+												{
+													case 'No':
+														return "<button type='button' class='registrar btn btn-primary' data-toggle='modal' data-target='#myModals'>.<i class='fa fa-file-o'></i></button>"
+														break;
+													default:
+														return "<form-group style='text-align:center;'>"+
+															"<a id='registrar' target='_blank'  class='btn btn-warning btn-md' role='button'><span  class='fa fa-stop'></span></a>"+
+															"</form-group>";
+												}
+											default:
+												return "<form-group style='text-align:center;'>"+
+												"<a id='printer' target='_blank'  class='btn btn-info' role='button'><span  class='fa fa-usd'></span></a>"+
+												"</form-group>";
+										}
+										break;
 								case '14':
 									switch(saldo)
 									{
@@ -459,26 +453,19 @@
 											"</form-group>";
 									}
 									break;
-								case '39':
+									case '39':
 										switch(saldo)
 										{
 											case '0.00':
 												switch(registrado)
 												{
-													case 'No':/*
-														return "<form-group style='text-align:center;'>"+
-															"<a id='registrar' target='_blank'  class='btn btn-warning btn-md' role='button'><span  class='fa fa-hand-paper-o fa-1x'></span></a>"+
-															"</form-group>";
-															*/
-															return "<form-group style='text-align:center;'>"+
-															"<a id='printer'  href='../ag_orden_dia_colpo_4/tabla_imagenes.php?numero_factura="+row['id_factura']+"&studio="+row['fk_id_estudio']+"' class='btn btn-success' role='button'><span  class='fa fa-image'></span></a>"+
-															"</form-group>";
-															break;
+													case 'No':
+														return "<button type='button' class='registrar btn btn-primary' data-toggle='modal' data-target='#myModals'>.<i class='fa fa-file-o'></i></button>"
+														break;
 													default:
 														return "<form-group style='text-align:center;'>"+
-														"<a id='printer'  href='../ag_orden_dia_colpo_4/tabla_imagenes.php?numero_factura="+row['id_factura']+"&studio="+row['fk_id_estudio']+"' class='btn btn-success' role='button'><span  class='fa fa-image'></span></a>"+
-														"</form-group>";
-														break;
+															"<a id='registrar' target='_blank'  class='btn btn-warning btn-md' role='button'><span  class='fa fa-stop'></span></a>"+
+															"</form-group>";
 												}
 											default:
 												return "<form-group style='text-align:center;'>"+
@@ -578,7 +565,7 @@
 							perfil=row['perfil'];
 
 							switch(perfil)
-							{  
+							{
 								case '1':
 									switch(saldo)
 									{
@@ -600,21 +587,35 @@
 											"<a id='printer' target='_blank'  class='btn btn-info' role='button'><span  class='fa fa-usd'></span></a>"+
 											"</form-group>";
 									}
+									case '39':
+										switch(saldo)
+										{
+											case '0.00':
+												switch(registrado)
+												{
+													case 'No':
+														return "<button type='button' class='registrar btn btn-primary' data-toggle='modal' data-target='#myModals'>.<i class='fa fa-file-o'></i></button>"
+														break;
+													default:
+														return "<form-group style='text-align:center;'>"+
+															"<a id='registrar' target='_blank'  class='btn btn-warning btn-md' role='button'><span  class='fa fa-stop'></span></a>"+
+															"</form-group>";
+												}
+											default:
+												return "<form-group style='text-align:center;'>"+
+												"<a id='printer' target='_blank'  class='btn btn-info' role='button'><span  class='fa fa-usd'></span></a>"+
+												"</form-group>";
+										}
+										break;
 								default:
 								if ( saldo == '0.00')
 								{
 									switch(registrado)
 									{
 										case 'No':
-											/*
 											return "<form-group style='text-align:center;'>"+
 												"<a id='registrar' target='_blank'  class='btn btn-warning btn-md' role='button'><span  class='fa fa-hand-paper-o fa-1x'></span></a>"+
 												"</form-group>";
-												*/
-												return "<form-group style='text-align:center;'>"+
-												"<a id='printer' target='_blank' href='reports/print_imagen.php?numero_factura="+row['id_factura']+"&studio="+row['fk_id_estudio']+"' class='btn btn-success' role='button'><span  class='fa fa-camera-retro'></span></a>"+
-												"</form-group>";
-												break;
 										default:
 											return "<form-group style='text-align:center;'>"+
 											"<a id='printer' target='_blank' href='reports/print_imagen.php?numero_factura="+row['id_factura']+"&studio="+row['fk_id_estudio']+"' class='btn btn-success' role='button'><span  class='fa fa-camera-retro'></span></a>"+
