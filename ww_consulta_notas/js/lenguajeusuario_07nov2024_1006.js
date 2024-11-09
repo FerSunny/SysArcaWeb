@@ -33,6 +33,7 @@
 			// se incluyo el perfil 46 y 33, solicitado por
 			// mariela enriquez, 23marzo2022-
 			//
+			console.log('Perfil'+perfil)
 							if(perfil == 1 || perfil == 12 || perfil == 36 || perfil == 42 || perfil == 45 || perfil == 33 || perfil == 40 || perfil == 46)
 							{
 								if (validado  == 1){

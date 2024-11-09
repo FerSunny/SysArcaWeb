@@ -152,7 +152,7 @@
 						<div class="col-9">
 							<div class="md-form mt-0">
 								<select class="form-control form-control-sm" name="fk_id_unidad_medida" 
-								id="fk_id_unidad_medida" required>
+								id="fk_id_unidad_medida" >
 									<option value="" class="z-depth-5">Seleccione</option>
 										<?php 
 												$query = $conexion -> query("SELECT id_unidad_medida,desc_unidad_medida FROM cr_unidad_medida WHERE estado = 'A'");
@@ -454,7 +454,7 @@
 						<div class="col-9">
 							<div class="md-form mt-0">
 								<select class="form-control form-control-sm" name="fk_id_unidad_medida" 
-								id="fk_id_unidad_medida" required>
+								id="fk_id_unidad_medida" >
 									<option value="" class="z-depth-5">Seleccione</option>
 										<?php 
 												$query = $conexion -> query("SELECT id_unidad_medida,desc_unidad_medida FROM cr_unidad_medida WHERE estado = 'A'");

@@ -26,6 +26,8 @@
 					{ "data": "nombre" },
 					{ "data": "importe" },
 					{ "data": "numero_factura" },
+					{ "data": "fecha_factura_sat" },
+					{ "data": "id_usr" },
 					{"defaultContent": "<button type='button' class='editar btn btn-primary' data-toggle='modal' data-target='#modalEditar'>.<i class='fa fa-pencil-square-o'></i></button>"}
 					//{"defaultContent":"<button type='button' class='eliminar btn btn-danger' data-toggle='modal' data-target='#modalEliminar' ><i class='fa fa-trash-o'></i></button>"}
 				],

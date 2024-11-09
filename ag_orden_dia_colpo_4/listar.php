@@ -53,7 +53,7 @@ fa.id_factura,
   
 CASE
     WHEN p2.fk_id_estudio IS NULL THEN
-      'Si'
+      'No'
     ELSE
       'Si'
 END AS Registrado,
@@ -111,7 +111,7 @@ fa.id_factura,
   
 CASE
     WHEN p2.fk_id_estudio IS NULL THEN
-      'Si'
+      'No'
     ELSE
       'Si'
 END AS Registrado,

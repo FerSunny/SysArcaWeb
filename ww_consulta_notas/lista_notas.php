@@ -47,8 +47,8 @@ session_start();
                     <th>Importe</th>
                     <th>Observaciones</th>
                     <th>Validado</th>
-                    <th>PDF</th>
-                    <th>Nota</th>
+                    <th>PDF (Resultado)</th>
+                    <th>Nota (OT)</th>
                 </tr>
             </thead>
             <tfoot>
