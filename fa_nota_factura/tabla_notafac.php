@@ -41,14 +41,18 @@
 						<thead>
 							<tr>
 								<!-- CAMBIO Se cambian las columnas segun las columnas a mostrar -->
+								<th>Sucursal</th>
                 				<th>Nota</th>
                 				<th>Fecha Nota</th>
                 				<th>Nombre Cliente </th>
                 				<th>Importe</th>
                 				<th>Folio de factura</th>
 								<th>Fecha factura</th>
-								<th>Asignar Folio</th>
 								<th>Usuario Facturo</th>
+								<th>Gpo Contable</th>
+								<th>Sucursal Sat</th>
+								<th>Asignar Folio</th>
+								
 							</tr>
 						</thead>
 					</table>

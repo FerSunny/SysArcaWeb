@@ -21,6 +21,7 @@
 					"url": "listar.php"
 				},
 				"columns":[
+					{ "data": "desc_corta" },
 					{ "data": "nota" },
 					{ "data": "fecha" },
 					{ "data": "nombre" },
@@ -28,6 +29,8 @@
 					{ "data": "numero_factura" },
 					{ "data": "fecha_factura_sat" },
 					{ "data": "id_usr" },
+					{ "data": "desc_grupo" },
+					{ "data": "desc_corta_ss" },
 					{"defaultContent": "<button type='button' class='editar btn btn-primary' data-toggle='modal' data-target='#modalEditar'>.<i class='fa fa-pencil-square-o'></i></button>"}
 					//{"defaultContent":"<button type='button' class='eliminar btn btn-danger' data-toggle='modal' data-target='#modalEliminar' ><i class='fa fa-trash-o'></i></button>"}
 				],
@@ -48,7 +51,9 @@
 				$("#frmedit #fi_importe").val( data.importe);
 				$("#frmedit #fi_nombre").val( data.nombre);		
 				$("#frmedit #fi_numero_factura").val( data.numero_factura);
-				//$("#frmedit #fi_factualiza").val( data.fecha_actuaizacion);
+				$("#frmedit #fi_grupo").val( data.grupo);
+				$("#frmedit #fi_sucursal").val( data.fk_id_sucursal_sat);
+				$("#frmedit #fi_fecha_factura").val( data.fecha_factura_sat);
 				$("#frmedit #fi_estado").val( data.estado);
 				
 				console.log(data);

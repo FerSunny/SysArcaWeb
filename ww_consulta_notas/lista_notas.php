@@ -45,6 +45,7 @@ session_start();
                     <th>Medico</th>
                     <th>Comision</th>
                     <th>Importe</th>
+                    <th>Tipo Pago</th>
                     <th>Observaciones</th>
                     <th>Validado</th>
                     <th>PDF (Resultado)</th>
@@ -62,6 +63,7 @@ session_start();
                     <th>Medico</th>
                     <th>Comision</th>
                     <th>Importe</th>
+                    <th>Tipo Pago</th>
                     <th>Observaciones</th>
                     <th>Validado</th>
                     <th>PDF</th>

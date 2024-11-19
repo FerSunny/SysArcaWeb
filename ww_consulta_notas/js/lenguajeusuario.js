@@ -23,6 +23,7 @@
 					{ "data": "medico" },
 					{ "data": "afectacomision" },
 					{ "data": "imp_total"},
+					{ "data": "desc_tipo_pago"},
 					{ "data": "observaciones"},
 					{ "data": "valido"},
 					{

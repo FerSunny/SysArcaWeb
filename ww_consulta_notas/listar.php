@@ -3,7 +3,8 @@
   session_start();
   $perfil = $_SESSION['fk_id_perfil'];
 
-	$query = "SELECT
+	$query = "
+  SELECT
   ".$perfil." perfil,
   su.desc_sucursal,
   fa.`id_factura` AS idnota,
@@ -35,7 +36,8 @@
   'Si'
   else
   'No'
-  end as valido
+  end as valido,
+  tp.desc_tipo_pago
 FROM so_factura fa
 LEFT OUTER JOIN kg_sucursales su ON (su.id_sucursal = fa.fk_id_sucursal)
 LEFT OUTER JOIN so_clientes cl ON (cl.id_cliente = fa.fk_id_cliente)
@@ -44,7 +46,8 @@ LEFT OUTER JOIN se_usuarios us ON (us.id_usuario = fa.fk_id_usuario)
 LEFT OUTER JOIN so_detalle_factura df ON (df.id_factura = fa.id_factura)
 LEFT OUTER JOIN km_estudios es ON (es.id_estudio = df.fk_id_estudio)
 left outer join vw_resultado re on (re.grupo = es.fk_id_plantilla and re.fk_id_factura = df.id_factura and re.fk_id_estudio = df.fk_id_estudio)
-WHERE fa.fecha_factura BETWEEN DATE_SUB(CURDATE(), INTERVAL 25 DAY) AND DATE_ADD(CURDATE(), INTERVAL 5 DAY)
+LEFT OUTER JOIN kg_tipo_pago tp ON (tp.id_tipo_pago = fa.fk_id_tipo_pago)
+WHERE fa.fecha_factura BETWEEN DATE_SUB(CURDATE(), INTERVAL 31 DAY) AND DATE_ADD(CURDATE(), INTERVAL 5 DAY)
 AND fa.estado_factura!=5
 AND fa.fk_id_sucursal > 0
  -- where fa.id_factura = 169595

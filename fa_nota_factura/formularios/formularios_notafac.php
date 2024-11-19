@@ -75,7 +75,41 @@
                    </td>
               </tr>
 
-             
+              <tr>
+                    <td class="renglon_titulo">Sucursal</td>
+                    <td class="renglon_valor">
+                        <select id="fi_sucursal" name="fn_sucursal"style="width:350px" >
+                            <?php
+                              $sql="SELECT su.id_sucursal, su.desc_sucursal FROM kg_sucursales su WHERE su.estado = 'A'";
+                              $rec=mysqli_query($conexion,$sql);
+                              while ($row=mysqli_fetch_array($rec))
+                              {
+                                echo "<option value='".$row['id_sucursal']."' >";
+                                echo $row['desc_sucursal'];
+                                echo "</option>";
+                              }
+                            ?>
+                        </select>
+                    </td>
+                </tr>              
+
+                <tr>
+                    <td class="renglon_titulo">Grupo Contable</td>
+                    <td class="renglon_valor">
+                        <select id="fi_grupo" name="fn_grupo"style="width:350px" >
+                            <?php
+                              $sql="SELECT gr.`id_grupo`,gr.`desc_grupo` FROM kg_grupos gr WHERE gr.estado = 'A'";
+                              $rec=mysqli_query($conexion,$sql);
+                              while ($row=mysqli_fetch_array($rec))
+                              {
+                                echo "<option value='".$row['id_grupo']."' >";
+                                echo $row['desc_grupo'];
+                                echo "</option>";
+                              }
+                            ?>
+                        </select>
+                    </td>
+                </tr>             
                 
              </table>   
             </div><!--Cierre modal body-->
